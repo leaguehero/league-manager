@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LeagueControllerTest < ActionController::TestCase
+class LeaguesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
