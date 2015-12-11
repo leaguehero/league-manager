@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <!-- from devise, to show signed in succesfully and other alerts -->
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  
 <%= yield %>
 
 </body>
