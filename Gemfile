@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Devise gem
 gem 'devise'
 
+# For better printing
+gem 'awesome_print'
+
 
 gem 'rails_12factor', group: :production
 
