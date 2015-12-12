@@ -497,3 +497,45 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
   [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
   [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for ::1 at 2015-12-12 17:29:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (13.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 241ms (Views: 230.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leagues" for ::1 at 2015-12-12 17:29:46 -0500
+Processing by LeaguesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered leagues/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 73ms (Views: 47.6ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-12-12 17:29:55 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8srGC6W2wucAxWQHLCbCztHstRshe9ZD3MYBwPSYg2OMbeTDeWELJjSNvzJek7dkxCQpDUCbGQeoilHzy2rS/w=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-12 17:29:55 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leagues" for ::1 at 2015-12-12 17:29:59 -0500
+Processing by LeaguesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-12-12 17:29:59 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/sessions/new.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 120ms (Views: 115.1ms | ActiveRecord: 0.0ms)
