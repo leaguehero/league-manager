@@ -45,6 +45,10 @@ gem 'sidekiq'
 # for sending background emails
 gem 'devise-async'
 
+# web server
+gem 'puma'
+
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do

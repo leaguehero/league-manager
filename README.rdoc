@@ -21,7 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+##to start the app on port 3000 with background jobs
+foreman start -p 3000 
 
 
 Please feel free to use a different markup language if you do not plan to run
