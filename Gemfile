@@ -42,6 +42,8 @@ gem 'awesome_print'
 # make sure to run 'redis-server' then 'bundle exec sidekiq' to run
 gem 'sidekiq'
 
+# for sending background emails
+gem 'devise-async'
 
 gem 'rails_12factor', group: :production
 
