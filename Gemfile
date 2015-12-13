@@ -54,6 +54,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # simple_form for bootstrap
 gem 'simple_form'
 
+# stripe gem for payment processing
+gem 'stripe'
+
 
 
 group :development, :test do
