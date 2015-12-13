@@ -38,6 +38,10 @@ gem 'devise'
 # For better printing
 gem 'awesome_print'
 
+# Sidekiq for background jobs
+# make sure to run 'redis-server' then 'bundle exec sidekiq' to run
+gem 'sidekiq'
+
 
 gem 'rails_12factor', group: :production
 
