@@ -1592,3 +1592,156 @@ Started GET "/" for ::1 at 2015-12-13 11:39:47 -0500
 Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts"  ORDER BY "accounts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "accounts" WHERE "accounts"."id" = $1[0m  [["id", 3]]
+  [1m[35m (4.0ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-12-13 11:46:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 206ms (Views: 196.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/leagues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-13 11:46:20 -0500
+
+
+Started GET "/users/sign_up" for ::1 at 2015-12-13 11:46:21 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/registrations/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 74ms (Views: 57.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for ::1 at 2015-12-13 11:46:26 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VYpwPtEkpyCxEYhsqx7lmU0iz3pKP4o707ryo2XEit+kaisBXSEwdFqST4CWK1nIbpM/w0sRuP35UuLgFqe18A==", "user"=>{"email"=>"robertschwar@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'robertschwar@gmail.com' LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "2b66938a6d758c3ebeb242eef807aed29ce0617edd1b33acf7b751a654e006ac"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "robertschwar@gmail.com"], ["encrypted_password", "$2a$10$jUVu6nqRb64C7hlW7R4b4eMA1nS.BqoxltZCuJy7yydgmwq64/1dq"], ["created_at", "2015-12-13 16:46:26.511019"], ["updated_at", "2015-12-13 16:46:26.511019"], ["confirmation_token", "U7H1axYYEWUCtzcVEpks"], ["confirmation_sent_at", "2015-12-13 16:46:26.724627"]]
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/mailer/confirmation_instructions.html.erb (0.8ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 226.4ms
+
+Sent mail to robertschwar@gmail.com (830.0ms)
+Date: Sun, 13 Dec 2015 11:46:26 -0500
+From: getleaguehero@gmail.com
+Reply-To: getleaguehero@gmail.com
+To: robertschwar@gmail.com
+Message-ID: <566da0e2eb9e9_4803fc11f982220794da@Robs-MacBook-Pro.local.mail>
+Subject: Confirm Your Account on League Hero
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome robertschwar@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=U7H1axYYEWUCtzcVEpks">Confirm my account</a></p>
+
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "robertschwar@gmail.com"], ["created_at", "2015-12-13 16:46:27.795497"], ["updated_at", "2015-12-13 16:46:27.795497"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 1390ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-13 11:46:27 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=bSUsGFk5XKH2L7oE3Cz7" for ::1 at 2015-12-13 11:46:44 -0500
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"bSUsGFk5XKH2L7oE3Cz7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "bSUsGFk5XKH2L7oE3Cz7"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "efcf5c2ca40a09851c2aa2bfe421f427a6a77e9943674a7afaa704e688f7bba4"]]
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/confirmations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 67ms (Views: 58.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/confirmation" for ::1 at 2015-12-13 11:47:04 -0500
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HAyvmWCTgt0ptZy9GPjwAFsMHfaJ37D14E2+bWgFbezt7PSm7JYVicI2W1ElzUxReL3tT4jxgjPKpa4uG2ZSww==", "user"=>{"email"=>"robertschwar@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."unconfirmed_email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["unconfirmed_email", "robertschwar@gmail.com"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/mailer/confirmation_instructions.html.erb (0.3ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 24.9ms
+
+Sent mail to robertschwar@gmail.com (1324.2ms)
+Date: Sun, 13 Dec 2015 11:47:04 -0500
+From: getleaguehero@gmail.com
+Reply-To: getleaguehero@gmail.com
+To: robertschwar@gmail.com
+Message-ID: <566da108d2e10_4803fc11f982220795be@Robs-MacBook-Pro.local.mail>
+Subject: Confirm Your Account on League Hero
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome robertschwar@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=U7H1axYYEWUCtzcVEpks">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1363ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-12-13 11:47:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/devise-3.5.3/app/views/devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
