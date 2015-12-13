@@ -48,6 +48,9 @@ gem 'devise-async'
 # web server
 gem 'puma'
 
+# bootstrap for stylesheets
+gem 'bootstrap-sass', '~> 3.3.6'
+
 
 gem 'rails_12factor', group: :production
 

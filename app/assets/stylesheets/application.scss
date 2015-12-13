@@ -10,6 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ @import "bootstrap-sprockets";
+ // we can import custom styles if we don't want all of bootstrap bu doing @import "bootstrap-custom" found here: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/_bootstrap.scss
+ @import "bootstrap";
