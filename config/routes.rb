@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources  :teams
   resources  :games
 
-  get "/subscriptions/cancel_subscription" => "subscriptions#cancel_subscription"
+  get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"
+  get "/subscriptions/update_card"          => "subscriptions#update_card"
+  post "/subscriptions/update_card_details" => "subscriptions#update_card_details"
   resources  :subscriptions
 
   root to: "home#index"

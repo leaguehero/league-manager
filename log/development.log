@@ -7635,3 +7635,372 @@ Processing by SubscriptionsController#index as HTML
   [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
   Rendered subscriptions/index.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 120ms (Views: 117.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 17:25:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 441ms (Views: 428.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 17:25:40 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 215ms (Views: 156.0ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 17:37:07 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 243ms (Views: 242.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-14 17:37:07 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:37:08 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:37:08 -0500
+
+
+Started GET "/assets/application.self-102004247dd0b1587c680d1610c79843c717a97ccb7b48ad0bd10b1f815ce9af.js?body=1" for ::1 at 2015-12-14 17:37:08 -0500
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-12-14 17:37:10 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hktgpExoFcP28L6kvXybW7baoU3Kd8Y8YHeC1AekXjx0seddtydNMNz9fVvsB2FGeeBkWpprU7mjUaR2JuTJOA=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 17:37:10 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-12-14 17:37:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (78.6ms)
+Completed 200 OK in 195ms (Views: 188.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-12-14 17:37:15 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ub4yf4Ue9j8/4fiyzunw5788JU5NaRiYAuvUz8FAhf9DG6517wXX/wxdu8Kk1Yy3kzqAt54g/+mrparjbW9+ZQ=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 17:37:15 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-12-14 17:37:16 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8yJGp/E5U3Noe5ICNUtGvDRdYTgOvH4V52tGtE24EO/hh9qtmyJys1vH0XJfdzrsGFvEwd31mWROJTiY4ZfrdQ=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 17:37:16 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 115ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-12-14 17:37:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-12-14 17:37:21 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TbOa8D2YxLSxxtGKhjDMH5YloWv7MXCQAJ8xeYd/01tfFgb6V4PldIJ6kvrsDLBPuiMEkih4l+Gp0U9VK1AowQ==", "user"=>{"email"=>"robertschwar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (11.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-12-13 19:05:08.821868"], ["current_sign_in_at", "2015-12-14 22:37:21.908890"], ["sign_in_count", 5], ["updated_at", "2015-12-14 22:37:21.910862"], ["id", 6]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 17:37:21 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 134ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 17:37:29 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 171ms (Views: 155.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/subscriptions/update_card" for ::1 at 2015-12-14 17:37:31 -0500
+Processing by SubscriptionsController#update_card as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/update_card.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 131ms (Views: 128.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/subscriptions/update_card_details" for ::1 at 2015-12-14 17:37:44 -0500
+Processing by SubscriptionsController#update_card_details as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLX04rtvXFgt4wasns2eB2A25hedUIXvFgje/e+0FtPTtFMX1/3e5/3dldwlKHs9EcAxBqYPxp8Gac2GJRoTSg==", "stripeToken"=>"tok_17I4wuJtFBDfh2lcqzSUBGzh"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+Redirected to http://localhost:3000/subscriptions/update_card?flash%5Berror%5D=undefined+local+variable+or+method+%60cusomer%27+for+%23%3CSubscriptionsController%3A0x007fd611753e58%3E
+Completed 302 Found in 733ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/subscriptions/update_card?flash%5Berror%5D=undefined+local+variable+or+method+%60cusomer%27+for+%23%3CSubscriptionsController%3A0x007fd611753e58%3E" for ::1 at 2015-12-14 17:37:45 -0500
+Processing by SubscriptionsController#update_card as HTML
+  Parameters: {"flash"=>{"error"=>"undefined local variable or method `cusomer' for #<SubscriptionsController:0x007fd611753e58>"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered subscriptions/update_card.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 123ms (Views: 120.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/update_card?flash%5Berror%5D=undefined+local+variable+or+method+%60cusomer%27+for+%23%3CSubscriptionsController%3A0x007fd611753e58%3E" for ::1 at 2015-12-14 17:39:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SubscriptionsController#update_card as HTML
+  Parameters: {"flash"=>{"error"=>"undefined local variable or method `cusomer' for #<SubscriptionsController:0x007fd611753e58>"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered subscriptions/update_card.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 377ms (Views: 334.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/assets/application.self-102004247dd0b1587c680d1610c79843c717a97ccb7b48ad0bd10b1f815ce9af.js?body=1" for ::1 at 2015-12-14 17:39:12 -0500
+
+
+Started GET "/subscriptions/update_card?flash%5Berror%5D=undefined+local+variable+or+method+%60cusomer%27+for+%23%3CSubscriptionsController%3A0x007fd611753e58%3E" for ::1 at 2015-12-14 17:39:37 -0500
+Processing by SubscriptionsController#update_card as HTML
+  Parameters: {"flash"=>{"error"=>"undefined local variable or method `cusomer' for #<SubscriptionsController:0x007fd611753e58>"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/update_card.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 111ms (Views: 93.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started GET "/assets/application.self-102004247dd0b1587c680d1610c79843c717a97ccb7b48ad0bd10b1f815ce9af.js?body=1" for ::1 at 2015-12-14 17:39:37 -0500
+
+
+Started POST "/subscriptions/update_card_details" for ::1 at 2015-12-14 17:39:41 -0500
+Processing by SubscriptionsController#update_card_details as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLX04rtvXFgt4wasns2eB2A25hedUIXvFgje/e+0FtPTtFMX1/3e5/3dldwlKHs9EcAxBqYPxp8Gac2GJRoTSg==", "stripeToken"=>"tok_17I4ynJtFBDfh2lcA5Ok7KU7"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+Redirected to http://localhost:3000/subscriptions
+Completed 302 Found in 1903ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 17:39:43 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 105ms (Views: 102.0ms | ActiveRecord: 0.5ms)
