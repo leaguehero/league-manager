@@ -16,6 +16,7 @@
  @import "bootstrap-sprockets";
  // we can import custom styles if we don't want all of bootstrap bu doing @import "bootstrap-custom" found here: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/_bootstrap.scss
  @import "bootstrap";
+ @import "subscriptions";
 
  body{
    padding: 20px;
