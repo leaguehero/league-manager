@@ -1,9 +1,13 @@
 class SubscriptionsController < ApplicationController
   before_action :authenticate_user!
+  def index
+    @account = Account.find_by_email(current_user.email)
+  end
 
   def new
     @plans = Plan.all
   end
+
   def create
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
@@ -34,5 +38,10 @@ class SubscriptionsController < ApplicationController
 
   rescue => e
     redirect_to :new_subscription, :flash => {:error => e.message}
+  end
+
+  def edit
+    @account = Account.find(params[:id])
+    @plans   = Plan.all
   end
 end
