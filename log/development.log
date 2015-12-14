@@ -8192,3 +8192,50 @@ Processing by SubscriptionsController#index as HTML
   [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
   Rendered subscriptions/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 122ms (Views: 119.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:38:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 597ms (Views: 584.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-14 18:38:05 -0500
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 18:38:15 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 146ms (Views: 91.7ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/subscriptions/6/edit" for ::1 at 2015-12-14 18:38:17 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/_plans.html.erb (0.3ms)
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 128ms (Views: 121.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/subscriptions" for ::1 at 2015-12-14 18:38:20 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"78CAMXCoO8DrzAqjnsqfxfVVGvxFU6jbUf/V58t48MYgwSfEHDq5fzvymdMlL3r/hKPN7X4M66tBnsacAdb1Xw==", "plan"=>{"stripe_id"=>"great_plan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mAccount Load (2.0ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4  [["stripe_plan_id", "great_plan"], ["active_until", "2016-01-14 23:38:21.000000"], ["updated_at", "2015-12-14 23:38:22.037487"], ["id", 6]]
+  [1m[36m (12.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1553ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:38:22 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.0ms)

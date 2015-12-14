@@ -61,6 +61,8 @@ gem 'stripe_event'
 
 
 group :development, :test do
+  # webhook for localhost
+  gem 'ultrahook'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
