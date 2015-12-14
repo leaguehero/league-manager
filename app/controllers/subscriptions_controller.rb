@@ -5,12 +5,12 @@ class SubscriptionsController < ApplicationController
   end
 
   def new
-    @plans = Plan.all
+    @plans = Stripe::Plan.all
   end
 
   def edit
     @account = Account.find(params[:id])
-    @plans   = Plan.all
+    @plans   = Stripe::Plan.all
   end
 
   def create
