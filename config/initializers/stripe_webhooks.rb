@@ -21,6 +21,7 @@ StripeEvent.configure do |events|
     ap event
     # called for any change on subscription
     subscription = event.data.object
+    customer_id = subscription.customer
 
     account = Account.find_by_customer_id(customer_id)
     account.stripe_plan_id = subscription.plan.id

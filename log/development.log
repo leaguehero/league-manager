@@ -8239,3 +8239,341 @@ Started GET "/" for ::1 at 2015-12-14 18:38:22 -0500
 Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:41:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 357ms (Views: 348.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-14 18:41:52 -0500
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 18:41:54 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 151ms (Views: 98.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/subscriptions/6/edit" for ::1 at 2015-12-14 18:41:56 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/_plans.html.erb (0.2ms)
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "plans".* FROM "plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 122ms (Views: 113.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/subscriptions" for ::1 at 2015-12-14 18:41:59 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B8QRgG59lANqomd6pyQCvlO4JaKnQXp9e0d70lcd4JDIxbZ1Au8WvLqc9AocweeEIk7ys5weOQ1rJmipnbPlCQ==", "plan"=>{"stripe_id"=>"test_plan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4  [["stripe_plan_id", "test_plan"], ["active_until", "2016-12-14 23:42:00.000000"], ["updated_at", "2015-12-14 23:42:01.091611"], ["id", 6]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1778ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:42:01 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 172ms (Views: 170.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 18:43:17 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 121ms (Views: 117.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subscriptions/6/edit" for ::1 at 2015-12-14 18:43:20 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 105ms (Views: 102.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/subscriptions" for ::1 at 2015-12-14 18:43:23 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1tNVEyKQl6XF6+N17cQhIa5cOulJR3S2V7VIk0LinIoZ0vLmTgIVGhXVcAVWIcQb36rt+HIYN8ZH1FvoiEyZEw==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4  [["stripe_plan_id", "better_plan"], ["active_until", "2016-01-14 23:43:24.000000"], ["updated_at", "2015-12-14 23:43:25.004856"], ["id", 6]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1829ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:43:25 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:47:18 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 105ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-14 18:47:19 -0500
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 18:47:22 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 107ms (Views: 103.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/cancel_subscription" for ::1 at 2015-12-14 18:47:23 -0500
+Processing by SubscriptionsController#cancel_subscription as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4[0m  [["stripe_plan_id", ""], ["active_until", "1970-01-01 00:00:00.000000"], ["updated_at", "2015-12-14 23:47:25.475489"], ["id", 6]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  Rendered subscriptions/cancel_subscription.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1865ms (Views: 99.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/stripe-event" for ::1 at 2015-12-14 18:47:31 -0500
+Processing by StripeEvent::WebhookController#event as XML
+  Parameters: {"id"=>"evt_17I62LJtFBDfh2lcerDMN206", "object"=>"event", "api_version"=>"2015-10-16", "created"=>1450136845, "data"=>{"object"=>{"id"=>"sub_7XAEulUmIt4ojH", "object"=>"subscription", "application_fee_percent"=>nil, "cancel_at_period_end"=>false, "canceled_at"=>1450136845, "current_period_end"=>1452815004, "current_period_start"=>1450136604, "customer"=>"cus_7WpGylb6l2Hjac", "discount"=>nil, "ended_at"=>1450136845, "metadata"=>{}, "plan"=>{"id"=>"better_plan", "object"=>"plan", "amount"=>0, "created"=>1450107125, "currency"=>"usd", "interval"=>"month", "interval_count"=>1, "livemode"=>false, "metadata"=>{}, "name"=>"Better Plan", "statement_descriptor"=>nil, "trial_period_days"=>nil}, "quantity"=>1, "start"=>1450136604, "status"=>"canceled", "tax_percent"=>nil, "trial_end"=>nil, "trial_start"=>nil}}, "livemode"=>false, "pending_webhooks"=>1, "request"=>"req_7XANQHXttdcBoT", "type"=>"customer.subscription.deleted", "webhook"=>{"id"=>"evt_17I62LJtFBDfh2lcerDMN206", "object"=>"event", "api_version"=>"2015-10-16", "created"=>1450136845, "data"=>{"object"=>{"id"=>"sub_7XAEulUmIt4ojH", "object"=>"subscription", "application_fee_percent"=>nil, "cancel_at_period_end"=>false, "canceled_at"=>1450136845, "current_period_end"=>1452815004, "current_period_start"=>1450136604, "customer"=>"cus_7WpGylb6l2Hjac", "discount"=>nil, "ended_at"=>1450136845, "metadata"=>{}, "plan"=>{"id"=>"better_plan", "object"=>"plan", "amount"=>0, "created"=>1450107125, "currency"=>"usd", "interval"=>"month", "interval_count"=>1, "livemode"=>false, "metadata"=>{}, "name"=>"Better Plan", "statement_descriptor"=>nil, "trial_period_days"=>nil}, "quantity"=>1, "start"=>1450136604, "status"=>"canceled", "tax_percent"=>nil, "trial_end"=>nil, "trial_start"=>nil}}, "livemode"=>false, "pending_webhooks"=>1, "request"=>"req_7XANQHXttdcBoT", "type"=>"customer.subscription.deleted"}}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."customer_id" = $1 LIMIT 1[0m  [["customer_id", "cus_7WpGylb6l2Hjac"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 519ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/6/edit" for ::1 at 2015-12-14 18:47:53 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 114ms (Views: 110.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for ::1 at 2015-12-14 18:47:56 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0lA5uQCm7nsL4CmknURCPcuV0HptQSLZBCkyfrIEH/EdUZ5MbDRsxNveutQmoacHumMHa1YeYakUSCEFeKoaaA==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4  [["stripe_plan_id", "better_plan"], ["active_until", "2016-01-14 23:47:57.000000"], ["updated_at", "2015-12-14 23:47:57.768066"], ["id", 6]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1657ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:47:57 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 107ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 18:49:58 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 117ms (Views: 114.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/6/edit" for ::1 at 2015-12-14 18:50:00 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 111ms (Views: 108.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for ::1 at 2015-12-14 18:50:02 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dx6JH9a9jZ1/NlerIFi6cQKlSlrMF+pmyg0SQ2ng8sLAHy7qui8PIq8IxNubvV9Lc1OdS/dIqRbabAE4o073Ww==", "plan"=>{"stripe_id"=>"great_plan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4  [["stripe_plan_id", "great_plan"], ["active_until", "2016-01-14 23:50:04.000000"], ["updated_at", "2015-12-14 23:50:04.771426"], ["id", 6]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1840ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-14 18:50:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 107ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscriptions" for ::1 at 2015-12-14 18:51:23 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 124ms (Views: 121.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/cancel_subscription" for ::1 at 2015-12-14 18:51:25 -0500
+Processing by SubscriptionsController#cancel_subscription as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "accounts"."id" = $4[0m  [["stripe_plan_id", ""], ["active_until", "1970-01-01 00:00:00.000000"], ["updated_at", "2015-12-14 23:51:26.798492"], ["id", 6]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  Rendered subscriptions/cancel_subscription.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1858ms (Views: 104.2ms | ActiveRecord: 1.6ms)
