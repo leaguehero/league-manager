@@ -5,9 +5,6 @@ class SubscriptionsController < ApplicationController
     @plans = Plan.all
   end
   def create
-    ap "Inside Create Payment"
-    ap params
-
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
     plan  = params[:plan][:stripe_id]
@@ -18,12 +15,19 @@ class SubscriptionsController < ApplicationController
       :plan => plan,
       :email => email
     )
-
+    subscriptions = customer.subscriptions
+    subscribed_plan = subscriptions.data.find {|o| o.plan.id == plan }
+    # get active_until from subscribed plan
+    current_period_end = subscribed_plan.current_period_end
+    # need to convert to rails timestamp
+    active_until = Time.at(current_period_end).to_datetime
     # Customer created with valid subscription
     # so, update account model
 
     account = Account.find_by_email(current_user.email)
     account.stripe_plan_id = plan
+    account.customer_id    = customer.id
+    account.active_until   = active_until
     account.save!
 
     redirect_to :root, :notice => "Successfully subscribed to a plan!"
