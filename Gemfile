@@ -56,6 +56,7 @@ gem 'simple_form'
 
 # stripe gem for payment processing
 gem 'stripe'
+gem 'stripe_event'
 
 
 
