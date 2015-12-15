@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   resources  :subscriptions
 
   root to: "home#index"
+  #root "pages#show", page: "home"
+
+  # Pages for Marketing Site
+  get "/*page" => "pages#show"
 
   mount StripeEvent::Engine, at: '/stripe-event' # provide a custom path
   # The priority is based upon order of creation: first created -> highest priority.
