@@ -12,5 +12,12 @@ Plan.create(:stripe_id => p1.id, :name => p1.name, :price => p1.amount, :interva
 In test mode, you can use the card number 4242424242424242 with any CVC and a valid expiration date. Read more in our testing documentation.
 
 # To run ultrahook for stripe events
-
 ultrahook stripe http://localhost:3000/stripe-event
+
+### Apartment
+
+#To create tenants using aparmtent gem
+Apartment::Tenant.create("tenant_name")
+
+#To switch into different Tenant databases
+Apartment::Tenant.switch!('tenant_name')

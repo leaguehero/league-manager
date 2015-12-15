@@ -57,6 +57,9 @@ gem 'simple_form'
 # stripe gem for payment processing
 gem 'stripe'
 gem 'stripe_event'
+# gem for allow multi tenantcy database
+gem 'apartment'
+
 
 
 

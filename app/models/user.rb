@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :async
 
   validate :email_is_unique, on: :create
+  validate :subdomain_is_unique, on: :create
+  after_validation :create_tenant
   after_create :create_account
 
 # override for not needing email confirmation when testing
@@ -16,18 +18,34 @@ class User < ActiveRecord::Base
   #  end
 
    private
-# email should be unique
+# email should be unique on each < Update to allow emails to be used on multiple subdomains
    def email_is_unique
-    #  Don't validate email if errors are present
-     return false unless self.errors[:email].empty?
-     unless Account.find_by_email(email).nil?
-       errors.add(:email, "is already taken")
+     if email.present?
+       unless Account.find_by_email(email).nil?
+         errors.add(:email, "is already taken")
+       end
+     end
+   end
+# subdomain should be unique
+   def subdomain_is_unique
+     if subdomain.present?
+       unless Account.find_by_subdomain(subdomain).nil?
+         errors.add(:subdomain, "is already taken")
+       end
+       if Apartment::Elevators::Subdomain.excluded_subdomains.include?(subdomain)
+         errors.add(:subdomain, "is not available")
+       end
      end
    end
 
    def create_account
-     account = Account.new(:email => email)
+     account = Account.new(:email => email, :subdomain => subdomain)
      account.save!
    end
 
+   def create_tenant
+     return false unless self.errors.empty?
+     Apartment::Tenant.create(subdomain)
+     Apartment::Tenant.switch!(subdomain)
+   end
 end
