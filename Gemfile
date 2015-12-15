@@ -49,7 +49,7 @@ gem 'devise-async'
 gem 'puma'
 
 # bootstrap for stylesheets
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 # simple_form for bootstrap
 gem 'simple_form'
