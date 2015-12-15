@@ -59,6 +59,9 @@ gem 'stripe'
 gem 'stripe_event'
 # gem for allow multi tenantcy database
 gem 'apartment'
+# for storing tenant name in Sidekiq
+gem 'apartment-sidekiq'
+
 
 
 

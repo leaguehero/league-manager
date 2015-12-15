@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20151215134619) do
     t.string   "email"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.string   "plan_id"
     t.string   "stripe_plan_id"
     t.string   "customer_id"
     t.datetime "active_until"

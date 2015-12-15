@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
 
   validate :email_is_unique, on: :create
   validate :subdomain_is_unique, on: :create
+
   after_validation :create_tenant
+
   after_create :create_account
 
 # override for not needing email confirmation when testing
@@ -45,7 +47,10 @@ class User < ActiveRecord::Base
 
    def create_tenant
      return false unless self.errors.empty?
-     Apartment::Tenant.create(subdomain)
-     Apartment::Tenant.switch!(subdomain)
+    #  only create if it's a new tenant
+      if self.new_record?
+       Apartment::Tenant.create(subdomain)
+      end
+      Apartment::Tenant.switch!(subdomain)
    end
 end
