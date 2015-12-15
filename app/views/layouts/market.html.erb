@@ -30,9 +30,23 @@
 
 </head>
 <body>
-  - Market -
-  
-  <%= yield %>
+
+  <div class="container">
+
+    <header>
+      <a class="logo desktop" href="/">League<span>Hero</span></a>
+      <nav class="primary-nav">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/about">About</a>
+        <a href="/users/sign_in">Log In</a>
+        <a class=sign-up href="/users/sign_up">Sign Up</a>
+      </nav>
+    </header>
+
+    <%= yield %>
+
+  </div>
 
 </body>
 </html>
