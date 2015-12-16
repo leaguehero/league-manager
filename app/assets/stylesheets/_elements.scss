@@ -5,7 +5,11 @@
 */
 
 
-body {
-  color: #666;
-  font-family: Futura;
-}
+  html { height: 100%; }
+  body {
+    color: #666;
+    font-family: Futura;
+    height: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+  }
