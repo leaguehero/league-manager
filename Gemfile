@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Devise gem
 gem 'devise'
+# Gem to allow users to invite other users
+gem 'devise_invitable', '~> 1.5.2'
 
 # For better printing
 gem 'awesome_print'
@@ -52,7 +54,7 @@ gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # simple_form for bootstrap
-gem 'simple_form' 
+gem 'simple_form'
 
 # stripe gem for payment processing
 gem 'stripe'
@@ -67,6 +69,8 @@ gem 'apartment-sidekiq'
 
 
 group :development, :test do
+  # to see emails in development
+  gem "letter_opener"
   # webhook for localhost
   gem 'ultrahook'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

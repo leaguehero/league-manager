@@ -14799,3 +14799,440 @@ Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8f
 
 
 Started GET "/" for ::1 at 2015-12-16 07:59:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseInvitableAddToUsers (20151216135738)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (20.2ms)[0m  [1mALTER TABLE "users" ADD "invitation_token" character varying[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "invitation_created_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "invitation_sent_at" timestamp[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "invitation_accepted_at" timestamp
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "invitation_limit" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "invited_by_id" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "invited_by_type" character varying[0m
+  [1m[35m (15.7ms)[0m  ALTER TABLE "users" ADD "invitations_count" integer DEFAULT 0
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_users_on_invitations_count" ON "users"  ("invitations_count")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_invitation_token" ON "users"  ("invitation_token")
+  [1m[36m (0.6ms)[0m  [1mCREATE  INDEX  "index_users_on_invited_by_id" ON "users"  ("invited_by_id")[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151216135738"]]
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'accounts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'plans'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.8ms)[0m  SELECT "public"."accounts"."subdomain" FROM "public"."accounts"
+  [1m[36m (0.3ms)[0m  [1mSELECT "public"."accounts"."subdomain" FROM "public"."accounts"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (12.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseInvitableAddToUsers (20151216135738)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "invitation_token" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "invitation_created_at" timestamp[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "invitation_sent_at" timestamp
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "invitation_accepted_at" timestamp[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "invitation_limit" integer
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "invited_by_id" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD "invited_by_type" character varying
+  [1m[36m (4.5ms)[0m  [1mALTER TABLE "users" ADD "invitations_count" integer DEFAULT 0[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_users_on_invitations_count" ON "users"  ("invitations_count")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_invitation_token" ON "users"  ("invitation_token")[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_users_on_invited_by_id" ON "users"  ("invited_by_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151216135738"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 09:01:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 3663ms (Views: 3650.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-16 09:01:48 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-16 09:01:53 -0500
+Processing by SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 223ms (Views: 206.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-12-16 09:01:57 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mx2iRBDUOYw53y6tKnXHNg6A/3bdyFmpbfxNx36fpTdR/qAGDNdiPNvoqUlvPFCWOXNB4u/0zblkMJAlZEs2AQ==", "user"=>{"email"=>"robertschwar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (7.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-12-16 03:15:16.838521"], ["current_sign_in_at", "2015-12-16 14:01:57.684920"], ["sign_in_count", 7], ["updated_at", "2015-12-16 14:01:57.686449"], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 132ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 09:01:57 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 132ms (Views: 131.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/invitation/new" for 127.0.0.1 at 2015-12-16 09:02:10 -0500
+Processing by Devise::InvitationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/invitations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 124ms (Views: 121.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/invitation/new" for 127.0.0.1 at 2015-12-16 09:03:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::InvitationsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/invitations/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 380ms (Views: 343.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-16 09:03:45 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:45 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:45 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-16 09:03:46 -0500
+
+
+Started POST "/users/invitation" for 127.0.0.1 at 2015-12-16 09:05:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::InvitationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kO1ahhiHkcGgLobx/aqpKyNmemhBXjBdycFx7+1kv3Q0AoU48vv/4iRJkiCX1dXIjvXAlTU1ay28ycQ1n+fSAA==", "user"=>{"email"=>"rob@rob.com"}, "commit"=>"Send an invitation"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "rob@rob.com"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."invitation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["invitation_token", "5abad1dbe3b8cc9adcacb77854c7d0584bd3b3092bebd8d7bd10792fc6e06f21"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "invited_by_id", "invited_by_type", "encrypted_password", "invitation_token", "invitation_created_at", "invitation_sent_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["email", "rob@rob.com"], ["invited_by_id", 1], ["invited_by_type", "User"], ["encrypted_password", "$2a$10$FBRox8TXJ04qNVz34OZNzeidGvGkaKBdBNgFwQM8WvmRZNcZjQIdW"], ["invitation_token", "5abad1dbe3b8cc9adcacb77854c7d0584bd3b3092bebd8d7bd10792fc6e06f21"], ["invitation_created_at", "2015-12-16 14:05:55.625580"], ["invitation_sent_at", "2015-12-16 14:05:55.625580"], ["created_at", "2015-12-16 14:05:55.626630"], ["updated_at", "2015-12-16 14:05:55.626630"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "public"."accounts" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "rob@rob.com"], ["created_at", "2015-12-16 14:05:55.634133"], ["updated_at", "2015-12-16 14:05:55.634133"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 413ms (ActiveRecord: 6.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 09:05:55 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+  Rendered devise/mailer/invitation_instructions.html.erb (1.3ms)
+
+Devise::Mailer#invitation_instructions: processed outbound mail in 161.5ms
+
+Sent mail to rob@rob.com (17.9ms)
+Date: Wed, 16 Dec 2015 09:05:55 -0500
+From: getleaguehero@gmail.com
+Reply-To: getleaguehero@gmail.com
+To: rob@rob.com
+Message-ID: <56716fc3d1333_81b03fc5510156842508@Robs-MacBook-Pro.local.mail>
+Subject: Invitation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello rob@rob.com</p>
+
+<p>Someone has invited you to http://lvh.me:5000/, you can accept it through the link below.</p>
+
+<p><a href="http://lvh.me:5000/users/invitation/accept?invitation_token=agDh79zB54dySiUXiKMx">Accept invitation</a></p>
+
+<p>If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password.</p>
+
+Completed 200 OK in 299ms (Views: 297.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/invitation/accept?invitation_token=agDh79zB54dySiUXiKMx" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+Processing by Devise::InvitationsController#edit as HTML
+  Parameters: {"invitation_token"=>"agDh79zB54dySiUXiKMx"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."invitation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["invitation_token", "5abad1dbe3b8cc9adcacb77854c7d0584bd3b3092bebd8d7bd10792fc6e06f21"]]
+Redirected to http://lvh.me:5000/
+Filter chain halted as :resource_from_invitation_token rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 141ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:01 -0500
+
+
+Started GET "/users/invitation/accept?invitation_token=agDh79zB54dySiUXiKMx" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+Processing by Devise::InvitationsController#edit as HTML
+  Parameters: {"invitation_token"=>"agDh79zB54dySiUXiKMx"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."invitation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["invitation_token", "5abad1dbe3b8cc9adcacb77854c7d0584bd3b3092bebd8d7bd10792fc6e06f21"]]
+  Rendered devise/invitations/edit.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 141ms (Views: 138.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-16 09:09:15 -0500
+
+
+Started PUT "/users/invitation" for 127.0.0.1 at 2015-12-16 09:09:20 -0500
+Processing by Devise::InvitationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dmtvLtpSK8jSivqr2Xd0EEm1KxyGCaDXGs2V5z0Sl0broT0rrQ9lolngYt5AfUV7qd18pQZSByL1ijs86UomLw==", "user"=>{"invitation_token"=>"agDh79zB54dySiUXiKMx", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Set my password"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."invitation_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["invitation_token", "5abad1dbe3b8cc9adcacb77854c7d0584bd3b3092bebd8d7bd10792fc6e06f21"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "encrypted_password" = $1, "invitation_accepted_at" = $2, "invitation_token" = $3, "confirmed_at" = $4, "updated_at" = $5 WHERE "users"."id" = $6  [["encrypted_password", "$2a$10$4.NLqPog3Qw7u4Wl21bqVO1zX6ujkHKMCy5gS48PMgeedCzPE5IAm"], ["invitation_accepted_at", "2015-12-16 14:09:20.105571"], ["invitation_token", nil], ["confirmed_at", "2015-12-16 14:09:20.105571"], ["updated_at", "2015-12-16 14:09:20.107412"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["last_sign_in_at", "2015-12-16 14:09:20.110729"], ["current_sign_in_at", "2015-12-16 14:09:20.110729"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2015-12-16 14:09:20.111336"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 105ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 09:09:20 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 111ms (Views: 110.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-16 09:09:22 -0500
+Processing by SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 113ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-12-16 09:09:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7o1nYzZ+Hy//ZKPRHv/rbwD5uUt8/3h450fEOrSxUFZzRzVmQSNRRXQOO6SH9doE4JHu8vyk340IAGrhYOnhPw==", "user"=>{"email"=>"rob@rob.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "rob@rob.com"]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms)
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7o1nYzZ+Hy//ZKPRHv/rbwD5uUt8/3h450fEOrSxUFZzRzVmQSNRRXQOO6SH9doE4JHu8vyk340IAGrhYOnhPw==", "user"=>{"email"=>"rob@rob.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 213ms (Views: 140.6ms | ActiveRecord: 0.0ms)

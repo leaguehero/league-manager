@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -41,5 +41,8 @@ Rails.application.configure do
 
   # to send out mailers in dev mode
   config.action_mailer.default_url_options = { :host => 'lvh.me:5000' }
+  # to open emails in the browser
+  config.action_mailer.delivery_method = :letter_opener
+
 
 end
