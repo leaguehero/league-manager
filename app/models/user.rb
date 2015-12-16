@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
   after_create :create_account
 
 # override for not needing email confirmation when testing
-  #  def confirmation_required?
-  #    false
-  #  end
+   def confirmation_required?
+     false
+   end
 
    private
 # email should be unique on each < Update to allow emails to be used on multiple subdomains

@@ -13202,3 +13202,1514 @@ Processing by Devise::PasswordsController#edit as HTML
   Rendered devise/shared/_links.html.erb (0.2ms)
   Rendered devise/passwords/edit.html.erb within layouts/application (6.6ms)
 Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 18:55:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 387ms (Views: 374.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 18:55:22 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (82.9ms)
+Completed 200 OK in 211ms (Views: 185.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-12-15 18:55:25 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"00PZ0jliDYOMS7f81yF/kJOD2eUAg+MRFGZUTDaVUZKK7iBPcV9dacsuAaO3c1FC5m559jHRlJ0U5bR25ayQnQ==", "user"=>{"email"=>"robertschwar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-12-15 23:44:36.349794"], ["current_sign_in_at", "2015-12-15 23:55:25.584391"], ["sign_in_count", 4], ["updated_at", "2015-12-15 23:55:25.586442"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 110ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 18:55:25 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 113ms (Views: 112.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 18:55:27 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 99.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2015-12-15 18:55:28 -0500
+Processing by SubscriptionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.3ms)
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/_creditcard.html.erb (7.8ms)
+  Rendered subscriptions/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 122ms (Views: 116.8ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 18:55:38 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mDElvOX3jqTv4h4XRsq9vCyexmYTSIf/GD0p0fYYmWRk8U55hwAR+kUb48Qik4XwBfps6lntbfjkWlIjiMUHeA==", "plan"=>{"stripe_id"=>"test_plan"}, "stripeToken"=>"tok_17ISdqJtFBDfh2lcmxRPEHcl"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "customer_id" = $2, "active_until" = $3, "updated_at" = $4 WHERE "public"."accounts"."id" = $5  [["stripe_plan_id", "test_plan"], ["customer_id", "cus_7XXjdHmopZOCEj"], ["active_until", "2016-12-15 23:55:38.000000"], ["updated_at", "2015-12-15 23:55:39.081236"], ["id", 1]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 874ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 18:55:39 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 18:55:43 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 18:55:44 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "public"."plans".* FROM "public"."plans"[0m
+  Rendered subscriptions/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 119ms (Views: 116.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 18:55:47 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CdKKoYByvY5vOSa6upSgb8EJQlULC05Ca3PKk5cGjZz1EuFk4oUi0MXA22nezZgj6G3o2UGupEWXFLFh6dsTgA==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", "better_plan"], ["active_until", "2016-01-15 23:55:48.000000"], ["updated_at", "2015-12-15 23:55:48.638410"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1296ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 18:55:48 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 18:55:57 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 118ms (Views: 115.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/cancel_subscription" for 127.0.0.1 at 2015-12-15 18:55:59 -0500
+Processing by SubscriptionsController#cancel_subscription as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", ""], ["active_until", "1970-01-01 00:00:00.000000"], ["updated_at", "2015-12-15 23:56:00.578605"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  Rendered subscriptions/cancel_subscription.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1517ms (Views: 109.5ms | ActiveRecord: 2.0ms)
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts"  ORDER BY "public"."accounts"."id" DESC LIMIT 1[0m
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 19:00:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 438ms (Views: 386.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-15 19:00:37 -0500
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2015-12-15 19:00:39 -0500
+Processing by SubscriptionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.3ms)
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT "public"."plans".* FROM "public"."plans"[0m
+  Rendered subscriptions/_creditcard.html.erb (13.0ms)
+  Rendered subscriptions/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 128ms (Views: 123.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 19:00:53 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WLx0KrN1wtIgD/aV7MxDIULctHiDjHu6cAyAmwekJd2kfB/v0YJdjIr2C0aIlXtta7ge9Mkpkb2Ma/tpeXm7wQ==", "plan"=>{"stripe_id"=>"great_plan"}, "stripeToken"=>"tok_17ISiuJtFBDfh2lcYsrMJSWG"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", "great_plan"], ["active_until", "2016-01-16 00:00:54.000000"], ["updated_at", "2015-12-16 00:00:55.202557"], ["id", 1]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 2133ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:00:55 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 120ms (Views: 119.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 19:01:45 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 112ms (Views: 109.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/update_card" for 127.0.0.1 at 2015-12-15 19:01:47 -0500
+Processing by SubscriptionsController#update_card as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/update_card.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 114ms (Views: 111.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/subscriptions/update_card_details" for 127.0.0.1 at 2015-12-15 19:01:57 -0500
+Processing by SubscriptionsController#update_card_details as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a2o09aEcuZotI6IJVSJmjPe0SBozd6mn+o2Ni+FGJP+Xql8ww+smxIfaX9oxe17A3tDilnnSQ6AG6vZ5n5u64w==", "stripeToken"=>"tok_17ISjxJtFBDfh2lcHs0K0k94"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+Redirected to http://rob.lvh.me:5000/subscriptions
+Completed 302 Found in 1885ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 19:01:59 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 117ms (Views: 114.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 19:03:47 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (1.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.1ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 122ms (Views: 117.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 19:03:50 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4dBhmfqNcnH5xWHL6Lu/APiqchbDrt6ducvqpv+LRRkdEApcmHrtL1M8nBiM4odM0c7YmokLNJpFrJFUgVbbBQ==", "plan"=>{"stripe_id"=>"test_plan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", "test_plan"], ["active_until", "2016-12-16 00:03:51.000000"], ["updated_at", "2015-12-16 00:03:52.045773"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 2027ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:03:52 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 120ms (Views: 119.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 19:04:31 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 178ms (Views: 174.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 19:04:33 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.1ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 108ms (Views: 104.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 19:04:35 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ia2k8ye7ZgvzM2UY3ZUcDWC38pIjIDe0NjRtifgo7kp1bc82RUz5VVnKmMu5zCRBSdNYHmmF3bPKUxZ7hvVwVg==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", "better_plan"], ["active_until", "2016-01-16 00:04:37.000000"], ["updated_at", "2015-12-16 00:04:37.819014"], ["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1845ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:04:37 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 142ms (Views: 137.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-15 21:57:16 -0500
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 21:57:18 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 316ms (Views: 270.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2015-12-15 21:57:20 -0500
+Processing by SubscriptionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.8ms)
+  [1m[36mPlan Load (0.4ms)[0m  [1mSELECT "public"."plans".* FROM "public"."plans"[0m
+  Rendered subscriptions/_creditcard.html.erb (21.2ms)
+  Rendered subscriptions/new.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 165ms (Views: 160.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 21:57:30 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+I0akocoI6jtwBD4JlKX0Lw1RIXXKTy8Yovn2xBCR4XIl+vKOs/0AlO/ZCEwHITa5R/nl35TvUN7VRtEpyXAg==", "plan"=>{"stripe_id"=>"test_plan"}, "stripeToken"=>"tok_17IVTqJtFBDfh2lcERHblT7Y"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.9ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", "test_plan"], ["active_until", "2016-12-16 02:57:46.000000"], ["updated_at", "2015-12-16 02:57:46.843483"], ["id", 1]]
+  [1m[35m (12.5ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 16473ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:57:46 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 146ms (Views: 144.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 21:57:53 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 109ms (Views: 106.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 21:57:55 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 21:57:58 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YBRTWjD4EOf0kVQXuB7gl/c7jdrOzvTCsS0ZAxXyOKqc1DifUg+PuV5oqcTcR9jb3l8nVoRrHsVNSmLxay+mtg==", "plan"=>{"stripe_id"=>"great_plan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", "great_plan"], ["active_until", "2016-01-16 02:58:04.000000"], ["updated_at", "2015-12-16 02:58:04.394693"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 6252ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:58:04 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 21:58:27 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 130ms (Views: 109.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 21:59:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 404ms (Views: 358.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-15 21:59:02 -0500
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 21:59:03 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.3ms)
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 232ms (Views: 188.8ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 21:59:06 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JfAc3NOZYz2vbwtHvSqjCKcn2IowsPyS0ysCnlGsvzLZMHcZsW78YwWW9pTZc5tEjkNyBnoVFpUvTHlsL3EhLg==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "updated_at" = $2 WHERE "public"."accounts"."id" = $3  [["stripe_plan_id", "better_plan"], ["updated_at", "2015-12-16 02:59:08.208482"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1835ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:59:08 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 128ms (Views: 127.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stripe-event/stripe-event" for 127.0.0.1 at 2015-12-15 21:59:16 -0500
+
+ActionController::RoutingError (No route matches [POST] "/stripe-event/stripe-event"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  puma (2.15.3) lib/puma/commonlogger.rb:31:in `call'
+  puma (2.15.3) lib/puma/configuration.rb:79:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.1ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x007fb45cdc7c48 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fb45cdc7900 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fb45cdbf1d8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:01:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 431ms (Views: 379.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 22:01:59 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.9ms)
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 152ms (Views: 145.1ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:02:02 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ab/qupv6WQ8FJailx/IzcerJADz9yJbJIPqxgD+J2e6Vf4F/+Q3GUa/cVXajqws9w62qsLdtfM7cncpyQVRH8g==", "plan"=>{"stripe_id"=>"test_plan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", "test_plan"], ["active_until", "2016-12-16 03:02:04.000000"], ["updated_at", "2015-12-16 03:02:05.260657"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 2705ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:02:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 228ms (Views: 227.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stripe-event" for 127.0.0.1 at 2015-12-15 22:02:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StripeEvent::WebhookController#event as XML
+  Parameters: {"id"=>"evt_17IVYHJtFBDfh2lcyRcazJX4", "object"=>"event", "api_version"=>"2015-10-16", "created"=>1450234925, "data"=>{"object"=>{"id"=>"sub_7XXoP2pFjenDnA", "object"=>"subscription", "application_fee_percent"=>nil, "cancel_at_period_end"=>false, "canceled_at"=>nil, "current_period_end"=>1481857324, "current_period_start"=>1450234924, "customer"=>"cus_7XXjdHmopZOCEj", "discount"=>nil, "ended_at"=>nil, "metadata"=>{}, "plan"=>{"id"=>"test_plan", "object"=>"plan", "amount"=>0, "created"=>1450045164, "currency"=>"usd", "interval"=>"year", "interval_count"=>1, "livemode"=>false, "metadata"=>{}, "name"=>"Test_Plan", "statement_descriptor"=>nil, "trial_period_days"=>nil}, "quantity"=>1, "start"=>1450234924, "status"=>"active", "tax_percent"=>nil, "trial_end"=>nil, "trial_start"=>nil}, "previous_attributes"=>{"current_period_end"=>1452913084, "current_period_start"=>1450234684, "plan"=>{"id"=>"better_plan", "created"=>1450107125, "interval"=>"month", "name"=>"Better Plan"}, "start"=>1450234748}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>"req_7XajdNkw7NIexJ", "type"=>"customer.subscription.updated", "webhook"=>{"id"=>"evt_17IVYHJtFBDfh2lcyRcazJX4", "object"=>"event", "api_version"=>"2015-10-16", "created"=>1450234925, "data"=>{"object"=>{"id"=>"sub_7XXoP2pFjenDnA", "object"=>"subscription", "application_fee_percent"=>nil, "cancel_at_period_end"=>false, "canceled_at"=>nil, "current_period_end"=>1481857324, "current_period_start"=>1450234924, "customer"=>"cus_7XXjdHmopZOCEj", "discount"=>nil, "ended_at"=>nil, "metadata"=>{}, "plan"=>{"id"=>"test_plan", "object"=>"plan", "amount"=>0, "created"=>1450045164, "currency"=>"usd", "interval"=>"year", "interval_count"=>1, "livemode"=>false, "metadata"=>{}, "name"=>"Test_Plan", "statement_descriptor"=>nil, "trial_period_days"=>nil}, "quantity"=>1, "start"=>1450234924, "status"=>"active", "tax_percent"=>nil, "trial_end"=>nil, "trial_start"=>nil}, "previous_attributes"=>{"current_period_end"=>1452913084, "current_period_start"=>1450234684, "plan"=>{"id"=>"better_plan", "created"=>1450107125, "interval"=>"month", "name"=>"Better Plan"}, "start"=>1450234748}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>"req_7XajdNkw7NIexJ", "type"=>"customer.subscription.updated"}}
+  [1m[35mAccount Load (0.6ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."customer_id" = $1 LIMIT 1  [["customer_id", "cus_7XXjdHmopZOCEj"]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 723ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:02:30 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 129ms (Views: 126.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subscriptions/cancel_subscription" for 127.0.0.1 at 2015-12-15 22:02:32 -0500
+Processing by SubscriptionsController#cancel_subscription as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", ""], ["active_until", "1970-01-01 00:00:00.000000"], ["updated_at", "2015-12-16 03:02:34.438356"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  Rendered subscriptions/cancel_subscription.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2589ms (Views: 226.0ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/stripe-event" for 127.0.0.1 at 2015-12-15 22:02:40 -0500
+Processing by StripeEvent::WebhookController#event as XML
+  Parameters: {"id"=>"evt_17IVYjJtFBDfh2lc8TKfitQd", "object"=>"event", "api_version"=>"2015-10-16", "created"=>1450234953, "data"=>{"object"=>{"id"=>"sub_7XXoP2pFjenDnA", "object"=>"subscription", "application_fee_percent"=>nil, "cancel_at_period_end"=>false, "canceled_at"=>1450234953, "current_period_end"=>1481857324, "current_period_start"=>1450234924, "customer"=>"cus_7XXjdHmopZOCEj", "discount"=>nil, "ended_at"=>1450234953, "metadata"=>{}, "plan"=>{"id"=>"test_plan", "object"=>"plan", "amount"=>0, "created"=>1450045164, "currency"=>"usd", "interval"=>"year", "interval_count"=>1, "livemode"=>false, "metadata"=>{}, "name"=>"Test_Plan", "statement_descriptor"=>nil, "trial_period_days"=>nil}, "quantity"=>1, "start"=>1450234924, "status"=>"canceled", "tax_percent"=>nil, "trial_end"=>nil, "trial_start"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>"req_7XakA5nYGbC9PZ", "type"=>"customer.subscription.deleted", "webhook"=>{"id"=>"evt_17IVYjJtFBDfh2lc8TKfitQd", "object"=>"event", "api_version"=>"2015-10-16", "created"=>1450234953, "data"=>{"object"=>{"id"=>"sub_7XXoP2pFjenDnA", "object"=>"subscription", "application_fee_percent"=>nil, "cancel_at_period_end"=>false, "canceled_at"=>1450234953, "current_period_end"=>1481857324, "current_period_start"=>1450234924, "customer"=>"cus_7XXjdHmopZOCEj", "discount"=>nil, "ended_at"=>1450234953, "metadata"=>{}, "plan"=>{"id"=>"test_plan", "object"=>"plan", "amount"=>0, "created"=>1450045164, "currency"=>"usd", "interval"=>"year", "interval_count"=>1, "livemode"=>false, "metadata"=>{}, "name"=>"Test_Plan", "statement_descriptor"=>nil, "trial_period_days"=>nil}, "quantity"=>1, "start"=>1450234924, "status"=>"canceled", "tax_percent"=>nil, "trial_end"=>nil, "trial_start"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>"req_7XakA5nYGbC9PZ", "type"=>"customer.subscription.deleted"}}
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."customer_id" = $1 LIMIT 1  [["customer_id", "cus_7XXjdHmopZOCEj"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 564ms (ActiveRecord: 0.6ms)
+  [1m[35mAccount Load (1.5ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts"  ORDER BY "public"."accounts"."id" DESC LIMIT 1
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "public"."accounts".* FROM "public"."accounts"
+DEPRECATION WARNING: [Deprecation Warning] `switch` now requires a block reset to the default tenant after the block. Please use `switch!` instead if you don't want this. (called from switch at /Users/robschwartz/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/forwardable.rb:183)
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT "public"."accounts".* FROM "public"."accounts"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mAccount Load (0.6ms)[0m  SELECT "public"."accounts".* FROM "public"."accounts"
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 22:04:23 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "public"."plans".* FROM "public"."plans"[0m
+  Rendered subscriptions/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 111ms (Views: 109.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:04:25 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0LxlDmOIZv6meKjTi+EsFweCO5NUJptJP9xIpt77rvIsfA7LAX/5oAyBVQDvuBRbLuaRHx6DcU7DuzNUoCYw7g==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", "better_plan"], ["active_until", "2016-01-16 03:04:27.000000"], ["updated_at", "2015-12-16 03:04:27.572842"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1854ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:04:27 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 238ms (Views: 236.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:05:19 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 321ms (Views: 302.8ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-12-15 22:05:25 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JEEkCSaAPn2rXrq8Cq/Xvti+KVCSMTdYhmxtOVIOxobYgU/MRHehIwGnR29u9u/y8dqD3NiU3V96CxbLLNNYmg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 18ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:05:25 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 156ms (Views: 155.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:05:29 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 206ms (Views: 204.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:05:33 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MEkkPzPYMlUirrw75CnIp5C9Cz35OsZxI6AIYVhhMQpm71gJPx4Z1qBocEfpwV2VcSk1FdmgzX0jgNIUBuFaWQ==", "user"=>{"email"=>"robertschwar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-12-15 23:55:25.584391"], ["current_sign_in_at", "2015-12-16 03:05:33.728089"], ["sign_in_count", 5], ["updated_at", "2015-12-16 03:05:33.729196"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 108ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:05:33 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 112ms (Views: 111.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:05:35 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 114ms (Views: 111.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2015-12-15 22:05:37 -0500
+Processing by SubscriptionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.3ms)
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/_creditcard.html.erb (9.0ms)
+  Rendered subscriptions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 119ms (Views: 115.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:05:50 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wgshQ0Ze/IZfdLhcg7JdSBjlQCGnSZ25NNbuC5E8XEzLY9PCucmyl2aDsfrOIB8LzdhtizIJvf9ViFFcCFkQDA==", "plan"=>{"stripe_id"=>"test_plan"}, "stripeToken"=>"tok_17IVbuJtFBDfh2lceF0fG5p4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", "test_plan"], ["active_until", "2016-12-16 03:05:51.000000"], ["updated_at", "2015-12-16 03:05:52.163102"], ["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1980ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:05:52 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:05:54 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 22:05:55 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "public"."plans".* FROM "public"."plans"[0m
+  Rendered subscriptions/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 122ms (Views: 119.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:05:58 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"doMlY//hKCh8LZHy58DtCQX02u2iIb4kh4cscULW8zR/69fiAHZmOUXamFSqUq9K0Mn3RzdhnmLm2ZMm27O/dA==", "plan"=>{"stripe_id"=>"great_plan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", "great_plan"], ["active_until", "2016-01-16 03:05:59.000000"], ["updated_at", "2015-12-16 03:06:00.038511"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1502ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:06:00 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:06:27 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 105ms (Views: 101.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 22:06:29 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:06:32 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ewbepzwiMsEdYImjfxVc2tqDChdLsP2C13g834cKid1ybiwmw7V80CSXgAUyhx6ZD74nvd7w3cS2JoOIHm/FnQ==", "plan"=>{"stripe_id"=>"better_plan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "updated_at" = $2 WHERE "public"."accounts"."id" = $3  [["stripe_plan_id", "better_plan"], ["updated_at", "2015-12-16 03:06:34.755764"], ["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1870ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:06:34 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 147ms (Views: 143.3ms | ActiveRecord: 1.1ms)
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "public"."accounts".* FROM "public"."accounts"[0m
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:06:56 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 117ms (Views: 115.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 22:06:57 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "public"."plans".* FROM "public"."plans"[0m
+  Rendered subscriptions/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 111ms (Views: 107.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:06:59 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ly6i5E+gr1gnzIfoPtZ9vHcY8Jj7d8r9B3tlPkppLBqeRlBlsDfhSR47jk5zRD//oiXdMm436rtmJdpp0wxgWg==", "plan"=>{"stripe_id"=>"test_plan"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4[0m  [["stripe_plan_id", "test_plan"], ["active_until", "2016-12-16 03:07:00.000000"], ["updated_at", "2015-12-16 03:07:01.403303"], ["id", 1]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1599ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:07:01 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 224ms (Views: 221.8ms | ActiveRecord: 1.1ms)
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "public"."accounts".* FROM "public"."accounts"
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "public"."accounts".* FROM "public"."accounts"[0m
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2015-12-15 22:08:16 -0500
+Processing by SubscriptionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1[0m  [["email", "robertschwar@gmail.com"]]
+  Rendered subscriptions/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subscriptions/1/edit" for 127.0.0.1 at 2015-12-15 22:08:17 -0500
+Processing by SubscriptionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered subscriptions/_plans.html.erb (0.0ms)
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "public"."plans".* FROM "public"."plans"
+  Rendered subscriptions/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 112ms (Views: 109.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2015-12-15 22:08:20 -0500
+Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eko1H5CXnoG5GO6HMXw9FlZGmc/w5ltBYfTTNZHWFGwbIseebwDQkIDv5yF87n9Vg3u0ZWWmewcAqmxiCLNYLA==", "plan"=>{"stripe_id"=>"great_plan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.6ms)[0m  SELECT  "public"."accounts".* FROM "public"."accounts" WHERE "public"."accounts"."email" = $1 LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "public"."accounts" SET "stripe_plan_id" = $1, "active_until" = $2, "updated_at" = $3 WHERE "public"."accounts"."id" = $4  [["stripe_plan_id", "great_plan"], ["active_until", "2016-01-16 03:08:21.000000"], ["updated_at", "2015-12-16 03:08:22.081457"], ["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1996ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:08:22 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 201ms (Views: 200.4ms | ActiveRecord: 0.2ms)
+  [1m[35mAccount Load (0.6ms)[0m  SELECT "public"."accounts".* FROM "public"."accounts"
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:11:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 380ms (Views: 369.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 156ms (Views: 155.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:40 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-15 22:11:41 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 101ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-15 22:14:57 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:15:04 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 135ms (Views: 131.4ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-12-15 22:15:10 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tOLYLYFR7mgaNQGA48QnN07cEgKGjSj2clCSb01nk+a9iiqsfsageSPCCCauVmV0m+E/qBPNCLATDi041ALfpg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 19ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:15:10 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 107ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:15:13 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 174ms (Views: 173.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:15:16 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qJLyJ/elgCp4bWsj/Nlkr78pG+rWh2DZl5hP5R8+Eqruov+OdHSUkvmHbMVD+Ojhsk0bVPvOuoDUxk4+DX/OLQ==", "user"=>{"email"=>"robertschwar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "robertschwar@gmail.com"]]
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-12-16 03:05:33.728089"], ["current_sign_in_at", "2015-12-16 03:15:16.838521"], ["sign_in_count", 6], ["updated_at", "2015-12-16 03:15:16.843660"], ["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 119ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:15:16 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:19:50 -0500
+Processing by RegistrationsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://rob.lvh.me:5000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 45ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:19:50 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 226ms (Views: 224.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-12-15 22:19:52 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nGOgjOCHrGPNXQ07ru7v8viaSwiUlM538fu4nsoPxswZbjHbOWOWb2VVd9oJHP7SHvvUWx27Jb53OoAF8nAw5A=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:19:52 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 134ms (Views: 133.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:20:03 -0500
+Processing by RegistrationsController#new as HTML
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:20:03 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:20:09 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 114ms (Views: 113.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:20:15 -0500
+Processing by RegistrationsController#new as HTML
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:20:15 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 110ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:21:15 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (68.8ms)
+Completed 200 OK in 193ms (Views: 184.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:21:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 158ms (Views: 143.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:21:24 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 179ms (Views: 177.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:21:30 -0500
+Processing by RegistrationsController#new as HTML
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:21:30 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 121ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:21:30 -0500
+Processing by RegistrationsController#new as HTML
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:21:30 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 192ms (Views: 191.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:21:58 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:22:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 182ms (Views: 180.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:25:45 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:25:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+  Rendered home/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 353ms (Views: 328.3ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 340ms (Views: 325.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:26:13 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 207ms (Views: 185.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:26:22 -0500
+Processing by SessionsController#new as HTML
+Redirected to http://lvh.me:5000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:26:22 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 184ms (Views: 183.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:26:38 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 125ms (Views: 124.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:26:40 -0500
+Processing by SessionsController#new as HTML
+Redirected to http://lvh.me:5000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:26:40 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 182ms (Views: 181.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:26:42 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 115ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:26:47 -0500
+Processing by SessionsController#new as HTML
+Redirected to http://lvh.me:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:26:47 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 167ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:26:56 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 127ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 233ms (Views: 208.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-6b3d87a99ff4844902b6fad7c755bb4c8aea67bdaaf44a77c7a8beb1e87aaaa0.css?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-15 22:28:18 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2015-12-15 22:28:20 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iL0pwlcrfbbHMMtRjf2Sq8tAfU23RrKJ6w5atOujVQV45rNemULzEkYojLcCvAJFp6psKm+AUyAv1uhxPRILDA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "subdomain"=>""}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/registrations/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 193ms (Views: 167.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:29:06 -0500
+Processing by SessionsController#new as HTML
+Redirected to http://lvh.me:5000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:29:06 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 191ms (Views: 190.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 22:29:17 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-15 22:29:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 113ms (Views: 112.4ms | ActiveRecord: 0.0ms)

@@ -3,8 +3,10 @@
 StripeEvent.configure do |events|
   # subscription failed/deleted
   events.subscribe 'customer.subscription.deleted' do |event|
+
     ap 'customer.subscription.deleted'
     ap event
+
     subscription = event.data.object
     customer_id = subscription.customer
 
