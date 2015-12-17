@@ -78,5 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # to send out mailers in dev mode
-  config.action_mailer.default_url_options = { :host => 'league-hero.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'leaguehero.io' }
 end

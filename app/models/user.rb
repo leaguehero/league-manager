@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   # confirmable makes user do email confirmation before signing in
   devise :invitable, :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
-        #  , :async
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable, :async
 
   validate :email_is_unique, on: :create
   validate :subdomain_is_unique, on: :create
