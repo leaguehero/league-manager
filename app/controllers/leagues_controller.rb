@@ -6,4 +6,20 @@ class LeaguesController < ApplicationController
   def index
     @league = "Rob's Rockin Robin"
   end
+
+  def new
+    @league = "Create Your League"
+  end
+
+  def edit
+
+  end
+
+  def create
+
+  end
+
+  def update
+
+  end
 end

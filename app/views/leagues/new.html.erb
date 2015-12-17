@@ -1,0 +1,9 @@
+This will be the beginning of the league setup form
+
+<%= simple_form_for @league do |f| %>
+  <%= f.input :name, required: true %>
+  <%= f.input :subdomain, required: true %>
+  <%= f.input :number_of_teams, required: true %>
+  <%= f.input :players_per_team, required: true %>
+  <%= f.button :submit %>
+<% end %>
