@@ -1,3 +1,11 @@
+Ruby version is 2.2.2, to switch using rvm => $rvm ruby-2.2.2
+
+##to start the app on port 3000 with background jobs
+foreman start -p 3000
+#starts rails with redis and Sidekiq
+foreman start --procfile=Procfile.dev
+open lvh.me:5000 in your browser
+
 #To create plan in the db
 
 p1 = Stripe::Plan.retrieve("test_plan")
@@ -28,12 +36,6 @@ Apartment::Tenant.switch!('tenant_name')
 
 #To remove a Tenant
 Apartment::Tenant.drop('tenant_name')
-
-
-##to start the app on port 3000 with background jobs
-foreman start -p 3000
-#starts rails with redis and Sidekiq
-foreman start --procfile=Procfile.dev
 
 ### Sidekiq
 to work with Sidekiq in console: require 'Sidekiq/api'
