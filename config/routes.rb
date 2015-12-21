@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
   # Devise routes with custom registrations controller
   devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
-  get "/leagues/payment"  => "leagues#payment_page"
-  post "/leagues/process_payment"  => "leagues#process_payment"
+
   get "/leagues/confirmation"  => "leagues#confirmation"
   resources  :leagues
   resources  :teams
   resources  :games
+  post 'charges/create' => "charges#create"
+  resources  :charges
 
-  get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"
-  get "/subscriptions/update_card"          => "subscriptions#update_card"
-  post "/subscriptions/update_card_details" => "subscriptions#update_card_details"
-  resources  :subscriptions
+  # get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"
+  # get "/subscriptions/update_card"          => "subscriptions#update_card"
+  # post "/subscriptions/update_card_details" => "subscriptions#update_card_details"
+  # resources  :subscriptions
 
   root to: "home#index"
 

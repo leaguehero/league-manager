@@ -22518,3 +22518,2375 @@ Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612
 
 
 Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 14:19:44 -0600
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-20 19:32:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 662ms (Views: 599.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 19:32:48 -0600
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:32:50 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 169ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:42:37 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    4:     <%= form_tag "/subscriptions", id: "payment-form" do %>
+    5:       <span class="payment-errors text-danger"></span>
+    6: 
+    7:       <%= collection_select :plan, :stripe_id, @plans, :stripe_id, :name, {}, {class: "form-control"} %>
+    8: 
+    9:       <div class="form-group">
+   10:         <label for="number">Card Number</label>
+  app/views/charges/new.html.erb:7:in `block in _app_views_charges_new_html_erb___4559879242281163192_70187427158280'
+  app/views/charges/new.html.erb:4:in `_app_views_charges_new_html_erb___4559879242281163192_70187427158280'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.8ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 104ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 19:42:52 -0600
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:43:18 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 225ms (Views: 209.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 19:43:19 -0600
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:49:58 -0600
+
+SyntaxError (/Users/robschwartz/Desktop/french_fries/league-hero/app/controllers/charges_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/charges_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.9ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:06 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 19:50:07 -0600
+
+
+Started POST "/charges/new" for 127.0.0.1 at 2015-12-20 19:50:18 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charges/new"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  puma (2.15.3) lib/puma/commonlogger.rb:31:in `call'
+  puma (2.15.3) lib/puma/configuration.rb:79:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.8ms)
+
+
+Started POST "/charges/new" for 127.0.0.1 at 2015-12-20 19:53:32 -0600
+Processing by ChargesController#new as HTML
+  Parameters: {"stripeToken"=>"tok_17KIoYJtFBDfh2lcSCHVcurt"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.7ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:59:45 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 19:59:46 -0600
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 19:59:52 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 112ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 20:00:11 -0600
+
+
+Started POST "/charges/new" for 127.0.0.1 at 2015-12-20 20:00:24 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charges/new"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  puma (2.15.3) lib/puma/commonlogger.rb:31:in `call'
+  puma (2.15.3) lib/puma/configuration.rb:79:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.1ms)
+
+
+Started GET "/charges/create" for 127.0.0.1 at 2015-12-20 20:02:23 -0600
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ChargesController):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.1ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 20:03:21 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:05:38 -0600
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 20:05:50 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charges/create"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  puma (2.15.3) lib/puma/commonlogger.rb:31:in `call'
+  puma (2.15.3) lib/puma/configuration.rb:79:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.5ms)
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 20:07:19 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charges/create"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  puma (2.15.3) lib/puma/commonlogger.rb:31:in `call'
+  puma (2.15.3) lib/puma/configuration.rb:79:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.0ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 20:08:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (108.8ms)
+Completed 200 OK in 358ms (Views: 347.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:07 -0600
+
+
+Started POST "/charges/charges" for 127.0.0.1 at 2015-12-20 20:08:19 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charges/charges"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  puma (2.15.3) lib/puma/commonlogger.rb:31:in `call'
+  puma (2.15.3) lib/puma/configuration.rb:79:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.8ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 126ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:35 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 20:08:36 -0600
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 20:08:45 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KJ6PJtFBDfh2lclbUWMzUD"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.2ms)
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 20:08:45 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KJ6PJtFBDfh2lcm8To2lfg"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.8ms)
+
+
+Started POST "/charges/console/repl_sessions/749bf2cd4bf2e91b5585a662b9684f7d/trace" for 127.0.0.1 at 2015-12-20 20:09:29 -0600
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 20:10:38 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KJ6PJtFBDfh2lcm8To2lfg"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.2ms)
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 20:10:49 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KJ8PJtFBDfh2lcokBlpOk6"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.0ms)
+
+
+Started POST "/charges/create" for 127.0.0.1 at 2015-12-20 22:30:16 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KJ8PJtFBDfh2lcokBlpOk6"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.8ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 186ms (Views: 181.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 22:30:21 -0600
+
+
+Started GET "/" for ::1 at 2015-12-20 22:30:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 411ms (Views: 396.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for ::1 at 2015-12-20 22:30:47 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:30:48 -0600
+
+
+Started GET "/leagues/new" for ::1 at 2015-12-20 22:30:49 -0600
+Processing by LeaguesController#new as HTML
+  Rendered leagues/new.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 183ms (Views: 173.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-12-20 22:30:51 -0600
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 135ms (Views: 117.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:30:52 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 178ms (Views: 176.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges/create" for ::1 at 2015-12-20 22:31:07 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KLKBJtFBDfh2lcdsRcYT6p"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.9ms)
+
+
+Started POST "/charges/create" for ::1 at 2015-12-20 22:33:23 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KLMNJtFBDfh2lcJnlBNV2n"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.2ms)
+
+
+Started POST "/charges/create" for ::1 at 2015-12-20 22:33:36 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KLMNJtFBDfh2lcJnlBNV2n"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (83.9ms)
+
+
+Started POST "/charges/create" for ::1 at 2015-12-20 22:33:56 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KLMNJtFBDfh2lcJnlBNV2n"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.4ms)
+
+
+Started POST "/charges/create" for ::1 at 2015-12-20 22:34:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KLNFJtFBDfh2lcjqVz9lbm"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  devise (3.5.3) lib/devise/controllers/helpers.rb:257:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  apartment (1.0.2) lib/apartment/elevators/generic.rb:23:in `call'
+  apartment (1.0.2) lib/apartment/reloader.rb:18:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-20 22:35:20 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 393ms (Views: 391.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-20 22:35:21 -0600
+
+
+Started GET "/leagues/new" for ::1 at 2015-12-20 22:35:23 -0600
+Processing by LeaguesController#new as HTML
+  Rendered leagues/new.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 190ms (Views: 179.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-12-20 22:35:25 -0600
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 131ms (Views: 115.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:35:26 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 145ms (Views: 144.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges/create" for ::1 at 2015-12-20 22:35:52 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"stripeToken"=>"tok_17KLOmJtFBDfh2lcRK0Wmcbt"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  devise (3.5.3) lib/devise/controllers/helpers.rb:257:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  apartment (1.0.2) lib/apartment/elevators/generic.rb:23:in `call'
+  apartment (1.0.2) lib/apartment/reloader.rb:18:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-20 22:38:09 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 136ms (Views: 134.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leagues/new" for ::1 at 2015-12-20 22:38:12 -0600
+Processing by LeaguesController#new as HTML
+  Rendered leagues/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-12-20 22:38:13 -0600
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 182ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:38:15 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    4:     <%= form_tag "/charge", id: "payment-form" do %>
+    5:       <span class="payment-errors text-danger"></span>
+    6: 
+    7:       <%= collection_select :plan, :stripe_id, @plans, :stripe_id, :name, {}, {class: "form-control"} %>
+    8: 
+    9:       <div class="form-group">
+   10:         <label for="number">Card Number</label>
+  app/views/charges/new.html.erb:7:in `block in _app_views_charges_new_html_erb__2252484623359972995_70112595059900'
+  app/views/charges/new.html.erb:4:in `_app_views_charges_new_html_erb__2252484623359972995_70112595059900'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.6ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:38:24 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 93ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:38:24 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:38:25 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:38:25 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-20 22:38:25 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:38:25 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:38:25 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-20 22:38:25 -0600
+
+
+Started POST "/charge" for ::1 at 2015-12-20 22:38:41 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charge"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.0ms)
+
+
+Started POST "/charge" for ::1 at 2015-12-20 22:38:59 -0600
+
+ActionController::RoutingError (No route matches [POST] "/charge"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (78.5ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:39:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (138.3ms)
+Completed 200 OK in 402ms (Views: 391.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-20 22:39:13 -0600
+
+
+Started POST "/charges" for ::1 at 2015-12-20 22:39:20 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LnUUu3g67UTYFaCNtPYpyQPI8itcKc1ju72CrvflTGPRVSFI9GrGcWolUZrBib2y6pD4/LiKKvHnpToLzE+K6g=="}
+Completed 500 Internal Server Error in 9751ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/charges_controller.rb:15:in `create'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.3ms)
+
+
+Started POST "/charges" for ::1 at 2015-12-20 22:40:34 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LnUUu3g67UTYFaCNtPYpyQPI8itcKc1ju72CrvflTGPRVSFI9GrGcWolUZrBib2y6pD4/LiKKvHnpToLzE+K6g=="}
+Completed 500 Internal Server Error in 124599ms (ActiveRecord: 0.0ms)
+
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  app/controllers/charges_controller.rb:15:in `create'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.2ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:42:39 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-20 22:42:39 -0600
+
+
+Started POST "/charges" for ::1 at 2015-12-20 22:42:51 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vikCvZGnF0FxTjSD4tYnix3UYZRRp/hsGFAlJvS+t0BBCTdOHfc8dMN+xZSXqbPw9IxrQ7UEH/5ESJ2DzxRxyQ==", "stripeToken"=>"tok_17KLVXJtFBDfh2lcCJ8JqKWW"}
+Completed 500 Internal Server Error in 17975ms (ActiveRecord: 0.0ms)
+
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  app/controllers/charges_controller.rb:15:in `create'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.1ms)
+
+
+Started POST "/charges" for ::1 at 2015-12-20 22:43:09 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vikCvZGnF0FxTjSD4tYnix3UYZRRp/hsGFAlJvS+t0BBCTdOHfc8dMN+xZSXqbPw9IxrQ7UEH/5ESJ2DzxRxyQ==", "stripeToken"=>"tok_17KLVXJtFBDfh2lcwale5giJ"}
+Completed 500 Internal Server Error in 27954ms (ActiveRecord: 0.0ms)
+
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  app/controllers/charges_controller.rb:15:in `create'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/robschwartz/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.1ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-20 22:43:54 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 111ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for ::1 at 2015-12-20 22:43:54 -0600
+
+
+Started POST "/charges" for ::1 at 2015-12-20 22:44:04 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzkn/yxGMw1YN2z+HGMfc20FN9xSiO0thTTv+HF7bTAwGRIMoBYYOOoHnelpHIsIhF09C7YrCr/ZLFddStGruQ==", "stripeToken"=>"tok_17KLWhJtFBDfh2lcSa48bowU"}
+  Rendered charges/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1338ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-12-20 22:44:05 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzkn/yxGMw1YN2z+HGMfc20FN9xSiO0thTTv+HF7bTAwGRIMoBYYOOoHnelpHIsIhF09C7YrCr/ZLFddStGruQ==", "stripeToken"=>"tok_17KLWhJtFBDfh2lcfErsuqw9"}
+  Rendered charges/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 929ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-20 22:44:57 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-20 22:44:57 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Completed 200 OK in 287ms (Views: 275.6ms | ActiveRecord: 0.0ms)
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 281ms (Views: 269.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leagues/new" for 127.0.0.1 at 2015-12-20 22:44:59 -0600
+Processing by LeaguesController#new as HTML
+  Rendered leagues/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 199ms (Views: 189.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-12-20 22:45:01 -0600
+Processing by RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 135ms (Views: 113.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 22:45:03 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 242ms (Views: 241.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2015-12-20 22:45:13 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MlEyeq+3Flbv+rzmQ1bdLJE99giYeGjjxdEGVl9CdhUsyZOYVyMjiZW2nwJMzcC+mi3zRZawZUXZuXiTdrKHqg==", "stripeToken"=>"tok_17KLXpJtFBDfh2lcOcduvVx1"}
+  Rendered charges/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1339ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 131ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-aa1a1b61606ebcde3071dcc110f897040b6f4490e04ef536ed6552fab4530b7d.css?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/leagues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-20 22:45:48 -0600
+
+
+Started POST "/charges" for 127.0.0.1 at 2015-12-20 22:45:56 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYTwCU2IhvQrATTM+mmeLxQxzkJEHLYyhZQnm4qJOIUjHFHrtRyzK1FNFyj18oO9HyHLD0rUu5SZ/Fleo3nJOg==", "stripeToken"=>"tok_17KLYWJtFBDfh2lcjhpqEkcu"}
+  Rendered charges/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1257ms (Views: 119.3ms | ActiveRecord: 0.0ms)

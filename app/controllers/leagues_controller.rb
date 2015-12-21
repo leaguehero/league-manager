@@ -26,18 +26,8 @@ class LeaguesController < ApplicationController
     end
   end
 
-  def payment_page
-    # last page for signup and submit payment
-  end
-
-  def process_payment
-    # post request to stripe to process payemnt
-    # if payment goes through, create league and user,
-    # else show payment_page with errors
-  end
-
   def confirmation
-    # confirmation page. Show Thank you note and link to league subdomain.  
+    # confirmation page. Show Thank you note and link to league subdomain.
   end
 
   def update
