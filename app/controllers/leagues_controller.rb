@@ -17,10 +17,10 @@ class LeaguesController < ApplicationController
   end
 
   def create
+
     @league_subdomain = League.where(subdomain: params["league"]["subdomain"])
     if @league_subdomain.length > 0
-      flash[:alert] = "subdomain is already taken"
-      redirect_to "new"
+      redirect_to :back, :flash => {:error => "subdomain is already taken"}
     else
     # go to user sign_up page with league params
     redirect_to new_user_registration_path
