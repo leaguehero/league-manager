@@ -8,14 +8,15 @@ class RegistrationsController < Devise::RegistrationsController
       flash[:alert] = "This page is restricted"
       redirect_to :root
     end
-
   end
 
+  # redirect_to new_charge_path
   protected
-
+  #
   def after_sign_up_path_for(resource)
     # '/an/example/path' # Or :prefix_to_your_route
-    new_user_session_url(subdomain: resource.subdomain)
+    # new_user_session_url(subdomain: resource.subdomain)
+    "/charges/new"
   end
 
   def after_inactive_sign_up_path_for(resource)
