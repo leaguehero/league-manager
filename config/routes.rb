@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources  :leagues
   resources  :teams
   resources  :games
-  post 'charges/create' => "charges#create"
+  get  'charges/confirmation' => "charges#confirmation"
   resources  :charges
 
   # get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"

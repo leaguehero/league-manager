@@ -20,8 +20,14 @@ class ChargesController < ApplicationController
         :description => "Charge for #{league}"
       )
     rescue Stripe::CardError => e
-      # The card has been declined
+      flash[:error] = e.message
+      redirect_to new_charge_path
     end
+    # use this route so user can't refresh confirmation page and send another call to Stripe
+    redirect_to "/charges/confirmation"
+  end
+
+  def confirmation
     @league = League.find(1)
   end
 end
