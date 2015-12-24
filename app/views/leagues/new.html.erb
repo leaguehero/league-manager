@@ -1,11 +1,12 @@
 This will be the beginning of the league setup form
 
 <%= simple_form_for @league do |f| %>
-  <%= f.input :name, :placeholder => "Leage Name", required: true %>
+  <%= f.input :name, :label => "Leage Name", required: true %>
   <div>
-    <span><%= f.input :subdomain, :placeholder => "Leage Name", required: true %>.leaguehero.io</span>
+    <span><%= f.input :subdomain, :placeholder => "Subdomain", required: true %>.leaguehero.io</span>
   </div>
   <%= f.input :max_teams, as: :integer, required: true %>
   <%= f.input :max_players_per_team, as: :integer, required: true %>
+  
   <%= f.submit "Next" %>
 <% end %>
