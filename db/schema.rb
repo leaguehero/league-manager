@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222021431) do
+ActiveRecord::Schema.define(version: 20151224150622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 20151222021431) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pre_leagues", force: :cascade do |t|
+    t.string   "league_name"
+    t.string   "subdomain"
+    t.integer  "max_teams"
+    t.integer  "max_players_per_team"
+    t.string   "admin_name"
+    t.string   "admin_email"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -72,6 +83,7 @@ ActiveRecord::Schema.define(version: 20151222021431) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
+    t.integer  "pre_league_id"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -10,12 +10,30 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  # redirect_to new_charge_path
+  def create
+    # Devise create path, need it here for custom usage
+    build_resource(sign_up_params)
+
+    if resource.save
+        yield resource if block_given?
+        if resource.active_for_authentication?
+            set_flash_message :notice, :signed_up if is_flashing_format?
+            sign_up(resource_name, resource)
+            respond_with resource, location: after_sign_up_path_for(resource)
+        else
+            set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
+            expire_data_after_sign_in!
+            respond_with resource, location: after_inactive_sign_up_path_for(resource)
+        end
+    else
+        clean_up_passwords resource
+        resource.errors.full_messages.each {|x| flash[x] = x} # Rails 4 simple way
+        redirect_to new_user_registration_path(:pre_league_id => params["user"]["pre_league_id"])
+    end
+  end
   protected
-  #
+
   def after_sign_up_path_for(resource)
-    # '/an/example/path' # Or :prefix_to_your_route
-    # new_user_session_url(subdomain: resource.subdomain)
     "/charges/new"
   end
 

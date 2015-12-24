@@ -1,0 +1,11 @@
+This will be the beginning of the league setup form
+
+<%= simple_form_for @pre_league do |f| %>
+  <%= f.input :league_name, :placeholder => "Insert the name of your league here", required: true %>
+  <%= f.input :admin_name,:placeholder => "Name of league Admin or Comissioner" %>
+  <%= f.input :subdomain, :placeholder => "Subdomain for your league", required: true %>
+  <%= f.input :max_teams, as: :integer, required: true %>
+  <%= f.input :max_players_per_team, as: :integer, required: true %>
+
+  <%= f.submit "Next" %>
+<% end %>

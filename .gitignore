@@ -30,6 +30,7 @@
 *.sql
 *.sqlite
 *.pid
+*.cache
 
 # OS generated files #
 ######################

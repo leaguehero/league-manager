@@ -9,7 +9,6 @@ class LeaguesController < ApplicationController
 
   def new
     @league = League.new
-    # @admin = current_user.email
   end
 
   def edit
@@ -18,23 +17,6 @@ class LeaguesController < ApplicationController
 
   def create
 
-    @league_subdomain = League.where(subdomain: params["league"]["subdomain"])
-    if @league_subdomain.length > 0
-      redirect_to :back, :flash => {:error => "subdomain is already taken"}
-    else
-    # go to user sign_up page with league params
-    redirect_to new_user_registration_path(:league => params["league"])
-    end
-
-
-
-    # @league = League.create(league_params)
-    #
-    # if @league.save
-    #   redirect_to root_path, notice: "Thank you for signing up!"
-    # else
-    #   render "/new"
-    # end
   end
 
   def confirmation

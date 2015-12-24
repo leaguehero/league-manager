@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/leagues/confirmation"  => "leagues#confirmation"
   resources  :leagues
+  resources  :pre_leagues
   resources  :teams
   resources  :games
   get  'charges/confirmation' => "charges#confirmation"

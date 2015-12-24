@@ -5,6 +5,8 @@ foreman start -p 3000
 #starts rails with redis and Sidekiq
 foreman start --procfile=Procfile.dev
 open lvh.me:5000 in your browser
+to view localhost when starting with foreman and testing subdomains, the url is 'lvh.me:5000'
+
 
 #To create plan in the db
 
@@ -42,5 +44,3 @@ to work with Sidekiq in console: require 'Sidekiq/api'
 clear Retry jobs: Sidekiq::RetrySet.new.clear
 #see stats from Sidekiq
 stats = Sidekiq::Stats.new
-
-to view localhost when starting with foreman and testing subdominas, the url is 'lvh.me:5000'
