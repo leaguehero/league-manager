@@ -9,10 +9,13 @@ class PreLeaguesController < ApplicationController
   end
 
   def create
-    @pre_league = PreLeague.create(pre_league_params)
-
+    @pre_league = PreLeague.new(pre_league_params)
+    if @pre_league.save
     # go to user sign_up page with league params
-    redirect_to new_user_registration_path(:pre_league_id => @pre_league.id)
+      redirect_to new_user_registration_path(:pre_league_id => @pre_league.id)
+    else
+      redirect_to :back, :flash => {:error => @pre_league.errors.full_messages.join(", ")}
+    end
 
   end
 

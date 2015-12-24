@@ -8,27 +8,27 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
         #  ,:confirmable, :async
 
-  validate :email_is_unique, on: :create
+  # validate :email_is_unique, on: :create
   # validate :subdomain_is_unique, on: :create
 
   # after_validation :create_tenant
 
-  after_create :create_account
+  # after_create :create_account
 
 # override for not needing email confirmation when testing
   #  def confirmation_required?
   #    false
   #  end
 
-   private
+  #  private
 # email should be unique on each < Update to allow emails to be used on multiple subdomains
-   def email_is_unique
-     if email.present?
-       unless Account.find_by_email(email).nil?
-         errors.add(:email, "is already taken")
-       end
-     end
-   end
+  #  def email_is_unique
+  #    if email.present?
+  #      unless Account.find_by_email(email).nil?
+  #        errors.add(:email, "is already taken")
+  #      end
+  #    end
+  #  end
 # # subdomain should be unique
 #    def subdomain_is_unique
 #      if subdomain.present?
@@ -41,10 +41,10 @@ class User < ActiveRecord::Base
 #      end
 #    end
 
-   def create_account
-     account = Account.new(:email => email)
-     account.save!
-   end
+  #  def create_account
+  #    account = Account.new(:email => email)
+  #    account.save!
+  #  end
 
   #  def create_tenant <= we'll need to do this on league model
   #    return false unless self.errors.empty?

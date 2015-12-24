@@ -24,7 +24,7 @@ Apartment.configure do |config|
   # config.tenant_names = lambda{ Customer.pluck(:tenant_name) }
   # config.tenant_names = ['tenant1', 'tenant2']
   #
-  config.tenant_names = lambda { Account.pluck :subdomain }
+  config.tenant_names = lambda { League.pluck :subdomain }
 
   #
   # ==> PostgreSQL only options
