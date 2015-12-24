@@ -1,9 +1,9 @@
 <!-- This will all change, don't worry Justin -->
-<h2>Your payment of <strong>$5.00</strong>!</h2>
+<h2>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</h2>
 
 <h3>Below are all the details of your league.</h3>
 
-<strong>League Name:</strong> <%= @league.league_name %>
+<strong>League Name:</strong> <%= @league.name %>
 <br>
 <strong>URL:</strong> <%= @league.subdomain %>
 <br>
@@ -14,7 +14,7 @@
 <br>
 <h2>NEXT STEP</h2>
 
-Head over to <a href="<%= @league.subdomain %>.leaguehero.io"><%= @league.subdomain %></a> to get started setting up your teams and players
+Head over to <a href="<%= @league.subdomain %>.leaguehero.io"><%= @league.subdomain %>.leaguehero.io</a> to get started setting up your teams and players
 
 
 Thank you!

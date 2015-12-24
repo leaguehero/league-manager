@@ -28,12 +28,22 @@ class ChargesController < ApplicationController
   end
 
   def confirmation
+    # find PreLeague to convert over to League
+    pl = PreLeague.find(current_user.pre_league_id)
     # build league
+    @league = League.create(
+    :name => pl["league_name"],
+    :subdomain => pl["subdomain"],
+    :url => pl["subdomain"] + ".leaguehero.io",
+    :max_teams => pl["max_teams"],
+    :max_players_per_team => pl["max_players_per_team"],
+    :admin_name => pl["admin_name"],
+    :admin_email => current_user.email
+    )
+    
     # delete pre league
-    # create subdomain
-    # add user to subdomain
+    # pl.destroy
 
-    @league = PreLeague.find(current_user.pre_league_id)
     # sign out user, no need to keep them logged in. They should only be able to log in on the subdomain site.
     sign_out current_user
   end
