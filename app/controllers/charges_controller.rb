@@ -28,6 +28,11 @@ class ChargesController < ApplicationController
   end
 
   def confirmation
-    @league = League.find(1)
+    # build league
+    # delete pre league
+
+    @league = PreLeague.find(current_user.pre_league_id)
+    # sign out user, no need to keep them logged in. They should only be able to log in on the subdomain site.
+    sign_out current_user
   end
 end

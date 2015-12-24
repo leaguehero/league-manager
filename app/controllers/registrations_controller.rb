@@ -12,8 +12,10 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     # Devise create path, need it here for custom usage
-    build_resource(sign_up_params)
+    user = params["user"]
+    sign_up_params = {"email"=>user["email"], "password"=>user["password"], "password_confirmation"=>user["password_confirmation"], "pre_league_id"=>(user["pre_league_id"].to_i)}
 
+    build_resource(sign_up_params)
     if resource.save
         yield resource if block_given?
         if resource.active_for_authentication?

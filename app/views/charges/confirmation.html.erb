@@ -3,18 +3,18 @@
 
 <h3>Below are all the details of your league.</h3>
 
-<strong>League Name:</strong> <%= @league.name %>
+<strong>League Name:</strong> <%= @league.league_name %>
 <br>
-<strong>URL:</strong> <%= @league.url %>
+<strong>URL:</strong> <%= @league.subdomain %>
 <br>
-<strong>Admin:</strong> <%= @league.admin %>
+<strong>Admin:</strong> <%= @league.admin_name %>
 <br>
 <strong>Teams:</strong> <%= @league.max_teams %>
 <br>
 <br>
 <h2>NEXT STEP</h2>
 
-Head over to <a href="<%= @league.url %>.leaguehero.io"><%= @league.url %></a> to get started setting up your teams and players
+Head over to <a href="<%= @league.subdomain %>.leaguehero.io"><%= @league.subdomain %></a> to get started setting up your teams and players
 
 
 Thank you!
