@@ -17,6 +17,7 @@ class SessionsController < Devise::SessionsController
       sign_out current_user
       redirect_to :root
     else
+      # Apartment::Tenant.switch!("")
       super
     end
   end

@@ -12,10 +12,10 @@
   <br>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   <br>
-  <%#= link_to('Manage League', subscriptions_path) %>
+  <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
   <br>
   <!-- We probably won't need this unless they have co-admin -->
-  <%= link_to('Invite User', new_user_invitation_path) %>
+  <%#= link_to('Invite User', new_user_invitation_path) %>
 <% end %>
 <br>
 <h1><%= @message %></h1>

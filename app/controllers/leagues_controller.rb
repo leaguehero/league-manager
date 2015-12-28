@@ -1,7 +1,7 @@
 class LeaguesController < ApplicationController
 
 # can use except or only to specify pages
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @league = "Rob's Rockin Robin"
@@ -12,7 +12,7 @@ class LeaguesController < ApplicationController
   end
 
   def edit
-
+    @league = League.find(params[:id])
   end
 
   def create
