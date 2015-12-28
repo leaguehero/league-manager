@@ -2,12 +2,6 @@ class League < ActiveRecord::Base
 
   before_create :create_tenant
 
-  after_create  :create_admin
-
-  def create_admin
-    
-  end
-
 private
 
    def create_tenant

@@ -15,14 +15,6 @@ class LeaguesController < ApplicationController
     @league = League.find(params[:id])
   end
 
-  def create
-
-  end
-
-  def confirmation
-    # confirmation page. Show Thank you note and link to league subdomain.
-  end
-
   def update
 
   end

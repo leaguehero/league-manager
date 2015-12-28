@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     # set @league if on subdomain
     if !request.subdomain.blank?
       @league = League.find_by_subdomain(request.subdomain)
-      Apartment::Tenant.switch!(request.subdomain)
+      # Apartment::Tenant.switch!(request.subdomain)
     end
     @message = "WELCOME TO LEAGUE HERO!"
   end
