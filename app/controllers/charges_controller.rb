@@ -40,7 +40,10 @@ class ChargesController < ApplicationController
     :admin_name => pl["admin_name"],
     :admin_email => current_user.email
     )
-    
+
+# update user with subdomain
+    user = User.find_by_email(current_user.email)
+    user.subdomain = pl["subdomain"]
     # delete pre league
     # pl.destroy
 
