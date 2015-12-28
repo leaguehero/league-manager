@@ -23,16 +23,10 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-    # use this route so user can't refresh confirmation page and send another call to Stripe
-    redirect_to "/charges/confirmation"
-  end
 
-# all functionality in this route should be moved to the league controller.
-  def confirmation
-    # find PreLeague to convert over to League
+    # build league if card goes through
     pl = PreLeague.find(current_user.pre_league_id)
-    # build league
-    @league = League.create(
+    League.create(
     :name => pl["league_name"],
     :subdomain => pl["subdomain"],
     :url => pl["subdomain"] + ".leaguehero.io",
@@ -41,7 +35,15 @@ class ChargesController < ApplicationController
     :admin_name => pl["admin_name"],
     :admin_email => current_user.email
     )
+    # use this route so user can't refresh confirmation page and send another call to Stripe
+    redirect_to "/charges/confirmation"
+  end
 
+# all functionality in this route should be moved to the league controller.
+  def confirmation
+    # find PreLeague to convert over to League
+    pl = PreLeague.find(current_user.pre_league_id)
+    @league = League.find_by_subdomain(pl["subdomain"])
 # update user with subdomain
     user = User.find_by_email(current_user.email)
     user.subdomain = pl["subdomain"]
