@@ -27,6 +27,7 @@ class ChargesController < ApplicationController
     redirect_to "/charges/confirmation"
   end
 
+# all functionality in this route should be moved to the league controller.
   def confirmation
     # find PreLeague to convert over to League
     pl = PreLeague.find(current_user.pre_league_id)
@@ -44,10 +45,6 @@ class ChargesController < ApplicationController
 # update user with subdomain
     user = User.find_by_email(current_user.email)
     user.subdomain = pl["subdomain"]
-    # delete pre league
-    # pl.destroy
-
-    # sign out user, no need to keep them logged in. They should only be able to log in on the subdomain site.
-    sign_out current_user
+    user.save!
   end
 end

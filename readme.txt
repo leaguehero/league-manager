@@ -39,6 +39,10 @@ Apartment::Tenant.switch!('tenant_name')
 #To remove a Tenant
 Apartment::Tenant.drop('tenant_name')
 
+#(DANGER)To remove ALL created Tenant
+- tnts = League.pluck(:subdomain)
+- tnts.each {|x| Apartment::Tenant.drop(x)}
+
 ### Sidekiq
 to work with Sidekiq in console: require 'Sidekiq/api'
 clear Retry jobs: Sidekiq::RetrySet.new.clear
