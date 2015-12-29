@@ -36,7 +36,6 @@ class ChargesController < ApplicationController
     :admin_name => pl["admin_name"],
     :admin_email => current_user.email
     )
-    
     # use this route so user can't refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
