@@ -25,7 +25,7 @@ Plan.create(:stripe_id => p1.id, :name => p1.name, :price => p1.amount, :interva
 #Test CreditCards
 In test mode, you can use the card number 4242424242424242 with any CVC and a valid expiration date. Read more in our testing documentation.
 
-# To run ultrahook for stripe events
+### To run ultrahook for stripe events
 ultrahook stripe http://lvh.me:5000/stripe-event
 
 ### Apartment

@@ -32,6 +32,12 @@ StripeEvent.configure do |events|
 
   end
 
+  # charge succeeded
+  events.subscribe 'charge.succeeded' do |event|
+    ap 'charge.succeeded'
+    ap event
+  end
+
   # events.subscribe 'charge.failed' do |event|
   #   # Define subscriber behavior based on the event object
   #   event.class       #=> Stripe::Event
