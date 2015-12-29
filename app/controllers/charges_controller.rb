@@ -24,8 +24,9 @@ class ChargesController < ApplicationController
       redirect_to new_charge_path
     end
 
-    # build league if card goes through
     pl = PreLeague.find(current_user.pre_league_id)
+
+    # build league if card goes through
     League.create(
     :name => pl["league_name"],
     :subdomain => pl["subdomain"],
@@ -35,6 +36,7 @@ class ChargesController < ApplicationController
     :admin_name => pl["admin_name"],
     :admin_email => current_user.email
     )
+    
     # use this route so user can't refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
