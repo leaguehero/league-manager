@@ -1,5 +1,21 @@
-<%= link_to('Login', new_user_session_path) %>
-<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-<%= link_to('Sign up', new_user_registration_path) %>
-<%= link_to('Manage Subscriptions', subscriptions_path) %>
+<% if current_user.nil? %>
+  <!-- if not on a subdomain -->
+  <% if request.subdomain.blank? || request.subdomain == "www" %>
+    <%= link_to('Get Started', new_pre_league_path) %>
+    <br>
+  <% else %>
+    <%= link_to('Login', new_user_session_path) %>
+    <br>
+  <% end %>
+<% else %>
+  Welcome <%= current_user.email %>
+  <br>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <br>
+  <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+  <br>
+  <!-- We probably won't need this unless they have co-admin -->
+  <%#= link_to('Invite User', new_user_invitation_path) %>
+<% end %>
+<br>
 <h1><%= @message %></h1>

@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper ApplicationHelper
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :set_mailer_host
 
   # Change layout marketing/application
   layout :define_layout
@@ -20,9 +21,14 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+  def set_mailer_host
+    # Will this work with new user registration
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
+  end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :subdomain
+    devise_parameter_sanitizer.for(:invite)  << :subdomain
   end
 
 end

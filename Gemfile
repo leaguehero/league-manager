@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby"2.2.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Devise gem
 gem 'devise'
+# Gem to allow users to invite other users
+gem 'devise_invitable', '~> 1.5.2'
 
 # For better printing
 gem 'awesome_print'
@@ -59,11 +61,16 @@ gem 'stripe'
 gem 'stripe_event'
 # gem for allow multi tenantcy database
 gem 'apartment'
+# for storing tenant name in Sidekiq
+gem 'apartment-sidekiq'
+
 
 
 
 
 group :development, :test do
+  # to see emails in development
+  gem "letter_opener"
   # webhook for localhost
   gem 'ultrahook'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
