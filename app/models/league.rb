@@ -7,6 +7,18 @@ class League < ActiveRecord::Base
 
 private
 
+  # subdomain should be unique
+   def subdomain_is_unique
+     if subdomain.present? && (League.all.count > 0)
+       unless League.find_by_subdomain(subdomain).nil?
+         errors.add(:subdomain, "is already taken")
+       end
+       if Apartment::Elevators::Subdomain.excluded_subdomains.include?(subdomain)
+         errors.add(:subdomain, "is not available")
+       end
+     end
+   end
+
    def create_tenant
      return false unless self.errors.empty?
       #  create subdomain
