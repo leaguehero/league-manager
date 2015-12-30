@@ -50,6 +50,9 @@ gem 'devise-async'
 # web server
 gem 'puma'
 
+# SEO
+gem 'meta-tags'
+
 # bootstrap for stylesheets
 gem 'bootstrap', '~> 4.0.0.alpha3'
 

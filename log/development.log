@@ -20478,3 +20478,530 @@ Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 15:08:30 -0600
 
 
 Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 15:08:30 -0600
+
+
+Started GET "/home.html" for 127.0.0.1 at 2015-12-30 16:31:44 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (8.9ms)
+Completed 200 OK in 562ms (Views: 536.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:31:45 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:31:45 -0600
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-12-30 16:31:48 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"contact"}
+  Rendered pages/contact.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 122ms (Views: 121.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:31:48 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:31:48 -0600
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"contact"}
+  Rendered pages/contact.html.erb within layouts/market (0.1ms)
+Completed 200 OK in 129ms (Views: 128.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:39:19 -0600
+
+
+Started GET "/features" for 127.0.0.1 at 2015-12-30 16:39:21 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"features"}
+  Rendered pages/features.html.erb within layouts/market (0.4ms)
+Completed 200 OK in 127ms (Views: 126.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:39:22 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:39:22 -0600
+
+
+Started GET "/pricing" for 127.0.0.1 at 2015-12-30 16:39:22 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"pricing"}
+  Rendered pages/pricing.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 132ms (Views: 131.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:39:23 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:39:23 -0600
+
+
+Started GET "/pre_leagues/new" for 127.0.0.1 at 2015-12-30 16:39:23 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (205.4ms)
+Completed 200 OK in 334ms (Views: 320.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-12-30 16:39:34 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  Rendered pages/about.html.erb within layouts/market (0.4ms)
+Completed 200 OK in 109ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:39:34 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:39:34 -0600
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-12-30 16:39:35 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"contact"}
+  Rendered pages/contact.html.erb within layouts/market (0.1ms)
+Completed 200 OK in 107ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:39:36 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:39:36 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 16:41:10 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 117ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 16:45:01 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (0.1ms)
+Completed 200 OK in 111ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:45:02 -0600
+
+
+Started GET "/pre_leagues/new" for 127.0.0.1 at 2015-12-30 16:45:22 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 118ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 16:58:27 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (9.7ms)
+Completed 200 OK in 319ms (Views: 293.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 16:58:28 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 16:58:28 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (0.6ms)
+Completed 200 OK in 128ms (Views: 127.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-30 17:08:38 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 17:08:39 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 17:08:39 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 17:08:55 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (0.2ms)
+Completed 200 OK in 121ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 17:08:55 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 17:08:55 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 17:09:13 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (1.7ms)
+Completed 200 OK in 335ms (Views: 324.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 17:09:14 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (0.2ms)
+Completed 200 OK in 174ms (Views: 173.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 17:15:39 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (0.2ms)
+Completed 200 OK in 99ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2015-12-30 17:18:00 -0600
