@@ -6,10 +6,11 @@ class ChargesController < ApplicationController
   def create
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
+    pl = PreLeague.find(current_user.pre_league_id)
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
-    league = "entered league name"
-    @amount  = (10 * 10) #(params[:max_teams] * params[:max_players_per_team])
+    league = pl["league_name"]
+    @amount  = (pl[:max_teams] * pl[:max_players_per_team])
     @amount_in_cents = @amount * 100
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
@@ -17,14 +18,13 @@ class ChargesController < ApplicationController
         :amount => @amount_in_cents,
         :currency => "usd",
         :source => token,
-        :description => "Charge for #{league}"
+        :description => "Charge for #{league} league."
       )
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
     end
 
-    pl = PreLeague.find(current_user.pre_league_id)
 
     # build league if card goes through
     League.create(
@@ -36,7 +36,7 @@ class ChargesController < ApplicationController
     :admin_name => pl["admin_name"],
     :admin_email => current_user.email
     )
-    
+
     # use this route so user can't refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
