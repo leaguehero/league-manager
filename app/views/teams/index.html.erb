@@ -1,4 +1,9 @@
 <!-- use jquery to restrict admin from adding more teams than league allows -->
 <!-- if no teams -->
+<% if @teams.blank? %>
+  <p>
+    Looks like you haven't added any teams. Get started by clicking below!
+  </p>
+<% end %>
 <%= link_to('Add Team', new_team_path) %>
 <!-- else show edit team -->

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224205213) do
+ActiveRecord::Schema.define(version: 20160105031428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20151224205213) do
     t.string   "customer_id"
     t.datetime "active_until"
     t.string   "subdomain"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer  "team_one"
+    t.integer  "team_two"
+    t.integer  "winner"
+    t.integer  "loser"
+    t.string   "location"
+    t.integer  "winner_score"
+    t.integer  "loser_score"
+    t.datetime "time"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "leagues", force: :cascade do |t|
@@ -47,6 +60,14 @@ ActiveRecord::Schema.define(version: 20151224205213) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pre_leagues", force: :cascade do |t|
     t.string   "league_name"
     t.string   "subdomain"
@@ -56,6 +77,14 @@ ActiveRecord::Schema.define(version: 20151224205213) do
     t.string   "admin_email"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "captain"
+    t.integer  "asst_captain"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
