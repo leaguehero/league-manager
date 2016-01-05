@@ -1,2 +1,10 @@
 <!-- use jquery to restrict adding more players than the league allows -->
-Add players-> Name, emails
+<%= simple_form_for @team do |f| %>
+  <%= f.input :name, :placeholder => "Insert the name of your team here" %>
+  <!-- this will be a dropdown of everyone on the team -->
+  <%= f.input :captain, :placeholder => "Choose team captain" %>
+  <!-- this will be a dropdown of everyone on the team -->
+  <%= f.input :asst_captain, :placeholder => "Choose asst. Captian" %>
+
+  <%= f.submit "Next" %>
+<% end %>

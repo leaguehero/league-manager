@@ -3,7 +3,13 @@
 <% if @teams.blank? %>
   <p>
     Looks like you haven't added any teams. Get started by clicking below!
+    <%= link_to('Add Team', new_team_path) %>
   </p>
+<% else %>
+  <% @team.each do |tm|%>
+    <p>
+      <%= tm.name  %>
+    </p>
+  <% end %>
 <% end %>
-<%= link_to('Add Team', new_team_path) %>
 <!-- else show edit team -->
