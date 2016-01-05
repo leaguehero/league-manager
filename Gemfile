@@ -72,6 +72,8 @@ gem 'apartment-sidekiq'
 
 
 group :development, :test do
+  # Environment variables
+  gem 'dotenv-rails'
   # to see emails in development
   gem "letter_opener"
   # webhook for localhost
