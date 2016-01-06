@@ -22401,3 +22401,1281 @@ Processing by ChargesController#confirmation as HTML
   Rendered charges/confirmation.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 2160ms (Views: 2145.1ms | ActiveRecord: 2.8ms)
 >>>>>>> 862bb61494ac584c8a7f920c4c099f86647e57e7
+
+
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2016-01-06 15:17:22 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.4ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered leagues/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 342ms (Views: 276.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:17:23 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-06 15:17:31 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1[0m  [["subdomain", "mctesterpants"]]
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `league_name' for #<League:0x007ff038978670>):
+    15:   <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+    16:   <br>
+    17:   Welcome <%= current_user.email %>
+    18:   <h3><%= @league.league_name %></h3>
+    19:   <h3>League Manager: <%= @league.admin_name %></h3>
+    20:   <h2>Standings</h2>
+    21:   <p>
+  app/views/home/index.html.erb:18:in `_app_views_home_index_html_erb___4488181257437488711_70334859136580'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (136.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-06 15:17:39 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1[0m  [["subdomain", "mctesterpants"]]
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `league_name' for #<League:0x007ff038921fa0>):
+    15:   <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+    16:   <br>
+    17:   Welcome <%= current_user.email %>
+    18:   <h3><%= @league.league_name %></h3>
+    19:   <h3>League Manager: <%= @league.admin_name %></h3>
+    20:   <h2>Standings</h2>
+    21:   <p>
+  app/views/home/index.html.erb:18:in `_app_views_home_index_html_erb___4488181257437488711_70334859136580'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.7ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.0ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (130.5ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2016-01-06 15:17:50 -0600
+Processing by TeamsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.4ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 1"], ["created_at", "2016-01-06 21:17:50.998250"], ["updated_at", "2016-01-06 21:17:50.998250"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 2"], ["created_at", "2016-01-06 21:17:51.054390"], ["updated_at", "2016-01-06 21:17:51.054390"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 3"], ["created_at", "2016-01-06 21:17:51.056235"], ["updated_at", "2016-01-06 21:17:51.056235"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 4"], ["created_at", "2016-01-06 21:17:51.057780"], ["updated_at", "2016-01-06 21:17:51.057780"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 5"], ["created_at", "2016-01-06 21:17:51.059241"], ["updated_at", "2016-01-06 21:17:51.059241"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 6"], ["created_at", "2016-01-06 21:17:51.060780"], ["updated_at", "2016-01-06 21:17:51.060780"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 7"], ["created_at", "2016-01-06 21:17:51.062298"], ["updated_at", "2016-01-06 21:17:51.062298"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 8"], ["created_at", "2016-01-06 21:17:51.063781"], ["updated_at", "2016-01-06 21:17:51.063781"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 9"], ["created_at", "2016-01-06 21:17:51.065475"], ["updated_at", "2016-01-06 21:17:51.065475"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 10"], ["created_at", "2016-01-06 21:17:51.067037"], ["updated_at", "2016-01-06 21:17:51.067037"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 11"], ["created_at", "2016-01-06 21:17:51.068505"], ["updated_at", "2016-01-06 21:17:51.068505"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 12"], ["created_at", "2016-01-06 21:17:51.069944"], ["updated_at", "2016-01-06 21:17:51.069944"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 13"], ["created_at", "2016-01-06 21:17:51.071347"], ["updated_at", "2016-01-06 21:17:51.071347"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 14"], ["created_at", "2016-01-06 21:17:51.072828"], ["updated_at", "2016-01-06 21:17:51.072828"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Team Name 15"], ["created_at", "2016-01-06 21:17:51.074346"], ["updated_at", "2016-01-06 21:17:51.074346"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Name 16"], ["created_at", "2016-01-06 21:17:51.075836"], ["updated_at", "2016-01-06 21:17:51.075836"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 179ms (Views: 86.7ms | ActiveRecord: 29.3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2016-01-06 15:17:55 -0600
+Processing by GamesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered games/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 142ms (Views: 139.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2016-01-06 15:17:57 -0600
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered games/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 95ms (Views: 92.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2016-01-06 15:18:42 -0600
+Processing by TeamsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.4ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.6ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 231ms (Views: 166.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/teams/1/edit" for 127.0.0.1 at 2016-01-06 15:19:50 -0600
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPlayer Load (53.1ms)[0m  SELECT "players".* FROM "players" WHERE "players"."team_id" = $1  [["team_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Player Name 1"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.539996"], ["updated_at", "2016-01-06 21:19:50.539996"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Player Name 2"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.543594"], ["updated_at", "2016-01-06 21:19:50.543594"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Player Name 3"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.545513"], ["updated_at", "2016-01-06 21:19:50.545513"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Player Name 4"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.547307"], ["updated_at", "2016-01-06 21:19:50.547307"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Player Name 5"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.549336"], ["updated_at", "2016-01-06 21:19:50.549336"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Player Name 6"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.551213"], ["updated_at", "2016-01-06 21:19:50.551213"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Player Name 7"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.553095"], ["updated_at", "2016-01-06 21:19:50.553095"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Player Name 8"], ["team_id", 1], ["created_at", "2016-01-06 21:19:50.554859"], ["updated_at", "2016-01-06 21:19:50.554859"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 217ms (Views: 131.9ms | ActiveRecord: 62.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-06 15:20:50 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1[0m  [["subdomain", "mctesterpants"]]
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `league_name' for #<League:0x007ff032d959c0>):
+    15:   <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+    16:   <br>
+    17:   Welcome <%= current_user.email %>
+    18:   <h3><%= @league.league_name %></h3>
+    19:   <h3>League Manager: <%= @league.admin_name %></h3>
+    20:   <h2>Standings</h2>
+    21:   <p>
+  app/views/home/index.html.erb:18:in `_app_views_home_index_html_erb___4488181257437488711_70334859136580'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.5ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.7ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (129.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-06 15:20:54 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1[0m  [["subdomain", "mctesterpants"]]
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `league_name' for #<League:0x007ff0326c0be0>):
+    15:   <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+    16:   <br>
+    17:   Welcome <%= current_user.email %>
+    18:   <h3><%= @league.league_name %></h3>
+    19:   <h3>League Manager: <%= @league.admin_name %></h3>
+    20:   <h2>Standings</h2>
+    21:   <p>
+  app/views/home/index.html.erb:18:in `_app_views_home_index_html_erb___4488181257437488711_70334859136580'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.1ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (58.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (135.1ms)
+
+
+Started POST "/console/repl_sessions/e2ca4dd048d2ca44cb61f1456844e362/trace" for 127.0.0.1 at 2016-01-06 15:21:22 -0600
+
+
+Started POST "/console/repl_sessions/e2ca4dd048d2ca44cb61f1456844e362/trace" for 127.0.0.1 at 2016-01-06 15:21:25 -0600
+DEPRECATION WARNING: [Deprecation Warning] `switch` now requires a block reset to the default tenant after the block. Please use `switch!` instead if you don't want this. (called from switch at /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/2.2.0/forwardable.rb:183)
+DEPRECATION WARNING: [Deprecation Warning] `switch` now requires a block reset to the default tenant after the block. Please use `switch!` instead if you don't want this. (called from switch at /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/2.2.0/forwardable.rb:183)
+DEPRECATION WARNING: [Deprecation Warning] `switch` now requires a block reset to the default tenant after the block. Please use `switch!` instead if you don't want this. (called from switch at /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/2.2.0/forwardable.rb:183)
+DEPRECATION WARNING: [Deprecation Warning] `switch` now requires a block reset to the default tenant after the block. Please use `switch!` instead if you don't want this. (called from switch at /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/2.2.0/forwardable.rb:183)
+  [1m[36mLeague Load (1.0ms)[0m  [1mSELECT "leagues".* FROM "leagues"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-06 15:25:12 -0600
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mLeague Load (0.2ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1[0m  [["subdomain", "mctesterpants"]]
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:25:13 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-06 15:26:09 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendered pages/home.html.erb within layouts/market (0.7ms)
+Completed 200 OK in 156ms (Views: 153.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:26:09 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:26:09 -0600
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 15:27:27 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered public/404.html within layouts/market (0.4ms)
+Completed 404 Not Found in 124ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:27:27 -0600
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:27:27 -0600
+
+
+Started GET "/sports/" for 127.0.0.1 at 2016-01-06 15:27:36 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered public/404.html within layouts/market (0.1ms)
+Completed 404 Not Found in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:27:36 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:27:36 -0600
+
+
+Started GET "/sports/index.html" for 127.0.0.1 at 2016-01-06 15:29:20 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/index"}
+  Rendered pages/sports/index.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 90ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:29:20 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:29:20 -0600
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 15:29:51 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered pages/sports.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 99ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:29:51 -0600
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:29:51 -0600
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:34:53 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 104ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:34:53 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:34:53 -0600
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:38:20 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.6ms)
+Completed 200 OK in 93ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:38:21 -0600
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:38:49 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.6ms)
+Completed 200 OK in 93ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:38:50 -0600
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.6ms)
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:39:03 -0600
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 15:39:14 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered pages/sports.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 100ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:39:15 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:39:15 -0600
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered pages/sports.html.erb within layouts/market (0.6ms)
+Completed 200 OK in 91ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:04 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:42:05 -0600
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:43:07 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.2ms)
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:43:07 -0600
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:43:07 -0600
+
+
+Started GET "/sports/ice-hockey" for 127.0.0.1 at 2016-01-06 15:43:09 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/ice-hockey"}
+  Rendered pages/sports/ice-hockey.html.erb within layouts/market (0.4ms)
+Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:43:10 -0600
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:43:10 -0600
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered pages/sports.html.erb within layouts/market (0.6ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:50:33 -0600
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:51:17 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.2ms)
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:51:17 -0600
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:51:17 -0600
+
+
+Started GET "/pre_leagues/new" for 127.0.0.1 at 2016-01-06 15:52:33 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (94.5ms)
+Completed 200 OK in 276ms (Views: 265.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:52:38 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"create-a-league"}
+  Rendered public/404.html within layouts/market (0.1ms)
+Completed 404 Not Found in 140ms (Views: 139.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:52:38 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:52:38 -0600
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:53:14 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 147ms (Views: 129.4ms | ActiveRecord: 2.3ms)
+
+
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:53:15 -0600
+
+
+Started GET "/pre_leagues/new" for 127.0.0.1 at 2016-01-06 15:53:29 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 110ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:53:35 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 94ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:53:56 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (93.9ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined method `pre_leagues_path' for #<#<Class:0x007ff032db5b30>:0x007ff032daf3c0>):
+    1: This will be the beginning of the league setup form
+    2: 
+    3: <%= simple_form_for @pre_league do |f| %>
+    4:   <%= f.input :league_name, :placeholder => "Insert the name of your league here" %>
+    5:   <%= f.input :admin_name,:placeholder => "Name of league Admin or Comissioner" %>
+    6:   <%= f.input :subdomain, :placeholder => "Subdomain for your league" %>
+  app/views/pre_leagues/new.html.erb:3:in `_app_views_pre_leagues_new_html_erb__1538765896211788017_70334811024900'
+  lib/rescue_apartment_middleware.rb:6:in `call'
+
+
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.2ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.5ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/aceeightofspades/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.7ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 124ms (Views: 114.3ms | ActiveRecord: 2.3ms)
+
+
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:15 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:16 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:16 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:54:16 -0600
+
+
+Started POST "/pre_leagues" for 127.0.0.1 at 2016-01-06 15:54:17 -0600
+Processing by PreLeaguesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sh+6yGhmHwaf1hRwqk4+72U/G4u52yqysXNdNKdPMIBo3IHsQgkjjtbPRXYI+sf+1ML89sHOcrVF0o3AGBq1OQ==", "pre_league"=>{"league_name"=>"", "admin_name"=>"", "subdomain"=>"", "max_teams"=>"", "max_players_per_team"=>""}, "commit"=>"Next"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://lvh.me:5000/create-a-league
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:54:17 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 139ms (Views: 138.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sports/baseball" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/baseball"}
+  Rendered pages/sports/baseball.html.erb within layouts/market (0.9ms)
+Completed 200 OK in 127ms (Views: 125.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 15:55:42 -0600
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:55:43 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 110ms (Views: 99.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:55:47 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 109ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create-a-league" for 127.0.0.1 at 2016-01-06 15:55:49 -0600
+Processing by PreLeaguesController#new as HTML
+  Rendered pre_leagues/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 108ms (Views: 107.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 16:01:45 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered pages/sports.html.erb within layouts/market (0.7ms)
+Completed 200 OK in 97ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:01:45 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:01:45 -0600
+
+
+Started GET "/sports/ice-hockey" for 127.0.0.1 at 2016-01-06 16:01:46 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports/ice-hockey"}
+  Rendered pages/sports/ice-hockey.html.erb within layouts/market (0.7ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:01:46 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:01:46 -0600
+
+
+Started GET "/features" for 127.0.0.1 at 2016-01-06 16:05:36 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"features"}
+  Rendered pages/features.html.erb within layouts/market (0.3ms)
+Completed 200 OK in 105ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:05:36 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:05:36 -0600
+
+
+Started GET "/pricing" for 127.0.0.1 at 2016-01-06 16:05:37 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"pricing"}
+  Rendered pages/pricing.html.erb within layouts/market (0.4ms)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:05:37 -0600
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:05:37 -0600
+
+
+Started GET "/features" for 127.0.0.1 at 2016-01-06 16:05:40 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"features"}
+  Rendered pages/features.html.erb within layouts/market (0.4ms)
+Completed 200 OK in 98ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:05:40 -0600
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:05:40 -0600
+
+
+Started GET "/features" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"features"}
+  Rendered pages/features.html.erb within layouts/market (0.7ms)
+Completed 200 OK in 95ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+Started GET "/assets/application.self-eee35f82402cabdc56b0c1d395cf673a68fea3008a084fbc150aec01f912c3df.css?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/application.self-7b1011ccfe113afce872bb0e647fba40ade59d0c8fc89613da7634114116032a.js?body=1" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:08:27 -0600
+
+
+Started GET "/sports" for 127.0.0.1 at 2016-01-06 16:08:34 -0600
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"sports"}
+  Rendered pages/sports.html.erb within layouts/market (0.9ms)
+Completed 200 OK in 139ms (Views: 138.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cd-arrow.svg" for 127.0.0.1 at 2016-01-06 16:08:34 -0600
+
+
+Started GET "/assets/cd-socials.svg" for 127.0.0.1 at 2016-01-06 16:08:34 -0600

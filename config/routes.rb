@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/leagues/confirmation"  => "leagues#confirmation"
   resources  :leagues
+  get "/create-a-league" => "pre_leagues#new"
   resources  :pre_leagues
   resources  :teams
   resources  :games
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
 
   # Pages for Marketing Site
   get "/*page" => "pages#show"
+
 
   mount StripeEvent::Engine, at: '/stripe-event' # provide a custom path
   # The priority is based upon order of creation: first created -> highest priority.
