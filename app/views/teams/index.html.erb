@@ -1,15 +1,5 @@
-<!-- use jquery to restrict admin from adding more teams than league allows -->
-<!-- if no teams -->
-<% if @teams.blank? %>
+<% @teams.each do |tm|%>
   <p>
-    Looks like you haven't added any teams. Get started by clicking below!
-    <%= link_to('Add Team', new_team_path) %>
+    <%= tm.name  %><%= tm.captain %><a href="teams/<%= tm.id %>">View</a><a href="teams/<%= tm.id %>/edit">Edit</a>
   </p>
-<% else %>
-  <% @team.each do |tm|%>
-    <p>
-      <%= tm.name  %>
-    </p>
-  <% end %>
 <% end %>
-<!-- else show edit team -->

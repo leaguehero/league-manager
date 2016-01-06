@@ -2,21 +2,26 @@ class TeamsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    # there should always only be 1 league per subdomain
+    @league = League.find(1)
+
     @teams = Team.all
-  end
-
-  def new
-    @team = Team.new
-  end
-
-  def create
-    @team = Team.new(team_params)
-    if @team.save
-    # go to add players page
-      redirect_to new_player_path(:team_id => @team.id)
-    else
-      redirect_to :back, :flash => {:error => @team.errors.full_messages.join(", ")}
+    # create max amount of teams when they first come to the team index page
+    if @teams.blank?
+        @count = 1
+        @league.max_teams.times {
+          @team_name  = "Team Name #{@count}"
+          Team.create(
+          name: @team_name
+          )
+          @count += 1
+        }
+      @teams = Team.all
     end
+  end
+  
+  def show
+
   end
 
   def edit
