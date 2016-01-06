@@ -16,16 +16,31 @@ class TeamsController < ApplicationController
           )
           @count += 1
         }
-      @teams = Team.all
     end
+    @teams = Team.all
   end
-  
+
   def show
 
   end
 
   def edit
-
+    @league = League.find(1)
+# check if any players are on the team
+    @players  = Player.where(:team_id => params[:id])
+    if @players.blank?
+        @count = 1
+        # create max amount of players when they first come to the team edit page
+        @league.max_players_per_team.times {
+          @player_name  = "Player Name #{@count}"
+          Player.create(
+          name: @player_name,
+          team_id: params[:id]
+          )
+          @count += 1
+        }
+    end
+    @players = Player.where(:team_id => params[:id])
   end
 
   def update
