@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources  :pre_leagues
   resources  :teams
   resources  :games
+  resources  :players
   get  'charges/confirmation' => "charges#confirmation"
   resources  :charges
 
