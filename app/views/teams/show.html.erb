@@ -1,1 +1,9 @@
 Show all team info here
+<br>
+<%= @team.name %>
+<br>
+<% @players.each do |pl|%>
+  <p>
+    <%= pl.name  %>
+  </p>
+<% end %>
