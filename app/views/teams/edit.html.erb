@@ -4,11 +4,11 @@ EDIT TEAM NAME:
 <%= best_in_place @team, :name %>
 <br>
 <br>
-<%= @team.name %>
-<br>
+
 <% @players.each do |pl|%>
   <p>
-    <%= pl.name  %>
+    <%= best_in_place pl, :name %>
+    <%= best_in_place pl, :email, place_holder: "Player Email" %>
   </p>
 <% end %>
 

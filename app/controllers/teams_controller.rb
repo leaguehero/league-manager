@@ -4,7 +4,6 @@ class TeamsController < ApplicationController
   def index
     # there should always only be 1 league per subdomain
     @league = League.find(1)
-
     @teams = Team.all
     # create max amount of teams when they first come to the team index page
     if @teams.blank?
