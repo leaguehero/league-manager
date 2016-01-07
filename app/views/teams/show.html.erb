@@ -4,6 +4,7 @@ Show all team info here
 <br>
 <% @players.each do |pl|%>
   <p>
-    <%= pl.name  %>
+    <strong>NAME:</strong> <%= pl.name  %>
+    <strong>EMAIL:</strong> <%= pl.email  %>
   </p>
 <% end %>
