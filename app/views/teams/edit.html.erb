@@ -1,7 +1,20 @@
 Edit Team here: change name, edit players, choose captian, upload image
 <br>
+EDIT TEAM NAME:
+<%= best_in_place @team, :name %>
+<br>
+<br>
+<%= @team.name %>
+<br>
 <% @players.each do |pl|%>
   <p>
     <%= pl.name  %>
   </p>
+<% end %>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    /* Activating Best In Place */
+    jQuery(".best_in_place").best_in_place();
+  });
 <% end %>

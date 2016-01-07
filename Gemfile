@@ -66,6 +66,9 @@ gem 'stripe_event'
 gem 'apartment'
 # for storing tenant name in Sidekiq
 gem 'apartment-sidekiq'
+# for editing attributes in place with AJAX
+gem 'best_in_place', '~> 3.0.1'
+
 
 
 

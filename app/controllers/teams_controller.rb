@@ -63,7 +63,16 @@ class TeamsController < ApplicationController
   end
 
   def update
-    
+    @team = Team.find(params[:id])
+    respond_to do |format|
+      if @team.update_attributes(team_params)
+        format.html { redirect_to(@team, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@team) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@team) }
+      end
+    end
   end
 
   def destroy

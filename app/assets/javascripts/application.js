@@ -14,4 +14,5 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require best_in_place
 //= require_tree .
