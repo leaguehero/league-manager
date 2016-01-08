@@ -7,8 +7,9 @@ EDIT TEAM NAME:
 
 <% @players.each do |pl|%>
   <p>
-    <strong>NAME:</strong><%= best_in_place pl, :name %>
+    <strong>NAME:</strong><%= best_in_place pl, :name, place_holder: "Player Name" %>
     <strong>EMAIL:</strong><%= best_in_place pl, :email, place_holder: "Player Email" %>
+    <strong>PHONE:</strong><%= best_in_place pl, :phone, place_holder: "Player Phone" %>
   </p>
 <% end %>
 
