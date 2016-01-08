@@ -10,6 +10,9 @@ class GamesController < ApplicationController
   def new
     @teams = Team.all
     @team_names = @teams.pluck(:name)
+
+
+    # move this to be called on button submit from view
     schedule=RRSchedule::Schedule.new(
       #array of teams that will compete against each other. If you group teams into multiple flights (divisions),
       #a separate round-robin is generated in each of them but the "physical constraints" are shared
@@ -21,7 +24,7 @@ class GamesController < ApplicationController
       ],
 
       #First games are played on...
-      :start_date => Date.parse("2010/10/13"),
+      :start_date => Date.parse("2016/03/01"),
 
       #array of dates to exclude
       :exclude_dates => [Date.parse("2010/11/24"),Date.parse("2010/12/15")],
@@ -34,5 +37,11 @@ class GamesController < ApplicationController
     )
     @schedule = schedule.generate
 
+  end
+
+  private
+
+  def game_params
+    params.require(:game).permit(:team_one,:team_two,:winner,:loser,:location,:winner_score,:loser_score,:time,:date)
   end
 end

@@ -44,6 +44,6 @@ class PlayersController < ApplicationController
 
 # Need to add permitted params for Rails 4
   def player_params
-    params.require(:player).permit(:name, :email, :team_id)
+    params.require(:player).permit(:name, :email, :phone, :team_id)
   end
 end

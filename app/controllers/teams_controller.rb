@@ -82,6 +82,6 @@ class TeamsController < ApplicationController
 
 # Need to add permitted params for Rails 4
   def team_params
-    params.require(:team).permit(:name, :captain, :asst_captain)
+    params.require(:team).permit(:name, :captain, :asst_captain, :coach, :points_for, :points_against)
   end
 end
