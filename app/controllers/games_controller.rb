@@ -8,6 +8,14 @@ class GamesController < ApplicationController
   end
 
   def new
+
+  end
+
+  def generator_options
+    @game = Game.new
+  end
+
+  def generate_games
     @teams = Team.all
     @team_names = @teams.pluck(:name)
 
@@ -36,7 +44,6 @@ class GamesController < ApplicationController
       :shuffle => true
     )
     @schedule = schedule.generate
-
   end
 
   private

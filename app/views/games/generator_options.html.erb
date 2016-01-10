@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    Add warning that they should only use this page in the begining of the season, running generate will remove all existing games and add a new schedule
+    <br>
+    Add your generator options here
+    <br>
+
+    Add form to enter fields/court options, game times, start date, how many times each team will play each other, dates to exclude.
+
+    <form action="games/generate" method="post">
+      <strong>Court/ Field Name(s):</strong> <input type="text" name="field_names" placeholder="Names of fields/ courts"><br>
+      <strong>Game Times:</strong>           <input type="text" name="game_times" placeholder="Times to allow Games"><br>
+      <strong>Start Date:</strong>           <input type="text" name="start_date" placeholder="Date to Start Games"><br>
+      <strong>Game Cycles:</strong>          <input type="text" name="cycles" placeholder="How Many Times Each Team Will Meet"><br>
+      <strong>Dates to Exclude:</strong>     <input type="text" name="excluded_dates" placeholder="Dates to not have games "><br>
+      <input type="submit" value="Generate Games">
+    </form>
+
+  </div>
+</div>

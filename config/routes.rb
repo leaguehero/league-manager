@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/create-a-league" => "pre_leagues#new"
   resources  :pre_leagues
   resources  :teams
+  get "games/generator_options" => "games#generator_options"
+  post "games/generate" => "games#generate_games"
   resources  :games
   resources  :players
   get  'charges/confirmation' => "charges#confirmation"
