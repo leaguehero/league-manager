@@ -1,10 +1,15 @@
-<br>
-<h1><%= @team.name %></h1>
-<br>
-<% @players.each do |pl|%>
-  <p>
-    <strong>NAME:</strong> <%= pl.name  %>
-    <strong>EMAIL:</strong> <%= pl.email  %>
-    <strong>PHONE:</strong> <%= pl.phone  %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <br>
+    <h1><%= @team.name %></h1>
+    <br>
+    <% @players.each do |pl|%>
+      <p>
+        <strong>NAME:</strong> <%= pl.name  %>
+        <strong>EMAIL:</strong> <%= pl.email  %>
+        <strong>PHONE:</strong> <%= pl.phone  %>
+      </p>
+    <% end %>
+
+  </div>
+</div>

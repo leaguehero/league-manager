@@ -25087,3 +25087,103 @@ Started GET "/assets/best_in_place.self-736c4c466f6a7ba1a06a77d0ab7a3a3919360435
 
 
 Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-08 08:28:10 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-10 10:43:13 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (7.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mLeague Load (0.7ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1  [["subdomain", "rob"]]
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 352ms (Views: 314.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-01-10 10:43:21 -0600
+Processing by SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (118.9ms)
+Completed 200 OK in 304ms (Views: 265.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+Processing by SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 108ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a61567bfb67916d3cc7946ae37b423fceb8b0b1572d4a1ed52b8a862682112e3.css?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/jquery.autosize.self-208a4ea73c22b3517889027ffae7a076a0c5b4c38e4b595639979f10ada2ebe4.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/best_in_place.self-736c4c466f6a7ba1a06a77d0ab7a3a3919360435d814a05c8cde33ad81160e6b.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/main.self-db400634dad4f73f05e786f3387db8fba1daf50296f1dfc12604f7a95fa8b3e7.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/stripe_payment.self-539c9a8b862c85dd36e0e17c82248c5c0b65188cf0610dd5c0d29f58f2718000.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started GET "/assets/application.self-42d7ccf3b645ccdbc8009709bb6c1a8f4fa23d19b2458c4919ca19b5c9a71b3e.js?body=1" for 127.0.0.1 at 2016-01-10 10:44:01 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-01-10 10:47:28 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rZD+A4bpO0kt3ZYHguj+8qjTDsxYVulSSM1IxadE67EYcFM3A1YxFywYnFIBV87cJaMWwv4d1Kr7AUbm1AKB7A==", "user"=>{"email"=>"rob@rob.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.3ms)[0m  [1mSELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."email" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1[0m  [["email", "rob@rob.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "public"."users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "public"."users"."id" = $5[0m  [["last_sign_in_at", "2016-01-08 14:26:24.069700"], ["current_sign_in_at", "2016-01-10 16:47:28.614646"], ["sign_in_count", 3], ["updated_at", "2016-01-10 16:47:28.616486"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://rob.lvh.me:5000/
+Completed 302 Found in 117ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-10 10:47:28 -0600
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mLeague Load (0.2ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1  [["subdomain", "rob"]]
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.4ms)

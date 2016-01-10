@@ -1,5 +1,9 @@
-<% @teams.each do |tm|%>
-  <p>
-    <%= tm.name  %><%= tm.captain %><a href="teams/<%= tm.id %>">View</a><a href="teams/<%= tm.id %>/edit">Edit</a>
-  </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @teams.each do |tm|%>
+      <p>
+        <%= tm.name  %><%= tm.captain %><a href="teams/<%= tm.id %>">View</a><a href="teams/<%= tm.id %>/edit">Edit</a>
+      </p>
+    <% end %>
+  </div>
+</div>

@@ -1,10 +1,15 @@
+<div class="container">
+  <div class="row">
 <!-- use jquery to restrict adding more players than the league allows -->
-<%= simple_form_for @player do |f| %>
-  <%= f.input :name, :placeholder => "Insert the name of your player here" %>
-  <!-- this will be a dropdown of everyone on the team -->
-  <%= f.input :email, :placeholder => "Player Email" %>
-  <!-- this will be a dropdown of everyone on the team -->
-  <%= f.input :team_id, as: :hidden%>
+    <%= simple_form_for @player do |f| %>
+      <%= f.input :name, :placeholder => "Insert the name of your player here" %>
+      <!-- this will be a dropdown of everyone on the team -->
+      <%= f.input :email, :placeholder => "Player Email" %>
+      <!-- this will be a dropdown of everyone on the team -->
+      <%= f.input :team_id, as: :hidden%>
 
-  <%= f.submit "Next" %>
-<% end %>
+      <%= f.submit "Next" %>
+    <% end %>
+
+  </div>
+</div>
