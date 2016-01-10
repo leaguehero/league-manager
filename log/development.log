@@ -25187,3 +25187,27 @@ Processing by HomeController#index as HTML
   [1m[35mLeague Load (0.2ms)[0m  SELECT  "leagues".* FROM "leagues" WHERE "leagues"."subdomain" = $1 LIMIT 1  [["subdomain", "rob"]]
   Rendered home/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/leagues/1/edit" for 127.0.0.1 at 2016-01-10 10:48:00 -0600
+Processing by LeaguesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mLeague Load (0.3ms)[0m  [1mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered leagues/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 249ms (Views: 195.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2016-01-10 10:48:03 -0600
+Processing by GamesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered games/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 136ms (Views: 132.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2016-01-10 10:48:04 -0600
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "public"."users".* FROM "public"."users" WHERE "public"."users"."id" = $1  ORDER BY "public"."users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (5.9ms)[0m  SELECT "teams"."name" FROM "teams"
+  Rendered games/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 121ms (Views: 90.8ms | ActiveRecord: 7.7ms)

@@ -1,20 +1,25 @@
-<!-- This will all change, don't worry Justin -->
-<h2>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</h2>
+<div class="container">
+  <div class="row">
+    <!-- This will all change, don't worry Justin -->
+    <h2>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</h2>
 
-<h3>Below are all the details of your league.</h3>
+    <h3>Below are all the details of your league.</h3>
 
-<strong>League Name:</strong> <%= @league.name %>
-<br>
-<strong>URL:</strong> <%= @league.subdomain %>
-<br>
-<strong>Admin:</strong> <%= @league.admin_name %>
-<br>
-<strong>Teams:</strong> <%= @league.max_teams %>
-<br>
-<br>
-<h2>NEXT STEP</h2>
+    <strong>League Name:</strong> <%= @league.name %>
+    <br>
+    <strong>URL:</strong> <%= @league.subdomain %>
+    <br>
+    <strong>Admin:</strong> <%= @league.admin_name %>
+    <br>
+    <strong>Teams:</strong> <%= @league.max_teams %>
+    <br>
+    <br>
+    <h2>NEXT STEP</h2>
 
-Head over to <a href="http://<%= @league.subdomain %>.leaguehero.io" target="_blank"><%= @league.subdomain %>.leaguehero.io</a> to get started setting up your teams and players
+    Head over to <a href="http://<%= @league.subdomain %>.leaguehero.io" target="_blank"><%= @league.subdomain %>.leaguehero.io</a> to get started setting up your teams and players
 
 
-Thank you!
+    Thank you!
+    
+  </div>
+</div>

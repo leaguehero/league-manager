@@ -1,18 +1,23 @@
-<h2>Sign Up</h2>
+<div class="container">
+  <div class="row">
+    <h2>Sign Up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-    <%= f.input :pre_league_id, as: :hidden, input_html: {value: (params["pre_league_id"].to_i)} %>
-    <%= f.submit "Next Step"%>
+      <div class="form-inputs">
+        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+        <%= f.input :password_confirmation, required: true %>
+        <%= f.input :pre_league_id, as: :hidden, input_html: {value: (params["pre_league_id"].to_i)} %>
+        <%= f.submit "Next Step"%>
+      </div>
+
+    <% end %>
+
+    <% unless request.subdomain.blank? || request.subdomain == "www" %>
+      <%= render "devise/shared/links" %>
+    <% end %>
+    
   </div>
-
-<% end %>
-
-<% unless request.subdomain.blank? || request.subdomain == "www" %>
-  <%= render "devise/shared/links" %>
-<% end %>
+</div>
