@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  include RRSchedule
+  # include RRSchedule
 
   before_action :authenticate_user!
 
@@ -8,20 +8,23 @@ class GamesController < ApplicationController
   end
 
   def new
+    @game = Game.new
+  end
+
+  def create
 
   end
 
   def generator_options
-    @game = Game.new
+    # @game = Game.new
   end
 
   def generate_games
     @teams = Team.all
     @team_names = @teams.pluck(:name)
 
-
     # move this to be called on button submit from view
-    schedule=RRSchedule::Schedule.new(
+    schedule = RRSchedule::Schedule.new(
       #array of teams that will compete against each other. If you group teams into multiple flights (divisions),
       #a separate round-robin is generated in each of them but the "physical constraints" are shared
       :teams => @team_names,

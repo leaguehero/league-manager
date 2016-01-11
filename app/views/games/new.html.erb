@@ -1,7 +1,16 @@
 Add Games here. Not sure the best way to do this. Maybe have 2 dropdowns of all team names (team1 vs team2) then they can add a date and time with jquery picker.
 <br>
+:team_one,:team_two,:winner,:loser,:location,:winner_score,:loser_score,:time,:date
 <div class="container">
   <div class="row">
+    <%= simple_form_for @game do |f| %>
+      <%= f.input :team_one %>
+      <%= f.input :team_two %>
+      <%= f.input :location %>
+      <%= f.input :time %>
+      <%= f.input :date %>
 
+      <%= f.submit "Add" %>
+    <% end %>
   </div>
 </div>
