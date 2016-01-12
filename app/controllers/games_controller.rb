@@ -4,11 +4,11 @@ class GamesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
   end
 
   def new
     @game = Game.new
+    @teams = Team.all
   end
 
   def create

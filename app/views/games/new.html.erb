@@ -4,8 +4,8 @@ Add Games here. Not sure the best way to do this. Maybe have 2 dropdowns of all 
 <div class="container">
   <div class="row">
     <%= simple_form_for @game do |f| %>
-      <%= f.input :team_one %>
-      <%= f.input :team_two %>
+      <%= f.input :team_one, :collection => @teams.all.map {|tm| ["#{tm.name}", tm.id]}.sort %>
+      <%= f.input :team_two, :collection => @teams.all.map {|tm| ["#{tm.name}", tm.id]}.sort %>
       <%= f.input :location %>
       <%= f.input :time %>
       <%= f.input :date %>
