@@ -57,11 +57,21 @@ class GamesController < ApplicationController
   end
 
   def edit
-    @games = Game.all
+    @game = Game.find(params[:id])
+    @teams = Team.all
   end
 
   def update
-
+    @game = Game.find(params[:id])
+    respond_to do |format|
+      if @game.update_attributes(game_params)
+        format.html { redirect_to(@game, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@game) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@game) }
+      end
+    end
   end
 
   private
