@@ -5,6 +5,13 @@
     <%= link_to('Generate Games', games_generator_options_path) %>
     <br>
 
-    Show all games here 
+    <% @games.each do |game| %>
+      <strong>Home Team:</strong> <%= game.team_one  %>
+      <strong>Away Team:</strong> <%= game.team_two  %>
+      <strong>Location:</strong> <%= game.location  %>
+      <strong>Date:</strong> <%= game.date %>
+      <strong>Time:</strong> <%= game.time %>
+      <br>
+    <% end %>
   </div>
 </div>

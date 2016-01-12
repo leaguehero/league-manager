@@ -4,6 +4,7 @@ class GamesController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @games = Game.all
   end
 
   def new
@@ -12,7 +13,13 @@ class GamesController < ApplicationController
   end
 
   def create
-
+    @game = Game.new(game_params)
+    if @game.save
+    # go to add games page
+      redirect_to games_path(:game_id => @game.id)
+    else
+      redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
+    end
   end
 
   def generator_options
