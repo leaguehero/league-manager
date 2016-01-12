@@ -56,6 +56,14 @@ class GamesController < ApplicationController
     @schedule = schedule.generate
   end
 
+  def edit
+    @games = Game.all
+  end
+
+  def update
+
+  end
+
   private
 
   def game_params

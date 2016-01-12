@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <br>
+      EDIT GAMES:
+    <br>
+
+    <% @games.each do |gm|%>
+      <p>
+        <strong>HOME TEAM:</strong><%= best_in_place gm, :team_one, place_holder: "Home Team" %>
+        <strong>AWAY TEAM:</strong><%= best_in_place gm, :team_two, place_holder: "Away Team" %>
+        <strong>LOCATION:</strong><%= best_in_place gm, :location, place_holder: "Game Location" %>
+        <strong>DATE:</strong><%= best_in_place gm, :date %>
+        <strong>TIME:</strong><%= best_in_place gm, :time %>
+      </p>
+    <% end %>
+
+    <%= javascript_tag do %>
+      $(document).ready(function() {
+        /* Activating Best In Place */
+        jQuery(".best_in_place").best_in_place();
+      });
+    <% end %>
+  </div>
+</div>
