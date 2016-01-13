@@ -32,7 +32,7 @@ class GamesController < ApplicationController
 
   def generate_games
     @teams = Team.all
-    @team_names = @teams.pluck(:name)
+    @team_ids = @teams.pluck(:id)
     @game_times = params["game_times"].split(", ")
     @fields = params["field_names"].split(", ")
 
@@ -40,7 +40,7 @@ class GamesController < ApplicationController
     schedule = RRSchedule::Schedule.new(
       #array of teams that will compete against each other. If you group teams into multiple flights (divisions),
       #a separate round-robin is generated in each of them but the "physical constraints" are shared
-      :teams => @team_names,
+      :teams => @team_ids,
 
       #Setup some scheduling rules
       :rules => [
@@ -61,9 +61,20 @@ class GamesController < ApplicationController
 
     )
     @schedule = schedule.generate
-
-    # create games per game generated 
-
+    # loop over each day games are played
+    @schedule.gamedays.each do |day|
+      # loop over all games played on that day
+      day.games.each do |gm|
+        # create games per game generated
+        Game.create(
+        team_one: gm.team_a,
+        team_two: gm.team_b,
+        location: gm.playing_surface,
+        time:     gm.game_time.strftime("%I:%M %p"),
+        date:     day.date.strftime("%m/%d/%Y")
+        )
+      end
+    end
 
     redirect_to games_path
   end
