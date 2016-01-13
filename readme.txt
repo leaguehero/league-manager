@@ -48,3 +48,13 @@ to work with Sidekiq in console: require 'Sidekiq/api'
 clear Retry jobs: Sidekiq::RetrySet.new.clear
 #see stats from Sidekiq
 stats = Sidekiq::Stats.new
+
+
+###Created By
+https://bitbucket.org/robschwartz/
+https://bitbucket.org/aceeightofspades/
+
+
+###Sources:
+https://github.com/bernat/best_in_place
+https://github.com/plataformatec/simple_form

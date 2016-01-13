@@ -1,6 +1,9 @@
 class GamesController < ApplicationController
   # include RRSchedule
 
+  # don't protect on genrate games post request
+  protect_from_forgery except: :generate_games
+
   before_action :authenticate_user!
 
   def index
@@ -23,12 +26,16 @@ class GamesController < ApplicationController
   end
 
   def generator_options
+    # TODO: Add validation to make sure the admin has added teams
     # @game = Game.new
   end
 
   def generate_games
     @teams = Team.all
     @team_names = @teams.pluck(:name)
+    @game_times = params["game_times"].split(",")
+    @fields = params["field_names"].split(",")
+    byebug
 
     # move this to be called on button submit from view
     schedule = RRSchedule::Schedule.new(
@@ -42,18 +49,21 @@ class GamesController < ApplicationController
       ],
 
       #First games are played on...
-      :start_date => Date.parse("2016/03/01"),
+      :start_date => Date.parse(params["start_date"]),
 
       #array of dates to exclude
       :exclude_dates => [Date.parse("2010/11/24"),Date.parse("2010/12/15")],
 
       #Number of times each team must play against each other (default is 1)
-      :cycles => 2,
+      :cycles => params["cycles"].to_i,
 
       #Shuffle team order before each cycle. Default is true
       :shuffle => true
+
     )
     @schedule = schedule.generate
+
+    redirect_to games_path
   end
 
   def edit
