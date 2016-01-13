@@ -33,9 +33,8 @@ class GamesController < ApplicationController
   def generate_games
     @teams = Team.all
     @team_names = @teams.pluck(:name)
-    @game_times = params["game_times"].split(",")
-    @fields = params["field_names"].split(",")
-    byebug
+    @game_times = params["game_times"].split(", ")
+    @fields = params["field_names"].split(", ")
 
     # move this to be called on button submit from view
     schedule = RRSchedule::Schedule.new(
@@ -45,7 +44,7 @@ class GamesController < ApplicationController
 
       #Setup some scheduling rules
       :rules => [
-        RRSchedule::Rule.new(:wday => 0, :gt => ["8:00PM","9:00PM","10:00PM"], :ps => ["field #1", "field #2"]),
+        RRSchedule::Rule.new(:wday => 0, :gt => @game_times, :ps => @fields),
       ],
 
       #First games are played on...
@@ -62,6 +61,9 @@ class GamesController < ApplicationController
 
     )
     @schedule = schedule.generate
+
+    # create games per game generated 
+
 
     redirect_to games_path
   end

@@ -58,3 +58,4 @@ https://bitbucket.org/aceeightofspades/
 ###Sources:
 https://github.com/bernat/best_in_place
 https://github.com/plataformatec/simple_form
+https://github.com/flamontagne/rrschedule

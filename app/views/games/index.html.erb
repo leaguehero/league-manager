@@ -4,7 +4,6 @@
     <br>
     <%= link_to('Generate Games', games_generator_options_path) %>
     <br>
-
     <% @games.each do |game| %>
       <strong>Home Team:</strong> <%= game.team_one  %>
       <strong>Away Team:</strong> <%= game.team_two  %>
