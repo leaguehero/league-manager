@@ -1,5 +1,4 @@
 class GamesController < ApplicationController
-  # include RRSchedule
 
   # don't protect on genrate games post request
   protect_from_forgery except: :generate_games
@@ -26,6 +25,7 @@ class GamesController < ApplicationController
   end
 
   def generator_options
+    @week_days = {sunday:0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday:5, saturday: 6}
     # TODO: Add validation to make sure the admin has added teams
     # @game = Game.new
   end
@@ -35,7 +35,7 @@ class GamesController < ApplicationController
     @team_ids = @teams.pluck(:id)
     @game_times = params["game_times"].split(", ")
     @fields = params["field_names"].split(", ")
-    @wdays = params["game_days"]
+    @wday = params["game_days"] # TODO: Add ability to have multiple days for games
 
     # move this to be called on button submit from view
     schedule = RRSchedule::Schedule.new(
@@ -45,7 +45,7 @@ class GamesController < ApplicationController
 
       #Setup some scheduling rules
       :rules => [
-        RRSchedule::Rule.new(:wday => 0, :gt => @game_times, :ps => @fields),
+          RRSchedule::Rule.new(:wday => @wday.to_i, :gt => @game_times, :ps => @fields),
       ],
 
       #First games are played on...
