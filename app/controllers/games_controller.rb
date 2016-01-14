@@ -35,6 +35,7 @@ class GamesController < ApplicationController
     @team_ids = @teams.pluck(:id)
     @game_times = params["game_times"].split(", ")
     @fields = params["field_names"].split(", ")
+    @wdays = params["game_days"]
 
     # move this to be called on button submit from view
     schedule = RRSchedule::Schedule.new(
@@ -95,6 +96,12 @@ class GamesController < ApplicationController
         format.json { respond_with_bip(@game) }
       end
     end
+  end
+
+  def destroy
+    Game.find(params[:id]).destroy
+    flash[:notice] = "Game was successfully deleted"
+    redirect_to games_path
   end
 
   private

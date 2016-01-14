@@ -5,12 +5,13 @@
     <%= link_to('Generate Games', games_generator_options_path) %>
     <br>
     <% @games.each do |game| %>
-      <strong>Home Team:</strong> <%= game.team_one  %>
-      <strong>Away Team:</strong> <%= game.team_two  %>
+      <strong>Home Team:</strong> <%= Team.find(game.team_one).name  %>
+      <strong>Away Team:</strong> <%= Team.find(game.team_two).name  %>
       <strong>Location:</strong> <%= game.location  %>
       <strong>Date:</strong> <%= game.date %>
       <strong>Time:</strong> <%= game.time %>
-      <a href="games/<%= game.id %>/edit">Edit</a>
+      <%= link_to('Edit', edit_game_path(:id => game.id)) %>
+      <%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %>
       <br>
     <% end %>
   </div>

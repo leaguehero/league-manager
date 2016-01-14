@@ -4,12 +4,19 @@
       EDIT GAMES:
     <br>
       <p>
-        <strong>HOME TEAM:</strong><%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-        <strong>AWAY TEAM:</strong><%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-        <strong>LOCATION:</strong><%= best_in_place @game, :location, place_holder: "Game Location" %>
-        <strong>DATE:</strong><%= best_in_place @game, :date, :as => :date %>
-        <strong>TIME:</strong><%= best_in_place @game, :time %>
+        <strong>HOME TEAM:</strong> <%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+        <strong>AWAY TEAM:</strong> <%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+        <strong>LOCATION:</strong>  <%= best_in_place @game, :location, place_holder: "Game Location" %>
+        <strong>DATE:</strong>      <%= best_in_place @game, :date, :as => :date %>
+        <strong>TIME:</strong>      <%= best_in_place @game, :time %>
       </p>
+    <br>
+      ADD GAME RESULTS:
+    <br>
+        <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort, :html_attrs => { :style => 'width:500px; height:500px;' } %>
+        <strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %>
+        <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+        <strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score, :type => :input, :html_attrs => { :style => 'width:500px; height:500px;' }  %>
   </div>
 </div>
 
