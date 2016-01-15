@@ -5,27 +5,27 @@
 */
 
 
-  // Clear
-  %clear:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+// Clear
+%clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  // Screensize Visibility
-  #desktop {
-    display: block;
-    visibility: visible;
-    @include breakpoint(l-three) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-  #mobile {
+// Screensize Visibility
+#desktop {
+  display: block;
+  visibility: visible;
+  @include breakpoint(l-three) {
     display: none;
     visibility: hidden;
-    @include breakpoint(l-three) {
-      display: block;
-      visibility: visible;
-    }
   }
+}
+#mobile {
+  display: none;
+  visibility: hidden;
+  @include breakpoint(l-three) {
+    display: block;
+    visibility: visible;
+  }
+}
