@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
   layout :define_layout
 
   def define_layout
-    # if devise_controller? && resource_name == :user
-    #   "devise"
     if params["controller"] == "pages"
       "market"
     else
