@@ -10,6 +10,7 @@ body {
   color: #666;
   font-family: Futura;
   height: 100%;
+  overflow-x: hidden;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -20,6 +21,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
 }
+h1, h2 { margin: 0 0 20px 0; }
+h3, h4 { margin: 0 0 12px 0; }
 h1 { font-size: 48px; }
 h2 { font-size: 42px; }
 h3 { font-size: 32px; }

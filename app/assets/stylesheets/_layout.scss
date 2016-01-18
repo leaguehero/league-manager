@@ -43,7 +43,7 @@
 header {
   border-bottom: 3px solid #6BC16F;
   height: 126px;
-  margin: 0 auto 64px auto;
+  margin: 0 auto 80px auto;
   padding: 64px 0.9375rem 32px 0.9375rem;
   @media (min-width: 768px) { max-width: 720px; }
   @media (min-width: 992px) { max-width: 940px; }
@@ -312,12 +312,47 @@ header {
 .no-touch #cd-lateral-nav .socials a:hover.cd-google { background-position: -96px -32px; }
 
 
+// Hero
+.hero {
+  margin: 0 0 80px 0;
+  text-align: center;
+  &.-home {
+    a.button { margin: 0 0 40px 0; }
+  }
+  img { margin: 0 0 64px 0; }
+}
+
 // Sections
 section {
   margin: 0 0 120px 0;
   &.-centered {
     text-align: center;
   }
+}
+
+// Slash
+.slasher {
+    width:2000px;
+    margin:0 auto 64px auto;
+}
+.slash-top {
+    height:0;
+    border-width: 100px 0 0 2000px;
+    border-style:solid;
+    border-color:transparent transparent #44536A #44536A;
+}
+.slash-content {
+  background: #44536A;
+  color: #FFF;
+  padding: 80px 0;
+  text-align: center;
+  h2 { color: #FFF; }
+}
+.slash-bottom {
+  height:0;
+  border-width:0 2000px 100px 0;
+  border-style:solid;
+  border-color: #44536A #44536A transparent transparent;
 }
 
 
