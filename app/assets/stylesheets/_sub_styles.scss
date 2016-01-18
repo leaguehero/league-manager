@@ -1,7 +1,46 @@
 .container-fluid{
   background-color: #edeff0;
+  height: 100%;
 }
 
 .info_box {
+  position: absolute;
+  top: 8em;
   background-color: #fff;
+  padding: 0;
+
+  ul {
+    height: 4em;
+    border-bottom: 2px solid #ddd;
+    li {
+      width: 15%;
+      float: left;
+      border-right: 2px solid #ddd;
+      padding: 10px;
+      height: 100%;
+      text-align: center;
+      line-height: 2.5em;
+      :hover{
+        color: black;
+      }
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        color: #a9a9a9;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.manage_tab{
+  float:right !important;
+  border-right: none !important;
+}
+
+.active{
+  a {
+    color: #000 !important;
+    border-bottom: none !important;
+  }
 }
