@@ -48,56 +48,56 @@
 	<main class="cd-main-content">
       <%= yield %>
 	</main>
-
-  <footer>
-  	<div class="container">
-  		<div class="row site-links">
-  			<div class="col-sm-3">
-  				<h5 id="h-products"><i class="caret right icon"></i>League Hero</h5>
-  				<nav id="n-products">
-  					<a href="/features">Features</a>
-  					<a href="/pricing">Pricing</a>
-  					<a href="/create-a-league">Create a League</a>
-  				</nav>
-  			</div>
-  			<div class="col-sm-3">
-  				<h5 id="h-resources"><i class="caret right icon"></i>Get in Touch</h5>
-  				<nav id="n-resources">
-  					<a href="/about">About Us</a>
-            <a href="http://blog.leaguehero.io">Blog</a>
-            <a href="/contact">Contact Us</a>
-  				</nav>
-  			</div>
-  			<div class="col-sm-5 col-md-offset-1">
-  				<h5 class="newsletter-h5">Newsletter</h5>
-          <div id="mc_embed_signup">
-            <form action="//leaguehero.us12.list-manage.com/subscribe/post?u=10d3864be1f2576e3c4af4f2c&amp;id=c936e347ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-            	  <label for="mce-EMAIL">Please enter your email address to receive our newsletter.</label>
-            	  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10d3864be1f2576e3c4af4f2c_c936e347ef" tabindex="-1" value=""></div>
-                <button type="submit" name="subscribe" id="mc-embedded-subscribe">Sign Up</button>
-              </div>
-            </form>
-          </div>
-  			</div>
-  		</div>
-  		<div class="row">
-  			<div id="desktop" class="col-sm-9">
-  				<nav class="legal">
-  					<span>&copy; 2016 <strong>LEAGUE</strong>HERO</span>
-  					<a href="/privacy">Privacy Policy</a>
-  					<a href="/terms">Terms of Service</a>
-  				</nav>
-  			</div>
-  			<div class="col-sm-3">
-  				<p>Built in
-  					<strong>Chicago</strong>
-  				</p>
-  			</div>
-  		</div>
-  	</div>
-  </footer>
+  <% if request.subdomain.blank? || request.subdomain == "www" %>
+    <footer>
+    	<div class="container">
+    		<div class="row site-links">
+    			<div class="col-sm-3">
+    				<h5 id="h-products"><i class="caret right icon"></i>League Hero</h5>
+    				<nav id="n-products">
+    					<a href="/features">Features</a>
+    					<a href="/pricing">Pricing</a>
+    					<a href="/create-a-league">Create a League</a>
+    				</nav>
+    			</div>
+    			<div class="col-sm-3">
+    				<h5 id="h-resources"><i class="caret right icon"></i>Get in Touch</h5>
+    				<nav id="n-resources">
+    					<a href="/about">About Us</a>
+              <a href="http://blog.leaguehero.io">Blog</a>
+              <a href="/contact">Contact Us</a>
+    				</nav>
+    			</div>
+    			<div class="col-sm-5 col-md-offset-1">
+    				<h5 class="newsletter-h5">Newsletter</h5>
+            <div id="mc_embed_signup">
+              <form action="//leaguehero.us12.list-manage.com/subscribe/post?u=10d3864be1f2576e3c4af4f2c&amp;id=c936e347ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              	  <label for="mce-EMAIL">Please enter your email address to receive our newsletter.</label>
+              	  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10d3864be1f2576e3c4af4f2c_c936e347ef" tabindex="-1" value=""></div>
+                  <button type="submit" name="subscribe" id="mc-embedded-subscribe">Sign Up</button>
+                </div>
+              </form>
+            </div>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div id="desktop" class="col-sm-9">
+    				<nav class="legal">
+    					<span>&copy; 2016 <strong>LEAGUE</strong>HERO</span>
+    					<a href="/privacy">Privacy Policy</a>
+    					<a href="/terms">Terms of Service</a>
+    				</nav>
+    			</div>
+    			<div class="col-sm-3">
+    				<p>Built in
+    					<strong>Chicago</strong>
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
 
 	<nav id="cd-lateral-nav">
 		<ul class="cd-navigation">
@@ -179,6 +179,7 @@
 			});
 		});
 	</script>
+  <% end %>
 
 
 </body>
