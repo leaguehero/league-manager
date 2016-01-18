@@ -36,8 +36,8 @@ bower.json
 .powenv
 =======
 .byebug_history
- dump.rdb
- log/development.log
+dump.rdb
+log/development.log
 
  # Compiled source #
 ###################
