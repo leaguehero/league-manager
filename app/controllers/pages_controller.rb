@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
 
   def show
+    if !request.subdomain.blank?
+      @league = League.find_by_subdomain(request.subdomain)
+      # Apartment::Tenant.switch!(request.subdomain)
+    end
+
     if valid_page?
       render template: "pages/#{params[:page]}"
     else
@@ -13,4 +18,4 @@ class PagesController < ApplicationController
     File.exist?(Pathname.new(Rails.root + "app/views/pages/#{params[:page]}.html.erb"))
   end
 
-  end
+end

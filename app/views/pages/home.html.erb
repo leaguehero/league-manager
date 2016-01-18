@@ -1,3 +1,6 @@
+
+
+<% if request.subdomain.blank? || request.subdomain == "www" %>
 <% set_meta_tags :site => 'League Hero, simple and easy league managment software.',
   :canonical => 'http://leaguehero.io',
   :author => 'League Hero',
@@ -22,7 +25,6 @@
     :image          => '-',
   }
 %>
-
 <div class="container">
   <div class="hero -home">
     <div class="row">
@@ -69,15 +71,19 @@
         <p>Simple reminders, rain delays or rescheduling can all be easily communicated to teams and players across the league with League Hero’s messaging services. Send specific messages to each captain or a mass message to everyone in the league.</p>
         <a class="button" href="#">Learn More</a>
       </div>
-    </div>
-  </section>
-  <section class="-centered">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Create... Set... Score!</h2>
-        <p>In 3 simple steps you can create your league's page.</p>
-        <a class="button -green" href="/create-a-league">Create a League</a>
+    </section>
+    <section class="-centered">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Create... Set... Score!</h2>
+          <p>In 3 simple steps you can create your league's page.</p>
+          <a class="button -green" href="/create-a-league">Create a League</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
+
+<% else %>
+  <%= render :partial => 'home/index' %>
+<% end %>

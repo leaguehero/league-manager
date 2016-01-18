@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   # post "/subscriptions/update_card_details" => "subscriptions#update_card_details"
   # resources  :subscriptions
 
-  root to: "home#index"
-  # root "pages#show", page: "home"
+  # root to: "home#index"
+  root "pages#show", page: "home"
 
   # Pages for Marketing Site
   get "/*page" => "pages#show"

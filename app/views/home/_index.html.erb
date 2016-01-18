@@ -1,0 +1,38 @@
+<%= render :partial => 'home/header' %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="info_box col-md-8 col-md-push-2">
+      <% if current_user.nil? %>
+        <!-- if not on a subdomain -->
+        <% if request.subdomain.blank? || request.subdomain == "www" %>
+        <!-- we might not need these links if we are redirected to sing up wiz from marketing site -->
+          <%= link_to('Get Started', new_pre_league_path) %>
+          <br>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+          <br>
+        <% end %>
+      <% else %>
+        <br>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <br>
+        <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+        <br>
+        Welcome <%= current_user.email %>
+        <h3><%= @league.name %></h3>
+        <h3>League Manager: <%= @league.admin_name %></h3>
+        <h2>Standings</h2>
+        <p>
+          Put league standings here
+        </p>
+        <h2>Recent News</h2>
+        <p>
+          Recent news here
+        </p>
+
+      <% end %>
+      <br>
+      <h1><%= @message %></h1>
+    </div>
+  </div>
+</div>
