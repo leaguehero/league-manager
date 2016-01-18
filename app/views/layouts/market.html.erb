@@ -30,24 +30,23 @@
 
 </head>
 <body>
-
-  <header>
-		<a class="logo desktop" href="/">League<span>Hero</span></a>
-		<nav id="cd-top-nav">
-			<ul>
-				<li><a href="/features">Features</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a class="sign-up" href="/create-a-league">Create</a></li>
-			</ul>
-		</nav>
-		<a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
-	</header>
+  <% if request.subdomain.blank? || request.subdomain == "www" %>
+    <header>
+    		<a class="logo desktop" href="/">League<span>Hero</span></a>
+    		<nav id="cd-top-nav">
+    			<ul>
+    				<li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a class="sign-up" href="/create-a-league">Create</a></li>
+    			</ul>
+    		</nav>
+    		<a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+  	</header>
+  <% end %>
 
 	<main class="cd-main-content">
-    <div class="container">
       <%= yield %>
-    </div>
 	</main>
 
   <footer>

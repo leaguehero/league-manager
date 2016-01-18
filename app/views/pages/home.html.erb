@@ -1,5 +1,6 @@
 <% if request.subdomain.blank? || request.subdomain == "www" %>
 <!-- marketing site -->
+<div class="container">
 
   <% set_meta_tags :site => 'League Hero, simple and easy league managment software.',
     :canonical => 'http://leaguehero.io',
@@ -80,6 +81,8 @@
       </div>
     </section>
   </div>
+</div>
+
 <% else %>
   <!-- subdomain home page -->
   <%= render :partial => 'home/index' %>
