@@ -2,6 +2,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="info_box col-md-8 col-md-push-2">
+        <ul class="nav nav-tabs list-inline" role="tablist">
+          <li class="active"><a href="#league" role="tab" data-toggle="tab">LEAGUE</a></li>
+          <li><a href="#schedule" role="tab" data-toggle="tab">SCHEDULE</a></li>
+          <li style="float:right;"><a href="#manage" role="tab" data-toggle="tab">MANAGE</a></li>
+        </ul>
       <% if current_user.nil? %>
         <!-- if not on a subdomain -->
         <% if request.subdomain.blank? || request.subdomain == "www" %>
@@ -36,3 +41,10 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('#myTabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>

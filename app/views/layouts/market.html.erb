@@ -43,12 +43,12 @@
     		</nav>
     		<a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
   	</header>
-  <% end %>
 
 	<main class="cd-main-content">
+    <% end %>
       <%= yield %>
-	</main>
   <% if request.subdomain.blank? || request.subdomain == "www" %>
+  </main>
     <footer>
     	<div class="container">
     		<div class="row site-links">
