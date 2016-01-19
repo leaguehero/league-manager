@@ -53,18 +53,18 @@
     	<div class="container">
     		<div class="row site-links">
     			<div class="col-sm-3">
-    				<h5 id="h-products"><i class="caret right icon"></i>League Hero</h5>
-    				<nav id="n-products">
+    				<h5 id="h-lh"><i class="caret right icon"></i>League Hero</h5>
+    				<nav id="n-lh">
     					<a href="/features">Features</a>
     					<a href="/pricing">Pricing</a>
     					<a href="/create-a-league">Create a League</a>
     				</nav>
     			</div>
     			<div class="col-sm-3">
-    				<h5 id="h-resources"><i class="caret right icon"></i>Get in Touch</h5>
-    				<nav id="n-resources">
+    				<h5 id="h-about"><i class="caret right icon"></i>Get in Touch</h5>
+    				<nav id="n-about">
     					<a href="/about">About Us</a>
-              <a href="http://blog.leaguehero.io">Blog</a>
+              <!-- <a href="http://blog.leaguehero.io">Blog</a> -->
               <a href="/contact">Contact Us</a>
     				</nav>
     			</div>
@@ -159,24 +159,18 @@
 
   <script type="text/javascript">
 		$(document).ready(function(){
-	    $("#h-products").click(function() {
-				$(this).find("i.icon").toggleClass("right");
-	      $(this).find("i.icon").toggleClass("down");
-	      $("#n-products").toggle();
-	    });
-			$("#h-resources").click(function() {
-				$(this).find("i.icon").toggleClass("right");
-	      $(this).find("i.icon").toggleClass("down");
-	      $("#n-resources").toggle();
-	    });
-			$("#h-about").click(function() {
-				$(this).find("i.icon").toggleClass("right");
-	      $(this).find("i.icon").toggleClass("down");
-	      $("#n-about").toggle();
-	    });
-  		$(".bxslider").bxSlider({
-				auto: true
-			});
+      if ($(window).width() < 768) {
+  	    $("#h-lh").click(function() {
+  				$(this).find("i.icon").toggleClass("right");
+  	      $(this).find("i.icon").toggleClass("down");
+  	      $("#n-lh").toggle();
+  	    });
+  			$("#h-about").click(function() {
+  				$(this).find("i.icon").toggleClass("right");
+  	      $(this).find("i.icon").toggleClass("down");
+  	      $("#n-about").toggle();
+  	    });
+      }
 		});
 	</script>
   <% end %>

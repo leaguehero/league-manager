@@ -1,3 +1,35 @@
+<% set_meta_tags :site => 'About • League Hero',
+  :canonical => 'http://leaguehero.io/about',
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'management', 'about', 'scheduling'],
+  :reverse => true,
+  :og => {
+    :title          => 'About • League Hero',
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => 'About • League Hero',
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
+
 <div class="container">
-  <h1>About Page</h1>
+  <div class="hero">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>About League Hero</h1>
+        <p>League Hero was created by Rob Schwartz and Justin Seidl.</p>
+      </div>
+    </div>
+  </div>
 </div>

@@ -113,7 +113,11 @@ header {
       letter-spacing: 0;
       text-decoration: none;
     }
-    &.sign-up { color: #6BC16F; }
+    &.sign-up {
+      color: #6BC16F;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
   }
 }
 .no-touch #cd-top-nav a:hover { color: rgba(255,255,255,0.7); }
@@ -319,6 +323,11 @@ header {
   &.-home {
     a.button { margin: 0 0 40px 0; }
   }
+  &.-pricing {
+    text-align: left;
+    margin: 0 0 160px 0;
+    padding: 40px 0 0 0;
+  }
   img { margin: 0 0 64px 0; }
 }
 
@@ -353,6 +362,16 @@ section {
   border-width:0 2000px 100px 0;
   border-style:solid;
   border-color: #44536A #44536A transparent transparent;
+}
+
+// Featured Items
+.featured-item {
+  margin: 0 auto 40px auto;
+  width: 80%;
+  img {
+    border-radius: 60px;
+    margin: 0 0 20px 0;
+  }
 }
 
 
