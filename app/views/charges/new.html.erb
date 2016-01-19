@@ -1,30 +1,41 @@
 <%= javascript_include_tag "https://js.stripe.com/v2/" %>
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <%= form_tag "/charges", id: "payment-form" do %>
-      <span class="payment-errors text-danger"></span>
+<div class="sub_header">
+  <div class="header_style_bar">
+  </div>
+  <div class="league_name">
+    Create a League
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="info_box col-md-8 col-md-push-2">
+      <div id="info_box_content">
+        <%= form_tag "/charges", id: "payment-form" do %>
+          <span class="payment-errors text-danger"></span>
 
-      <div class="form-group">
-        <label for="number">Card Number</label>
-        <input type="text" size="20" class="form-control"  id="number" data-stripe="number"/>
+          <div class="form-group">
+            <label for="number">Card Number</label>
+            <input type="text" size="20" class="form-control"  id="number" data-stripe="number"/>
+          </div>
+
+          <div class="form-group">
+            <label for="cvc">CVC</label>
+            <input type="text" size="4" class="form-control" id="cvc" data-stripe="cvc"/>
+          </div>
+
+          <label for="exp">Expiration (MM/YYYY)</label>
+          <div class="form-group">
+            <div>
+              <input type="text" size="2" class="form-control exp-field" id="exp"data-stripe="exp-month"/>
+              <span> / </span>
+              <input type="text" size="4" class="form-control exp-field" data-stripe="exp-year"/>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Payment</button>
+        <% end %>
       </div>
-
-      <div class="form-group">
-        <label for="cvc">CVC</label>
-        <input type="text" size="4" class="form-control" id="cvc" data-stripe="cvc"/>
-      </div>
-
-      <label for="exp">Expiration (MM/YYYY)</label>
-      <div class="form-group">
-        <div>
-          <input type="text" size="2" class="form-control exp-field" id="exp"data-stripe="exp-month"/>
-          <span> / </span>
-          <input type="text" size="4" class="form-control exp-field" data-stripe="exp-year"/>
-        </div>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit Payment</button>
-    <% end %>
+    </div>
   </div>
 </div>
 

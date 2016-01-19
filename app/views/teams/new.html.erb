@@ -1,15 +1,36 @@
-<div class="container">
+<%= render :partial => 'home/header' %>
+<div class="container-fluid">
   <div class="row">
-<!-- use jquery to restrict adding more players than the league allows -->
-    <%= simple_form_for @team do |f| %>
-      <%= f.input :name, :placeholder => "Insert the name of your team here" %>
-      <!-- this will be a dropdown of everyone on the team -->
-      <%= f.input :captain, :placeholder => "Choose team captain" %>
-      <!-- this will be a dropdown of everyone on the team -->
-      <%= f.input :asst_captain, :placeholder => "Choose asst. Captian" %>
+    <div class="info_box col-md-8 col-md-push-2">
+      <div class="info_box_header">
+        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
+          <li class="active"><a href="#league" role="tab" data-toggle="tab">LEAGUE</a></li>
+          <li><a href="#schedule" role="tab" data-toggle="tab">SCHEDULE</a></li>
+          <div class="dropdown">
+            <li class="manage_tab">
+              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li><a href="/teams">Manage Teams</a></li>
+                  <li><a href="/games">Manage Games</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+        </div>
+        </ul>
+      </div>
+      <div id="info_box_content">
+    <!-- use jquery to restrict adding more players than the league allows -->
+        <%= simple_form_for @team do |f| %>
+          <%= f.input :name, :placeholder => "Insert the name of your team here" %>
+          <!-- this will be a dropdown of everyone on the team -->
+          <%= f.input :captain, :placeholder => "Choose team captain" %>
+          <!-- this will be a dropdown of everyone on the team -->
+          <%= f.input :asst_captain, :placeholder => "Choose asst. Captian" %>
 
-      <%= f.submit "Next" %>
-    <% end %>
-
+          <%= f.submit "Next" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
