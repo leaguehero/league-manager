@@ -6,10 +6,20 @@
         <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
           <li class="active"><a href="#league" role="tab" data-toggle="tab">LEAGUE</a></li>
           <li><a href="#schedule" role="tab" data-toggle="tab">SCHEDULE</a></li>
-          <li class="manage_tab"><a href="#manage" role="tab" data-toggle="tab">MANAGE</a></li>
+          <div class="dropdown">
+            <li class="manage_tab">
+              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li><a href="/teams">Manage Teams</a></li>
+                  <li><a href="/games">Manage Games</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+        </div>
         </ul>
       </div>
-      <div class="info_box_content">
+      <div id="info_box_content">
         <% if current_user.nil? %>
           <!-- if not on a subdomain -->
           <% if request.subdomain.blank? || request.subdomain == "www" %>
@@ -58,5 +68,9 @@
   $('#info_box_tabs a').click(function (e) {
     e.preventDefault()
     $(this).tab('show');
-  })
+  });
+  $('.dropdown-toggle').dropdown();
+  // add redner different views into the info_box_content area
+  $("#info_box_content").html("<%=escape_javascript(render :partial=>"show_blog")%>");
+
 </script>

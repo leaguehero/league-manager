@@ -1,25 +1,46 @@
-Edit Team here: change name, edit players, choose captian, upload image
-<div class="container">
+<%= render :partial => 'home/header' %>
+<div class="container-fluid">
   <div class="row">
-    <br>
-    EDIT TEAM NAME:
-    <%= best_in_place @team, :name %>
-    <br>
-    <br>
+    <div class="info_box col-md-8 col-md-push-2">
+      <div class="info_box_header">
+        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
+          <li class="active"><a href="#league" role="tab" data-toggle="tab">LEAGUE</a></li>
+          <li><a href="#schedule" role="tab" data-toggle="tab">SCHEDULE</a></li>
+          <div class="dropdown">
+            <li class="manage_tab">
+              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li><a href="/teams">Manage Teams</a></li>
+                  <li><a href="/games">Manage Games</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+        </div>
+        </ul>
+      </div>
+      <div id="info_box_content">
+        <br>
+        EDIT TEAM NAME:
+        <%= best_in_place @team, :name %>
+        <br>
+        <br>
 
-    <% @players.each do |pl|%>
-      <p>
-        <strong>NAME:</strong><%= best_in_place pl, :name, place_holder: "Player Name" %>
-        <strong>EMAIL:</strong><%= best_in_place pl, :email, place_holder: "Player Email" %>
-        <strong>PHONE:</strong><%= best_in_place pl, :phone, place_holder: "Player Phone" %>
-      </p>
-    <% end %>
+        <% @players.each do |pl|%>
+          <p>
+            <strong>NAME:</strong><%= best_in_place pl, :name, place_holder: "Player Name" %>
+            <strong>EMAIL:</strong><%= best_in_place pl, :email, place_holder: "Player Email" %>
+            <strong>PHONE:</strong><%= best_in_place pl, :phone, place_holder: "Player Phone" %>
+          </p>
+        <% end %>
 
-    <%= javascript_tag do %>
-      $(document).ready(function() {
-        /* Activating Best In Place */
-        jQuery(".best_in_place").best_in_place();
-      });
-    <% end %>
+        <%= javascript_tag do %>
+          $(document).ready(function() {
+            /* Activating Best In Place */
+            jQuery(".best_in_place").best_in_place();
+          });
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

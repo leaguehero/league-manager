@@ -1,22 +1,44 @@
-<div class="container">
+<%= render :partial => 'home/header' %>
+<div class="container-fluid">
   <div class="row">
-    <br>
-      EDIT GAMES:
-    <br>
-      <p>
-        <strong>HOME TEAM:</strong> <%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-        <strong>AWAY TEAM:</strong> <%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-        <strong>LOCATION:</strong>  <%= best_in_place @game, :location, place_holder: "Game Location" %>
-        <strong>DATE:</strong>      <%= best_in_place @game, :date, :as => :date %>
-        <strong>TIME:</strong>      <%= best_in_place @game, :time %>
-      </p>
-    <br>
-      ADD GAME RESULTS:
-    <br>
-        <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort, :html_attrs => { :style => 'width:500px; height:500px;' } %>
-        <strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %>
-        <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-        <strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score, :type => :input, :html_attrs => { :style => 'width:500px; height:500px;' }  %>
+    <div class="info_box col-md-8 col-md-push-2">
+      <div class="info_box_header">
+        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
+          <li class="active"><a href="#league" role="tab" data-toggle="tab">LEAGUE</a></li>
+          <li><a href="#schedule" role="tab" data-toggle="tab">SCHEDULE</a></li>
+          <div class="dropdown">
+            <li class="manage_tab">
+              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li><a href="/teams">Manage Teams</a></li>
+                  <li><a href="/games">Manage Games</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+        </div>
+        </ul>
+      </div>
+      <div id="info_box_content">
+        <br>
+          EDIT GAMES:
+        <br>
+          <p>
+            <strong>HOME TEAM:</strong> <%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+            <strong>AWAY TEAM:</strong> <%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+            <strong>LOCATION:</strong>  <%= best_in_place @game, :location, place_holder: "Game Location" %>
+            <strong>DATE:</strong>      <%= best_in_place @game, :date, :as => :date %>
+            <strong>TIME:</strong>      <%= best_in_place @game, :time %>
+          </p>
+        <br>
+          ADD GAME RESULTS:
+        <br>
+            <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort, :html_attrs => { :style => 'width:500px; height:500px;' } %>
+            <strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %>
+            <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+            <strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score, :type => :input, :html_attrs => { :style => 'width:500px; height:500px;' }  %>
+      </div>
+    </div>
   </div>
 </div>
 

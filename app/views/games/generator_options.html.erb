@@ -1,33 +1,47 @@
-<div class="container">
+<%= render :partial => 'home/header' %>
+<div class="container-fluid">
   <div class="row">
-    Add warning that they should only use this page in the begining of the season, running generate will remove all existing games and add a new schedule
-    <br>
-    Add your generator options here
-    <br>
+    <div class="info_box col-md-8 col-md-push-2">
+      <div class="info_box_header">
+        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
+          <li class="active"><a href="#league" role="tab" data-toggle="tab">LEAGUE</a></li>
+          <li><a href="#schedule" role="tab" data-toggle="tab">SCHEDULE</a></li>
+          <div class="dropdown">
+            <li class="manage_tab">
+              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li><a href="/teams">Manage Teams</a></li>
+                  <li><a href="/games">Manage Games</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+        </div>
+        </ul>
+      </div>
+      <div id="info_box_content">
+        <form action="generate" method="post">
+          <strong>Court/ Field Name(s):</strong> <input type="text" name="field_names" placeholder="Names of fields/ courts">
+            Please use a comma(,) to seperate the field/ court names.
+            <br>
+          <strong>Game Times:</strong> <input type="text" name="game_times" placeholder="Times to allow Games">
+          Please use a comma(,) to seperate game times to allow.
+          <br>
+          <strong>Start Date:</strong> <input type="date" name="start_date" placeholder="Date to Start Games"><br>
+          <strong>Game Day:</strong> <select type="collection" name="game_days" placeholder="Days of week to allow Games">
+            <% @week_days.each do |key, val| %>
+              <option value=<%= val %>>
+                <%= key %>
+              </option>
+            <% end %>
+          </select><br>
+          <strong>Game Cycles:</strong> <input type="text" name="cycles" placeholder="How Many Times Each Team Will Meet"><br>
+          <strong>Dates to Exclude:</strong> <input type="text" name="excluded_dates" placeholder="Dates to not have games "> Add dates in YYYY/MM/DD format<br><br>
 
-    Add form to enter fields/court options, game times, start date, how many times each team will play each other, dates to exclude.
-
-    <form action="generate" method="post">
-      <strong>Court/ Field Name(s):</strong> <input type="text" name="field_names" placeholder="Names of fields/ courts">
-        Please use a comma(,) to seperate the field/ court names.
-        <br>
-      <strong>Game Times:</strong> <input type="text" name="game_times" placeholder="Times to allow Games">
-      Please use a comma(,) to seperate game times to allow.
-      <br>
-      <strong>Start Date:</strong> <input type="date" name="start_date" placeholder="Date to Start Games"><br>
-      <strong>Game Day:</strong> <select type="collection" name="game_days" placeholder="Days of week to allow Games">
-        <% @week_days.each do |key, val| %>
-          <option value=<%= val %>>
-            <%= key %>
-          </option>
-        <% end %>
-      </select><br>
-      <strong>Game Cycles:</strong> <input type="text" name="cycles" placeholder="How Many Times Each Team Will Meet"><br>
-      <strong>Dates to Exclude:</strong> <input type="text" name="excluded_dates" placeholder="Dates to not have games "> Add dates in YYYY/MM/DD format<br><br>
-
-      <input type="submit" value="Generate Games">
-      <notice>Don't worry, you will be able to edit the games.</notice>
-    </form>
-
+          <input type="submit" value="Generate Games">
+          <notice>Don't worry, you will be able to edit the games.</notice>
+        </form>
+      </div>
+    </div>
   </div>
 </div>

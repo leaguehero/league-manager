@@ -2,6 +2,8 @@ class TeamsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @league = League.find_by_subdomain(request.subdomain)
+
     # there should always only be 1 league per subdomain
     @league = League.find(1)
     @teams = Team.all
@@ -20,6 +22,8 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @league = League.find_by_subdomain(request.subdomain)
+
     id = params[:id]
     @league = League.find(1)
 # check if any players are on the team
@@ -41,6 +45,8 @@ class TeamsController < ApplicationController
   end
 
   def edit
+    @league = League.find_by_subdomain(request.subdomain)
+
     id = params[:id]
     @league = League.find(1)
 # check if any players are on the team

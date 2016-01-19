@@ -7,11 +7,13 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+    @league = League.find_by_subdomain(request.subdomain)
   end
 
   def new
     @game = Game.new
     @teams = Team.all
+    @league = League.find_by_subdomain(request.subdomain)
   end
 
   def create
@@ -25,6 +27,7 @@ class GamesController < ApplicationController
   end
 
   def generator_options
+    @league = League.find_by_subdomain(request.subdomain)
     @week_days = {sunday:0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday:5, saturday: 6}
     # TODO: Add validation to make sure the admin has added teams
     # @game = Game.new
@@ -81,6 +84,7 @@ class GamesController < ApplicationController
   end
 
   def edit
+    @league = League.find_by_subdomain(request.subdomain)
     @game = Game.find(params[:id])
     @teams = Team.all
   end

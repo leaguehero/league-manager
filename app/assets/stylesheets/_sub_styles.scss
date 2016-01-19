@@ -44,3 +44,15 @@
     border-bottom: none !important;
   }
 }
+
+#info_box_content {
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.dropdown-menu {
+  float: right;
+  li{
+    width: 10%;
+  }
+}
