@@ -1,20 +1,31 @@
-<div class="container">
+<div class="sub_header">
+  <div class="header_style_bar">
+  </div>
+  <div class="league_name">
+    Create a League
+  </div>
+</div>
+<div class="container-fluid">
   <div class="row">
-    <h2>Log in</h2>
+    <div class="info_box col-md-8 col-md-push-2">
+      <div id="info_box_content">
+        <h2>Log in</h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs">
-        <%= f.input :email, required: false, autofocus: true %>
-        <%= f.input :password, required: false %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :email, required: false, autofocus: true %>
+            <%= f.input :password, required: false %>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+          <div class="form-actions">
+            <%= f.button :submit, "Log in" %>
+          </div>
+        <% end %>
+        <% if request.subdomain.blank? || request.subdomain == "www" %>
+          <%= render "devise/shared/links" %>
+        <% end %>
       </div>
-    <% end %>
-    <% if request.subdomain.blank? || request.subdomain == "www" %>
-      <%= render "devise/shared/links" %>
-    <% end %>    
+    </div>
   </div>
 </div>
