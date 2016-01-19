@@ -113,7 +113,11 @@ header {
       letter-spacing: 0;
       text-decoration: none;
     }
-    &.sign-up { color: #6BC16F; }
+    &.sign-up {
+      color: #6BC16F;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
   }
 }
 .no-touch #cd-top-nav a:hover { color: rgba(255,255,255,0.7); }
