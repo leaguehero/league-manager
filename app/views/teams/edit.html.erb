@@ -23,6 +23,11 @@
         <br>
         EDIT TEAM NAME:
         <%= best_in_place @team, :name %>
+        <% if !params[:errors].blank? %>
+          <p>
+            <%= params[:errors] %>
+          </p>
+        <% end %>
         <br>
         <br>
 

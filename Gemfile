@@ -67,8 +67,8 @@ gem 'apartment'
 # for storing tenant name in Sidekiq
 gem 'apartment-sidekiq'
 # for editing attributes in place with AJAX
-gem 'best_in_place', '~> 3.0.1'
-# schedule generator 
+gem 'best_in_place'
+# schedule generator
 gem 'rrschedule'
 
 

@@ -226,7 +226,7 @@ DEPENDENCIES
   apartment
   apartment-sidekiq
   awesome_print
-  best_in_place (~> 3.0.1)
+  best_in_place
   bootstrap (~> 4.0.0.alpha3)
   byebug
   coffee-rails (~> 4.1.0)
