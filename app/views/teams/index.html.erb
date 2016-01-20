@@ -20,11 +20,36 @@
         </ul>
       </div>
       <div id="info_box_content">
-        <% @teams.each do |tm|%>
-          <p>
-            <%= tm.name  %><%= tm.captain %><a href="teams/<%= tm.id %>">View</a><a href="teams/<%= tm.id %>/edit">Edit</a>
-          </p>
-        <% end %>
+        <h2>Teams</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th class="team_captian">Team Captain</th>
+              <th></th>
+              <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @teams.each do |tm|%>
+              <tr>
+                <td>
+                  <%= tm.name  %>
+                </td>
+                <td class="team_captian">
+                  <%= !tm.captain.blank? ? tm.captain : "-" %>
+                </td>
+                <td>
+                  <a href="teams/<%= tm.id %>">View</a>
+                </td>
+                <td>
+                  <a href="teams/<%= tm.id %>/edit">Edit</a>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+
+        </table>
       </div>
     </div>
   </div>

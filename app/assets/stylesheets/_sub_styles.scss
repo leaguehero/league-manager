@@ -46,8 +46,8 @@
 }
 
 #info_box_content {
-  padding-right: 3em;
-  padding-left: 3em;
+  padding: 3em;
+
 }
 
 .dropdown-menu {
@@ -55,4 +55,9 @@
   li{
     width: 10%;
   }
+}
+
+// team index page
+.team_captian{
+  text-align: center;
 }

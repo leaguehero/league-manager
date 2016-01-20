@@ -70,7 +70,7 @@ class TeamsController < ApplicationController
   respond_to :html, :json
   def update
     @team = Team.find(params[:id])
-    @team.update_attributes(params[:team])
+    @team.update_attributes(team_params)
     respond_with @team
   end
 
