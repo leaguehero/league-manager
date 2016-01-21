@@ -20,32 +20,44 @@
         </ul>
       </div>
       <div id="info_box_content">
-        <br>
-        EDIT TEAM NAME:
-        <%= best_in_place @team, :name %>
-        <% if !params[:errors].blank? %>
-          <p>
-            <%= params[:errors] %>
-          </p>
-        <% end %>
-        <br>
-        <br>
+        <div><span class="edit_page_title">EDIT TEAM DETAILS</span> (click on any input to edit)</div>
+        <p class="team_name"><%= best_in_place @team, :name %></p>
+        <table class="table teams_table">
+          <thead>
+            <tr>
+              <th class="team_edit_header">Name</th>
+              <th class="team_edit_header">Email</th>
+              <th class="team_edit_header">Phone</th>
+              <th>Captain</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @players.each do |pl|%>
+              <tr>
+                <td>
+                  <%= best_in_place pl, :name, place_holder: "Player Name" %>
+                </td>
+                <td>
+                  <%= best_in_place pl, :email, place_holder: "Player Email" %>
+                </td>
+                <td>
+                  <%= best_in_place pl, :phone, place_holder: "Player Phone" %>
+                </td>
+                <td class="glyphicon glyphicon-star-empty">
 
-        <% @players.each do |pl|%>
-          <p>
-            <strong>NAME:</strong><%= best_in_place pl, :name, place_holder: "Player Name" %>
-            <strong>EMAIL:</strong><%= best_in_place pl, :email, place_holder: "Player Email" %>
-            <strong>PHONE:</strong><%= best_in_place pl, :phone, place_holder: "Player Phone" %>
-          </p>
-        <% end %>
-
-        <%= javascript_tag do %>
-          $(document).ready(function() {
-            /* Activating Best In Place */
-            jQuery(".best_in_place").best_in_place();
-          });
-        <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </div>
+
+<%= javascript_tag do %>
+$(document).ready(function() {
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
+});
+<% end %>
