@@ -57,10 +57,8 @@
   }
 }
 
+/////////TEAM PAGES///////
 // team index page
-.team_captian_header{
-  width: 40%;
-}
 .team_header{
   width: 40%;
 }
@@ -69,4 +67,20 @@
   thead{
     background-color: #ddd;
   }
+}
+
+// team show page
+.team_name{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.edit_team_button {
+  float: right;
+  border: 1px solid black !important;
+  color: black;
+}
+  .edit_team_button:hover{
+    background-color: #edeff0 !important;
 }

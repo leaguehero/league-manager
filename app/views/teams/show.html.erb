@@ -20,16 +20,40 @@
         </ul>
       </div>
       <div id="info_box_content">
-        <br>
-        <h1><%= @team.name %></h1>
-        <br>
-        <% @players.each do |pl|%>
+        <p class="team_name"><%= @team_name %> <span><a class="btn btn-default edit_team_button" href="<%= params['id'] %>/edit" role="button">EDIT TEAM</a></span></p>
+        <% if !@team.captain.blank? %>
           <p>
-            <strong>NAME:</strong> <%= pl.name  %>
-            <strong>EMAIL:</strong> <%= pl.email  %>
-            <strong>PHONE:</strong> <%= pl.phone  %>
+            Team Captain:
           </p>
         <% end %>
+        <table class="table teams_table">
+          <thead>
+            <tr>
+              <th class="team_header">Name</th>
+              <th class="team_header">Email</th>
+              <th>Phone</th>
+              <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @players.each do |pl|%>
+              <tr>
+                <td>
+                  <%= pl.name  %>
+                </td>
+                <td>
+                  <%= pl.email  %>
+                </td>
+                <td>
+                  <%= pl.phone  %>
+                </td>
+                <td>
+
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
