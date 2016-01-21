@@ -58,6 +58,15 @@
 }
 
 // team index page
-.team_captian{
-  text-align: center;
+.team_captian_header{
+  width: 40%;
+}
+.team_header{
+  width: 40%;
+}
+.teams_table {
+  border: 1px solid #ddd;
+  thead{
+    background-color: #ddd;
+  }
 }
