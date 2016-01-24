@@ -52,9 +52,14 @@
 
 .dropdown-menu {
   float: right;
+  display: block;
+  position: static;
+  margin-bottom: 5px;
+  width: 180px;
   li{
     width: 10%;
   }
+
 }
 
 /////////TEAM PAGES///////
@@ -93,4 +98,11 @@
 .edit_page_title{
   font-size: 1em;
   font-weight: bold;
+}
+
+////////////////Game Pages///////////
+// Game Edit Page
+
+#ui-datepicker-div{
+  background-color: #edeff0;
 }
