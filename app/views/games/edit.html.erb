@@ -56,10 +56,10 @@
         <br>
           ADD GAME RESULTS:
         <br>
-            <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort%>
+            <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name }%>
             <strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %>
             <br>
-            <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+            <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %>
             <strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %>
       </div>
     </div>
