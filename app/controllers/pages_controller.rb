@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
+  include PagesHelper
 
   def show
     if !request.subdomain.blank?
       @league = League.find_by_subdomain(request.subdomain)
+      create_rankings
       # Apartment::Tenant.switch!(request.subdomain)
     end
 
