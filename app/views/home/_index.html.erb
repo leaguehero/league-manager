@@ -40,16 +40,25 @@
           <h3><%= @league.name %></h3>
           <h3>League Manager: <%= @league.admin_name %></h3>
           <h2>Standings</h2>
+          <table class="table teams_table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Win</th>
+                <th>Loss</th>
+                <th>Tie</th>
+            </tr>
+            </thead>
+            <tbody>
+              <%= @wins %>
+              <%= @losses %>
+            </tbody>
+          </table>
           <p>
             Put league standings here
           </p>
           <h2>Recent News</h2>
-          <p>
-            Recent news here
-          </p>
-          <p>
-            Recent news here
-          </p>
           <p>
             Recent news here
           </p>
