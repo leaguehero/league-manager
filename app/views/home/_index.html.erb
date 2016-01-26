@@ -40,6 +40,7 @@
           <h3><%= @league.name %></h3>
           <h3>League Manager: <%= @league.admin_name %></h3>
           <h2>Standings</h2>
+
           <table class="table teams_table">
             <thead>
               <tr>
@@ -51,13 +52,28 @@
             </tr>
             </thead>
             <tbody>
-              <%= @wins %>
-              <%= @losses %>
+              <% @rankings.each do |tm| %>
+              <tr>
+                <td>
+                  <%= @rankings.index(tm) + 1 %>
+                </td>
+                <td>
+                  <%= tm[0] %>
+                </td>
+                <td>
+                  <%= tm[1]["wins"] %>
+                </td>
+                <td>
+                  <%= tm[1]["losses"] %>
+                </td>
+                <td>
+                  <%= tm[1]["ties"]%>
+                </td>
+              </tr>
+              <% end %>
             </tbody>
           </table>
-          <p>
-            Put league standings here
-          </p>
+
           <h2>Recent News</h2>
           <p>
             Recent news here

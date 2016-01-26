@@ -5,6 +5,8 @@ module PagesHelper
       @rankings[team.name] = {}
       @rankings[team.name]["wins"] = Game.where(winner: team.id).count
       @rankings[team.name]["losses"] = Game.where(loser: team.id).count
+      # need to update schema before adding ties
+      @rankings[team.name]["ties"] = 0
     end
     @rankings = @rankings.sort_by{|k,v| v["wins"]}.reverse
   end
