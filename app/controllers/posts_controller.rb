@@ -12,6 +12,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    if @post.save
+    # go to add posts page
+      redirect_to posts_path(:post_id => @post.id)
+    else
+      redirect_to :back, :flash => {:error => @post.errors.full_messages.join(", ")}
+    end
   end
 
   def update

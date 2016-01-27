@@ -21,7 +21,15 @@
         </ul>
       </div>
       <div id="info_box_content">
-        New Posts
+        <h2>Create New League Post</h2>
+        <%= simple_form_for @post do |f| %>
+          <%= f.input :title, :placeholder => "Post title" %>
+          <!-- this will be a dropdown of everyone on the team -->
+          <%= f.input :body, :placeholder => "Write your post here" %>
+          <!-- this will be a dropdown of everyone on the team -->
+
+          <%= f.submit "Submit" %>
+        <% end %>
       </div>
     </div>
   </div>

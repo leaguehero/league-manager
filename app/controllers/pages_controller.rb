@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     if !request.subdomain.blank?
       @league = League.find_by_subdomain(request.subdomain)
       create_rankings
+      @posts = Post.all
       # Apartment::Tenant.switch!(request.subdomain)
     end
 

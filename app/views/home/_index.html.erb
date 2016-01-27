@@ -76,12 +76,12 @@
           </table>
 
           <h2>Recent News</h2>
-          <p>
-            Recent news here
-          </p>
-          <p>
-            Recent news here
-          </p>
+          <% if @posts.length > 0 %>
+            <% @posts.each do |post| %>
+              <h4><%= post.title %></h4>
+              <p><%= post.body %></p>
+            <% end %>
+          <% end %>
         <% end %>
         <br>
         <h1><%= @message %></h1>
