@@ -1,0 +1,11 @@
+show all posts
+<% if !@posts.nil? %>
+  <% @posts.each do |post| %>
+    <h4><%= post.title %></h4>
+    <p><%= post.body %></p>
+  <% end %>
+<% else %>
+<p>
+  Add a League Message
+</p>
+<% end %>
