@@ -12,6 +12,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="/teams">Manage Teams</a></li>
                   <li><a href="/games">Manage Games</a></li>
+                  <li><a href="/posts">Manage Posts</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="/users/sign_out">Logout</a></li>
                 </ul>
@@ -25,11 +26,10 @@
             <h4><%= post.title %></h4>
             <p><%= post.body %></p>
           <% end %>
-        <% else %>
-          <p>
-            Add a League Message
-          </p>
         <% end %>
+        <p>
+          <%= link_to "Create League Post", new_post_path %><br />
+        </p>
       </div>
     </div>
   </div>
