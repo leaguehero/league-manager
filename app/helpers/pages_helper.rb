@@ -8,6 +8,7 @@ module PagesHelper
       # need to update schema before adding ties
       @rankings[team.name]["ties"] = 0
     end
+    # order rank by games won percentage
     @rankings = @rankings.sort_by{|k,v| v["wins"]}.reverse
   end
 end
