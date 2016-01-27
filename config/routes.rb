@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources  :players
   get  'charges/confirmation' => "charges#confirmation"
   resources  :charges
+  resources  :posts
 
   # get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"
   # get "/subscriptions/update_card"          => "subscriptions#update_card"
