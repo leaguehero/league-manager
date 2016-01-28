@@ -4,7 +4,6 @@ class ChargesController < ApplicationController
   end
 
   def create
-    byebug
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
     pl = PreLeague.find(current_user.pre_league_id)
     # Get the credit card details submitted by the form
