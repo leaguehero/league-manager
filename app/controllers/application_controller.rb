@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
   before_filter :set_mailer_host
+  before_filter :set_league
 
   # Change layout marketing/application
   layout :define_layout
@@ -27,6 +28,17 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :subdomain
     devise_parameter_sanitizer.for(:invite)  << :subdomain
+  end
+
+  def set_league
+    # set @league if on subdomain
+    if !request.subdomain.blank?
+      @league = League.find_by_subdomain(request.subdomain)
+      # TODO: remove when going live
+      if @league.nil?
+        @league = PreLeague.find_by_subdomain(request.subdomain)
+      end
+    end
   end
 
 end
