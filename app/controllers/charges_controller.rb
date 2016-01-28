@@ -35,19 +35,17 @@ class ChargesController < ApplicationController
     :admin_name => pl["admin_name"],
     :admin_email => current_user.email
     )
-
+    # update current_user with subdomain
+    user = User.find_by_email(current_user.email)
+    user.subdomain = pl["subdomain"]
+    user.save!
     # use this route so user can't refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
 
 # all functionality in this route should be moved to the league controller.
   def confirmation
-    # find PreLeague to convert over to League
-    pl = PreLeague.find(current_user.pre_league_id)
-    @league = League.find_by_subdomain(pl["subdomain"])
-# update user with subdomain
-    user = User.find_by_email(current_user.email)
-    user.subdomain = pl["subdomain"]
-    user.save!
+    # find PreLeague from current_user
+    @league = PreLeague.find_by_subdomain(current_user["subdomain"])
   end
 end
