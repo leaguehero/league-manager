@@ -5,11 +5,11 @@ class ChargesController < ApplicationController
 
   def create
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-    ap Stripe.api_key
+    ap "API KEY: #{Stripe.api_key}"
     pl = PreLeague.find(current_user.pre_league_id)
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
-    ap token
+    ap "TOKEN: #{token}"
     league = pl["league_name"]
     @amount  = (pl[:max_teams] * pl[:max_players_per_team])
     @amount_in_cents = @amount * 100
