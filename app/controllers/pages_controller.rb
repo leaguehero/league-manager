@@ -8,7 +8,6 @@ class PagesController < ApplicationController
       @posts = Post.all
       # Apartment::Tenant.switch!(request.subdomain)
     end
-
     if valid_page?
       render template: "pages/#{params[:page]}"
     else
