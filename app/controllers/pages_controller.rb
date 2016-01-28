@@ -8,8 +8,10 @@ class PagesController < ApplicationController
       @posts = Post.all
       # Apartment::Tenant.switch!(request.subdomain)
     end
-
     if valid_page?
+      if current_user
+        sign_out current_user
+      end
       render template: "pages/#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found

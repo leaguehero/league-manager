@@ -1,5 +1,8 @@
 class PreLeaguesController < ApplicationController
   def new
+    if current_user
+      sign_out current_user
+    end
     @pre_league = PreLeague.new
     # @admin = current_user.email
   end
