@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LeagueHero</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= display_meta_tags %>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-  <!-- from devise, to show signed in succesfully and other alerts -->
-  <!-- <p class="notice"><%= notice %></p> -->
-  <!-- <p class="alert"><%= alert %></p> -->
 
-  <% flash.each do |type, msg| %>
+</head>
+<body class="lh-application">
+
+  <!-- <% flash.each do |type, msg| %>
     <div class="alert <%= bootstrap_class_for(type) %> alert-dismissible" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <%= msg %>
     </div>
-  <% end %>
-<%= yield %>
+  <% end %> -->
+
+  <div class="league-header">
+    <div class="lh-topbar"></div>
+    <% if @league %>
+      <a href="/"><%= @league.name %></a>
+    <% end %>
+  </div>
+
+  <div class="league-content">
+    <!-- CLEAN UP :: REFACTOR -->
+    <ul class="nav nav-tabs list-inline lh-nav" role="tablist">
+      <li class="active"><a href="/">LEAGUE</a></li>
+      <li><a href="/games" role="tab" data-toggle="tab">SCHEDULE</a></li>
+      <div class="dropdown">
+        <a class="dropdown-toggle manage_tab" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+          <li><a href="/teams">Manage Teams</a></li>
+          <li><a href="/games">Manage Games</a></li>
+          <li><a href="/posts">Manage Posts</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </ul>
+    <!-- CLEAN UP :: REFACTOR -->
+
+    <%= yield %>
+
+  </div>
+
 
   <% if ENV['PRODUCTION'] == "true" %>
     <script>

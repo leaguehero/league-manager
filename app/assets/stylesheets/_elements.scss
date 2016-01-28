@@ -13,6 +13,9 @@ body {
   overflow-x: hidden;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
+  &.lh-application {
+    background: #EDEFF0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

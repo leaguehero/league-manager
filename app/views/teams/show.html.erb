@@ -1,61 +1,39 @@
-<%= render :partial => 'home/header' %>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div class="info_box_header">
-        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
-          <li class="active"><a href="/">LEAGUE</a></li>
-          <li><a href="/games" role="tab" data-toggle="tab">SCHEDULE</a></li>
-          <div class="dropdown">
-            <li class="manage_tab">
-              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                  <li><a href="/teams">Manage Teams</a></li>
-                  <li><a href="/games">Manage Games</a></li>
-                  <li><a href="/posts">Manage Posts</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Logout</a></li>
-                </ul>
-            </li>
-        </div>
-        </ul>
-      </div>
-      <div id="info_box_content">
-        <p class="team_name"><%= @team_name %> <span><a class="btn btn-default edit_team_button" href="<%= params['id'] %>/edit" role="button">EDIT TEAM</a></span></p>
-        <% if !@team.captain.blank? %>
-          <p>
-            Team Captain:
-          </p>
-        <% end %>
-        <table class="table teams_table">
-          <thead>
+    <div class="col-md-12">
+      <p class="team_name"><%= @team_name %> <span><a class="btn btn-default edit_team_button" href="<%= params['id'] %>/edit" role="button">EDIT TEAM</a></span></p>
+      <% if !@team.captain.blank? %>
+        <p>
+          Team Captain:
+        </p>
+      <% end %>
+      <table class="table teams_table">
+        <thead>
+          <tr>
+            <th class="team_header">Name</th>
+            <th class="team_header">Email</th>
+            <th>Phone</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @players.each do |pl|%>
             <tr>
-              <th class="team_header">Name</th>
-              <th class="team_header">Email</th>
-              <th>Phone</th>
-              <th></th>
-          </tr>
-          </thead>
-          <tbody>
-            <% @players.each do |pl|%>
-              <tr>
-                <td>
-                  <%= pl.name  %>
-                </td>
-                <td>
-                  <%= pl.email  %>
-                </td>
-                <td>
-                  <%= pl.phone  %>
-                </td>
-                <td>
-
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
+              <td>
+                <%= pl.name  %>
+              </td>
+              <td>
+                <%= pl.email  %>
+              </td>
+              <td>
+                <%= pl.phone  %>
+              </td>
+              <td>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

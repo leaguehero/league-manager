@@ -1,55 +1,35 @@
-<%= render :partial => 'home/header' %>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div class="info_box_header">
-        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
-          <li class="active"><a href="/">LEAGUE</a></li>
-          <li><a href="/games" role="tab" data-toggle="tab">SCHEDULE</a></li>
-          <div class="dropdown">
-              <a class="dropdown-toggle manage_tab" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                  <li><a href="/teams">Manage Teams</a></li>
-                  <li><a href="/games">Manage Games</a></li>
-                  <li><a href="/posts">Manage Posts</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Logout</a></li>
-                </ul>
-        </div>
-        </ul>
-      </div>
-      <div id="info_box_content">
-        <h2>Teams</h2>
-        <table class="table teams_table">
-          <thead>
-            <tr>
-              <th class="team_header">Team</th>
-              <th class="team_header">Team Captain</th>
-              <th></th>
-              <th></th>
+    <div class="col-md-12">
+      <h2>Teams</h2>
+      <table class="table teams_table">
+        <thead>
+          <tr>
+            <th class="team_header">Team</th>
+            <th class="team_header">Team Captain</th>
+            <th></th>
+            <th></th>
           </tr>
-          </thead>
-          <tbody>
-            <% @teams.each do |tm|%>
-              <tr>
-                <td>
-                  <%= tm.name  %>
-                </td>
-                <td class="team_captian">
-                  <%= !tm.captain.blank? ? tm.captain : "-" %>
-                </td>
-                <td>
-                  <a href="teams/<%= tm.id %>">View</a>
-                </td>
-                <td>
-                  <a href="teams/<%= tm.id %>/edit">Edit</a>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-
-        </table>
-      </div>
+        </thead>
+        <tbody>
+          <% @teams.each do |tm|%>
+            <tr>
+              <td>
+                <%= tm.name  %>
+              </td>
+              <td class="team_captian">
+                <%= !tm.captain.blank? ? tm.captain : "-" %>
+              </td>
+              <td>
+                <a href="teams/<%= tm.id %>">View</a>
+              </td>
+              <td>
+                <a href="teams/<%= tm.id %>/edit">Edit</a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

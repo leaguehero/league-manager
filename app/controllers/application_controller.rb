@@ -6,9 +6,17 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
   before_filter :set_mailer_host
+  before_filter :league
 
   # Change layout marketing/application
   layout :define_layout
+
+  # set @league if on subdomain
+  def league
+    if !request.subdomain.blank?
+      @league = League.find_by_subdomain(request.subdomain)
+    end
+  end
 
   def define_layout
     if params["controller"] == "pages"
