@@ -1,6 +1,7 @@
 class PreLeaguesController < ApplicationController
   def new
     if current_user
+      # sign out current user on first page of sign up process
       sign_out current_user
     end
     @pre_league = PreLeague.new
