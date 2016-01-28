@@ -1,91 +1,69 @@
-<%= render :partial => 'home/header' %>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div class="info_box_header">
-        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
-          <li class="active"><a href="/" role="tab" data-toggle="tab">LEAGUE</a></li>
-          <li><a href="/games" role="tab" data-toggle="tab">SCHEDULE</a></li>
-          <div class="dropdown">
-            <li class="manage_tab">
-              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
-                <ul class="dropdown-menu">
-                  <li><a href="/teams">Manage Teams</a></li>
-                  <li><a href="/games">Manage Games</a></li>
-                  <li><a href="/posts">Manage Posts</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="/users/sign_out">Logout</a></li>
-                </ul>
-            </li>
-        </div>
-        </ul>
-      </div>
-      <div id="info_box_content">
-        <% if current_user.nil? %>
-          <!-- if not on a subdomain -->
-          <% if request.subdomain.blank? || request.subdomain == "www" %>
-          <!-- we might not need these links if we are redirected to sing up wiz from marketing site -->
-            <%= link_to('Get Started', new_pre_league_path) %>
-            <br>
-          <% else %>
-            <%= link_to('Login', new_user_session_path) %>
-            <br>
-          <% end %>
+    <div class="col-md-12">
+      J
+      <% if current_user.nil? %>
+        <!-- if not on a subdomain -->
+        <% if request.subdomain.blank? || request.subdomain == "www" %>
+        <!-- we might not need these links if we are redirected to sing up wiz from marketing site -->
+          <%= link_to('Get Started', new_pre_league_path) %>
+          <br>
         <% else %>
+          <%= link_to('Login', new_user_session_path) %>
           <br>
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-          <br>
-          <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
-          <br>
-          Welcome <%= current_user.email %>
-          <h3><%= @league.name %></h3>
-          <h3>League Manager: <%= @league.admin_name %></h3>
-          <h2>Standings</h2>
-
-          <table class="table teams_table">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Team</th>
-                <th>Win</th>
-                <th>Loss</th>
-                <th>Tie</th>
+        <% end %>
+      <% else %>
+        <br>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <br>
+        <%= link_to('Manage League', edit_league_path(:id => @league.id)) %>
+        <br>
+        Welcome <%= current_user.email %>
+        <h3><%= @league.name %></h3>
+        <h3>League Manager: <%= @league.admin_name %></h3>
+        <h2>Standings</h2>
+        <table class="table teams_table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team</th>
+              <th>Win</th>
+              <th>Loss</th>
+              <th>Tie</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @rankings.each do |tm| %>
+            <tr>
+              <td>
+                <%= @rankings.index(tm) + 1 %>
+              </td>
+              <td>
+                <%= tm[0] %>
+              </td>
+              <td>
+                <%= tm[1]["wins"] %>
+              </td>
+              <td>
+                <%= tm[1]["losses"] %>
+              </td>
+              <td>
+                <%= tm[1]["ties"]%>
+              </td>
             </tr>
-            </thead>
-            <tbody>
-              <% @rankings.each do |tm| %>
-              <tr>
-                <td>
-                  <%= @rankings.index(tm) + 1 %>
-                </td>
-                <td>
-                  <%= tm[0] %>
-                </td>
-                <td>
-                  <%= tm[1]["wins"] %>
-                </td>
-                <td>
-                  <%= tm[1]["losses"] %>
-                </td>
-                <td>
-                  <%= tm[1]["ties"]%>
-                </td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-
-          <h2>Recent News</h2>
-          <% if @posts.length > 0 %>
-            <% @posts.each do |post| %>
-              <h4><%= post.title %></h4>
-              <p><%= post.body %></p>
             <% end %>
+          </tbody>
+        </table>
+        <h2>Recent News</h2>
+        <% if @posts.length > 0 %>
+          <% @posts.each do |post| %>
+            <h4><%= post.title %></h4>
+            <p><%= post.body %></p>
           <% end %>
         <% end %>
-        <br>
-        <h1><%= @message %></h1>
-      </div>
+      <% end %>
+      <br>
+      <h1><%= @message %></h1>
     </div>
   </div>
 </div>

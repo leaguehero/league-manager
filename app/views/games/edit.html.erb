@@ -1,68 +1,47 @@
-<%= render :partial => 'home/header' %>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div class="info_box_header">
-        <ul class="nav nav-tabs list-inline" id="info_box_tabs" role="tablist">
-          <li class="active"><a href="/" role="tab" data-toggle="tab">LEAGUE</a></li>
-          <li><a href="/games" role="tab" data-toggle="tab">SCHEDULE</a></li>
-          <div class="dropdown">
-            <li class="manage_tab">
-              <a class="dropdown-toggle" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                  <li><a href="/teams">Manage Teams</a></li>
-                  <li><a href="/games">Manage Games</a></li>
-                  <li><a href="/posts">Manage Posts</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Logout</a></li>
-                </ul>
-            </li>
-        </div>
-        </ul>
-      </div>
-      <div id="info_box_content">
-        <br>
-          EDIT GAME:
-        <br>
-        <table class="table teams_table">
-          <thead>
+    <div class="col-md-12">
+      <br>
+        EDIT GAME:
+      <br>
+      <table class="table teams_table">
+        <thead>
+          <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
             <tr>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Location</th>
-          </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td>
-                  <%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-                </td>
-                <td>
-                  <%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
-                </td>
-                <td>
-                  <%= best_in_place @game, :date, :as => :date %>
-                </td>
-                <td>
-                  <%= best_in_place @game, :time %>
-                </td>
-                <td>
-                  <%= best_in_place @game, :location, place_holder: "Game Location" %>
-                </td>
-              </tr>
-          </tbody>
-        </table>
-        <br>
-          ADD GAME RESULTS:
-        <br>
-            <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name }%>
-            <strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %>
-            <br>
-            <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %>
-            <strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %>
-      </div>
+              <td>
+                <%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+              </td>
+              <td>
+                <%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %>
+              </td>
+              <td>
+                <%= best_in_place @game, :date, :as => :date %>
+              </td>
+              <td>
+                <%= best_in_place @game, :time %>
+              </td>
+              <td>
+                <%= best_in_place @game, :location, place_holder: "Game Location" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <br>
+        ADD GAME RESULTS:
+      <br>
+          <strong>WINNING TEAM:</strong>  <%= best_in_place @game, :winner, :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name }%>
+          <strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %>
+          <br>
+          <strong>LOSING TEAM:</strong>   <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %>
+          <strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %>
     </div>
   </div>
 </div>

@@ -1,14 +1,13 @@
-edit your league info here
 <div class="container">
   <div class="row">
-    <br>
-    <%= @league.name %>
-    <br>
-    <%= link_to('League Home', root_path) %>
-    <br>
-    <%= link_to('Manage Teams', teams_path) %>
-    <br>
-    <%= link_to('Manage Games', games_path) %>
-
+    <div class="col-md-12">
+      <%= @league.name %>
+      <br>
+      <%= link_to('League Home', root_path) %>
+      <br>
+      <%= link_to('Manage Teams', teams_path) %>
+      <br>
+      <%= link_to('Manage Games', games_path) %>
+    </div>
   </div>
 </div>

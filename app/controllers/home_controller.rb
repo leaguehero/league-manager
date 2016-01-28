@@ -9,5 +9,7 @@ class HomeController < ApplicationController
       @league = League.find_by_subdomain(request.subdomain)
     end
     @message = "WELCOME TO LEAGUE HERO!"
+
+    render layout: "application"
   end
 end

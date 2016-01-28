@@ -8,17 +8,6 @@ class ApplicationController < ActionController::Base
   before_filter :set_mailer_host
   before_filter :set_league
 
-  # Change layout marketing/application
-  layout :define_layout
-
-  def define_layout
-    if params["controller"] == "pages"
-      "market"
-    else
-      "application"
-    end
-  end
-
   protected
   def set_mailer_host
     # Will this work with new user registration
