@@ -45,7 +45,7 @@ class ChargesController < ApplicationController
 
 # all functionality in this route should be moved to the league controller.
   def confirmation
-    # find PreLeague from current_user
-    @league = PreLeague.find_by_subdomain(current_user["subdomain"])
+    # find League from current_user
+    @league = League.find_by_subdomain(current_user["subdomain"])
   end
 end
