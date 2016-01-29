@@ -23,10 +23,6 @@ class ApplicationController < ActionController::Base
     # set @league if on subdomain
     if !request.subdomain.blank?
       @league = League.find_by_subdomain(request.subdomain)
-      # TODO: remove when going live
-      if @league.nil?
-        @league = PreLeague.find_by_subdomain(request.subdomain)
-      end
     end
   end
 
