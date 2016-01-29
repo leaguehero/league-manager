@@ -19,16 +19,21 @@
     <ul class="nav nav-tabs list-inline lh-nav" role="tablist">
       <li class="active"><a href="/">LEAGUE</a></li>
       <li><a href="/games" role="tab" data-toggle="tab">SCHEDULE</a></li>
-      <div class="dropdown">
-        <a class="dropdown-toggle manage_tab" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-          <li><a href="/teams">Manage Teams</a></li>
-          <li><a href="/games">Manage Games</a></li>
-          <li><a href="/posts">Manage Posts</a></li>
-          <li role="separator" class="divider"></li>
-          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-        </ul>
-      </div>
+      <% if current_user.nil? %>
+        <%= link_to('Login', new_user_session_path) %>
+      <% else %>
+        <div class="dropdown">
+          <a class="dropdown-toggle manage_tab" data-target="#manage" role="tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANAGE</a><span class="caret"></span>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+            <li><%= link_to('Manage League', edit_league_path(:id => @league.id)) %></li>
+            <li><a href="/teams">Manage Teams</a></li>
+            <li><a href="/games">Manage Games</a></li>
+            <li><a href="/posts">Manage Posts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          </ul>
+        </div>
+      <% end %>
     </ul>
     <!-- CLEAN UP :: REFACTOR -->
 
