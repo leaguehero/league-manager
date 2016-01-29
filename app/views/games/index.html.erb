@@ -14,8 +14,10 @@
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
+          <% if current_user %>
             <th></th>
             <th></th>
+          <% end %>
         </tr>
         </thead>
         <tbody>
@@ -36,12 +38,14 @@
               <td>
                 <%= game.location  %>
               </td>
+            <% if current_user %>
               <td>
                 <%= link_to('Edit', edit_game_path(:id => game.id)) %>
               </td>
               <td>
                 <%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %>
               </td>
+            <% end %>
             </tr>
           <% end %>
         </tbody>
