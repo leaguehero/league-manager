@@ -31,6 +31,36 @@
   top: 156px;
   width: 100%;
   z-index: 2;
+  nav.lh-nav {
+    background: #FAFAFA;
+    border-bottom: 2px solid #DDD;
+    height: 60px;
+    margin: 0 0 40px 0;
+    @extend %clear;
+    a {
+      background: #FAFAFA;
+      border-right: 2px solid #DDD;
+      color: #999;
+      float: left;
+      font-weight: 600;
+      height: 58px;
+      line-height: 60px;
+      padding: 0 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      &.active, &:hover {
+        background: #FFF;
+        color: #44536A;
+      }
+      &.active { height: 60px; }
+      &.manage-log-in {
+        border-right: none;
+        float: right;
+        &:hover { background: #FAFAFA; }
+      }
+    }
+  }
+
   ul.lh-nav {
     border-bottom: 2px solid #DDD;
     height: 60px;
@@ -56,5 +86,34 @@
   }
   .container {
     padding: 0 40px;
+  }
+}
+
+// Toolbar
+.lh-toolbar {
+  margin: 0 0 40px 0;
+  width: 100%;
+  @extend %clear;
+  .lht-img {
+    background: #EDEDED;
+    border-radius: 12px;
+    float: left;
+    height: 60px;
+    margin: 0 20px 0 0;
+    width: 60px;
+  }
+  .lht-info {
+    float: left;
+    .lht-league {
+      color: #44536A;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+    }
+    .lht-manager {
+      color: #999;
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 }

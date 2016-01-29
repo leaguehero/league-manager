@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-        <h3><%= @league.name %></h3>
-        <h3>League Manager: <%= @league.admin_name %></h3>
-        <h2>Standings</h2>
+      <%= render :partial => 'layouts/toolbar' %>
+
         <table class="table teams_table">
           <thead>
             <tr>
