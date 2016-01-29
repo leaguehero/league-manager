@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   # don't protect on genrate games post request
   protect_from_forgery except: :generate_games
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:index, :show]
 
   def index
     @games = Game.all

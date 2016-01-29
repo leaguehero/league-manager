@@ -8,7 +8,9 @@
             <th class="team_header">Team</th>
             <th class="team_header">Team Captain</th>
             <th></th>
+          <% if current_user %>
             <th></th>
+          <% end %>
           </tr>
         </thead>
         <tbody>
@@ -23,9 +25,11 @@
               <td>
                 <a href="teams/<%= tm.id %>">View</a>
               </td>
+            <% if current_user %>
               <td>
                 <a href="teams/<%= tm.id %>/edit">Edit</a>
               </td>
+            <% end %>
             </tr>
           <% end %>
         </tbody>

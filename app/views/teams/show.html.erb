@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p class="team_name"><%= @team_name %> <span><a class="btn btn-default edit_team_button" href="<%= params['id'] %>/edit" role="button">EDIT TEAM</a></span></p>
+      <p class="team_name"><%= @team_name %>
+        <% if current_user %>
+          <span><a class="btn btn-default edit_team_button" href="<%= params['id'] %>/edit" role="button">EDIT TEAM</a></span>
+        <% end %>
+      </p>
       <% if !@team.captain.blank? %>
         <p>
           Team Captain:
