@@ -67,6 +67,32 @@
         &:hover { background: #FAFAFA; }
       }
     }
+    .dropdown {
+      float: right;
+      a {
+        background: none;
+        border-right: none;
+      }
+      .dropdown-toggle::after { margin-top: -3px; }
+      .dropdown-menu {
+        left: initial;
+        right: 20px;
+        top: 76%;
+        a.dropdown-item {
+          font-size: 14px;
+          height: 28px;
+          line-height: 28px;
+          padding: 0 16px;
+          &.log-out {
+            border-top: 1px solid #DDD;
+            color: #F45D4C;
+            height: 32px;
+            line-height: 34px;
+            margin: 4px 0 0 0;
+          }
+        }
+      }
+    }
   }
 
   ul.lh-nav {
