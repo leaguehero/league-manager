@@ -13,11 +13,9 @@ class SessionsController < Devise::SessionsController
 
   def create
     if current_user && (current_user.subdomain != request.subdomain)
-      # byebug
       sign_out current_user
       redirect_to :back, :flash => {:error => "Only the league admin can sign in to this page!"}
     else
-      # Apartment::Tenant.switch!("")
       super
     end
   end

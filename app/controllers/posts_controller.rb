@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    @league = League.find_by_subdomain(request.subdomain)
   end
 
   def new
     @post = Post.new
-    @league = League.find_by_subdomain(request.subdomain)
 
   end
 
@@ -21,15 +19,26 @@ class PostsController < ApplicationController
   end
 
   def update
-
+    @post = Post.find(params[:id])
+    respond_to do |format|
+      if @post.update_attributes(post_params)
+        format.html { redirect_to(@post, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@post) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@post) }
+      end
+    end
   end
 
   def edit
-    @league = League.find_by_subdomain(request.subdomain)
+    @post = Post.find(params[:id])
   end
 
   def destroy
-
+    Post.find(params[:id]).destroy
+    flash[:notice] = "Post was successfully deleted"
+    redirect_to posts_path
   end
 
   private

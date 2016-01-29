@@ -1,7 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      Edit Posts
+      <p>
+        <strong>Edit Title:</strong>
+        <%= best_in_place @post, :title %>
+      </p>
+      <strong>Edit Body:</strong>
+      <p>
+        <%= best_in_place @post, :body, :as => :textarea %>
+      </p>
+
     </div>
   </div>
 </div>
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    /* Activating Best In Place */
+    jQuery(".best_in_place").best_in_place();
+  });
+<% end %>
