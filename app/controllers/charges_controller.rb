@@ -1,6 +1,9 @@
 class ChargesController < ApplicationController
   def new
-
+    if current_user
+      @pl = PreLeague.find(current_user.pre_league_id)
+      @amount  = (@pl.max_teams * @pl.max_players_per_team) 
+    end
   end
 
   def create

@@ -37,6 +37,11 @@
   </div>
 </div>
 <div class="container-fluid">
+  <div class="cost">
+    <% if current_user %>
+    TEAMS:<%= @pl.max_teams %> x PLAYERS PER TEAM:<%= @pl.max_players_per_team %> = TOTAL: $<%= @amount  %>
+    <% end %>
+  </div>
   <div class="row">
     <div class="info_box col-md-8 col-md-push-2">
       <div id="info_box_content">
