@@ -8,6 +8,9 @@
       <br>
     <% end %>
       <h3>Schedule</h3>
+
+
+
       <table class="table teams_table">
         <thead>
           <tr>
@@ -23,7 +26,7 @@
         </tr>
         </thead>
         <tbody>
-          <% @games.each do |game|%>
+          <% @current_games.each do |game|%>
             <tr>
               <td>
                 <%= Team.find(game.team_one).name  %>
