@@ -42,6 +42,16 @@
         width: auto;
         &:hover, &.active { color: #333; }
       }
+     &.destroy_all{
+       color: red;
+       float: right;
+       background: none;
+       border: none;
+       height: auto;
+       margin: 0 0 0 20px;
+       width: auto;
+       &:hover, &.active { color: #333; }
+     }
     }
   }
 }

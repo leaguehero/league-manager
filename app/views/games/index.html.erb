@@ -41,6 +41,8 @@
           <% if current_user %>
             <% if @games.blank? %>
               <%= link_to 'Generate Schedule', games_generator_options_path, class: "generate-schedule" %>
+              <% else %>
+              <%= link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
             <% end %>
             <%= link_to 'Add Game', new_game_path, class: "add-game" %>
           <% end %>

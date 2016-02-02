@@ -126,6 +126,12 @@ class GamesController < ApplicationController
     redirect_to games_path
   end
 
+  def destroy_all
+    # delete all games created
+    Game.where("created_at" < Time.now.to_s).destroy_all
+    redirect_to games_path
+  end
+
   private
 
   def game_params
