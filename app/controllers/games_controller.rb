@@ -7,13 +7,23 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-    @league = League.find_by_subdomain(request.subdomain)
+    if @games.length > 0
+      @current_month_string = Date.today.strftime("%b")
+      @current_month = Date.today.month #set current_month
+      @current_games = [] #set array for games in this month
+      @games.each do |gm|
+        gm_date = Date.strptime(gm.date, '%m/%d/%Y') #convert saved game date to Date object
+        gm_month = gm_date.month #if the game month and current month match up, insert it into the array
+        if gm_month == @current_month
+          @current_games << gm
+        end
+      end
+    end
   end
 
   def new
     @game = Game.new
     @teams = Team.all
-    @league = League.find_by_subdomain(request.subdomain)
   end
 
   def create
@@ -27,7 +37,6 @@ class GamesController < ApplicationController
   end
 
   def generator_options
-    @league = League.find_by_subdomain(request.subdomain)
     @week_days = {sunday:0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday:5, saturday: 6}
     # TODO: Add validation to make sure the admin has added teams
     # @game = Game.new
@@ -36,9 +45,13 @@ class GamesController < ApplicationController
   def generate_games
     @teams = Team.all
     @team_ids = @teams.pluck(:id)
+    # TODO: fix all these inputs to automatically split at (",")
     @game_times = params["game_times"].split(", ")
     @fields = params["field_names"].split(", ")
-    @wday = params["game_days"] # TODO: Add ability to have multiple days for games
+    @exclude_dates = params["exclude_dates"].split(", ")
+
+    # TODO: Add ability to have multiple days for games
+    @wday = params["game_days"]
 
     # move this to be called on button submit from view
     schedule = RRSchedule::Schedule.new(
@@ -55,7 +68,7 @@ class GamesController < ApplicationController
       :start_date => Date.parse(params["start_date"]),
 
       #array of dates to exclude
-      :exclude_dates => [Date.parse("2010/11/24"),Date.parse("2010/12/15")],
+      :exclude_dates => @exclude_dates,
 
       #Number of times each team must play against each other (default is 1)
       :cycles => params["cycles"].to_i,
@@ -84,7 +97,6 @@ class GamesController < ApplicationController
   end
 
   def edit
-    @league = League.find_by_subdomain(request.subdomain)
     @game = Game.find(params[:id])
     @teams = Team.all
   end
