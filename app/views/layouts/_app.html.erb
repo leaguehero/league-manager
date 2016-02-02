@@ -16,8 +16,8 @@
 
   <div class="league-content">
     <nav class="lh-nav">
-      <a class="active" href="/">League</a>
-      <a href="/games">Schedule</a>
+      <a class="" href="/">League</a>
+      <a class="<% if current_page?(controller: 'games', action: 'index') %>active<% end %>" href="/schedule">Schedule</a>
       <% if current_user.nil? %>
         <%= link_to "Log In", new_user_session_path, :class => "manage-log-in" %>
       <% else %>

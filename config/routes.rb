@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources  :teams
   get "games/generator_options" => "games#generator_options"
   post "games/generate" => "games#generate_games"
-  resources  :games
+  resources  :games, :path => "schedule"
   resources  :players
   get  'charges/confirmation' => "charges#confirmation"
   resources  :charges
