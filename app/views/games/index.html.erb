@@ -31,17 +31,25 @@
       <div class="games-toolbar">
         <h3>Schedule</h3>
         <nav class="gt-months">
-          <% @game_months.each do |month| %>
-            <a <% if @game_months.index(month) == 1 %>class="active"<% end %> href="#"><%= month %></a>
+          <!-- create nav bar links for each month of games -->
+          <% if !@game_months.blank? %>
+            <% @game_months.each do |month| %>
+              <a class="<% if @game_months.index(month) == 1 %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
+            <% end %>
           <% end %>
+
           <% if current_user %>
             <% if @games.blank? %>
               <%= link_to 'Generate Schedule', games_generator_options_path, class: "generate-schedule" %>
+              <% else %>
+              <%= link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
             <% end %>
             <%= link_to 'Add Game', new_game_path, class: "add-game" %>
           <% end %>
+
         </nav>
       </div>
+
       <% if @current_games.present? %>
         <table class="table teams_table">
           <thead>
@@ -77,3 +85,7 @@
     </div>
   </div>
 </div>
+
+<script>
+  $()
+</script>
