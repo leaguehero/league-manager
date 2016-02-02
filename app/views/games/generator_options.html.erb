@@ -7,12 +7,19 @@
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
       <form class="game_generator_form" action="generate" method="post">
-        <strong>Court/ Field Name(s):</strong> <input type="text" name="field_names" placeholder="Names of fields/ courts">
-          Please use a comma(,) to seperate the field/ court names.
-          <br>
-        <strong>Game Times:</strong> <input type="text" name="game_times" placeholder="Times to allow Games">
-        Please use a comma(,) to seperate game times to allow.
-        <br>
+        <fieldset class="form-group">
+          <label>Court / Field Name(s)</label>
+          <input class="form-control" type="text" name="field_names" placeholder="Names of courts or fields">
+          <small class="text-muted">Please use a comma(,) to seperate the field / court names.</small>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Game Times</label>
+          <input class="form-control" type="text" name="game_times" placeholder="Available game times">
+          <small class="text-muted">Please use a comma(,) to seperate available game times.</small>
+        </fieldset>
+
+
+
         <strong>Start Date:</strong> <input type="date" name="start_date" placeholder="Date to Start Games"><br>
         <strong>Game Day:</strong>
         <select type="collection" name="game_days" placeholder="Days of week to allow Games">

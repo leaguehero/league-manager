@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources  :teams
   get "games/generator_options" => "games#generator_options"
   post "games/generate" => "games#generate_games"
-  resources  :games, :path => "schedule"
+  resources  :games
   resources  :players
   get  'charges/confirmation' => "charges#confirmation"
   resources  :charges
@@ -25,7 +25,6 @@ Rails.application.routes.draw do
 
   # Pages for Marketing Site
   get "/*page" => "pages#show"
-
 
   mount StripeEvent::Engine, at: '/stripe-event' # provide a custom path
   # The priority is based upon order of creation: first created -> highest priority.
