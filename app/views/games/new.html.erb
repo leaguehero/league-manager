@@ -1,38 +1,33 @@
+<% set_meta_tags :site => 'New Game • League Hero',
+  :noindex => true
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <table class="table teams_table new_game_table">
-        <thead>
-          <tr>
-            <th>Home Team</th>
-            <th>Away Team</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Location</th>
-        </tr>
-        </thead>
-        <tbody>
-          <%= simple_form_for @game do |f| %>
+      <%= render :partial => 'layouts/toolbar' %>
+      <%= simple_form_for @game do |f| %>
+        <table class="table teams_table new_game_table">
+          <thead>
             <tr>
-              <td>
-                <%= f.input :team_one, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Home Team" %>
-              </td>
-              <td>
-                <%= f.input :team_two, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Away Team"%>
-              </td>
-              <td>
-                <%= f.input :date, as: :date, html5: true %>
-              </td>
-              <td>
-                <%= f.input :time, as: :time, html5: true %>
-              </td>
-              <td>
-                <%= f.input :location, :placeholder => "Enter field/ court name" %>
-              </td>
+              <th>Home Team</th>
+              <th>Away Team</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Location</th>
             </tr>
-        </tbody>
-      </table>
-      <%= f.submit "Add" %>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.input :team_one, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Home Team" %></td>
+              <td><%= f.input :team_two, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Away Team"%></td>
+              <td><%= f.input :date, as: :date, html5: true %></td>
+              <td><%= f.input :time, as: :time, html5: true %></td>
+              <td><%= f.input :location, :placeholder => "Enter field/ court name" %></td>
+            </tr>
+          </tbody>
+        </table>
+        <%= f.submit "Add" %>
       <% end %>
     </div>
   </div>

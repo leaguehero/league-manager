@@ -1,6 +1,11 @@
+<% set_meta_tags :site => 'Generate Schedule • League Hero',
+  :noindex => true
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <%= render :partial => 'layouts/toolbar' %>
       <form class="game_generator_form" action="generate" method="post">
         <strong>Court/ Field Name(s):</strong> <input type="text" name="field_names" placeholder="Names of fields/ courts">
           Please use a comma(,) to seperate the field/ court names.
