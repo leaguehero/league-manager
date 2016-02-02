@@ -28,28 +28,37 @@
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
-      <div class="games-toolbar">
-        <h3>Schedule</h3>
-        <nav class="gt-months">
-          <!-- create nav bar links for each month of games -->
-          <% if !@game_months.blank? %>
-            <% @game_months.each do |month| %>
-              <a class="<% if @game_months.index(month) == 1 %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
+      <% if @games.present? %>
+        <div class="games-toolbar">
+          <h3>Schedule</h3>
+          <nav class="gt-months">
+            <% if !@game_months.blank? %>
+              <% @game_months.each do |month| %>
+                <a class="<% if @game_months.index(month) == 1 %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
+              <% end %>
             <% end %>
-          <% end %>
-
-          <% if current_user %>
-            <% if @games.blank? %>
-              <%= link_to 'Generate Schedule', games_generator_options_path, class: "generate-schedule" %>
-              <% else %>
-              <%= link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
+            <% if current_user %>
+              <!-- Let's hold off on giving this to user's until it is requested -->
+              <!-- link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete -->
+              <%= link_to 'Add Game', new_game_path, class: "add-game" %>
             <% end %>
-            <%= link_to 'Add Game', new_game_path, class: "add-game" %>
-          <% end %>
-
-        </nav>
-      </div>
-
+          </nav>
+        </div>
+      <% else %>
+        <% if current_user %>
+          <div class="hero-create-schedule">
+            <h3>Let's Create a Schedule!</h3>
+            <p>Oops, it look like you haven't added any games to your schedule. Use <strong>Scheduling Hero&trade;</strong> to auto generate a schedule based on preferences or manually create a schedule by individually adding games.</p>
+            <%= link_to 'Generate Schedule', games_generator_options_path, class: "btn btn-primary-outline" %>
+            <%= link_to 'Add Game', new_game_path, class: "btn btn-secondary-outline" %>
+          </div>
+        <% else %>
+          <div class="hero-create-schedule">
+            <h3>Schedule</h3>
+            <p>Oops, it doesn't look like any games have been added to the <%= @league.name %> league schedule yet.</p>
+          </div>
+        <% end %>
+      <% end %>
       <% if @current_games.present? %>
         <table class="table teams_table">
           <thead>

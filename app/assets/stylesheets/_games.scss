@@ -32,7 +32,7 @@
         border: 2px solid #454545;
         color: #FFF;
       }
-      &.generate-schedule, &.add-game {
+      &.add-game {
         color: #999;
         float: right;
         background: none;
@@ -42,16 +42,12 @@
         width: auto;
         &:hover, &.active { color: #333; }
       }
-     &.destroy_all{
-       color: red;
-       float: right;
-       background: none;
-       border: none;
-       height: auto;
-       margin: 0 0 0 20px;
-       width: auto;
-       &:hover, &.active { color: #333; }
-     }
     }
   }
+}
+
+.hero-create-schedule {
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  padding: 24px;
 }
