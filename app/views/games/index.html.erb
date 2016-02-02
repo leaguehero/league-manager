@@ -1,8 +1,33 @@
+<% @title = 'Schedule • ' + @league.name + ' • League Hero' %>
+<% set_meta_tags :site => @title,
+  :canonical => request.original_url,
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'schedule', 'teams', 'scheduling', 'recent news'],
+  :reverse => true,
+  :og => {
+    :title          => @title,
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => @title,
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
-
       <div class="games-toolbar">
         <h3>Schedule</h3>
         <nav class="gt-months">
@@ -12,7 +37,7 @@
               <a class="<% if @game_months.index(month) == 1 %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
             <% end %>
           <% end %>
-          
+
           <% if current_user %>
             <% if @games.blank? %>
               <%= link_to 'Generate Schedule', games_generator_options_path, class: "generate-schedule" %>
@@ -32,38 +57,24 @@
               <th>Date</th>
               <th>Time</th>
               <th>Location</th>
-            <% if current_user %>
-              <th></th>
-              <th></th>
-            <% end %>
-          </tr>
+              <% if current_user %>
+                <th></th>
+                <th></th>
+              <% end %>
+            </tr>
           </thead>
           <tbody>
             <% @current_games.each do |game|%>
               <tr>
-                <td>
-                  <%= Team.find(game.team_one).name  %>
-                </td>
-                <td>
-                  <%= Team.find(game.team_two).name  %>
-                </td>
-                <td>
-                  <%= game.date %>
-                </td>
-                <td>
-                  <%= game.time %>
-                </td>
-                <td>
-                  <%= game.location  %>
-                </td>
-              <% if current_user %>
-                <td>
-                  <%= link_to('Edit', edit_game_path(:id => game.id)) %>
-                </td>
-                <td>
-                  <%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %>
-                </td>
-              <% end %>
+                <td><%= Team.find(game.team_one).name  %></td>
+                <td><%= Team.find(game.team_two).name  %></td>
+                <td><%= game.date %></td>
+                <td><%= game.time %></td>
+                <td><%= game.location  %></td>
+                <% if current_user %>
+                  <td><%= link_to('Edit', edit_game_path(:id => game.id)) %></td>
+                  <td><%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %></td>
+                <% end %>
               </tr>
             <% end %>
           </tbody>
