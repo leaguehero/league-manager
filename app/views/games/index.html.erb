@@ -34,7 +34,7 @@
           <nav class="gt-months">
             <% if !@game_months.blank? %>
               <% @game_months.each do |month| %>
-                <a class="<% if @game_months.index(month) == 1 %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
+                <a class="<% if month == @current_month_name %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
               <% end %>
             <% end %>
             <% if current_user %>

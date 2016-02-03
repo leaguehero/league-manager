@@ -10,6 +10,7 @@ class GamesController < ApplicationController
     if @games.length > 0
       @game_months = ["All"]
       @current_month = Date.today.month #set current_month
+      @current_month_name = Date.today.strftime("%b") #set current_month name
       @current_games = [] #set array for games in this month
       @games.each do |gm|
 
