@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   get "/create-a-league" => "pre_leagues#new"
   resources  :pre_leagues
   resources  :teams
+
+  # Games Index Renamed Schedule
+  get "/schedule" => "games#index"
   get "games/generator_options" => "games#generator_options"
   post "games/generate" => "games#generate_games"
   delete "games/destroy_all" => "games#destroy_all"
   resources  :games
+  
   resources  :players
   get  'charges/confirmation' => "charges#confirmation"
   resources  :charges

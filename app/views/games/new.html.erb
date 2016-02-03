@@ -6,28 +6,28 @@
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
+      <h3>New Game</h3>
       <%= simple_form_for @game do |f| %>
-        <table class="table teams_table new_game_table">
-          <thead>
-            <tr>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Location</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><%= f.input :team_one, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Home Team" %></td>
-              <td><%= f.input :team_two, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Away Team"%></td>
-              <td><%= f.input :date, as: :date, html5: true %></td>
-              <td><%= f.input :time, as: :time, html5: true %></td>
-              <td><%= f.input :location, :placeholder => "Enter field/ court name" %></td>
-            </tr>
-          </tbody>
-        </table>
-        <%= f.submit "Add" %>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= f.input :team_one, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Home Team", input_html: { class:  "c-select" } %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :team_two, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Away Team", input_html: { class: "c-select" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <%= f.input :date, as: :date, html5: true %>
+          </div>
+          <div class="col-sm-4">
+            <%= f.input :time, as: :time, html5: true, :class => "form-control" %>
+          </div>
+          <div class="col-sm-4">
+            <%= f.input :location, :placeholder => "Enter court / field", :class => "form-control" %>
+          </div>
+        </div>
+        <%= f.submit "Add Game", :class => "btn btn-primary-outline" %>
       <% end %>
     </div>
   </div>
