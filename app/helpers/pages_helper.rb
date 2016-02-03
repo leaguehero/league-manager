@@ -3,6 +3,7 @@ module PagesHelper
     @rankings = {}
     Team.all.each do |team|
       @rankings[team.name] = {}
+      @rankings[team.name]["id"] = team.id
       @rankings[team.name]["wins"] = Game.where(winner: team.id).count
       @rankings[team.name]["losses"] = Game.where(loser: team.id).count
       # need to update schema before adding ties
