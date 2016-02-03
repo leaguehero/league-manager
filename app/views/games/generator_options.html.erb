@@ -6,33 +6,61 @@
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
+      <h3>Scheduling Hero&trade;</h3>
+      <p>Use Scheduling Hero&trade; to auto generate games for your league based on the criteria below. Games and schedule can be adjusted after creation.</p>
       <form class="game_generator_form" action="generate" method="post">
-        <fieldset class="form-group">
-          <label>Court / Field Name(s)</label>
-          <input class="form-control" type="text" name="field_names" placeholder="Name of courts or fields">
-          <small class="text-muted">Please use a comma(,) to seperate the court / field names.</small>
-        </fieldset>
-        <fieldset class="form-group">
-          <label>Game Times</label>
-          <input class="form-control" type="text" name="game_times" placeholder="Available game times">
-          <small class="text-muted">Please use a comma(,) to seperate available game times.</small>
-        </fieldset>
-
-
-
-        <strong>Start Date:</strong> <input type="date" name="start_date" placeholder="Date to Start Games"><br>
-        <strong>Game Day:</strong>
-        <select type="collection" name="game_days" placeholder="Days of week to allow Games">
-          <% @week_days.each do |key, val| %>
-            <option value=<%= val %>>
-              <%= key %>
-            </option>
-          <% end %>
-        </select><br>
-        <strong>Game Cycles:</strong> <input type="text" name="cycles" placeholder="How Many Times Each Team Will Meet"><br>
-        <strong>Dates to Exclude:</strong> <input type="text" name="excluded_dates" placeholder="Dates to not have games "> Add dates in YYYY/MM/DD format<br><br>
-        <input type="submit" value="Generate Games">
-        <notice>Don't worry, you will be able to edit the games.</notice>
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Court / Field Name(s)</label>
+              <input class="form-control" type="text" name="field_names" placeholder="Name of courts or fields">
+              <small class="text-muted">Please use a comma(,) to seperate the court / field names.</small>
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Game Times</label>
+              <input class="form-control" type="text" name="game_times" placeholder="Available game times">
+              <small class="text-muted">Please use a comma(,) to seperate available game times.</small>
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Start Date</label>
+              <input class="form-control" type="date" name="start_date" placeholder="Date to Start Games">
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Game Day</label>
+              <select class="c-select" type="collection" name="game_days" placeholder="Days of week to allow Games">
+                <% @week_days.each do |key, val| %>
+                  <option value=<%= val %>>
+                    <%= key %>
+                  </option>
+                <% end %>
+              </select>
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Game Cycles</label>
+              <input class="form-control" type="text" name="cycles" placeholder="How many times will each team meet?">
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Dates to Exclude</label>
+              <input class="form-control" type="text" name="excluded_dates" placeholder="Dates to not have games.">
+              <small class="text-muted">Add dates in YYYY/MM/DD format</small>
+            </fieldset>
+          </div>
+        </div>
+        <button class="btn btn-primary-outline" type="submit">Generate Games</button>
       </form>
     </div>
   </div>

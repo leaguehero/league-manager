@@ -104,7 +104,7 @@ class GamesController < ApplicationController
       end
     end
 
-    redirect_to games_path
+    redirect_to "/schedule"
   end
 
   def edit
