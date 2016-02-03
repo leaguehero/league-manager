@@ -1,18 +1,58 @@
+<% @title = 'League News • ' + @league.name + ' • League Hero' %>
+<% set_meta_tags :site => @title,
+  :canonical => request.original_url,
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'news', 'recent', 'posts', 'messages'],
+  :reverse => true,
+  :og => {
+    :title          => @title,
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => @title,
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <%= render :partial => 'layouts/postbar' %>
       <% if @posts.length > 0 %>
+        <h3>Recent News</h3>
         <% @posts.each do |post| %>
-          <h4><%= post.title %>
-            <span><%= link_to "Edit", edit_post_path(:id => post.id) %></span>
-            <span><%= link_to "Delete", post_path(:id => post.id), :confirm => 'Are you sure?', :method => :delete %></span>
-          </h4>
-          <p><%= post.body %></p>
+          <div class="lh-post">
+            <h5><span><%= post.created_at.strftime("%b %e at %-I:%M%p") %></span><%= post.title %></h5>
+            <p><%= post.body %></p>
+            <!-- <% if current_user %>
+              <%= link_to "Delete", post_path(:id => post.id), :confirm => 'Are you sure?', :method => :delete %>
+            <% end %> -->
+          </div>
+        <% end %>
+      <% else %>
+        <% if current_user %>
+          <div class="hero-create-schedule">
+            <h3>Let's Create a Post!</h3>
+            <p>Easily send messages to teams and players about important updates, schedule changes, or meetings by creating a post.</p>
+            <%= link_to "Create a Post", new_post_path, class: "btn btn-primary-outline" %>
+          </div>
+        <% else %>
+          <div class="hero-create-schedule">
+            <h3>Recent News</h3>
+            <p>Oops, it doesn't look like any messages have been posted to the league yet.</p>
+          </div>
         <% end %>
       <% end %>
-      <p>
-        <%= link_to "Create League Post", new_post_path %><br />
-      </p>
     </div>
   </div>
 </div>

@@ -1,11 +1,19 @@
+<% set_meta_tags :site => 'New Post • League Hero',
+  :noindex => true
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Create New League Post</h2>
+      <%= render :partial => 'layouts/postbar' %>
+      <h3>Create a Post</h3>
       <%= simple_form_for @post do |f| %>
-        <%= f.input :title, :placeholder => "Post title" %>
-        <%= f.input :body, :placeholder => "Write your post here" %>
-        <%= f.submit "Submit" %>
+        <div class="form-group">
+          <label>Title</label>
+          <input class="form-control" type="text" name="post[title]" placeholder="Title"/>
+        </div>
+        <%= f.input :body, :label => "Message", :placeholder => "Message..." %>
+        <%= f.submit "Submit", class: "btn btn-primary-outline" %>
       <% end %>
     </div>
   </div>

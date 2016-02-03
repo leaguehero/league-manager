@@ -2,12 +2,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = Post.all
+    @posts = Post.order(:created_at).limit(8)
   end
 
   def new
     @post = Post.new
-
   end
 
   def create
@@ -31,10 +30,6 @@ class PostsController < ApplicationController
         format.json { respond_with_bip(@post) }
       end
     end
-  end
-
-  def edit
-    @post = Post.find(params[:id])
   end
 
   def destroy

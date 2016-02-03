@@ -1,0 +1,10 @@
+<div class="lh-toolbar">
+  <div class="lht-img"><!-- IMG --></div>
+  <div class="lht-info">
+    <div class="lht-league"><%= @league.name %></div>
+    <div class="lht-manager">Manager: <%= @league.admin_name %> <a href="mailto:#">email</a></div>
+  </div>
+  <% if current_page?(posts_path) && current_user && (@posts.length > 0) %>
+    <a class="btn btn-primary-outline lht-btn" href="posts/new">Create a Post</a></span>
+  <% end %>
+</div>
