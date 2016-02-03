@@ -8,9 +8,11 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
     if @games.length > 0
+      #set current_month
+      @current_month = params["month"] ? Date::ABBR_MONTHNAMES.index(params["month"]) : Date.today.month
+      #set current_month name
+      @current_month_name = params["month"] ? params["month"] : Date.today.strftime("%b")
       @game_months = ["All"]
-      @current_month = params["month"] ? Date::ABBR_MONTHNAMES.index(params["month"]) : Date.today.month #set current_month
-      @current_month_name = params["month"] ? Date::ABBR_MONTHNAMES.index(params["month"]) : Date.today.strftime("%b") #set current_month name
       @current_games = [] #set array for games in this month
 
       @games.each do |gm|
