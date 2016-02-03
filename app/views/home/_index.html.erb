@@ -20,7 +20,7 @@
                 <%= @rankings.index(tm) + 1 %>
               </td>
               <td>
-                <%= tm[0] %>
+                <%= link_to tm[0], team_path(id: tm[1]["id"]) %>
               </td>
               <td>
                 <%= tm[1]["wins"] %>

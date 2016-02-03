@@ -8,9 +8,13 @@ class GamesController < ApplicationController
   def index
     @games = Game.all
     if @games.length > 0
+      #set current_month
+      @current_month = params["month"] ? Date::ABBR_MONTHNAMES.index(params["month"]) : Date.today.month
+      #set current_month name
+      @current_month_name = params["month"] ? params["month"] : Date.today.strftime("%b")
       @game_months = ["All"]
-      @current_month = Date.today.month #set current_month
       @current_games = [] #set array for games in this month
+
       @games.each do |gm|
 
         gm_date = Date.parse(Date.strptime(gm.date,'%m/%d/%Y').to_s) #convert saved game date to Date object
@@ -19,8 +23,9 @@ class GamesController < ApplicationController
         @game_months << gm_date.strftime("%b") unless @game_months.include?(gm_date.strftime("%b"))
 
         gm_month = gm_date.month #if the game month and current month match up, insert it into the array
-
-        if gm_month == @current_month
+        if params["month"] == "All"
+          @current_games = @games
+        elsif gm_month == @current_month
           @current_games << gm
         end
       end
@@ -93,8 +98,8 @@ class GamesController < ApplicationController
         team_one: gm.team_a,
         team_two: gm.team_b,
         location: gm.playing_surface,
-        time:     gm.game_time.strftime("%I:%M %p"),
-        date:     day.date.strftime("%m/%d/%Y")
+        time:     gm.game_time,
+        date:     day.date
         )
       end
     end

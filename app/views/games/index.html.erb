@@ -34,12 +34,13 @@
           <nav class="gt-months">
             <% if !@game_months.blank? %>
               <% @game_months.each do |month| %>
-                <a class="<% if @game_months.index(month) == 1 %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a>
+              <%= link_to month, games_path(month: month), class: if month == @current_month_name then "active" end, id: month  %>
+                <!-- <a class="<% if month == @current_month_name %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a> -->
               <% end %>
             <% end %>
             <% if current_user %>
               <!-- Let's hold off on giving this to user's until it is requested -->
-              <!-- link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete -->
+              <%#= link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
               <%= link_to 'Add Game', new_game_path, class: "add-game" %>
             <% end %>
           </nav>
