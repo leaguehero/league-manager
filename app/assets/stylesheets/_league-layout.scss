@@ -138,16 +138,17 @@
   }
   .lht-info {
     float: left;
-    .lht-league {
+    .lht-league, .lht-team {
       color: #44536A;
       font-size: 24px;
       font-weight: 600;
       line-height: 36px;
     }
-    .lht-manager {
+    .lht-manager, .lht-captain {
       color: #999;
       font-size: 14px;
       font-weight: 600;
     }
   }
+  .lht-btn { float: right; }
 }

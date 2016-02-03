@@ -1,39 +1,47 @@
+<% @title = @team.name + ' • ' + @league.name + ' • League Hero' %>
+<% set_meta_tags :site => @title,
+  :canonical => request.original_url,
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'teams', 'members', 'clubs'],
+  :reverse => true,
+  :og => {
+    :title          => @title,
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => @title,
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p class="team_name"><%= @team_name %>
-        <% if current_user %>
-          <span><a class="btn btn-default edit_team_button" href="<%= params['id'] %>/edit" role="button">EDIT TEAM</a></span>
-        <% end %>
-      </p>
-      <% if !@team.captain.blank? %>
-        <p>
-          Team Captain:
-        </p>
-      <% end %>
-      <table class="table teams_table">
+      <%= render :partial => 'layouts/teambar' %>
+      <table class="table">
         <thead>
           <tr>
             <th class="team_header">Name</th>
             <th class="team_header">Email</th>
             <th>Phone</th>
-            <th></th>
-        </tr>
+          </tr>
         </thead>
         <tbody>
           <% @players.each do |pl|%>
             <tr>
-              <td>
-                <%= pl.name  %>
-              </td>
-              <td>
-                <%= pl.email  %>
-              </td>
-              <td>
-                <%= pl.phone  %>
-              </td>
-              <td>
-              </td>
+              <td><%= pl.name  %></td>
+              <td><%= pl.email  %></td>
+              <td><%= pl.phone  %></td>
             </tr>
           <% end %>
         </tbody>

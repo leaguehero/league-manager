@@ -66,9 +66,9 @@
             <tr>
               <th>Home Team</th>
               <th>Away Team</th>
-              <th>Date</th>
-              <th>Time</th>
+              <th>Date / Time</th>
               <th>Location</th>
+              <th>Score</th>
               <% if current_user %>
                 <th></th>
                 <th></th>
@@ -78,11 +78,11 @@
           <tbody>
             <% @current_games.each do |game|%>
               <tr>
-                <td><%= Team.find(game.team_one).name  %></td>
-                <td><%= Team.find(game.team_two).name  %></td>
-                <td><%= game.date %></td>
-                <td><%= game.time %></td>
-                <td><%= game.location  %></td>
+                <td><a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a></td>
+                <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
+                <td><%= game.date %> at <%= game.time %></td>
+                <td><%= game.location %></td>
+                <td></td>
                 <% if current_user %>
                   <td><%= link_to('Edit', edit_game_path(:id => game.id)) %></td>
                   <td><%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %></td>

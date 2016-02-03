@@ -1,32 +1,28 @@
+<% set_meta_tags :site => 'Edit Team • League Hero',
+  :noindex => true
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div><span class="edit_page_title">EDIT TEAM DETAILS</span> (click on any input to edit)</div>
-      <p class="team_name"><%= best_in_place @team, :name %></p>
-      <table class="table teams_table">
+      <%= render :partial => 'layouts/teambar' %>
+      <p><small>* click on players to edit information inline</small></p>
+      <table class="table">
         <thead>
           <tr>
-            <th class="team_edit_header">Name</th>
-            <th class="team_edit_header">Email</th>
-            <th class="team_edit_header">Phone</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
             <th>Captain</th>
         </tr>
         </thead>
         <tbody>
           <% @players.each do |pl|%>
             <tr>
-              <td>
-                <%= best_in_place pl, :name, place_holder: "Player Name" %>
-              </td>
-              <td>
-                <%= best_in_place pl, :email, place_holder: "Player Email" %>
-              </td>
-              <td>
-                <%= best_in_place pl, :phone, place_holder: "Player Phone" %>
-              </td>
-              <td class="glyphicon glyphicon-star-empty">
-
-              </td>
+              <td><%= best_in_place pl, :name, place_holder: "Player Name" %></td>
+              <td><%= best_in_place pl, :email, place_holder: "Player Email" %></td>
+              <td><%= best_in_place pl, :phone, place_holder: "Player Phone" %></td>
+              <td></td>
             </tr>
           <% end %>
         </tbody>

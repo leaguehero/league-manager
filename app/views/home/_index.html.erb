@@ -1,9 +1,35 @@
+<% @title = @league.name + ' • League Hero' %>
+<% set_meta_tags :site => @title,
+  :canonical => request.original_url,
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'management', 'schedule', 'teams', 'scheduling', 'recent news'],
+  :reverse => true,
+  :og => {
+    :title          => @title,
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => @title,
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
-
-        <table class="table teams_table">
+        <h3>Standings</h3>
+        <table class="table">
           <thead>
             <tr>
               <th>Rank</th>
@@ -11,39 +37,29 @@
               <th>Win</th>
               <th>Loss</th>
               <th>Tie</th>
-          </tr>
+            </tr>
           </thead>
           <tbody>
             <% @rankings.each do |tm| %>
-            <tr>
-              <td>
-                <%= @rankings.index(tm) + 1 %>
-              </td>
-              <td>
-                <%= link_to tm[0], team_path(id: tm[1]["id"]) %>
-              </td>
-              <td>
-                <%= tm[1]["wins"] %>
-              </td>
-              <td>
-                <%= tm[1]["losses"] %>
-              </td>
-              <td>
-                <%= tm[1]["ties"]%>
-              </td>
-            </tr>
+              <tr>
+                <td><%= @rankings.index(tm) + 1 %></td>
+                <td><%= link_to tm[0], team_path(id: tm[1]["id"]) %></td>
+                <td><%= tm[1]["wins"] %></td>
+                <td><%= tm[1]["losses"] %></td>
+                <td><%= tm[1]["ties"]%></td>
+              </tr>
             <% end %>
           </tbody>
         </table>
-        <h2>Recent News</h2>
+        <h3>Recent News</h3>
         <% if @posts.length > 0 %>
           <% @posts.each do |post| %>
-            <h4><%= post.title %></h4>
+            <h5><%= post.title %></h5>
             <p><%= post.body %></p>
           <% end %>
         <% end %>
-      <br>
-      <h1><%= @message %></h1>
+        <!-- TODO :: what is @message used for? -->
+        <h1><%= @message %></h1>
     </div>
   </div>
 </div>

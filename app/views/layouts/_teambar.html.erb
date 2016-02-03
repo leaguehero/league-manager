@@ -1,0 +1,10 @@
+<div class="lh-toolbar">
+  <div class="lht-img"><!-- IMG --></div>
+  <div class="lht-info">
+    <div class="lht-team"><%= @team.name %></div>
+    <div class="lht-captain">Team Captain: %LEAGEUE CAPTAIN%</div>
+  </div>
+  <% if current_page?(team_path) && current_user %>
+    <a class="btn btn-primary-outline lht-btn" href="<%= params['id'] %>/edit">Edit</a></span>
+  <% end %>
+</div>

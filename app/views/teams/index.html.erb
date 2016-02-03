@@ -1,35 +1,52 @@
+<% @title = 'Teams • ' + @league.name + ' • League Hero' %>
+<% set_meta_tags :site => @title,
+  :canonical => request.original_url,
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'teams', 'members', 'clubs'],
+  :reverse => true,
+  :og => {
+    :title          => @title,
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => @title,
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Teams</h2>
-      <table class="table teams_table">
+      <%= render :partial => 'layouts/toolbar' %>
+      <h3>Teams</h3>
+      <table class="table">
         <thead>
           <tr>
             <th class="team_header">Team</th>
             <th class="team_header">Team Captain</th>
-            <th></th>
-          <% if current_user %>
-            <th></th>
-          <% end %>
+            <% if current_user %>
+              <th></th>
+            <% end %>
           </tr>
         </thead>
         <tbody>
           <% @teams.each do |tm|%>
             <tr>
-              <td>
-                <%= tm.name  %>
-              </td>
-              <td class="team_captian">
-                <%= !tm.captain.blank? ? tm.captain : "-" %>
-              </td>
-              <td>
-                <a href="teams/<%= tm.id %>">View</a>
-              </td>
-            <% if current_user %>
-              <td>
-                <a href="teams/<%= tm.id %>/edit">Edit</a>
-              </td>
-            <% end %>
+              <td><a href="teams/<%= tm.id %>"><%= tm.name  %></a></td>
+              <td><%= !tm.captain.blank? ? tm.captain : "-" %></td>
+              <% if current_user %>
+                <td><a href="teams/<%= tm.id %>/edit">Edit</a></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>
