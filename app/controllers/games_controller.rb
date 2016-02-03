@@ -93,8 +93,8 @@ class GamesController < ApplicationController
         team_one: gm.team_a,
         team_two: gm.team_b,
         location: gm.playing_surface,
-        time:     gm.game_time.strftime("%I:%M %p"),
-        date:     day.date.strftime("%m/%d/%Y")
+        time:     gm.game_time,
+        date:     day.date
         )
       end
     end
