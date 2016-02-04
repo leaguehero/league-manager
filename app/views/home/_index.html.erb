@@ -54,9 +54,15 @@
           </table>
         <% else %>
           <div class="hero-create-schedule">
-            <h3>Welcome</h3>
-            <p>Yikes! It looks like the league has yet to be fully setup. Are you the league admin? Log in to begin adding teams, players and a schedule for your league.</p>
-            <%= link_to "Log In", new_user_session_path, class: "btn btn-primary-outline" %>
+            <% if current_user %>
+              <h3>Establish Teams</h3>
+              <p>Let's finish setting up your league by creating the teams. Once the teams are established we can begin adding players and a schedule.</p>
+              <a class="btn btn-primary-outline" href="/teams">Setup Teams</a>
+            <% else %>
+              <h3>Welcome</h3>
+              <p>Yikes! It looks like the league has yet to be fully setup. Are you the league admin? Log in to begin adding teams, players and a schedule for your league.</p>
+              <%= link_to "Log In", new_user_session_path, class: "btn btn-primary-outline" %>
+            <% end %>
           </div>
         <% end %>
         <% if @posts.length > 0 %>
