@@ -19,7 +19,7 @@
     background: #57A15B;
     height: 16px;
   }
-  a {
+  a, h1 {
     color: #FFF;
     display: block;
     font-size: 42px;
@@ -30,7 +30,7 @@
   }
 }
 
-.league-content {
+.league-content, .league-sign-up {
   background: #FFF;
   margin: 0 auto 40px auto;
   max-width: 940px;
@@ -94,7 +94,6 @@
       }
     }
   }
-
   ul.lh-nav {
     border-bottom: 2px solid #DDD;
     height: 60px;
@@ -118,9 +117,11 @@
       }
     }
   }
-  .container {
-    padding: 0 40px;
-  }
+  .container { padding: 0 40px; }
+}
+.league-sign-up {
+  max-width: 480px;
+  .container { padding: 56px 40px 0 40px; }
 }
 
 // Toolbar

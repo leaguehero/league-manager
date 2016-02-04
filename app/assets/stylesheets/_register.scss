@@ -1,0 +1,61 @@
+/*
+* League Hero
+* Copyright League Hero 2016
+* leaguehero.io
+*/
+
+.step-by-step {
+  margin: 0 auto;
+  position: relative;
+  top: 24px;
+  width: 160px;
+  .step {
+    background: #EDEDED;
+    border-radius: 20px;
+    height: 16px;
+    top: 0;
+    width: 16px;
+    z-index: 5;
+    &.full { background: #CCC; }
+    &.left {
+      left: 0;
+      position: absolute;
+    }
+    &.center {
+      margin: 0 auto;
+      position: relative;
+    }
+    &.right {
+      position: absolute;
+      right: 0;
+    }
+  }
+  .bar {
+    background: #EDEDED;
+    height: 6px;
+    position: absolute;
+    top: 5px;
+    width: 50%;
+    z-index: 4;
+    @include box-sizing(border-box);
+    &.full { background: #CCC; }
+    &.left { left: 0; }
+    &.right { right: 0; }
+  }
+}
+strong.subdomain-url {
+  display: block;
+  margin: 40px 0 0 0;
+}
+
+.league-cost {
+  background: #EDEDED;
+  margin: 0 0 20px 0;
+  padding: 12px 16px;
+  span { float: right; }
+}
+p.cost-disclaimer {
+  color: #CCC;
+  font-size: 13px;
+  line-height: 1.4;
+}

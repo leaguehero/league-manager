@@ -1,6 +1,15 @@
 <body class="lh-application">
 
-  <%= yield %>
+  <div class="league-header">
+    <div class="lh-topbar"></div>
+    <h1>Create a League</h1>
+  </div>
+
+  <div class="league-sign-up">
+
+    <%= yield %>
+
+  </div>
 
 
   <% if ENV['PRODUCTION'] == "true" %>
