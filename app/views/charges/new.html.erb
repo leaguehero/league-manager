@@ -1,3 +1,7 @@
+<% set_meta_tags :site => 'Create a League • League Hero',
+  :noindex => true
+%>
+
 <script type="text/javascript">
   // This identifies your website in the createToken call below
   Stripe.setPublishableKey( "<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>");
@@ -29,47 +33,51 @@
   });
 </script>
 
-<div class="sub_header">
-  <div class="header_style_bar">
-  </div>
-  <div class="league_name">
-    Create a League
-  </div>
+<div class="step-by-step">
+  <div class="step left full"></div>
+  <div class="bar full"></div>
+  <div class="step center full"></div>
+  <div class="bar right full"></div>
+  <div class="step right full"></div>
 </div>
-<div class="container-fluid">
-  <div class="cost">
-    <% if current_user %>
-    TEAMS:<%= @pl.max_teams %> x PLAYERS PER TEAM:<%= @pl.max_players_per_team %> = TOTAL: $<%= @amount  %>
-    <% end %>
-  </div>
+
+<div class="container">
   <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div id="info_box_content">
-        <%= form_tag "/charges", id: "payment-form" do %>
-          <span class="payment-errors text-danger"></span>
-
-          <div class="form-group">
-            <label for="number">Card Number</label>
-            <input type="text" size="20" class="form-control"  id="number" data-stripe="number"/>
-          </div>
-
-          <div class="form-group">
-            <label for="cvc">CVC</label>
-            <input type="text" size="4" class="form-control" id="cvc" data-stripe="cvc"/>
-          </div>
-
-          <label for="exp">Expiration (MM/YYYY)</label>
-          <div class="form-group">
-            <div>
-              <input type="text" size="2" class="form-control exp-field" id="exp"data-stripe="exp-month"/>
-              <span> / </span>
-              <input type="text" size="4" class="form-control exp-field" data-stripe="exp-year"/>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit Payment</button>
+    <div class="col-md-12">
+      <div class="league-cost">
+        <% if current_user %>
+          <strong><%= @pl.max_teams %></strong> teams x <strong><%= @pl.max_players_per_team %></strong> players/team x <strong>$1</strong><span>= $<%= @amount %></span>
         <% end %>
       </div>
+      <p class="cost-disclaimer">You league will be charged for the number of teams and the max number of players per team at a dollar per player. Teams and players may be added after league has been created.</p>
+      <%= form_tag "/charges", id: "payment-form" do %>
+        <span class="payment-errors text-danger"></span>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" size="20" class="form-control" data-stripe="number"/>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Security Code (CVV)</label>
+              <input type="text" size="4" class="form-control" data-stripe="cvc"/>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <label>MM</label>
+            <input type="text" size="2" class="form-control exp-field" data-stripe="exp-month" placeholder="MM"/>
+          </div>
+          <div class="col-sm-3">
+            <label>YYYY</label>
+            <input type="text" size="4" class="form-control exp-field" data-stripe="exp-year" placeholder="YYYY"/>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary-outline">Submit</button>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,24 +1,85 @@
-<div class="sub_header">
-  <div class="header_style_bar">
-  </div>
-  <div class="league_name">
-    Create a League
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div id="info_box_content">
-        <%= simple_form_for @pre_league do |f| %>
-          <%= f.input :league_name, :placeholder => "Insert the name of your league here" %>
-          <%= f.input :admin_name,:placeholder => "Name of league Admin or Comissioner" %>
-          <%= f.input :subdomain, :placeholder => "Subdomain for your league" %>
-          <%= f.input :max_teams, as: :integer %>
-          <%= f.input :max_players_per_team, as: :integer %>
+<% set_meta_tags :site => 'Create a League • League Hero',
+  :canonical => request.original_url,
+  :author => 'League Hero',
+  :copyright => '&copy; 2016 League Hero',
+  :description => "-",
+  :keywords => ['league', 'create', 'register', 'signup', 'manager'],
+  :reverse => true,
+  :og => {
+    :title          => 'Create a League • League Hero',
+    :type           => 'website',
+    :url            => request.original_url,
+    :image          => '-',
+    :description    => "-",
+    :site_name      => 'League Hero',
+  },
+  :twitter => {
+    :card           => 'summary',
+    :site           => '@getleaguehero',
+    :title          => 'Create a League • League Hero',
+    :description    => "-",
+    :creator        => '@getleaguehero',
+    :image          => '-',
+  }
+%>
 
-          <%= f.submit "Next" %>
-        <% end %>
-      </div>
+<div class="step-by-step">
+  <div class="step left full"></div>
+  <div class="bar"></div>
+  <div class="step center"></div>
+  <div class="bar right"></div>
+  <div class="step right"></div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <% flash.each do |type, msg| %>
+        <div class="alert <%= bootstrap_class_for(type) %> alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <%= msg %>
+        </div>
+      <% end %>
+      <%= simple_form_for @pre_league do |f| %>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label>Name</label>
+              <input class="form-control" type="text" name="pre_league[league_name]" placeholder="League Name">
+            </div>
+            <div class="form-group">
+              <label>Admin Name</label>
+              <input class="form-control" type="text" name="pre_league[admin_name]" placeholder="Name of League Admin">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="form-group">
+              <label>Subdomain</label>
+              <input class="form-control" type="text" name="pre_league[subdomain]" placeholder="Subdomain">
+            </div>
+          </div>
+          <div class="col-sm-5" style="padding-left: 0;">
+            <strong class="subdomain-url">.leaguehero.io</strong>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Number of Teams</label>
+              <input class="form-control" type="number" step="1" name="pre_league[max_teams]">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Max Players per Team</label>
+              <input class="form-control" type="number" step="1" name="pre_league[max_players_per_team]">
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary-outline" type="submit">Next</button>
+      <% end %>
     </div>
   </div>
 </div>
