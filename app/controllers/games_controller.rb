@@ -109,6 +109,7 @@ class GamesController < ApplicationController
 
   def edit
     @game = Game.find(params[:id])
+    @game_played = Date.parse(@game.date) < Date.today
     @teams = Team.all
   end
 

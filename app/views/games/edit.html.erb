@@ -33,6 +33,14 @@
       <p><strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %></p>
       <p><strong>LOSING TEAM:</strong> <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %></p>
       <p><strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %></p>
+      <!-- TODO :: Restyle and use more logic  -->
+      <% if @game_played %>
+        <h3>Game Results</h3>
+        <p><strong>WINNING TEAM:</strong> <%= best_in_place @game, :winner, :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name }%></p>
+        <p><strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %></p>
+        <p><strong>LOSING TEAM:</strong> <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %></p>
+        <p><strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %></p>
+      <% end %>
     </div>
   </div>
 </div>
