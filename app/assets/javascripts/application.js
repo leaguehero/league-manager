@@ -12,9 +12,9 @@
 //  r e q u i re turbolinks
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place
-//= require best_in_place.jquery-ui
+// = require best_in_place.jquery-ui
+//= require bootstrap-sprockets
 //= require_tree .
