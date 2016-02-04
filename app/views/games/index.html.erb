@@ -39,8 +39,7 @@
               <% end %>
             <% end %>
             <% if current_user %>
-              <!-- Let's hold off on giving this to user's until it is requested -->
-              <%#= link_to 'Delete All', games_destroy_all_path, class: "destroy_all", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
+              <%= link_to 'Delete All', games_destroy_all_path, class: "destroy-games", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
               <%= link_to 'Add Game', new_game_path, class: "add-game" %>
             <% end %>
           </nav>
