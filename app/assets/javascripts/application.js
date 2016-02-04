@@ -15,7 +15,6 @@
 //= require best_in_place
 //= require jquery_ujs
 //= require jquery.purr
-//= require jquery.timepicker.js
 //= require best_in_place.jquery-ui
 //= require bootstrap-sprockets
 //= require_tree .
