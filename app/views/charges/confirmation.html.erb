@@ -1,35 +1,21 @@
-<div class="sub_header">
-  <div class="header_style_bar">
-  </div>
-  <div class="league_name">
-    Confirmation
-  </div>
-</div>
-<div class="container-fluid">
+<% set_meta_tags :site => 'Success! • League Hero',
+  :noindex => true
+%>
+
+<div class="step-by-step"></div>
+
+<div class="container">
   <div class="row">
-    <div class="info_box col-md-8 col-md-push-2">
-      <div id="info_box_content">
-        <!-- This will all change, don't worry Justin -->
-        <h2>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</h2>
-
-        <h3>Below are all the details of your league.</h3>
-
-        <strong>League Name:</strong> <%= @league.name %>
-        <br>
-        <strong>URL:</strong> <%= @league.subdomain %>
-        <br>
-        <strong>Admin:</strong> <%= @league.admin_name %>
-        <br>
-        <strong>Teams:</strong> <%= @league.max_teams %>
-        <br>
-        <br>
-        <h2>NEXT STEP</h2>
-
-        Head over to <a href="http://<%= @league.subdomain %>.leaguehero.io" target="_blank"><%= @league.subdomain %>.leaguehero.io</a> to get started setting up your teams and players
-
-
-        Thank you!
-      </div>
+    <div class="col-md-12">
+      <h3>Success!</h3>
+      <p>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</p>
+      <h5>League Details</h5>
+      <p><strong>Name:</strong> <%= @league.name %><br>
+        <strong>URL:</strong> <%= @league.subdomain %>.leaguehero.io<br>
+        <strong>Teams:</strong> <%= @league.max_teams %></p>
+      <h3>Let's Have Some Fun!</h3>
+      <p>Now that we created your league let's login to your league website and begin adding information about each team and the players on those teams.</p>
+      <a class="btn btn-primary-outline" href="http://<%= @league.subdomain %>.leaguehero.io">Go To League</a>
     </div>
   </div>
 </div>
