@@ -16,7 +16,6 @@ class GamesController < ApplicationController
       @current_games = [] #set array for games in this month
 
       @games.each do |gm|
-
         gm_date = Date.parse(Date.strptime(gm.date,'%m/%d/%Y').to_s) #convert saved game date to Date object
 
         # create array of months in which there are games present
@@ -115,15 +114,17 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    respond_to do |format|
+    # respond_to do |format|
       if @game.update_attributes(game_params)
-        format.html { redirect_to(@game, :notice => 'User was successfully updated.') }
-        format.json { respond_with_bip(@game) }
+        redirect_to games_path
+      #   format.html { redirect_to(@game, :notice => 'User was successfully updated.') }
+      #   format.json { respond_with_bip(@game) }
       else
-        format.html { render :action => "edit" }
-        format.json { respond_with_bip(@game) }
+      #   format.html { render :action => "edit" }
+      #   format.json { respond_with_bip(@game) }
+        redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
       end
-    end
+    # end
   end
 
   def destroy

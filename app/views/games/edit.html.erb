@@ -7,32 +7,28 @@
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
       <h3>Edit Game</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Home Team</th>
-            <th>Away Team</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><%= best_in_place @game, :team_one, :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %></td>
-            <td><%= best_in_place @game, :team_two,  :as => :select, :collection => @teams.map {|tm| [tm.id, tm.name]}.sort %></td>
-            <td><%= best_in_place @game, :date, :as => :date %></td>
-            <td><%= best_in_place @game, :time %></td>
-            <td><%= best_in_place @game, :location, place_holder: "Game Location" %></td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- TODO :: Restyle and use more logic -->
-      <h3>Game Results</h3>
-      <p><strong>WINNING TEAM:</strong> <%= best_in_place @game, :winner, :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name }%></p>
-      <p><strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %></p>
-      <p><strong>LOSING TEAM:</strong> <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %></p>
-      <p><strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %></p>
+      <%= simple_form_for @game do |f| %>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= f.input :team_one, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Home Team", input_html: { class:  "c-select" } %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :team_two, :collection => @teams.map {|tm| ["#{tm.name}", tm.id]}.sort, :prompt => "Select Away Team", input_html: { class: "c-select" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <%= f.input :date, :placeholder => @game.date, as: :date, html5: true, :class => "form-control" %>
+          </div>
+          <div class="col-sm-4">
+            <%= f.input :time, :placeholder => @game.time, as: :time, html5: true, :class => "form-control" %>
+          </div>
+          <div class="col-sm-4">
+            <%= f.input :location, :placeholder => "Enter court / field", :class => "form-control" %>
+          </div>
+        </div>
+        <%= f.submit "Update Game", :class => "btn btn-primary-outline" %>
+      <% end %>
       <!-- TODO :: Restyle and use more logic  -->
       <% if @game_played %>
         <h3>Game Results</h3>

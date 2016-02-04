@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
-  before_create :convert_date
-  before_create :convert_time
+  before_save :convert_date
+  before_save :convert_time
 
   def convert_date
     self.date = Date.parse(self.date).strftime("%m/%d/%Y")
