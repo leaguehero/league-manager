@@ -1,6 +1,7 @@
 <% set_meta_tags :site => 'Edit Game • League Hero',
   :noindex => true
 %>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.standalone.min.css">
 
 <div class="container">
   <div class="row">
@@ -18,24 +19,33 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <%= f.input :date, :placeholder => @game.date, as: :date, html5: true, :class => "form-control" %>
+            <%= f.input :date, :placeholder => @game.date, :class => "form-control", :id => "game_date", :readonly => true %>
           </div>
           <div class="col-sm-4">
-            <%= f.input :time, :placeholder => @game.time, as: :time, html5: true, :class => "form-control" %>
+            <%= f.input :time, default: @game.time, :class => "form-control" %>
           </div>
           <div class="col-sm-4">
             <%= f.input :location, :placeholder => "Enter court / field", :class => "form-control" %>
           </div>
         </div>
-        <%= f.submit "Update Game", :class => "btn btn-primary-outline" %>
-      <% end %>
       <!-- TODO :: Restyle and use more logic  -->
-      <% if @game_played %>
-        <h3>Game Results</h3>
-        <p><strong>WINNING TEAM:</strong> <%= best_in_place @game, :winner, :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name }%></p>
-        <p><strong>WINNER'S SCORE:</strong><%= best_in_place @game, :winner_score %></p>
-        <p><strong>LOSING TEAM:</strong> <%= best_in_place @game, :loser,  :as => :select, :collection => {@game.team_one => Team.find(@game.team_one).name , @game.team_two => Team.find(@game.team_two).name } %></p>
-        <p><strong>LOSER'S SCORE:</strong> <%= best_in_place @game, :loser_score %></p>
+        <% if @game_played %>
+        <br>
+          <h3>Game Results</h3>
+          <div class="col-sm-6">
+            <%= f.input :winner, :as => :select, :collection => [Team.find(@game.team_one).name, Team.find(@game.team_two).name],:include_blank => false%>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :winner_score %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :loser, :as => :select, :collection => [Team.find(@game.team_two).name, Team.find(@game.team_one).name],:include_blank => false%>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :loser_score %>
+          </div>
+        <% end %>
+        <%= f.submit "Update Game", :class => "btn btn-primary-outline" %>
       <% end %>
     </div>
   </div>
@@ -43,8 +53,10 @@
 
 <%= javascript_tag do %>
   $(document).ready(function() {
-    /* Activating Best In Place */
-    jQuery(".best_in_place").best_in_place();
+  <!-- bootstrap datepicker -->
+    $('#game_date').datepicker({
+      todayBtn: "linked"
+    });
   });
 <% end %>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>

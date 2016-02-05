@@ -52,3 +52,7 @@
   border-radius: 8px;
   padding: 24px;
 }
+
+.form-control[readonly]{
+  background-color: white;
+}

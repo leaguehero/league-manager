@@ -1,6 +1,7 @@
 <% set_meta_tags :site => 'New Game • League Hero',
   :noindex => true
 %>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.standalone.min.css">
 
 <div class="container">
   <div class="row">
@@ -18,7 +19,7 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <%= f.input :date, as: :date, html5: true, :class => "form-control" %>
+            <%= f.input :date, :class => "form-control", :id => "game_date", :readonly => true %>
           </div>
           <div class="col-sm-4">
             <%= f.input :time, as: :time, html5: true, :class => "form-control" %>
@@ -32,3 +33,12 @@
     </div>
   </div>
 </div>
+<%= javascript_tag do %>
+  $(document).ready(function() {
+  <!-- bootstrap datepicker -->
+    $('#game_date').datepicker({
+      todayBtn: "linked"
+    });
+  });
+<% end %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
