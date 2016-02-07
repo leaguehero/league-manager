@@ -24,7 +24,7 @@ class GamesController < ApplicationController
 
         gm_month = gm_date.month #if the game month and current month match up, insert it into the array
         if params["month"] == "All"
-          @current_games = @games
+          @current_games << gm
         elsif gm_month == @current_month
           @current_games << gm
         end
