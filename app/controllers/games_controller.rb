@@ -6,6 +6,7 @@ class GamesController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
+    @teams = Team.all
     @games = Game.all
     if @games.length > 0
       #set current_month

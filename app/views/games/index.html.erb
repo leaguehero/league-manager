@@ -48,9 +48,13 @@
         <% if current_user %>
           <div class="hero-create-schedule">
             <h3>Let's Create a Schedule!</h3>
-            <p>Oops, it look like you haven't added any games to your schedule. Use <strong>Scheduling Hero&trade;</strong> to auto generate a schedule based on preferences or manually create a schedule by individually adding games.</p>
-            <%= link_to 'Generate Schedule', games_generator_options_path, class: "btn btn-primary-outline" %>
-            <%= link_to 'Add Game', new_game_path, class: "btn btn-secondary-outline" %>
+            <% if @teams.blank?  %>
+              <p>Oops, it looks like you haven't added any teams to your league yet. Setup your teams first, then come on back to start adding games to your schedule!</p>
+            <% else %>
+              <p>Oops, it looks like you haven't added any games to your schedule. Use <strong>Scheduling Hero&trade;</strong> to auto generate a schedule based on preferences or manually create a schedule by individually adding games.</p>
+              <%= link_to 'Generate Schedule', games_generator_options_path, class: "btn btn-primary-outline" %>
+              <%= link_to 'Add Game', new_game_path, class: "btn btn-secondary-outline" %>
+            <% end %>
           </div>
         <% else %>
           <div class="hero-create-schedule">
