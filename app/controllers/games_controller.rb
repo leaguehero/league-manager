@@ -27,6 +27,7 @@ class GamesController < ApplicationController
         elsif gm_month == @current_month
           @current_games << gm
         end
+        @current_games.sort! { |a,b| "#{a.date}" + " #{a.time}"  <=> "#{b.date}" + " #{b.time}"  }
       end
     end
   end
@@ -39,7 +40,6 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
     if @game.save
-    # go to add games page
       redirect_to games_path(:game_id => @game.id)
     else
       redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
@@ -98,7 +98,7 @@ class GamesController < ApplicationController
         team_two: gm.team_b,
         location: gm.playing_surface,
         time:     gm.game_time,
-        date:     day.date
+        date:     Date.parse(day.date.to_s).strftime("%m/%d/%Y")
         )
       end
     end
@@ -108,7 +108,7 @@ class GamesController < ApplicationController
 
   def edit
     @game = Game.find(params[:id])
-    @game_played = Date.parse(@game.date) < Date.today
+    @game_played = Time.strptime(@game.date,'%m/%d/%Y') < Time.now
     @teams = Team.all
   end
 
