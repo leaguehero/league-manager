@@ -447,6 +447,29 @@ footer {
       }
 		}
 	}
+  &.app-footer {
+    margin: 200px auto 0 auto;
+    max-width: 940px;
+    position: relative;
+    nav {
+      &.legal a, span { color: #999; }
+  		span { color: #999; }
+  		&.legal a {
+  			border-left: 1px solid #DDD;
+  			&:hover, &:active { color: #666; }
+        &.lh-logo-footer {
+          border-left: none;
+          letter-spacing: initial;
+          padding: 0;
+          &:hover { font-weight: normal; }
+        }
+  		}
+    }
+    p {
+      color: #999;
+      font-size: 16px;
+    }
+  }
   #mc_embed_signup {
     #mc_embed_signup_scroll { @extend %clear; }
     label {
