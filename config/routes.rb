@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   get "games/generator_options" => "games#generator_options"
   post "games/generate" => "games#generate_games"
   delete "games/destroy_all" => "games#destroy_all"
-  get "schedule" => "games#index"
   resources  :games
-  
+
   resources  :players
   get  'charges/confirmation' => "charges#confirmation"
   resources  :charges
