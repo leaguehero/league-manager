@@ -28,7 +28,7 @@
   transition-duration: 0.4s;
   @include breakpoint(l-three) {
     min-height: 100%;
-    padding-top: 60px;
+    padding-top: 92px;
   }
 }
 .cd-main-content.lateral-menu-is-open {
@@ -320,6 +320,7 @@ header {
 .hero {
   margin: 0 0 80px 0;
   text-align: center;
+  @include breakpoint(l-one) { margin: 0 0 32px 0; }
   &.-home {
     a.button { margin: 0 0 40px 0; }
   }
@@ -328,27 +329,43 @@ header {
     margin: 0 0 160px 0;
     padding: 40px 0 0 0;
   }
-  img { margin: 0 0 64px 0; }
+  img {
+    margin: 0 0 64px 0;
+    @include breakpoint(l-one) { margin: 0 0 20px 0; }
+  }
 }
 
 // Sections
 section {
   margin: 0 0 120px 0;
-  &.-centered {
+  @include breakpoint(l-one) {
+    margin: 0 0 64px 0;
     text-align: center;
+  }
+  &.-centered { text-align: center; }
+  img {
+    @include breakpoint(l-one) {
+      margin: 0 0 24px 0;
+      max-width: 72%;
+    }
   }
 }
 
 // Slash
 .slasher {
-    width:2000px;
-    margin:0 auto 64px auto;
+  margin:0 auto 64px auto;
+  width:2000px;
+  @include breakpoint(l-three) {
+    margin:0 auto 20px auto;
+    max-width: 100%;
+  }
 }
 .slash-top {
-    height:0;
-    border-width: 100px 0 0 2000px;
-    border-style:solid;
-    border-color:transparent transparent #44536A #44536A;
+  border-color:transparent transparent #44536A #44536A;
+  border-style:solid;
+  border-width: 100px 0 0 2000px;
+  height: 0;
+  @include breakpoint(l-three) { border-width: 60px 0 0 768px; }
 }
 .slash-content {
   background: #44536A;
@@ -356,12 +373,14 @@ section {
   padding: 80px 0;
   text-align: center;
   h2 { color: #FFF; }
+  @include breakpoint(l-three) { padding: 20px; }
 }
 .slash-bottom {
-  height:0;
-  border-width:0 2000px 100px 0;
-  border-style:solid;
   border-color: #44536A #44536A transparent transparent;
+  border-style:solid;
+  border-width:0 2000px 100px 0;
+  height: 0;
+  @include breakpoint(l-three) { border-width: 0 768px 60px 0; }
 }
 
 // Featured Items
@@ -388,22 +407,30 @@ footer {
     font-weight: 700;
     margin: 0 0 32px 0;
 		i.icon { display: none; visibility: hidden; }
-    &.newsletter-h5 { margin: 0 0 24px 0; }
 		@include breakpoint(l-three) {
-			background: #D1D4D4;
+			background: #EDEDED;
 			border-radius: 4px;
-			color: #454545;
 			cursor: pointer;
 			margin: 0 0 8px 0;
 			padding: 16px;
 			@include box-sizing(border-box);
 			i.icon { display: inline-block; visibility: visible; }
 		}
+    &.newsletter-h5 {
+      margin: 0 0 24px 0;
+      @include breakpoint(l-three) {
+        background: none;
+        color: #44536A;
+        cursor: default;
+        margin: 20px 0 8px 0;
+        padding: 0;
+      }
+    }
   }
 	nav {
 		width: 100%;
 		@include breakpoint(l-three) {
-			background: #D1D4D4;
+			background: #EDEDED;
 			border-radius: 0 0 4px 4px;
 			display: none;
 			margin: -10px 0 8px 0;
