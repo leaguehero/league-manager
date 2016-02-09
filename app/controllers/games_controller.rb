@@ -58,7 +58,7 @@ class GamesController < ApplicationController
     @team_ids = @teams.pluck(:id)
     @game_times = params["game_times"] unless params["game_times"].nil?
     @fields = params["field_names"] unless params["field_names"].nil?
-    # removed for now, they can manually change dates on games or delete them 
+    # removed for now, they can manually change dates on games or delete them
     @exclude_dates = params["exclude_dates"].split(", ") unless params["exclude_dates"].nil?
 
     # TODO: Add ability to have multiple days for games
