@@ -13,7 +13,9 @@
           <div class="col-sm-6">
             <fieldset class="form-group">
               <label>Court / Field Name(s)</label>
-              <input class="form-control" type="text" name="field_names" placeholder="Name of courts or fields">
+              <select class="form-control" id="court-names" data-placeholder="Enter a field" multiple type="text" name="field_names[]">
+                <option value=""></option>
+              </select>
               <small class="text-muted">Please use a comma(,) to seperate the court / field names.</small>
             </fieldset>
           </div>
@@ -65,3 +67,9 @@
     </div>
   </div>
 </div>
+<%= javascript_tag do %>
+$(document).ready(function() {
+  <!-- Ability to add multiple input options into field -->
+  $("#court-names").chosen({create_option: true, persistent_create_option: true, skip_no_results: true, create_option_text: 'Add Court'});
+});
+<% end %>
