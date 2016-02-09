@@ -16,5 +16,5 @@
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place.jquery-ui
-//= require bootstrap-sprockets
 //= require_tree .
+//= require bootstrap-sprockets
