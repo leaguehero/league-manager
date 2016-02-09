@@ -41,7 +41,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
     if @game.save
-      redirect_to games_path(:game_id => @game.id)
+      redirect_to schedule_path(:game_id => @game.id)
     else
       redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
     end
@@ -117,7 +117,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     # respond_to do |format|
       if @game.update_attributes(game_params)
-        redirect_to games_path
+        redirect_to schedule_path
       #   format.html { redirect_to(@game, :notice => 'User was successfully updated.') }
       #   format.json { respond_with_bip(@game) }
       else
@@ -131,13 +131,13 @@ class GamesController < ApplicationController
   def destroy
     Game.find(params[:id]).destroy
     flash[:notice] = "Game was successfully deleted"
-    redirect_to games_path
+    redirect_to schedule_path
   end
 
   def destroy_all
     # delete all games created
     Game.where("created_at" < Time.now.to_s).destroy_all
-    redirect_to games_path
+    redirect_to schedule_path
   end
 
   private
