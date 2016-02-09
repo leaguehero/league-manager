@@ -365,7 +365,7 @@ section {
   border-style:solid;
   border-width: 100px 0 0 2000px;
   height: 0;
-  @include breakpoint(l-three) { border-width: 60px 0 0 768px; }
+  @include breakpoint(l-three) { border-width: 5vh 0 0 100vw; }
 }
 .slash-content {
   background: #44536A;
@@ -383,7 +383,7 @@ section {
   border-style:solid;
   border-width:0 2000px 100px 0;
   height: 0;
-  @include breakpoint(l-three) { border-width: 0 768px 60px 0; }
+  @include breakpoint(l-three) { border-width: 0 100vw 5vh 0; }
 }
 
 // Featured Items
