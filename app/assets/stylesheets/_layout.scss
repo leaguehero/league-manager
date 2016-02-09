@@ -325,9 +325,14 @@ header {
     a.button { margin: 0 0 40px 0; }
   }
   &.-pricing {
-    text-align: left;
     margin: 0 0 160px 0;
     padding: 40px 0 0 0;
+    text-align: left;
+    @include breakpoint(l-one) {
+      margin: 0 0 80px 0;
+      padding: 0;
+      text-align: center;
+    }
   }
   img {
     margin: 0 0 64px 0;
@@ -356,7 +361,7 @@ section {
   margin:0 auto 64px auto;
   width:2000px;
   @include breakpoint(l-three) {
-    margin:0 auto 20px auto;
+    margin:0 auto 32px auto;
     max-width: 100%;
   }
 }

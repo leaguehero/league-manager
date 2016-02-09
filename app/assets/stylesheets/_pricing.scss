@@ -5,6 +5,14 @@
 */
 
 
+.img-pricing {
+  color: #44536A;
+  font-size: 4.4em;
+  font-weight: 700;
+  line-height: 3;
+  @include breakpoint(l-one) { line-height: 2; }
+}
+
 .pricing {
   color: #44536A;
   font-weight: 700;
