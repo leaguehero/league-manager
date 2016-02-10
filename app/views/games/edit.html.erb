@@ -19,7 +19,7 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <%= f.input :date, :placeholder => @game.date, :class => "form-control", :id => "edit-game-date", :readonly => true %>
+            <%= f.input :date, :placeholder => @game.date, :class => "form-control", :id => "game_date", :readonly => true %>
           </div>
           <div class="col-sm-4">
             <%= f.input :time, :collection => @time_options, default: @game.time, :class => "form-control", :id => "edit-game-time" %>
@@ -54,7 +54,7 @@
 <%= javascript_tag do %>
   $(document).ready(function() {
   <!-- bootstrap datepicker -->
-    $('#edit-game-date').datepicker({
+    $('#game_date').datepicker({
       todayBtn: "linked"
     });
     <!-- TODO: game time picker -->

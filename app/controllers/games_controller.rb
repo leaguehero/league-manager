@@ -118,17 +118,18 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    # respond_to do |format|
+
+    # set game winner and loser
+    winner = params["game"]["winner"]
+    loser = params["game"]["loser"]
+    # need to keep params here to overwrite
+    params["game"]["winner"] = Team.find_by_name(winner).id unless winner.nil?
+    params["game"]["loser"] = Team.find_by_name(loser).id unless loser.nil?
       if @game.update_attributes(game_params)
         redirect_to schedule_path
-      #   format.html { redirect_to(@game, :notice => 'User was successfully updated.') }
-      #   format.json { respond_with_bip(@game) }
       else
-      #   format.html { render :action => "edit" }
-      #   format.json { respond_with_bip(@game) }
         redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
       end
-    # end
   end
 
   def destroy
