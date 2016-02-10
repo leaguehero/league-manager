@@ -35,7 +35,6 @@
             <% if !@game_months.blank? %>
               <% @game_months.each do |month| %>
               <%= link_to month, schedule_path(month: month), class: if month == @current_month_name then "active" end, id: month  %>
-                <!-- <a class="<% if month == @current_month_name %>active<% end %> game_month" id="<%= month %>" href="#"><%= month %></a> -->
               <% end %>
             <% end %>
             <% if current_user %>
@@ -81,7 +80,7 @@
                 <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
                 <td><%= game.date %> at <%= game.time %></td>
                 <td><%= game.location %></td>
-                <td></td>
+                <td><% if game.winner_score && game.loser_score %><%= game.winner_score %> - <%= game.loser_score %><% end %></td>
                 <% if current_user %>
                   <td><%= link_to('Edit', edit_game_path(:id => game.id)) %></td>
                   <td><%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %></td>
