@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  include GamesHelper
 
   # don't protect on genrate games post request
   protect_from_forgery except: :generate_games
@@ -34,6 +35,7 @@ class GamesController < ApplicationController
   end
 
   def new
+    set_time_options
     @game = Game.new
     @teams = Team.all
   end
@@ -108,6 +110,7 @@ class GamesController < ApplicationController
   end
 
   def edit
+    set_time_options
     @game = Game.find(params[:id])
     @game_played = Time.strptime(@game.date,'%m/%d/%Y') < Time.now
     @teams = Team.all

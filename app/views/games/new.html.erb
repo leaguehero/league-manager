@@ -22,7 +22,7 @@
             <%= f.input :date, :class => "form-control", :id => "game_date", :readonly => true %>
           </div>
           <div class="col-sm-4">
-            <%= f.input :time, as: :time, html5: true, :class => "form-control" %>
+            <%= f.input :time, :collection => @time_options, :class => "form-control" %>
           </div>
           <div class="col-sm-4">
             <%= f.input :location, :placeholder => "Enter court / field", :class => "form-control" %>
