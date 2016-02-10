@@ -486,12 +486,28 @@ footer {
     margin: 200px auto 0 auto;
     max-width: 940px;
     position: relative;
-    nav {
-      &.legal a, span { color: #999; }
-  		span { color: #999; }
-  		&.legal a {
+    nav.legal {
+      @include breakpoint(l-one) {
+        display: block;
+        padding: 0;
+        text-align: center;
+        span {
+          display: block;
+          font-size: 1.1em;
+          a { margin: 0 0 8px 0; }
+        }
+      }
+      a, span { color: #999; }
+  		a {
   			border-left: 1px solid #DDD;
+        @include breakpoint(l-one) {
+          margin: 0 0 12px 0;
+          padding: 0 12px;
+        }
   			&:hover, &:active { color: #666; }
+        &.footer-policy {
+          @include breakpoint(l-one) { border-left: none; }
+        }
         &.lh-logo-footer {
           border-left: none;
           letter-spacing: initial;

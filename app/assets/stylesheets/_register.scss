@@ -46,6 +46,7 @@
 strong.subdomain-url {
   display: block;
   margin: 40px 0 0 0;
+  @include breakpoint(l-one) { margin: -6px 0 24px 24px; }
 }
 
 .league-cost {
