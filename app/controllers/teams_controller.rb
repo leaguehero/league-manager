@@ -35,9 +35,13 @@ class TeamsController < ApplicationController
           @count += 1
         }
     end
+    # find players and team
     @players = Player.where(:team_id => id)
     @team = Team.find(id)
     @team_name = @team.name.capitalize
+
+    # pull in all team games and sort by date 
+    @team_games = Game.where("team_one = #{id} or team_two = #{id}").sort_by &:date
   end
 
   def edit
