@@ -46,29 +46,31 @@
           <% end %>
         </tbody>
       </table>
-      <h4>Games</h4>
-      <table class="table teams_table">
-        <thead>
-          <tr>
-            <th>Home Team</th>
-            <th>Away Team</th>
-            <th>Date / Time</th>
-            <th>Location</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @team_games.each do |game|%>
+      <% if @team_games.present? %>
+        <h4>Games</h4>
+        <table class="table teams_table">
+          <thead>
             <tr>
-              <td><a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a></td>
-              <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
-              <td><%= game.date %> at <%= game.time %></td>
-              <td><%= game.location %></td>
-              <td><% if game.winner_score && game.loser_score %><%= game.winner_score %> - <%= game.loser_score %><% end %></td>
+              <th>Home Team</th>
+              <th>Away Team</th>
+              <th>Date / Time</th>
+              <th>Location</th>
+              <th>Score</th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <% @team_games.each do |game|%>
+              <tr>
+                <td><a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a></td>
+                <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
+                <td><%= game.date %> at <%= game.time %></td>
+                <td><%= game.location %></td>
+                <td><% if game.winner_score && game.loser_score %><%= game.winner_score %> - <%= game.loser_score %><% end %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
     </div>
   </div>
 </div>
