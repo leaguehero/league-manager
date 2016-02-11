@@ -1,13 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <%= @league.name %>
-      <br>
-      <%= link_to('League Home', root_path) %>
-      <br>
-      <%= link_to('Manage Teams', teams_path) %>
-      <br>
-      <%= link_to('Manage Games', games_path) %>
+      <h3>Edit League</h3>
+      <div><strong>League Name: </strong><%= best_in_place @league, :name %></div>
+      <div><strong>Admin Name: </strong><%= best_in_place @league, :admin_name %></div>
+      <div><strong>Admin Email: </strong><%= best_in_place @league, :admin_email %></div>
+      <!-- TODO: Ability to add more teams and/ or players per team  -->
+      <!-- <strong>Max Teams: </strong><div><%= best_in_place @league, :max_teams %></div>
+      <strong>Max Players Per Team: </strong><div><%= best_in_place @league, :max_players_per_team %></div> -->
     </div>
   </div>
 </div>
+
+<%= javascript_tag do %>
+$(document).ready(function() {
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
+});
+<% end %>
