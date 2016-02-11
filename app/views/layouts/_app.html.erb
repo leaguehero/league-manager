@@ -1,12 +1,10 @@
 <body class="lh-application">
-
   <div class="league-header">
     <div class="lh-topbar"></div>
     <% if @league %>
       <a href="/"><%= @league.name %></a>
     <% end %>
   </div>
-
   <div class="league-content">
     <nav class="lh-nav">
       <a class="<% if current_page?(root_path) %>active<% end %>"
@@ -26,32 +24,8 @@
         </div>
       <% end %>
     </nav>
-
     <%= yield %>
-
   </div>
-
-  <footer class="app-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-9">
-          <nav class="legal">
-            <span>&copy; 2016 <a class="lh-logo-footer" href="http://leaguehero.io"><strong>LEAGUE</strong>HERO</a></span>
-            <a href="http://leaguehero.io/privacy">Privacy Policy</a>
-            <a href="http://leaguehero.io/terms">Terms of Service</a>
-          </nav>
-        </div>
-        <div class="col-sm-3">
-          <p>Built in
-            <strong>Chicago</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
+  <%= render :partial => 'layouts/footer' %>
   <%= render :partial => 'layouts/analytics' %>
-
-
 </body>
