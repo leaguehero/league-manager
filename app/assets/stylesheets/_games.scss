@@ -33,7 +33,7 @@
         border: 2px solid #454545;
         color: #FFF;
       }
-      &.add-game {
+      &.add-game, &.destroy-games {
         color: #999;
         float: right;
         background: none;
@@ -42,6 +42,10 @@
         margin: 0 0 0 20px;
         width: auto;
         &:hover, &.active { color: #333; }
+      }
+      &.destroy-games {
+        color: #CCC;
+        &:hover { color: #F45D4C; }
       }
     }
   }
@@ -53,6 +57,85 @@
   padding: 24px;
 }
 
-.form-control[readonly]{
-  background-color: white;
+.form-control[readonly] { background-color: #FFF; }
+
+.gameday-legend {
+  background: #EDEDED;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  height: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  width: 100%;
+  @extend %clear;
+  .gl-info {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 16px;
+    width: 25%;
+  }
+  .gl-team {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 12px;
+    width: 75%;
+    @extend %clear;
+    .gl-match { float: left; }
+    .gl-result, .gl-score {
+      float: right;
+      text-align: center;
+      width: 80px;
+    }
+  }
+}
+.gameday-group {
+  border-bottom: 2px solid #EDEDED;
+  margin: 0 0 12px 0;
+  width: 100%;
+  .gameday-game {
+    border: 2px solid #EDEDED;
+    border-bottom-width: 1px;
+    box-sizing: border-box;
+    height: 70px;
+    @extend %clear;
+    .gd-info {
+      border-right: 2px solid #EDEDED;
+      box-sizing: border-box;
+      color: #44536A;
+      float: left;
+      font-size: 20px;
+      font-weight: 600;
+      height: 65px;
+      line-height: 1;
+      padding: 12px 16px;
+      width: 25%;
+      span {
+        color: #999;
+        font-size: 13px;
+      }
+    }
+    .gd-teams {
+      float: left;
+      width: 75%;
+      .gd-team {
+        border-bottom: 2px solid #EDEDED;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 600;
+        height: 33px;
+        line-height: 1;
+        padding: 8px 12px;
+        width: 100%;
+        @extend %clear;
+        &.last { border-bottom: 0; }
+        a { float: left; }
+        .gd-score, .gd-result {
+          float: right;
+          text-align: center;
+          width: 80px;
+        }
+      }
+    }
+  }
 }
