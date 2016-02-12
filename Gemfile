@@ -70,6 +70,10 @@ gem 'apartment-sidekiq'
 gem 'best_in_place'
 # schedule generator
 gem 'rrschedule'
+# paperclip for uploading images
+gem "paperclip", "~> 4.3"
+
+
 
 
 

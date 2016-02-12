@@ -44,5 +44,6 @@ Rails.application.configure do
   # to open emails in the browser
   config.action_mailer.delivery_method = :letter_opener
 
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 
 end
