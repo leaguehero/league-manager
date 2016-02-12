@@ -24,13 +24,14 @@ class GamesController < ApplicationController
         @game_months << gm_date.strftime("%b") unless @game_months.include?(gm_date.strftime("%b"))
 
         gm_month = gm_date.month #if the game month and current month match up, insert it into the array
-        if params["month"] == "All"
+        if params["month"] == "All" || params["month"].nil?
+          @current_month_name = "All"
           @current_games << gm
         elsif gm_month == @current_month
           @current_games << gm
         end
-        @current_games.sort! { |a,b| "#{a.date}" + " #{a.time}"  <=> "#{b.date}" + " #{b.time}"  }
       end
+      @current_games.sort! { |a,b| "#{a.date}" + " #{a.time}"  <=> "#{b.date}" + " #{b.time}"  }
     end
   end
 
