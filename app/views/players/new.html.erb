@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <%= render :partial => 'layouts/messages' %>
       <!-- use jquery to restrict adding more players than the league allows -->
       <%= simple_form_for @player do |f| %>
         <%= f.input :name, :placeholder => "Insert the name of your player here" %>

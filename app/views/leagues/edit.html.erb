@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <%= render :partial => 'layouts/messages' %>
       <h3>Edit League</h3>
       <div><strong>League Name: </strong><%= best_in_place @league, :name %></div>
       <div><strong>Admin Name: </strong><%= best_in_place @league, :admin_name %></div>

@@ -34,12 +34,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <% flash.each do |type, msg| %>
-        <div class="alert <%= bootstrap_class_for(type) %> alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <%= msg %>
-        </div>
-      <% end %>
+      <%= render :partial => 'layouts/messages' %>
       <%= simple_form_for @pre_league do |f| %>
         <div class="row">
           <div class="col-sm-12">

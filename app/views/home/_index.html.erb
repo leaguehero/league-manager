@@ -28,53 +28,54 @@
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
-        <% if @rankings.present? %>
-          <h3>Standings</h3>
-          <table class="table">
-            <thead>
+      <%= render :partial => 'layouts/messages' %>
+      <% if @rankings.present? %>
+        <h3>Standings</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team</th>
+              <th>Win</th>
+              <th>Loss</th>
+              <th>Tie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @rankings.each do |tm| %>
               <tr>
-                <th>Rank</th>
-                <th>Team</th>
-                <th>Win</th>
-                <th>Loss</th>
-                <th>Tie</th>
+                <td><%= @rankings.index(tm) + 1 %></td>
+                <td><%= link_to tm[0], team_path(id: tm[1]["id"]) %></td>
+                <td><%= tm[1]["wins"] %></td>
+                <td><%= tm[1]["losses"] %></td>
+                <td><%= tm[1]["ties"]%></td>
               </tr>
-            </thead>
-            <tbody>
-              <% @rankings.each do |tm| %>
-                <tr>
-                  <td><%= @rankings.index(tm) + 1 %></td>
-                  <td><%= link_to tm[0], team_path(id: tm[1]["id"]) %></td>
-                  <td><%= tm[1]["wins"] %></td>
-                  <td><%= tm[1]["losses"] %></td>
-                  <td><%= tm[1]["ties"]%></td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-        <% else %>
-          <div class="hero-create-schedule">
-            <% if current_user %>
-              <h3>Establish Teams</h3>
-              <p>Let's finish setting up your league by creating the teams. Once the teams are established we can begin adding players and a schedule.</p>
-              <a class="btn btn-primary-outline" href="/teams">Setup Teams</a>
-              <a class="btn btn-secondary-outline" href="/schedule">Add Games</a>
-            <% else %>
-              <h3>Welcome</h3>
-              <p>Yikes! It looks like the league has yet to be fully setup. Are you the league admin? Log in to begin adding teams, players and a schedule for your league.</p>
-              <%= link_to "Log In", new_user_session_path, class: "btn btn-primary-outline" %>
             <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div class="hero-create-schedule">
+          <% if current_user %>
+            <h3>Establish Teams</h3>
+            <p>Let's finish setting up your league by creating the teams. Once the teams are established we can begin adding players and a schedule.</p>
+            <a class="btn btn-primary-outline" href="/teams">Setup Teams</a>
+            <a class="btn btn-secondary-outline" href="/schedule">Add Games</a>
+          <% else %>
+            <h3>Welcome</h3>
+            <p>Yikes! It looks like the league has yet to be fully setup. Are you the league admin? Log in to begin adding teams, players and a schedule for your league.</p>
+            <%= link_to "Log In", new_user_session_path, class: "btn btn-primary-outline" %>
+          <% end %>
+        </div>
+      <% end %>
+      <% if @posts.length > 0 %>
+        <h3>Recent News</h3>
+        <% @posts.each do |post| %>
+          <div class="lh-post">
+            <h5><span><%= post.created_at.strftime("%b %e at %-I:%M%p") %></span><%= post.title %></h5>
+            <p><%= post.body %></p>
           </div>
         <% end %>
-        <% if @posts.length > 0 %>
-          <h3>Recent News</h3>
-          <% @posts.each do |post| %>
-            <div class="lh-post">
-              <h5><span><%= post.created_at.strftime("%b %e at %-I:%M%p") %></span><%= post.title %></h5>
-              <p><%= post.body %></p>
-            </div>
-          <% end %>
-        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

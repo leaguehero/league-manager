@@ -7,6 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <%= render :partial => 'layouts/messages' %>
       <h3>Success!</h3>
       <p>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</p>
       <h5>League Details</h5>
