@@ -72,6 +72,8 @@ gem 'best_in_place'
 gem 'rrschedule'
 # paperclip for uploading images
 gem "paperclip", "~> 4.3"
+# to save files to aws
+gem 'aws-sdk'
 
 
 
