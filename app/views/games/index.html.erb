@@ -147,8 +147,8 @@
             </tr>
           </thead>
           <tbody>
-            <% @current_games.each do |game|%>
-              <tr>
+            <% @current_games.each_with_index do |game, index|%>
+              <tr <% if @current_games[index+1] && (game.date != @current_games[index+1].date) %>class="gameday-group-break"<% end %>>
                 <td><a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a></td>
                 <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
                 <td><%= game.date %> at <%= game.time %></td>
