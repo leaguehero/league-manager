@@ -62,106 +62,39 @@
 
       <!-- EXAMPLE OF NEW GAME GROUPING -->
       <!-- GAME LEGEND, don't loop for each grouping just show once at top -->
-      <!--
-      <div class="gameday-legend">
-        <div class="gl-info">Date / Venue</div>
-        <div class="gl-team">
-          <div class="gl-match">Matchup</div>
-          <div class="gl-result">Result</div>
-          <div class="gl-score">Score</div>
-        </div>
-      </div>
-      -->
-      <!--
-      <div class="gameday-group">
-        <div class="gameday-game">
-          <div class="gd-info">
-            DEC 8 at 6:30pm<br>
-            <span>Gold's Gym</span>
-          </div>
-          <div class="gd-teams">
-            <div class="gd-team">
-              <a href="#">Rob's Rhinos</a>
-              <div class="gd-result">W</div>
-              <div class="gd-score">111</div>
-            </div>
-            <div class="gd-team last">
-              <a href="#">Justin's Jaguars</a>
-              <div class="gd-result">L</div>
-              <div class="gd-score">000</div>
-            </div>
-          </div>
-        </div>
-        <div class="gameday-game">
-          <div class="gd-info">
-            DEC 8 at 7:30pm<br>
-            <span>Gold's Gym</span>
-          </div>
-          <div class="gd-teams">
-            <div class="gd-team">
-              <a href="#">Rob's Rhinos</a>
-              <div class="gd-result">W</div>
-              <div class="gd-score">111</div>
-            </div>
-            <div class="gd-team last">
-              <a href="#">Justin's Jaguars</a>
-              <div class="gd-result">L</div>
-              <div class="gd-score">000</div>
-            </div>
-          </div>
-        </div>
-        <div class="gameday-game">
-          <div class="gd-info">
-            DEC 8 at 8:30pm<br>
-            <span>Gold's Gym</span>
-          </div>
-          <div class="gd-teams">
-            <div class="gd-team">
-              <a href="#">Rob's Rhinos</a>
-              <div class="gd-result">W</div>
-              <div class="gd-score">111</div>
-            </div>
-            <div class="gd-team last">
-              <a href="#">Justin's Jaguars</a>
-              <div class="gd-result">L</div>
-              <div class="gd-score">000</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-
       <% if @current_games.present? %>
-        <table class="table teams_table">
-          <thead>
-            <tr>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>Date / Time</th>
-              <th>Location</th>
-              <th>Score</th>
-              <% if current_user %>
-                <th></th>
-                <th></th>
-              <% end %>
-            </tr>
-          </thead>
-          <tbody>
-            <% @current_games.each_with_index do |game, index|%>
-              <tr <% if @current_games[index+1] && (game.date != @current_games[index+1].date) %>class="gameday-group-break"<% end %>>
-                <td><a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a></td>
-                <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
-                <td><%= game.date %> at <%= game.time %></td>
-                <td><%= game.location %></td>
-                <td><% if game.winner_score && game.loser_score %><%= game.winner_score %> - <%= game.loser_score %><% end %></td>
-                <% if current_user %>
-                  <td><%= link_to('Edit', edit_game_path(:id => game.id)) %></td>
-                  <td><%= link_to "Delete", game_path(:id => game.id), :confirm => 'Are you sure?', :method => :delete %></td>
-                <% end %>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+
+        <div class="gameday-legend">
+          <div class="gl-info">Date / Venue</div>
+          <div class="gl-team">
+            <div class="gl-match">Matchup</div>
+            <div class="gl-result">Result</div>
+            <div class="gl-score">Score</div>
+          </div>
+        </div>
+
+        <% @current_games.each_with_index do |game, index|%>
+          <div class="gameday-group<% if @current_games[index+1] && (game.date != @current_games[index+1].date) %> gameday-group-break<% end %>">
+            <div class="gameday-game">
+              <div class="gd-info">
+                <%= game.date %> at <%= game.time %><br>
+                <span><%= game.location %></span>
+              </div>
+              <div class="gd-teams">
+                <div class="gd-team">
+                  <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
+                  <div class="gd-result">-</div>
+                  <div class="gd-score">-</div>
+                </div>
+                <div class="gd-team last">
+                  <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
+                  <div class="gd-result">-</div>
+                  <div class="gd-score">-</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
