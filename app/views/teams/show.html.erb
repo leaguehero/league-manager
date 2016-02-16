@@ -49,28 +49,36 @@
       </table>
       <% if @team_games.present? %>
         <h4>Games</h4>
-        <table class="table teams_table">
-          <thead>
-            <tr>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>Date / Time</th>
-              <th>Location</th>
-              <th>Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @team_games.each do |game|%>
-              <tr>
-                <td><a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a></td>
-                <td><a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a></td>
-                <td><%= game.date %> at <%= game.time %></td>
-                <td><%= game.location %></td>
-                <td><% if game.winner_score && game.loser_score %><%= game.winner_score %> - <%= game.loser_score %><% end %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+        <div class="gameday-legend">
+          <div class="gl-info">Date / Venue</div>
+          <div class="gl-team">
+            <div class="gl-match">Matchup</div>
+            <div class="gl-result">Result</div>
+            <div class="gl-score">Score</div>
+          </div>
+        </div>
+        <div class="gameday-group">
+          <% @team_games.each do |game|%>
+            <div class="gameday-game">
+              <div class="gd-info">
+                <%= Date.strptime(game.date, "%m/%d/%Y").strftime("%b") %> <%= Date.strptime(game.date, "%m/%d/%Y").day %> at <%= game.time %><br>
+                <span><%= game.location %></span>
+              </div>
+              <div class="gd-teams">
+                <div class="gd-team">
+                  <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
+                  <div class="gd-result">-</div>
+                  <div class="gd-score">-</div>
+                </div>
+                <div class="gd-team last">
+                  <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
+                  <div class="gd-result">-</div>
+                  <div class="gd-score">-</div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>

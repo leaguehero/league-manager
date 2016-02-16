@@ -59,11 +59,7 @@
           </div>
         <% end %>
       <% end %>
-
-      <!-- EXAMPLE OF NEW GAME GROUPING -->
-      <!-- GAME LEGEND, don't loop for each grouping just show once at top -->
       <% if @current_games.present? %>
-
         <div class="gameday-legend">
           <div class="gl-info">Date / Venue</div>
           <div class="gl-team">
@@ -72,7 +68,6 @@
             <div class="gl-score">Score</div>
           </div>
         </div>
-
         <% @current_games.each_with_index do |game, index|%>
           <div class="gameday-group<% if @current_games[index+1] && (game.date != @current_games[index+1].date) %> gameday-group-break<% end %>">
             <div class="gameday-game">
@@ -82,12 +77,12 @@
               </div>
               <div class="gd-teams">
                 <div class="gd-team">
-                  <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
+                  <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
                   <div class="gd-result">-</div>
                   <div class="gd-score">-</div>
                 </div>
                 <div class="gd-team last">
-                  <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
+                  <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
                   <div class="gd-result">-</div>
                   <div class="gd-score">-</div>
                 </div>
