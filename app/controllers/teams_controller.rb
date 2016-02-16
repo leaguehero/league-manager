@@ -40,14 +40,14 @@ class TeamsController < ApplicationController
     @team = Team.find(id)
     @team_name = @team.name.capitalize
 
-    # pull in all team games and sort by date 
+    # pull in all team games and sort by date
     @team_games = Game.where("team_one = #{id} or team_two = #{id}").sort_by &:date
   end
 
   def edit
     id = params[:id]
 # check if any players are on the team
-    @players  = Player.where(:team_id => id)
+    @players = Player.where(:team_id => id)
     if @players.blank?
         @count = 1
         # create max amount of players when they first come to the team edit page
@@ -60,10 +60,14 @@ class TeamsController < ApplicationController
           @count += 1
         }
     end
+    # find all players on the team
     @players = Player.where(:team_id => id)
+    # convert @players into hash to be compatible with best_in_place
+    @pl_select = Hash[@players.each_with_index.map {|index, value| [index.id, index.name]}]
     @team = Team.find(id)
   end
 
+# updating using best_in_place
   respond_to :html, :json
   def update
     @team = Team.find(params[:id])
