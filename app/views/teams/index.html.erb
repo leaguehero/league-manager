@@ -44,7 +44,7 @@
           <% @teams.each do |tm|%>
             <tr>
               <td><a href="teams/<%= tm.id %>"><%= tm.name  %></a></td>
-              <td><%= !tm.captain.blank? ? tm.captain : "-" %></td>
+              <td><%= !tm.captain.blank? ? Player.find(tm.captain).name : "-" %></td>
               <% if current_user %>
                 <td><a href="teams/<%= tm.id %>/edit">Edit</a></td>
               <% end %>
