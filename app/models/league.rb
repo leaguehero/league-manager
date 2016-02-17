@@ -5,7 +5,7 @@ class League < ActiveRecord::Base
   before_create :create_tenant
 
 # paperclip attachments for images
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/image-sports.png"
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "https://s3.amazonaws.com/leaguehero/image-sports.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   validates_attachment_size :avatar, :less_than => 0.2.megabytes
 
