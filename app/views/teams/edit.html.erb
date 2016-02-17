@@ -14,7 +14,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Captain</th>
+            <!-- <th>Captain</th> -->
         </tr>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
               <td><%= best_in_place pl, :name, place_holder: "Player Name" %></td>
               <td><%= best_in_place pl, :email, place_holder: "Player Email" %></td>
               <td><%= best_in_place pl, :phone, place_holder: "Player Phone" %></td>
-              <td <% if pl.id == @team.captain %>class="captain-star"<% end %></td>
+              <!-- <td <% if pl.id == @team.captain %>class="captain-star"<% end %></td> -->
             </tr>
           <% end %>
         </tbody>
