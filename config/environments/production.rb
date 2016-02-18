@@ -79,4 +79,14 @@ Rails.application.configure do
 
   # to send out mailers in dev mode
   config.action_mailer.default_url_options = { :host => 'leaguehero.io' }
+
+  # paperclip Settings
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'], #set these creds using Heroku ENV vars
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end

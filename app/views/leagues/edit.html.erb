@@ -3,19 +3,32 @@
     <div class="col-md-12">
       <%= render :partial => 'layouts/messages' %>
       <h3>Edit League</h3>
-      <div><strong>League Name: </strong><%= best_in_place @league, :name %></div>
-      <div><strong>Admin Name: </strong><%= best_in_place @league, :admin_name %></div>
-      <div><strong>Admin Email: </strong><%= best_in_place @league, :admin_email %></div>
+      <%= simple_form_for(@league, :html => {multipart: true}) do |f| %>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= f.input :name, :placeholder => @league.name %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :admin_name, :placeholder => @league.admin_name   %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <%= f.input :admin_email, :placeholder => @league.admin_email, :class => "form-control" %>
+          </div>
+          <div class="col-sm-4">
+            <%= f.file_field :avatar, :label => "Upload an image" %>
+            <%#= f.input :avatar, :placeholder => @league.avatar.url %>
+            <% if @league.avatar.url %>
+              <%= image_tag @league.avatar.url(:thumb)%>
+            <% end %>
+          </div>
+        </div>
+        <%= f.submit "Update League", :class => "btn btn-primary-outline" %>
+      <% end %>
       <!-- TODO: Ability to add more teams and/ or players per team  -->
       <!-- <strong>Max Teams: </strong><div><%= best_in_place @league, :max_teams %></div>
       <strong>Max Players Per Team: </strong><div><%= best_in_place @league, :max_players_per_team %></div> -->
     </div>
   </div>
 </div>
-
-<%= javascript_tag do %>
-$(document).ready(function() {
-  /* Activating Best In Place */
-  jQuery(".best_in_place").best_in_place();
-});
-<% end %>

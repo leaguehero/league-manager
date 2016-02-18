@@ -1,5 +1,5 @@
 <div class="lh-toolbar">
-  <div class="lht-img"><!-- IMG --></div>
+  <div class="lht-img"><%= image_tag @league.avatar.url%></div>
   <div class="lht-info">
     <div class="lht-team"><%= best_in_place @team, :name %></div>
     <!-- only show editing input on edit page -->

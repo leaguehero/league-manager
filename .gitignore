@@ -79,3 +79,6 @@ log/development.log
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Ignore application configuration
+/config/application.yml
