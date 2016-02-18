@@ -74,6 +74,9 @@ gem 'rrschedule'
 gem "paperclip", "~> 4.3"
 # to save files to aws
 gem 'aws-sdk','< 2.0'
+# file to hide ENV variables 
+gem 'figaro'
+
 
 
 
