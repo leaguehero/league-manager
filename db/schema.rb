@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160212023601) do
+ActiveRecord::Schema.define(version: 20160219035313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,8 +86,6 @@ ActiveRecord::Schema.define(version: 20160212023601) do
     t.string   "subdomain"
     t.integer  "max_teams"
     t.integer  "max_players_per_team"
-    t.string   "admin_name"
-    t.string   "admin_email"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -130,6 +128,7 @@ ActiveRecord::Schema.define(version: 20160212023601) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
     t.integer  "pre_league_id"
+    t.string   "name"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -27,6 +27,6 @@ class PreLeaguesController < ApplicationController
 
 # Need to add permitted params for Rails 4
   def pre_league_params
-    params.require(:pre_league).permit(:admin_name, :subdomain, :url, :league_name, :max_teams, :max_players_per_team, :admin_email)
+    params.require(:pre_league).permit(:subdomain, :url, :league_name, :max_teams, :max_players_per_team)
   end
 end

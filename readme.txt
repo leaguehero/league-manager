@@ -49,6 +49,9 @@ clear Retry jobs: Sidekiq::RetrySet.new.clear
 #see stats from Sidekiq
 stats = Sidekiq::Stats.new
 
+# Add to migrations
+rails g migration (ex:) addEmailToUsers email:string
+
 
 ###Created By
 https://bitbucket.org/robschwartz/

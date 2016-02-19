@@ -2,7 +2,7 @@ class PreLeague < ActiveRecord::Base
   belongs_to :user
 
   # we check subdomain here since we use PreLeague to create League
-  validates :admin_name, :league_name, :subdomain, :max_teams, :max_players_per_team, presence: true
+  validates :league_name, :subdomain, :max_teams, :max_players_per_team, presence: true
   validate :subdomain_is_unique, on: :create
   private
 

@@ -30,13 +30,13 @@ class ChargesController < ApplicationController
 
     # build league if card goes through
     League.create(
-    :name => pl["league_name"],
-    :subdomain => pl["subdomain"],
-    :url => pl["subdomain"] + ".leaguehero.io",
-    :max_teams => pl["max_teams"],
-    :max_players_per_team => pl["max_players_per_team"],
-    :admin_name => pl["admin_name"],
-    :admin_email => current_user.email
+      :name => pl["league_name"],
+      :subdomain => pl["subdomain"],
+      :url => pl["subdomain"] + ".leaguehero.io",
+      :max_teams => pl["max_teams"],
+      :max_players_per_team => pl["max_players_per_team"],
+      :admin_name => current_user.name,
+      :admin_email => current_user.email
     )
     # update current_user with subdomain
     user = User.find_by_email(current_user.email)
