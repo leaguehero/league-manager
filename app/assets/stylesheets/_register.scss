@@ -55,8 +55,14 @@ strong.subdomain-url {
   padding: 12px 16px;
   span { float: right; }
 }
+p.trial-disclaimer {
+  color: #F45D4C;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
 p.cost-disclaimer {
-  color: #CCC;
+  color: #AAA;
   font-size: 13px;
   line-height: 1.4;
 }
