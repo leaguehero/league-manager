@@ -81,13 +81,45 @@
               <div class="gd-teams <% if current_user %>gd-w-admin<% end %>">
                 <div class="gd-team">
                   <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
-                  <div class="gd-result">-</div>
-                  <div class="gd-score">-</div>
+                  <div class="gd-result">
+                    <% if game.winner.nil? %>
+                      -
+                    <% elsif game.winner == Team.find(game.team_two).id %>
+                      W
+                    <% else %>
+                      L
+                    <% end %>
+                  </div>
+                  <div class="gd-score">
+                    <% if game.winner.nil? %>
+                      -
+                    <% elsif game.winner == Team.find(game.team_two).id %>
+                      <%= game.winner_score %>
+                    <% else %>
+                      <%= game.loser_score %>
+                    <% end %>
+                  </div>
                 </div>
                 <div class="gd-team last">
                   <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
-                  <div class="gd-result">-</div>
-                  <div class="gd-score">-</div>
+                  <div class="gd-result">
+                    <% if game.winner.nil? %>
+                      -
+                    <% elsif game.winner == Team.find(game.team_one).id %>
+                      W
+                    <% else %>
+                      L
+                    <% end %>
+                  </div>
+                  <div class="gd-score">
+                    <% if game.winner.nil? %>
+                      -
+                    <% elsif game.winner == Team.find(game.team_one).id %>
+                      <%= game.winner_score %>
+                    <% else %>
+                      <%= game.loser_score %>
+                    <% end %>
+                  </div>
                 </div>
               </div>
               <% if current_user %>
