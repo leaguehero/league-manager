@@ -22,7 +22,7 @@ class ChargesController < ApplicationController
       Stripe::Plan.create(
         :amount => @amount_in_cents,
         :interval => "year",
-        :name => "Charge for " + pl["league_name"],
+        :name => pl["league_name"]+ " League Plan" ,
         :currency => "usd",
         :id => pl["league_name"],
         :trial_period_days => 30
