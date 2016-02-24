@@ -93,6 +93,11 @@
       text-align: center;
       width: 80px;
     }
+    &.gl-w-admin { width: 70%; }
+  }
+  .gl-admin {
+    float: left;
+    width: 5%;
   }
 }
 .gameday-group {

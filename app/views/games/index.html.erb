@@ -61,11 +61,14 @@
       <% if @current_games.present? %>
         <div class="gameday-legend">
           <div class="gl-info">Date / Venue</div>
-          <div class="gl-team">
+          <div class="gl-team <% if current_user %>gl-w-admin<% end %>">
             <div class="gl-match">Matchup</div>
             <div class="gl-result">Result</div>
             <div class="gl-score">Score</div>
           </div>
+          <% if current_user %>
+            <div class="gl-admin"></div>
+          <% end %>
         </div>
         <% @current_games.each_with_index do |game, index|%>
           <div class="gameday-group<% if @current_games[index+1] && (game.date != @current_games[index+1].date) %> gameday-group-break<% end %>">
