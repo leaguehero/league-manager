@@ -119,6 +119,11 @@
         border-right: 0;
         width: 100%;
       }
+      a.gd-edit {
+        float: right;
+        font-size: 0.72em;
+        text-transform: uppercase;
+      }
       span {
         color: #999;
         font-size: 13px;
@@ -128,6 +133,14 @@
       float: left;
       width: 75%;
       @include breakpoint(l-one) { width: 100%; }
+      &.gd-w-admin {
+        border-right: 2px solid #EDEDED;
+        width: 70%;
+        @include breakpoint(l-one) {
+          border-right: 0;
+          width: 100%;
+        }
+      }
       .gd-team {
         border-bottom: 2px solid #EDEDED;
         box-sizing: border-box;
@@ -147,9 +160,18 @@
         }
       }
     }
+    .gd-admin {
+      float: left;
+      line-height: 66px;
+      text-align: center;
+      width: 5%;
+    }
   }
 }
 .gameday-group-break{
   border-bottom: 2px solid #EDEDED;
   margin: 0 0 12px 0;
 }
+
+// Delete Game
+a.game-delete { float: right; }

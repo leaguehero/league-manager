@@ -39,7 +39,6 @@
               <% end %>
             <% end %>
             <% if current_user %>
-              <%= link_to 'Delete All', games_destroy_all_path, class: "destroy-games", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
               <%= link_to 'Add Game', new_game_path, class: "add-game" %>
             <% end %>
           </nav>
@@ -72,10 +71,11 @@
           <div class="gameday-group<% if @current_games[index+1] && (game.date != @current_games[index+1].date) %> gameday-group-break<% end %>">
             <div class="gameday-game">
               <div class="gd-info">
+                <a id="mobile" class="gd-edit" href="/games/<%= game.id %>/edit">Edit</a>
                 <%= Date.strptime(game.date, "%m/%d/%Y").strftime("%b")%> <%= Date.strptime(game.date, "%m/%d/%Y").day%> at <%= Time.parse(game.time).strftime("%l:%M %P") %><br>
                 <span><%= game.location %></span>
               </div>
-              <div class="gd-teams">
+              <div class="gd-teams <% if current_user %>gd-w-admin<% end %>">
                 <div class="gd-team">
                   <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
                   <div class="gd-result">-</div>
@@ -87,6 +87,11 @@
                   <div class="gd-score">-</div>
                 </div>
               </div>
+              <% if current_user %>
+                <div id="desktop" class="gd-admin">
+                  <a href="/games/<%= game.id %>/edit">Edit</a>
+                </div>
+              <% end %>
             </div>
           </div>
         <% end %>
