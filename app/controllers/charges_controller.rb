@@ -2,7 +2,7 @@ class ChargesController < ApplicationController
   def new
     if current_user
       @pl = PreLeague.find(current_user.pre_league_id)
-      @amount  = (@pl.max_teams * @pl.max_players_per_team) 
+      @amount  = (@pl.max_teams * @pl.max_players_per_team)
     end
   end
 
@@ -16,10 +16,15 @@ class ChargesController < ApplicationController
     @amount_in_cents = @amount * 100
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
+      customer = Stripe::Customer.create(
+        :source => token,
+        :description => current_user.email
+      )
+
       charge = Stripe::Charge.create(
         :amount => @amount_in_cents,
         :currency => "usd",
-        :source => token,
+        :customer => customer.id,
         :description => "Charge for #{league} league."
       )
     rescue Stripe::CardError => e
@@ -41,8 +46,10 @@ class ChargesController < ApplicationController
     # update current_user with subdomain
     user = User.find_by_email(current_user.email)
     user.subdomain = pl["subdomain"]
+    # add stripe id to user 
+    user.stripe_id = customer.id
     user.save!
-    # use this route so user can't refresh confirmation page and send another call to Stripe
+    # use this route so user can'tD refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
 
