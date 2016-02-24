@@ -5,11 +5,21 @@
 */
 
 .lh-post {
-  padding: 24px 0 0 0;
   border-bottom: 1px solid #DDD;
+  margin: 0 0 24px 0;
   h5 {
     margin: 0 0 8px 0;
-    span { color: #CCC; margin: 0 32px 0 0; }
+    @include breakpoint(l-one) { margin: 0 0 16px 0; }
+    span {
+      color: #CCC;
+      margin: 0 32px 0 0;
+      @include breakpoint(l-one) {
+        font-size: 0.72em;
+        margin: 0;
+        padding: 4px 0 0 0;
+        text-transform: uppercase;
+      }
+    }
   }
   p { margin: 0 0 24px 0; }
 }

@@ -54,7 +54,12 @@
 .hero-create-schedule {
   border: 1px solid #DDD;
   border-radius: 8px;
-  padding: 24px;
+  margin: 0 0 24px 0;
+  padding: 40px;
+  @include breakpoint(l-one) {
+    margin: 0 0 32px 0;
+    padding: 24px;
+  }
 }
 
 .form-control[readonly] { background-color: #FFF; }
@@ -69,6 +74,7 @@
   text-transform: uppercase;
   width: 100%;
   @extend %clear;
+  @include breakpoint(l-one) { display: none; visibility: hidden; }
   .gl-info {
     box-sizing: border-box;
     float: left;
@@ -97,6 +103,7 @@
     box-sizing: border-box;
     height: 68px;
     @extend %clear;
+    @include breakpoint(l-one) { height: auto; }
     .gd-info {
       border-right: 2px solid #EDEDED;
       box-sizing: border-box;
@@ -108,6 +115,10 @@
       line-height: 1;
       padding: 12px 16px;
       width: 25%;
+      @include breakpoint(l-one) {
+        border-right: 0;
+        width: 100%;
+      }
       span {
         color: #999;
         font-size: 13px;
@@ -116,6 +127,7 @@
     .gd-teams {
       float: left;
       width: 75%;
+      @include breakpoint(l-one) { width: 100%; }
       .gd-team {
         border-bottom: 2px solid #EDEDED;
         box-sizing: border-box;
