@@ -7,7 +7,9 @@ class ChargesController < ApplicationController
   end
 
   def create
+    # set api key for Stripe calls
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+
     pl = PreLeague.find(current_user.pre_league_id)
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
@@ -16,22 +18,28 @@ class ChargesController < ApplicationController
     @amount_in_cents = @amount * 100
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
-      customer = Stripe::Customer.create(
-        :source => token,
-        :description => current_user.email
+      # create league specific plan
+      Stripe::Plan.create(
+        :amount => @amount_in_cents,
+        :interval => "year",
+        :name => "Charge for " + pl["league_name"],
+        :currency => "usd",
+        :id => pl["league_name"],
+        :trial_period_days => 30
       )
 
-      charge = Stripe::Charge.create(
-        :amount => @amount_in_cents,
-        :currency => "usd",
-        :customer => customer.id,
-        :description => "Charge for #{league} league."
+      # create stripe customer
+      customer = Stripe::Customer.create(
+        :source => token,
+        :email => current_user.email,
+        :plan => pl["league_name"],
+        :description => "Admin for " + pl["league_name"]
       )
+
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-
 
     # build league if card goes through
     League.create(
@@ -43,10 +51,11 @@ class ChargesController < ApplicationController
       :admin_name => current_user.name,
       :admin_email => current_user.email
     )
+
     # update current_user with subdomain
     user = User.find_by_email(current_user.email)
     user.subdomain = pl["subdomain"]
-    # add stripe id to user 
+    # add stripe id to user
     user.stripe_id = customer.id
     user.save!
     # use this route so user can'tD refresh confirmation page and send another call to Stripe
