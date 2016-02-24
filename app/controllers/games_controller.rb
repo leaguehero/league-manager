@@ -14,7 +14,7 @@ class GamesController < ApplicationController
       @current_month = params["month"] ? Date::ABBR_MONTHNAMES.index(params["month"]) : Date.today.month
       #set current_month name
       @current_month_name = params["month"] ? params["month"] : Date.today.strftime("%b")
-      @game_months = ["All"]
+      @game_months = []
       @current_games = [] #set array for games in this month
 
       @games.each do |gm|
@@ -22,7 +22,6 @@ class GamesController < ApplicationController
 
         # create array of months in which there are games present
         @game_months << gm_date.strftime("%b") unless @game_months.include?(gm_date.strftime("%b"))
-
         gm_month = gm_date.month #if the game month and current month match up, insert it into the array
         if params["month"] == "All" || params["month"].nil?
           @current_month_name = "All"
@@ -31,6 +30,9 @@ class GamesController < ApplicationController
           @current_games << gm
         end
       end
+      # sort game months array by checking index of abbr month name
+      @game_months.sort! {|a,b| Date::ABBR_MONTHNAMES.index(a) <=> Date::ABBR_MONTHNAMES.index(b)}
+      @game_months.unshift("All") # Add all tab to the front of the array to show as the first tab
       @current_games.sort! { |a,b| "#{a.date}" + " #{a.time}"  <=> "#{b.date}" + " #{b.time}"  }
     end
   end
