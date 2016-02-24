@@ -52,6 +52,10 @@ stats = Sidekiq::Stats.new
 # Add to migrations
 rails g migration (ex:) addEmailToUsers email:string
 
+### Stripe
+Recurring payment plans are generated per league when they first sign up. The plan can be found using the league's name as the id. 
+There is a 30 trial period attached to each league
+
 
 ###Created By
 https://bitbucket.org/robschwartz/
