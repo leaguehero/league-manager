@@ -49,12 +49,12 @@ class ChargesController < ApplicationController
       :max_teams => pl["max_teams"],
       :max_players_per_team => pl["max_players_per_team"],
       :admin_name => current_user.name,
-      :admin_email => current_user.email
+      :admin_email => current_user.email,
+      :user_id => current_user.id
     )
 
     # update current_user with subdomain
     user = User.find_by_email(current_user.email)
-    user.subdomain = pl["subdomain"]
     # add stripe id to user
     user.stripe_id = customer.id
     user.save!
@@ -64,7 +64,9 @@ class ChargesController < ApplicationController
 
 # all functionality in this route should be moved to the league controller.
   def confirmation
-    # find League from current_user
-    @league = League.find_by_subdomain(current_user["subdomain"])
+    # find PreLeague from current_user
+    @pl = PreLeague.find(current_user.pre_league_id)
+    # find league by preleague subdomain
+    @league = League.find_by_subdomain(@pl.subdomain)
   end
 end

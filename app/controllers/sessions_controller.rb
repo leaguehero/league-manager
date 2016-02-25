@@ -12,9 +12,10 @@ class SessionsController < Devise::SessionsController
   end
 
   def create
-    if current_user && (current_user.subdomain != request.subdomain)
+    if current_user && @league.user_id != current_user.id
       sign_out current_user
-      redirect_to :back, :flash => {:error => "Only the league admin can sign in to this page!"}
+      flash[:alert] = "Only the league admin can sign in to this page!"
+      redirect_to :back
     else
       super
     end
