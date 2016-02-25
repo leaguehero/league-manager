@@ -1,5 +1,5 @@
 class League < ActiveRecord::Base
-
+  belongs_to :user
   validate :subdomain_is_unique, on: :create
 
   before_create :create_tenant
