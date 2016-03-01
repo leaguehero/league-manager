@@ -34,6 +34,23 @@
         </div>
         <%= f.input :pre_league_id, as: :hidden, input_html: {value: (params["pre_league_id"].to_i)} %>
         <button class="btn btn-primary-outline" type="submit">Next</button>
+        <% end %>
+        <!-- Switch to Login -->
+        <span>Already have an account? <a href="#">Log In</a></span>
+
+        <!-- Log In form -->
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, required: false, autofocus: true %>
+          <%= f.input :password, required: false %>
+          <%= f.input :pre_league_id, as: :hidden, input_html: {value: (params["pre_league_id"].to_i)} %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Log In", :class => "btn btn-primary-outline" %>
+          <span>Don't have an account? <a href="#">Sign Up</a></span>
+        </div>
+
       <% end %>
     </div>
   </div>
