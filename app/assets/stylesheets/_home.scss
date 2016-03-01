@@ -1,0 +1,37 @@
+/*
+* League Hero
+* Copyright League Hero 2016
+* leaguehero.io
+*/
+
+
+section.featured-home-tabs {
+
+}
+.home-tabs {
+  border-bottom: 3px solid #DDD;
+  height: 120px;
+  margin: 0 0 64px 0;
+  @extend %clear;
+  .ht-tab {
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    height: 120px;
+    padding: 0 24px 0 0;
+    width: 25%;
+    &.active {
+      border-bottom: 3px solid #44536A;
+    }
+  }
+}
+.htv-item {
+  background: #ededed;
+  box-sizing: border-box;
+  display: none;
+  height: 600px;
+  width: 100%;
+  &.active {
+    display: block;
+  }
+}

@@ -24,6 +24,87 @@
     }
   %>
   <div class="container">
+    <section class="featured-home-tabs">
+      <div class="home-tabs">
+        <div id="tab1" class="ht-tab active">
+          <div class="img"></div>
+          <h5>Insights Everywhere</h5>
+          <p>Capture feedback through many different channels<p>
+        </div>
+        <div id="tab2" class="ht-tab">
+          <div class="img"></div>
+          <h5>Insights Everywhere</h5>
+          <p>Capture feedback through many different channels<p>
+        </div>
+        <div id="tab3" class="ht-tab">
+          <div class="img"></div>
+          <h5>Insights Everywhere</h5>
+          <p>Capture feedback through many different channels<p>
+        </div>
+        <div id="tab4" class="ht-tab">
+          <div class="img"></div>
+          <h5>Insights Everywhere</h5>
+          <p>Capture feedback through many different channels<p>
+        </div>
+      </div>
+      <div class="home-tab-views">
+        <div id="view1" class="htv-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                - img -
+              </div>
+              <div class="col-md-6">
+                <h3>Title of Something</h3>
+                <p>Blah blah blah...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="view2" class="htv-item">
+          - Hello World 2 -
+        </div>
+        <div id="view3" class="htv-item">
+          - Hello World 3 -
+        </div>
+        <div id="view4" class="htv-item">
+          - Hello World 4 -
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#tab1").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab1").addClass("active");
+        $("#view1").addClass("active");
+      });
+      $("#tab2").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab2").addClass("active");
+        $("#view2").addClass("active");
+      });
+      $("#tab3").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab3").addClass("active");
+        $("#view3").addClass("active");
+      });
+      $("#tab4").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab4").addClass("active");
+        $("#view4").addClass("active");
+      });
+    });
+  </script>
+
+
+  <!-- <div class="container">
     <div class="hero -home">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -83,7 +164,8 @@
         </div>
       </section>
     </div>
-  </div>
+  </div> -->
+
 <% else %>
   <%= render :partial => 'home/index' %>
 <% end %>
