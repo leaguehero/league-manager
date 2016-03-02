@@ -11,7 +11,7 @@ class SessionsController < Devise::SessionsController
     end
   end
 
-  def create
+  def create # hijacking Devise to customize when we create sessions and how if affects the user
     if current_user && (@league && @league.user_id != current_user.id) #failed sign in to a subdomain
       sign_out current_user
       flash[:alert] = "Only the league admin can sign in to this page!"
@@ -26,14 +26,13 @@ class SessionsController < Devise::SessionsController
         redirect_to session[:return_to]
         session[:return_to] = nil
       else
+        # update user with new pre_league_id
+        user = User.find(current_user.id)
+        user.pre_league_id = params["user"]["pre_league_id"]
+        user.save!
+        # send user to payment page
         respond_with resource, :location => "/charges/new"
       end
     end
   end
-  protected
-
-  # def after_sign_in_path_for(resource)
-  #   "/charges/new"
-  # end
-
 end
