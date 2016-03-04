@@ -32,6 +32,8 @@
 </head>
 <% if (params["controller"] == "pre_leagues") || (params["controller"] == "registrations") || (params["controller"] == "charges") %>
   <%= render :partial => 'layouts/signup' %>
+<% elsif (params["controller"] == "sessions") || current_page?(manage_path) %>
+  <%= render :partial => 'layouts/signin' %>
 <% else %>
   <% if request.subdomain.blank? || request.subdomain == "www" %>
     <%= render :partial => 'layouts/market' %>

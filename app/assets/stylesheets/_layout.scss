@@ -41,7 +41,6 @@
 
 // Header
 header {
-  border-bottom: 3px solid #6BC16F;
   height: 126px;
   margin: 0 auto 80px auto;
   padding: 64px 0.9375rem 32px 0.9375rem;
@@ -49,6 +48,7 @@ header {
   @media (min-width: 992px) { max-width: 940px; }
   @media (min-width: 1200px) { max-width: 1140px; }
   @include breakpoint(l-three) {
+    border-bottom: 3px solid #6BC16F;
     height: 60px;
     left: 0;
     margin: 0;
