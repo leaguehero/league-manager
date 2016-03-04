@@ -23,7 +23,7 @@
             <%= f.input :date, :placeholder => @game.date, :class => "form-control", :id => "game_date", :readonly => true %>
           </div>
           <div class="col-sm-4">
-            <%= f.input :time, :collection => @time_options, default: @game.time, :class => "form-control", :id => "edit-game-time" %>
+            <%= f.input :time, :selected => @game.time.strip, :collection => @time_options, :id => "edit-game-time" %>
           </div>
           <div class="col-sm-4">
             <%= f.input :location, :placeholder => "Enter court / field", :class => "form-control" %>
