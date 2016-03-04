@@ -24,7 +24,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def manage
+  def my
     if current_user.blank?
       redirect_to "/"
     else

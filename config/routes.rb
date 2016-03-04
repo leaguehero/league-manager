@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   root "pages#show", page: "home"
 
   # page after logging in from the marketing site
-  get "/manage" => "pages#manage"
+  get "/my-leagues" => "pages#my"
 
   # Pages for Marketing Site
   get "/*page" => "pages#show"
