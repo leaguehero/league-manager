@@ -3,6 +3,9 @@ class PagesController < ApplicationController
 
   def show
     if !request.subdomain.blank?
+      if current_user && (@league.user_id != current_user.id)
+        sign_out current_user
+      end
       create_rankings
       @posts = Post.all
       if @posts.blank?
