@@ -29,6 +29,9 @@ class PagesController < ApplicationController
       redirect_to "/"
     else
       @user_leagues = League.where(user_id: current_user.id)
+      if @user_leagues.length == 1
+        redirect_to "http://" + @user_leagues[0].url + "/"
+      end
     end
   end
 
