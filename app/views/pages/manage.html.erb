@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Subdomains</h3>
+      <% @user_leagues.each do |lg| %>
+        <li>
+          Name:<%= lg.name %>
+          Url:<%= lg.url %>
+        </li>
+      <% end %>
+    </div>
+  </div>
+</div>

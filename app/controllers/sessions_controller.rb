@@ -1,15 +1,15 @@
 class SessionsController < Devise::SessionsController
 
-  def new
-    # make sure everyone can sign_in on subdomain url
-    # override devise to check subdomain
-    if (request.subdomain.blank? || request.subdomain == "www")
-      flash[:alert] = "This page is restricted!"
-      redirect_to :root
-    else
-      super
-    end
-  end
+  # def new
+  #   # make sure everyone can sign_in on subdomain url
+  #   # override devise to check subdomain
+  #   if (request.subdomain.blank? || request.subdomain == "www")
+  #     flash[:alert] = "This page is restricted!"
+  #     redirect_to :root
+  #   else
+  #     super
+  #   end
+  # end
 
   def create # hijacking Devise to customize when we create sessions and how if affects the user
     if current_user && (@league && @league.user_id != current_user.id) #failed sign in to a subdomain
@@ -25,7 +25,9 @@ class SessionsController < Devise::SessionsController
       if !session[:return_to].blank?
         redirect_to session[:return_to]
         session[:return_to] = nil
-      else
+      elsif params["user"]["pre_league_id"].blank? # successful sign in from main site
+        respond_with resource, :location => "/manage"
+      else # successful sign in when creating a league
         # update user with new pre_league_id
         user = User.find(current_user.id)
         user.pre_league_id = params["user"]["pre_league_id"]

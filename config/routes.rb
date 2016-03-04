@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   # root to: "home#index"
   root "pages#show", page: "home"
 
+  # page after logging in from the marketing site
+  get "/manage" => "pages#manage"
+
   # Pages for Marketing Site
   get "/*page" => "pages#show"
 

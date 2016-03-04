@@ -21,6 +21,14 @@ class PagesController < ApplicationController
     end
   end
 
+  def manage
+    if current_user.blank?
+      redirect_to "/"
+    else
+      @user_leagues = League.where(user_id: current_user.id)
+    end
+  end
+
   private
   def valid_page?
     File.exist?(Pathname.new(Rails.root + "app/views/pages/#{params[:page]}.html.erb"))
