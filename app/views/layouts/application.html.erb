@@ -36,7 +36,7 @@
   <% else %>
     <%= render :partial => 'layouts/signup' %>
   <% end %>
-<% elsif (params["controller"] == "sessions") || current_page?(my_leagues_path) || current_page?(new_user_password_path) %>
+<% elsif (params["controller"] == "sessions") || current_page?(my_leagues_path) || current_page?(new_user_password_path) || current_page?(edit_user_password_path) %>
   <%= render :partial => 'layouts/signin' %>
 <% else %>
   <% if request.subdomain.blank? || request.subdomain == "www" %>
