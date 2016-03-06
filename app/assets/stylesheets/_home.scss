@@ -5,6 +5,21 @@
 */
 
 
+.home-wrapper {
+  background: #44536A;
+
+  header {
+    a.logo.desktop { color: #FFF; }
+    #cd-top-nav a {
+      color: #FFF;
+      &.sign-up { color: #6BC16F; }
+    }
+  }
+}
+.home-hero {
+  background: #44536A;
+}
+
 section.featured-home-tabs {
 
 }

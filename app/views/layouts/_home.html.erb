@@ -1,0 +1,125 @@
+<body class="home">
+
+  <div class="home-wrapper">
+    <header>
+      <a class="logo desktop" href="/">League<span>Hero</span></a>
+      <nav id="cd-top-nav">
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="http://demo.leaguehero.io/" target="_blank">Demo</a></li>
+          <li><a href="/users/sign_in">Log In</a></li>
+          <li><a class="sign-up" href="/create-a-league">Free Trial</a></li>
+        </ul>
+      </nav>
+      <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+    </header>
+  </div>
+  <div class="home-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          Hello World!
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="cd-main-content">
+    <%= yield %>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row site-links">
+        <div class="col-sm-3">
+          <h5 id="h-lh"><i class="caret right icon"></i>League Hero</h5>
+          <nav id="n-lh">
+            <a href="/features">Features</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/create-a-league">Create a League</a>
+          </nav>
+        </div>
+        <div class="col-sm-3">
+          <h5 id="h-about"><i class="caret right icon"></i>Get in Touch</h5>
+          <nav id="n-about">
+            <a href="http://demo.leaguehero.io/" target="_blank">Demo</a>
+            <a href="/about">About</a>
+            <!-- <a href="http://blog.leaguehero.io">Blog</a> -->
+            <a href="/contact">Contact Us</a>
+          </nav>
+        </div>
+        <div class="col-sm-5 col-md-offset-1">
+          <h5 class="newsletter-h5">Newsletter</h5>
+          <div id="mc_embed_signup">
+            <form action="//leaguehero.us12.list-manage.com/subscribe/post?u=10d3864be1f2576e3c4af4f2c&amp;id=c936e347ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL">Please enter your email address to receive our newsletter.</label>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10d3864be1f2576e3c4af4f2c_c936e347ef" tabindex="-1" value=""></div>
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="desktop" class="col-sm-9">
+          <nav class="legal">
+            <span>&copy; 2016 <strong>LEAGUE</strong>HERO</span>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+          </nav>
+        </div>
+        <div class="col-sm-3">
+          <p>Built in
+            <strong>Chicago</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav id="cd-lateral-nav">
+    <ul class="cd-navigation">
+      <li class="item-has-children">
+        <a href="#">Features</a>
+        <ul class="sub-menu">
+          <li><a href="/features">Overview</a></li>
+          <li><a href="/sports">Sports</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="http://demo.leaguehero.io/" target="_blank">Demo</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><a href="/create-a-league">Create a League</a></li>
+    </ul>
+    <div class="cd-navigation socials">
+      <a class="cd-twitter cd-img-replace" href="https://twitter.com/getleaguehero" target="_blank">Twitter</a>
+      <a class="cd-facebook cd-img-replace" href="https://www.facebook.com/League-Hero-1655071211413120/" target="_blank">Facebook</a>
+    </div>
+  </nav>
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if ($(window).width() < 768) {
+        $("#h-lh").click(function() {
+          $(this).find("i.icon").toggleClass("right");
+          $(this).find("i.icon").toggleClass("down");
+          $("#n-lh").toggle();
+        });
+        $("#h-about").click(function() {
+          $(this).find("i.icon").toggleClass("right");
+          $(this).find("i.icon").toggleClass("down");
+          $("#n-about").toggle();
+        });
+      }
+    });
+  </script>
+  <%= render :partial => 'layouts/analytics' %>
+
+
+</body>

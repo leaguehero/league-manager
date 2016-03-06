@@ -34,7 +34,11 @@
   <%= render :partial => 'layouts/signup' %>
 <% else %>
   <% if request.subdomain.blank? || request.subdomain == "www" %>
-    <%= render :partial => 'layouts/market' %>
+    <% if current_page?(root_path) %>
+      <%= render :partial => 'layouts/home' %>
+    <% else %>
+      <%= render :partial => 'layouts/market' %>
+    <% end %>
   <% else %>
     <%= render :partial => 'layouts/app' %>
   <% end %>
