@@ -2,6 +2,6 @@
   <div class="lht-img"><%= image_tag @league.avatar.url%></div>
   <div class="lht-info">
     <div class="lht-league"><%= @league.name %></div>
-    <div class="lht-manager">Manager: <%= @league.admin_name %> <a href="mailto:#">email</a></div>
+    <div class="lht-manager">Manager: <%= @league.admin_name %> <a href="mailto:<%= @league.admin_email %>">email</a></div>
   </div>
 </div>
