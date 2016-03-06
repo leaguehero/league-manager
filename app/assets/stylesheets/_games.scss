@@ -162,6 +162,7 @@
           float: right;
           text-align: center;
           width: 80px;
+          @include breakpoint(l-one) { width: 40px; }
         }
       }
     }
