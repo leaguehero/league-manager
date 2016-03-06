@@ -53,9 +53,15 @@ stats = Sidekiq::Stats.new
 rails g migration (ex:) addEmailToUsers email:string
 
 ### Stripe
-Recurring payment plans are generated per league when they first sign up. The plan can be found using the league's name as the id. 
+Recurring payment plans are generated per league when they first sign up. The plan can be found using the league's name as the id.
 There is a 30 trial period attached to each league
 
+### Demo customers
+
+# Create User (remember the password you input into the user, if you forget it, you won't be able to recover)
+- User.create(email: "email", password: "password", password_confirmation: "password", name: "name")
+# Create League
+- League.create(:name => "League Name", :url => "league.leaguehero.io",:max_teams => 10,:max_players_per_team => 10, :subdomain => "unique subdomain",:admin_name => "admin name",:admin_email => "admin email",:user_id => demo user's id)
 
 ###Created By
 https://bitbucket.org/robschwartz/
