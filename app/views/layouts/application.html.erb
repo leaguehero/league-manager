@@ -31,7 +31,11 @@
 
 </head>
 <% if (params["controller"] == "pre_leagues") || (params["controller"] == "registrations") || (params["controller"] == "charges") %>
-  <%= render :partial => 'layouts/signup' %>
+  <% if current_page?(edit_user_registration_path) %>
+    <%= render :partial => 'layouts/app' %>
+  <% else %>
+    <%= render :partial => 'layouts/signup' %>
+  <% end %>
 <% elsif (params["controller"] == "sessions") || current_page?(my_leagues_path) || current_page?(new_user_password_path) %>
   <%= render :partial => 'layouts/signin' %>
 <% else %>

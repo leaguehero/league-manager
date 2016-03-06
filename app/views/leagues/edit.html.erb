@@ -29,6 +29,8 @@
       <hr>
       <%= link_to 'Delete All Games', games_destroy_all_path, class: "btn btn-danger-outline", :data => {:confirm => 'Are you sure?'}, :method => :delete %>
 
+      <a class="btn btn-secondary-outline" href="/users/edit">Edit User</a>
+
       <!-- TODO: Ability to add more teams and/ or players per team  -->
       <!-- <strong>Max Teams: </strong><div><%= best_in_place @league, :max_teams %></div>
       <strong>Max Players Per Team: </strong><div><%= best_in_place @league, :max_players_per_team %></div> -->
