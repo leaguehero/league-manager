@@ -42,11 +42,14 @@ class ChargesController < ApplicationController
       :plan => pl["league_name"],
       :description => "Admin for " + pl["league_name"]
       )
+      # update current_user with subdomain
+      user = User.find_by_email(current_user.email)
+      # add stripe id to user
+      user.stripe_id = stripe_customer.id
+      user.save!
     rescue
       # plan and customer were already created, move on
     end
-
-
     # build league if card goes through
     League.create(
       :name => pl["league_name"],
@@ -58,12 +61,6 @@ class ChargesController < ApplicationController
       :admin_email => current_user.email,
       :user_id => current_user.id
     )
-
-    # update current_user with subdomain
-    user = User.find_by_email(current_user.email)
-    # add stripe id to user
-    user.stripe_id = stripe_customer.id
-    user.save!
     # use this route so user can'tD refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
