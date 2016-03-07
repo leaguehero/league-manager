@@ -57,11 +57,13 @@ Recurring payment plans are generated per league when they first sign up. The pl
 There is a 30 trial period attached to each league
 
 ### Demo customers
-# log in to the heroku console by typing $ heroku run rails c
+# log in to the heroku console by typing `heroku run rails c`
 # Create User (remember the password you input into the user, if you forget it, you won't be able to recover)
+(TIP: It's easiest to copy the line below and make your changes outside of the terminal, then input the command with all the correct data into the terminal)
 - User.create(email: "email", password: "password", password_confirmation: "password", name: "name")
 - After hitting enter, you will see the new User object, copy the new User's ID since you will need it when you create the league. If you loose the ID, you can find it by inputing `ap User.all` and it will most likely be the last User's ID that you want.
 # Create League
+(TIP: It's easiest to copy the line below and make your changes outside of the terminal, then input the command with all the correct data into the terminal)
 - League.create(:name => "CUSTOM-LEAGUE-NAME", :url => "CUSTOM-LEAGUE-SUBDOMAIN.leaguehero.io",:max_teams => 10,:max_players_per_team => 10, :subdomain => "CUSTOM-LEAGUE-SUBDOMAIN",:admin_name => "LEAGUE ADMIN NAME",:admin_email => "LEAGUE ADMIN NAME",:user_id => DEMO USER ID)
 
 ###Created By
