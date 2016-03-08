@@ -1,4 +1,5 @@
 class SessionsController < Devise::SessionsController
+  skip_before_filter :verify_authenticity_token, :only => :create
 
   def create # hijacking Devise to customize when we create sessions and how if affects the user
     if current_user && (@league && @league.user_id != current_user.id) #failed sign in to a subdomain
