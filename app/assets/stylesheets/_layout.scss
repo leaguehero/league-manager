@@ -110,6 +110,7 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     &:hover, &:focus, &.active {
+      color: #6BC16F;
       text-decoration: none;
     }
     &.sign-up {
@@ -119,6 +120,10 @@ header {
       font-weight: 700;
       line-height: 52px;
       padding: 0 24px;
+      &:hover {
+        background: #6BC16F;
+        color: #FFF;
+      }
     }
   }
 }

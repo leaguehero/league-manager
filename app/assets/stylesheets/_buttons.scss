@@ -7,30 +7,30 @@
 
 // Button
 .button, a.button {
-  background: #EDEDED;
-  border: none;
+  background: none;
+  border: 2px solid #999;
   border-radius: 8px;
   color: #999;
   display: inline-block;
   font-weight: 700;
-  height: 50px;
+  height: 54px;
   line-height: 50px;
   padding: 0 24px;
   text-decoration: none;
   text-transform: uppercase;
   @include box-sizing(border-box);
   &:hover {
-    background: #666;
+    background: #999;
     color: #FFF;
   }
 }
 
 // Button Colors
 .button.-green, a.button.-green {
-  background: #6BC16F;
-  color: #FFF;
+  border: 2px solid #6BC16F;
+  color: #6BC16F;
   &:hover {
-    background: #44536A;
+    background: #6BC16F;
     color: #FFF;
   }
 }

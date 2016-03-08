@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Simple Signup</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Simple-Signup">
+            <g id="Group" transform="translate(30.000000, 17.000000)">
+                <path d="M10,63.0017365 L10,63.0017365 L10,186.998263 C10,193.623206 15.3733605,199 22.0017365,199 L145.998263,199 C152.623206,199 158,193.62664 158,186.998263 L158,63.0017365 C158,56.3767943 152.62664,51 145.998263,51 L22.0017365,51 C15.3767943,51 10,56.3733605 10,63.0017365 L10,63.0017365 Z M0,63.0017365 L0,63.0017365 C0,50.8512563 9.85320314,41 22.0017365,41 L145.998263,41 C158.148744,41 168,50.8532031 168,63.0017365 L168,186.998263 C168,199.148744 158.146797,209 145.998263,209 L22.0017365,209 C9.85125627,209 0,199.146797 0,186.998263 L0,63.0017365 Z" id="Rectangle-10" fill="#44536A"></path>
+                <g id="Group-2" transform="translate(128.842406, 78.842406) rotate(-45.000000) translate(-128.842406, -78.842406) translate(33.342406, 62.842406)">
+                    <rect id="Rectangle-11" fill="#44536A" x="43" y="0" width="108" height="32"></rect>
+                    <path d="M175,1.70530257e-13 L159,1.70530257e-13 L159,32 L175,32 C183.836556,32 191,24.836556 191,16 C191,7.163444 183.836556,1.70530257e-13 175,1.70530257e-13 Z" id="Combined-Shape" fill="#6BC16F"></path>
+                    <path d="M34.5109116,-1.13686838e-13 L34.5109116,32 L-6.39488462e-14,16.0496264 L34.5109116,-1.13686838e-13 Z" id="Path-11" fill="#44536A"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

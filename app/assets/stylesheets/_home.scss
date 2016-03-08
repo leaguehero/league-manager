@@ -12,41 +12,69 @@
     a.logo.desktop { color: #FFF; }
     #cd-top-nav a {
       color: #FFF;
-      &.sign-up { color: #6BC16F; }
+      &:hover { color: #6BC16F; }
+      &.sign-up {
+        color: #6BC16F;
+        &:hover { color: #FFF; }
+      }
     }
   }
 }
 .home-hero {
   background: #44536A;
+  padding: 80px 0 0;
+  position: relative;
+  height: calc(100vh - 196px);
+  h1 { color: #FFF; }
+  p {
+    color: #FFF;
+    margin: 0 0 48px;
+  }
+  img.lh-image-01 {
+    bottom: 0;
+    max-height: 72vh;
+    position: absolute;
+    right: 0;
+    width: auto;
+  }
 }
 
 section.featured-home-tabs {
-
+  padding: 80px 0 0;
 }
 .home-tabs {
-  border-bottom: 3px solid #DDD;
-  height: 120px;
+  border-bottom: 2px solid #DDD;
+  height: 232px;
   margin: 0 0 64px 0;
   @extend %clear;
   .ht-tab {
     box-sizing: border-box;
     cursor: pointer;
     float: left;
-    height: 120px;
-    padding: 0 24px 0 0;
-    width: 25%;
+    height: 232px;
+    margin: 0 2.5% 0 0;
+    padding: 0 20px 0 0;
+    width: 23.125%;
     &.active {
-      border-bottom: 3px solid #44536A;
+      border-bottom: 2px solid #44536A;
     }
+    &.last { margin: 0; }
+    img {
+      margin: 0 0 32px;
+      max-width: 80px;
+      vertical-align: top;
+    }
+    p { font-size: 18px; }
   }
 }
 .htv-item {
-  background: #ededed;
   box-sizing: border-box;
   display: none;
-  height: 600px;
   width: 100%;
   &.active {
     display: block;
   }
+}
+.htv-content {
+  padding: 60px 24px
 }
