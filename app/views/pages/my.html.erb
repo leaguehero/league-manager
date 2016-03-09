@@ -1,0 +1,18 @@
+<% set_meta_tags :site => 'Select a League • League Hero',
+  :noindex => true
+%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= render :partial => 'layouts/messages' %>
+      <h3>Select a League</h3>
+      <ul class="select-league">
+        <% @user_leagues.each do |lg| %>
+          <li><a href="http://<%= lg.url %>" target="_blank"><%= lg.name %></a></li>
+          <!-- for testing, comment above and uncomment below -->
+          <!-- <li><a href="http://<%= lg.subdomain %>.lvh.me:5000" target="_blank"><%= lg.name %></a></li> -->
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

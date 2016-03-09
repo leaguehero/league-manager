@@ -39,7 +39,4 @@ class RegistrationsController < Devise::RegistrationsController
     "/charges/new"
   end
 
-  def after_inactive_sign_up_path_for(resource)
-    new_user_session_url(subdomain: resource.subdomain)
-  end
 end

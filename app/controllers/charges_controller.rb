@@ -24,25 +24,32 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-    # DO everything after the payment has been set up
+    # Do everything after the payment has been set up
     # create league specific plan
-    Stripe::Plan.create(
-      :amount => @amount_in_cents,
-      :interval => "year",
-      :name => pl["league_name"]+ " League Plan" ,
-      :currency => "usd",
-      :id => pl["league_name"],
-      :trial_period_days => 30
-    )
-
-    # create stripe customer
-    stripe_customer = Stripe::Customer.create(
+    begin
+      Stripe::Plan.create(
+        :amount => @amount_in_cents,
+        :interval => "year",
+        :name => pl["league_name"]+ " League Plan" ,
+        :currency => "usd",
+        :id => pl["league_name"],
+        :trial_period_days => 30
+      )
+      # create stripe customer
+      stripe_customer = Stripe::Customer.create(
       :source => token,
       :email => current_user.email,
       :plan => pl["league_name"],
       :description => "Admin for " + pl["league_name"]
-    )
-
+      )
+      # update current_user with subdomain
+      user = User.find_by_email(current_user.email)
+      # add stripe id to user
+      user.stripe_id = stripe_customer.id
+      user.save!
+    rescue
+      # plan and customer were already created, move on
+    end
     # build league if card goes through
     League.create(
       :name => pl["league_name"],
@@ -54,12 +61,6 @@ class ChargesController < ApplicationController
       :admin_email => current_user.email,
       :user_id => current_user.id
     )
-
-    # update current_user with subdomain
-    user = User.find_by_email(current_user.email)
-    # add stripe id to user
-    user.stripe_id = stripe_customer.id
-    user.save!
     # use this route so user can'tD refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end

@@ -66,3 +66,20 @@ p.cost-disclaimer {
   font-size: 13px;
   line-height: 1.4;
 }
+
+form.league-signup, form.league-log-in {
+  display: none;
+  visibility: hidden;
+  &.active {
+    display: block;
+    visibility: visible;
+  }
+  span {
+    display: inline-block;
+    line-height: 38px;
+    padding: 0 0 0 12px;
+    vertical-align: top;
+    a { cursor: pointer; }
+  }
+}
+.checkbox label input:only-child { position: absolute !important; }

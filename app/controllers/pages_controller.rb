@@ -3,6 +3,9 @@ class PagesController < ApplicationController
 
   def show
     if !request.subdomain.blank?
+      if current_user && (@league.user_id != current_user.id)
+        sign_out current_user
+      end
       create_rankings
       @posts = Post.all
       if @posts.blank?
@@ -18,6 +21,17 @@ class PagesController < ApplicationController
       render template: "pages/#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found
+    end
+  end
+
+  def my
+    if current_user.blank?
+      redirect_to "/"
+    else
+      @user_leagues = League.where(user_id: current_user.id)
+      if @user_leagues.length == 1
+        redirect_to "http://" + @user_leagues[0].url + "/"
+      end
     end
   end
 
