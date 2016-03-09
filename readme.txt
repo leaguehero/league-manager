@@ -66,6 +66,13 @@ There is a 30 trial period attached to each league
 (TIP: It's easiest to copy the line below and make your changes outside of the terminal, then input the command with all the correct data into the terminal)
 - League.create(:name => "CUSTOM-LEAGUE-NAME", :url => "CUSTOM-LEAGUE-SUBDOMAIN.leaguehero.io",:max_teams => 10,:max_players_per_team => 10, :subdomain => "CUSTOM-LEAGUE-SUBDOMAIN",:admin_name => "LEAGUE ADMIN NAME",:admin_email => "LEAGUE ADMIN NAME",:user_id => DEMO USER ID)
 
+### Testing
+- To run tests run `rspec` in the terminal
+- To see simplecov test coverage, open coverage/index.html in the browser
+- Command to add test to existing files: `rails g model ModelName -s --migration=false` OR `rails g controller ControllerName -s --migration=false` ex: rails g model Posts -s --migration=false.
+After run rake db:test:prepare to prep the db for tests.
+
+
 ###Created By
 https://bitbucket.org/robschwartz/
 https://bitbucket.org/aceeightofspades/
