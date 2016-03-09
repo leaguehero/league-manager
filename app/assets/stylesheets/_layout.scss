@@ -5,6 +5,24 @@
 */
 
 
+// Demo Box
+.demo-box {
+  background: #374457;
+  color: #FFF;
+  font-size: 1.2em;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  @include breakpoint(l-three) {
+    display: none;
+    visibility: hidden;
+  }
+  a {
+    color: #6BC16F;
+    &:hover { text-decoration: underline; }
+  }
+}
+
 .cd-img-replace {
   display: inline-block;
   overflow: hidden;
@@ -49,6 +67,7 @@ header {
   @media (min-width: 992px) { max-width: 940px; }
   @media (min-width: 1200px) { max-width: 1140px; }
   @include breakpoint(l-three) {
+    background: #FFF;
     border-bottom: 3px solid #6BC16F;
     height: 60px;
     left: 0;
@@ -83,7 +102,11 @@ header {
     line-height: 56px;
     text-transform: uppercase;
     &:hover, &:focus { text-decoration: none; }
-    @include breakpoint(l-three) { margin: 13px 0 13px 12px; }
+    @include breakpoint(l-three) {
+      font-size: 28px;
+      line-height: 34px;
+      margin: 13px 0 13px 12px;
+    }
     span {
       color: #6BC16F;
       font-weight: normal;
@@ -387,7 +410,7 @@ section {
   h2 { color: #FFF; }
   @include breakpoint(l-three) {
     margin: 0;
-    padding: 20px;
+    padding: 20px 0;
   }
 }
 .slash-bottom {

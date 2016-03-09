@@ -10,6 +10,7 @@
   background: none;
   border: 2px solid #999;
   border-radius: 8px;
+  box-sizing: border-box;
   color: #999;
   display: inline-block;
   font-weight: 700;
@@ -18,7 +19,7 @@
   padding: 0 24px;
   text-decoration: none;
   text-transform: uppercase;
-  @include box-sizing(border-box);
+  @include breakpoint(l-three) { padding: 0 16px; }
   &:hover {
     background: #999;
     color: #FFF;
