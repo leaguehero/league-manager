@@ -10,7 +10,7 @@
       :title          => 'League Hero',
       :type           => 'website',
       :url            => request.original_url,
-      :image          => '-',
+      :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
       :description    => "-",
       :site_name      => 'Green Bay Travel Guide',
     },
@@ -20,70 +20,144 @@
       :title          => 'League Hero',
       :description    => "-",
       :creator        => '@getleaguehero',
-      :image          => '-',
+      :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
     }
   %>
   <div class="container">
-    <div class="hero -home">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>Manage your league online and with your mobile.</h1>
-          <p>A simple and easy way to manage your leagues online.</p>
-          <a class="button -green" href="/create-a-league">Create a League</a>
-          <img src="/assets/image-mobile-league.svg" alt="Mobile League Management Application">
-          <h3>Registration. Scheduling. Communication.</h3>
+    <section class="featured-home-tabs">
+      <div class="home-tabs">
+        <div id="tab1" class="ht-tab active">
+          <%= image_tag("simple-registration.svg", alt: 'Simple Sign Up') %>
+          <h5>Simple Registration</h5>
+          <p>Creating your league takes less than 5 minutes!<p>
+        </div>
+        <div id="tab2" class="ht-tab">
+          <%= image_tag("schedule-generator.svg", alt: 'Sports Scheduler') %>
+          <h5>Sports Scheduling</h5>
+          <p>Generate or create a custom schedule for your league.<p>
+        </div>
+        <div id="tab3" class="ht-tab">
+          <%= image_tag("league-communication.svg", alt: 'League Messaging') %>
+          <h5>League Communication</h5>
+          <p>Easily inform teams and players of your league.<p>
+        </div>
+        <div id="tab4" class="ht-tab last">
+          <%= image_tag("multiple-leagues.svg", alt: 'Multiple League Support') %>
+          <h5>Multi-League Support</h5>
+          <p>A wide variety of sports and clubs supported.<p>
         </div>
       </div>
-    </div>
+      <div class="home-tab-views">
+        <div id="view1" class="htv-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6" style="text-align:center;">
+                <%= image_tag("simple-league-registration.svg", alt: 'Create A League') %>
+              </div>
+              <div class="col-md-6">
+                <div class="htv-content">
+                  <h2>Setting up your league should be simple</h2>
+                  <p>League Hero makes it a priority to easily create and setup a league. Create your league in less than 5 minutes, set up the teams, auto generate the league schedule, and then message your members when ready!</p>
+                  <a class="button -green" href="/pricing">What Does It Cost?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="view2" class="htv-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <%= image_tag("auto-generated-league-schedule.svg", alt: 'Generate a League Schedule') %>
+              </div>
+              <div class="col-md-6">
+                <div class="htv-content">
+                  <h2>Save valuable time with Scheduling Hero&trade;</h2>
+                  <p>Utilize Scheduling Hero&trade; or create a custom schedule tailored to your league's needs. Scheduling Hero&trade; is an auto scheduling tool created by League Hero to generate schedules quickly for your league.</p>
+                  <a class="button -green" href="/features">Find Out More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="view3" class="htv-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <%= image_tag("sports-league-messaging.svg", alt: 'League messaging for teams and players') %>
+              </div>
+              <div class="col-md-6">
+                <div class="htv-content">
+                  <h2>Quickly communicate with members of your league</h2>
+                  <p>Simple reminders, rain delays or rescheduling can all be easily communicated to teams and players across the league with League Hero’s messaging services.</p>
+                  <p>Send specific messages to each captain or a mass message to everyone in the league.</p>
+                  <a class="button -green" href="/features">Find Out More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="view4" class="htv-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <%= image_tag("multiple-league-support.svg", alt: 'Create a wide variety of leagues') %>
+              </div>
+              <div class="col-md-6">
+                <div class="htv-content">
+                  <h2>Built for the many different types of leagues</h2>
+                  <p>League Hero wants to make it easy for you to manage your league or club no matter what type of sport it is.</p>
+                  <p>From basketball, to volleyball and every sport in between our solution will save you time and keep your league organized.</p>
+                  <a class="button -green" href="/sports">View Sports</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
   <div class="slasher">
     <div class="slash-top"></div>
     <div class="slash-content row">
       <div class="col-md-4 col-md-offset-2">
-        <h2>What is League Hero?</h2>
+        <h2>Wait... What is League Hero?</h2>
         <p>League Hero is the easiest-to-use league management website for clubs, intramural and city leagues. Online registration, simple scheduling, league website and mobile application. The best league management application at a great price!</p>
+        <a class="button -green" href="/create-a-league">Sign Up for a 30 Day Free Trial</a>
       </div>
     </div>
     <div class="slash-bottom"></div>
   </div>
-  <div class="container">
-    <section>
-      <div class="row">
-        <div id="mobile" class="col-md-3 col-md-offset-1 -centered">
-          <img src="/assets/image-sports-scheduling.png" alt="Sports Scheduling Hero&trade;">
-        </div>
-        <div class="col-md-5 col-md-offset-1">
-          <h3>Sports Scheduling</h3>
-          <p>Utilize Scheduling Hero&trade; or create a custom schedule tailored to your league's needs. Scheduling Hero&trade; is an auto scheduling tool created by League Hero to generate schedules quickly for your league.</p>
-          <a class="button" href="/features">Learn More</a>
-        </div>
-        <div id="desktop" class="col-md-3 col-md-offset-1">
-          <img src="/assets/image-sports-scheduling.png" alt="Sports Scheduling Hero&trade;">
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-1 -centered">
-          <img src="/assets/image-messaging.png" alt="League Messaging">
-        </div>
-        <div class="col-md-5 col-md-offset-1">
-          <h3>League Communication</h3>
-          <p>Simple reminders, rain delays or rescheduling can all be easily communicated to teams and players across the league with League Hero’s messaging services. Send specific messages to each captain or a mass message to everyone in the league.</p>
-          <a class="button" href="/features">Learn More</a>
-        </div>
-      </section>
-      <section class="-centered">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Create... Set... Score!</h2>
-            <p>In 3 simple steps you can create your league's page.</p>
-            <a class="button -green" href="/create-a-league">Create a League</a>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#tab1").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab1").addClass("active");
+        $("#view1").addClass("active");
+      });
+      $("#tab2").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab2").addClass("active");
+        $("#view2").addClass("active");
+      });
+      $("#tab3").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab3").addClass("active");
+        $("#view3").addClass("active");
+      });
+      $("#tab4").click(function() {
+        $(".ht-tab").removeClass("active");
+        $(".htv-item").removeClass("active");
+        $("#tab4").addClass("active");
+        $("#view4").addClass("active");
+      });
+    });
+  </script>
+
 <% else %>
   <%= render :partial => 'home/index' %>
 <% end %>
