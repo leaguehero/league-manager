@@ -95,7 +95,19 @@ group :development, :test do
   gem 'simplecov', :require => false
   # testing framework
   gem 'rspec-rails', '~> 3.0'
+  # for creating fake data while testing
+  gem 'factory_girl_rails'
+  # e2e tests for rails
+  gem 'capybara'
+  # helps with running tests
+  gem 'guard-rspec'
+  # runs tests faster
+  gem 'spring-commands-rspec'
+
+  gem 'vcr'
 
 end
+# locks down test env from talking to the internet
+gem 'webmock', group: :test
 
 gem 'rails_12factor', group: :production
