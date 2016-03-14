@@ -69,7 +69,7 @@ There is a 30 trial period attached to each league
 ### Testing
 - To run tests run `rspec` in the terminal
 - To see simplecov test coverage, open coverage/index.html in the browser
-- Command to add test to existing files: `rails g model ModelName -s --migration=false` OR `rails g controller ControllerName -s --migration=false` ex: rails g model Posts -s --migration=false.
+- Command to add test to existing files: `rails g model ModelName -s --migration=false` OR `rails g controller SessionsController -s --migration=false` ex: rails g model Posts -s --migration=false.
 After run rake db:test:prepare to prep the db for tests.
 
 
