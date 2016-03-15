@@ -27,11 +27,11 @@ RSpec.describe SessionsController, type: :controller do
 
       post :create
 
-      expect( response.location ).to redirect_to("http://test.host/")
+      expect( response.location ).to eq("/")
 
     end
 
-    it 'user sign in failed' do
+    it 'shows correct error when user sign in failed' do
       # sign_out
       @request.env["devise.mapping"] = Devise.mappings[:user]
       user = create(:user) # Using factory girl as an example
@@ -42,14 +42,42 @@ RSpec.describe SessionsController, type: :controller do
 
     end
 
-    it 'user sign in failed' do
+    it 'user is updated with current pre_league_id' do
       # sign_out
       @request.env["devise.mapping"] = Devise.mappings[:user]
       user = create(:user) # Using factory girl as an example
+      login_with user
+      @request.env['HTTP_REFERER'] = 'http://test.host/charges/new'
 
-      get :create,{ :user => { :pre_league_id => 1 } }
+      get :create, { :user => { :pre_league_id => 2 } }, :format => :json
 
-      expect( flash[:alert] ).to eq( "You need to sign in or sign up before continuing.")
+      expect( User.find(user.id).pre_league_id ).to eq(2)
+
+    end
+
+    it 'user is sent to new charge path when signing in from league set up process' do
+      # sign_out
+      @request.env["devise.mapping"] = Devise.mappings[:user]
+      user = create(:user) # Using factory girl as an example
+      login_with user
+      @request.env['HTTP_REFERER'] = 'http://test.host/charges/new'
+
+      get :create, { :user => { :pre_league_id => 2 } }, :format => :json
+
+      expect( response.location ).to eq(new_charge_path)
+
+    end
+
+    it 'user is sent to users leagues when signing in from main site' do
+      # sign_out
+      @request.env["devise.mapping"] = Devise.mappings[:user]
+      user = create(:user) # Using factory girl as an example
+      login_with user
+      @request.env['HTTP_REFERER'] = 'http://test.host/my-leagues'
+
+      get :create, { :user => {} },:format => :json
+
+      expect( response.location ).to eq("/my-leagues")
 
     end
 
