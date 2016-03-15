@@ -31,14 +31,25 @@ RSpec.describe SessionsController, type: :controller do
 
     end
 
-    pending 'and the user is not allowed to see the page' do
+    it 'user sign in failed' do
       # sign_out
       @request.env["devise.mapping"] = Devise.mappings[:user]
-      create(:user) # Using factory girl as an example
+      user = create(:user) # Using factory girl as an example
 
-      get :create
+      get :create, user: user
 
-      expect( flash[:alert] ).to eq( "Only the league admin can sign in to this page!" )
+      expect( flash[:alert] ).to eq( "You need to sign in or sign up before continuing.")
+
+    end
+
+    it 'user sign in failed' do
+      # sign_out
+      @request.env["devise.mapping"] = Devise.mappings[:user]
+      user = create(:user) # Using factory girl as an example
+
+      get :create,{ :user => { :pre_league_id => 1 } }
+
+      expect( flash[:alert] ).to eq( "You need to sign in or sign up before continuing.")
 
     end
 
