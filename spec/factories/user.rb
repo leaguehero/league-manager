@@ -14,3 +14,12 @@ FactoryGirl.define do
     pre_league_id 1
   end
 end
+
+FactoryGirl.define do
+  factory :bad_user, :class => 'User' do
+    email
+    password '123456789'
+    password_confirmation '12345678'
+    pre_league_id 1
+  end
+end
