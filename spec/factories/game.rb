@@ -5,6 +5,18 @@ FactoryGirl.define do
 end
 
 FactoryGirl.define do
+  sequence :date do |n|
+    "0#{n}/02/2016"
+  end
+end
+
+FactoryGirl.define do
+  sequence :time do |n|
+    "0#{n}:30PM"
+  end
+end
+
+FactoryGirl.define do
   factory :game, :class => 'Game' do
     team_one      1
     team_two      2
@@ -13,7 +25,7 @@ FactoryGirl.define do
     location
     winner_score  45
     loser_score   44
-    time          "10:30PM"
-    date          "02/02/02"
+    time
+    date
   end
 end
