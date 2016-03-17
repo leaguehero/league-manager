@@ -81,4 +81,16 @@ RSpec.describe TeamsController, type: :controller do
     end
   end
 
+  describe "#update" do
+    it "updates team when sent propper params" do
+      user = login_with create(:user)
+      @team1 = create(:team)
+
+      post :update, id: @team1.id, team: {name: "New Name"}
+
+      expect(controller.instance_variable_get(:@team)["name"]).to eq("New Name")
+
+    end
+  end
+
 end
