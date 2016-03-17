@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe ChargesController, type: :controller do
+  before(:each) do
+    #Needed so we don't get schema errors
+    Apartment::Tenant.drop("test")
+  end
   describe "When user navigates to new charge page" do
 
     it "should be redirected to first page in league set up" do

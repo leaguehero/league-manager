@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe TeamsController, type: :controller do
   before(:each) do
-    # this might break when first running these tests
+    #Needed so we don't get schema errors
     Apartment::Tenant.drop("test")
     @league = create(:league)
   end
