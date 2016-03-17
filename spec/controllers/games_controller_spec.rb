@@ -95,12 +95,24 @@ RSpec.describe GamesController, type: :controller do
     end
 
     describe "#update" do
-      it "updates game with edits" do
+      it "updates game with correct edits" do
         login_with create(:user)
+        request.env["HTTP_REFERER"] = edit_game_path(id: @game1.id)
+        request.env["HTTP_REFERER"] = "http://test.host/schedule"
 
-        get :edit, id: @game1.id
+        put :update, id: @game1.id, game: {team_one: @team1.id, team_two: @team2.id, location:"Court 1", winner: @team1.name, loser: @team2.name, winner_score: 54, loser_score: 45, date: "02/02/02", time: "10:00PM"}
 
-        expect(response.status).to eq(200)
+        expect(response.location).to eq("http://test.host/schedule")
+      end
+
+      it "updates fail with incorrect edits" do
+        login_with create(:user)
+        request.env["HTTP_REFERER"] = edit_game_path(id: @game1.id)
+        request.env["HTTP_REFERER"] = "http://test.host/schedule"
+
+        put :update, id: @game1.id, game: {team_one: @team1.id, team_two: @team2.id, location:"Court 1", winner: @team1.name, loser: @team2.name, winner_score: 45, loser_score: 54, date: "02/02/02", time: "10:00PM"}
+
+        expect(response.location).to eq("http://test.host/schedule")
       end
     end
 

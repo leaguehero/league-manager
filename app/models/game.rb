@@ -21,7 +21,7 @@ class Game < ActiveRecord::Base
   end
 
   def winner_score_is_higher_than_loser_score
-    if self.winner_score > self.loser_score
+    if self.winner_score < self.loser_score
       errors.add(:game, "winner score must be higher than loser score")
     end
   end
