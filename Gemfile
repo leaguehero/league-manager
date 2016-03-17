@@ -105,6 +105,8 @@ group :development, :test do
   gem 'spring-commands-rspec'
 
   gem 'vcr'
+  # to clean db after tests
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
 
 end
 # locks down test env from talking to the internet

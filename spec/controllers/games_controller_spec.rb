@@ -20,7 +20,7 @@ RSpec.describe GamesController, type: :controller do
     it "should show the games in the correct order" do
       get :index
 
-      expect(controller.instance_variable_get(:@current_games)[1].date).to eq("01/02/2016")
+      expect(controller.instance_variable_get(:@current_games)[1].date).to eq("02/02/2016")
     end
 
     it "should only show the games in the current month" do
@@ -56,7 +56,7 @@ RSpec.describe GamesController, type: :controller do
       login_with create(:user)
       request.env["HTTP_REFERER"] = new_game_path
 
-      post :create, game: {team_one: @team1.id, team_two: @team1.id, winner: @team1.id, loser: @team2.id, date: "02/02/02", time: "10:30PM"}
+      post :create, game: {team_one: @team1.id, team_two: @team1.id, location:"Court 1", date: "02/02/02", time: "10:30PM"}
 
       @game = controller.instance_variable_get(:@game)
 
@@ -72,18 +72,17 @@ RSpec.describe GamesController, type: :controller do
         expect(controller.instance_variable_get(:@week_days)).to eq({sunday:0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday:5, saturday: 6})
       end
     end
-# this takes too long to test, find out how to shorten time <= passes
-    # describe "#generate_games" do
-    #   it "generates a league schedule based on generator options" do
-    #     login_with create(:user)
-    #     request.env["HTTP_REFERER"] = "http://test.host/schedule"
-    # 
-    #
-    #     post :generate_games, game_times: ["9:00PM","10:00PM"],field_names: ["Court 1", "Court 2"],game_days: 0,start_date: "02/02/2016", cycles: 1
-    #
-    #     expect(response.location).to eq("http://test.host/schedule")
-    #   end
-    # end
+
+    describe "#generate_games" do
+      it "generates a league schedule based on generator options" do
+        login_with create(:user)
+        request.env["HTTP_REFERER"] = "http://test.host/schedule"
+
+        post :generate_games, game_times: ["9:00PM","10:00PM"],field_names: ["Court 1", "Court 2"],game_days: 0,start_date: "02/02/2016", cycles: 1
+
+        expect(response.location).to eq("http://test.host/schedule")
+      end
+    end
 
     describe "#edit" do
       it "user is logged in while viewing edit page" do

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   sequence :name do |n|
-    "team #{n}"
+    "team#{n}"
   end
 end
 
