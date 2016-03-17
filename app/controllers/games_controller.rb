@@ -128,11 +128,11 @@ class GamesController < ApplicationController
     # need to keep params here to overwrite
     params["game"]["winner"] = Team.find_by_name(winner).id unless winner.nil?
     params["game"]["loser"] = Team.find_by_name(loser).id unless loser.nil?
-      if @game.update_attributes(game_params)
-        redirect_to schedule_path
-      else
-        redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
-      end
+    if @game.update_attributes(game_params)
+      redirect_to schedule_path
+    else
+      redirect_to :back, :flash => {:error => @game.errors.full_messages.join(", ")}
+    end
   end
 
   def destroy
