@@ -27,4 +27,58 @@ RSpec.describe TeamsController, type: :controller do
     end
   end
 
+  describe "#show" do
+    it "creates players if none are present" do
+      @team1 = create(:team)
+
+      controller.instance_variable_set(:@league, @league)
+
+      get :show, id: @team1.id
+
+      expect(controller.instance_variable_get(:@players).count).to eq(@league.max_players_per_team)
+
+    end
+
+    it "doesn't create players if some are present" do
+      @team1 = create(:team)
+      @player = create(:player, team_id: @team1.id)
+
+      controller.instance_variable_set(:@league, @league)
+      controller.instance_variable_set(:@players, @player)
+
+      get :show, id: @team1.id
+
+      expect(controller.instance_variable_get(:@players).count).to eq(1)
+
+    end
+  end
+
+  describe "#edit" do
+    it "makes sure user is signed in for team edits" do
+      user = login_with create(:user)
+      @team1 = create(:team)
+      @player = create(:player, team_id: @team1.id)
+
+      controller.instance_variable_set(:@league, @league)
+
+      get :edit, id: @team1.id
+
+      expect(response.status).to eq(200)
+
+    end
+
+    it "creates players if none are present" do
+      user = login_with create(:user)
+
+      @team1 = create(:team)
+
+      controller.instance_variable_set(:@league, @league)
+
+      get :edit, id: @team1.id
+
+      expect(controller.instance_variable_get(:@players).count).to eq(@league.max_players_per_team)
+
+    end
+  end
+
 end
