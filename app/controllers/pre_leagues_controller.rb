@@ -7,7 +7,7 @@ class PreLeaguesController < ApplicationController
     @pre_league = PreLeague.new
     # @admin = current_user.email
   end
-
+# needed?
   def edit
 
   end
@@ -20,7 +20,6 @@ class PreLeaguesController < ApplicationController
     else
       redirect_to :back, :flash => {:error => @pre_league.errors.full_messages.join(", ")}
     end
-
   end
 
   private

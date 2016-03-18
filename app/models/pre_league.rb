@@ -3,7 +3,7 @@ class PreLeague < ActiveRecord::Base
 
   # we check subdomain here since we use PreLeague to create League
   validates :league_name, :subdomain, :max_teams, :max_players_per_team, presence: true
-  validate :subdomain_is_unique, on: :create
+  validate :subdomain_is_unique,:at_least_two_teams, on: :create
   private
 
   # subdomain should be unique
@@ -15,6 +15,12 @@ class PreLeague < ActiveRecord::Base
        if Apartment::Elevators::Subdomain.excluded_subdomains.include?(subdomain)
          errors.add(:subdomain, "is not available")
        end
+     end
+   end
+
+   def at_least_two_teams
+     if self.max_teams < 2
+       errors.add(:max_teams, "should be at least 2")
      end
    end
 
