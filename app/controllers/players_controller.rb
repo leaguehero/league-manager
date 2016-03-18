@@ -1,10 +1,11 @@
 class PlayersController < ApplicationController
   before_action :authenticate_user!
 
+# needed?
   def index
     @players = Player.all
   end
-
+# needed?
   def new
     @player = Player.new
   end
@@ -14,13 +15,9 @@ class PlayersController < ApplicationController
     if @player.save
     # go to add players page
       redirect_to new_player_path(:player_id => @player.id)
-    else
+    else #no validations yet to make it fail
       redirect_to :back, :flash => {:error => @player.errors.full_messages.join(", ")}
     end
-  end
-
-  def edit
-
   end
 
   def update
@@ -34,10 +31,6 @@ class PlayersController < ApplicationController
         format.json { respond_with_bip(@player) }
       end
     end
-  end
-
-  def destroy
-
   end
 
   private

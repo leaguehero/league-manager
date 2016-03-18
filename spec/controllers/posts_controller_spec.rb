@@ -48,7 +48,7 @@ RSpec.describe PostsController, type: :controller do
   end
 
   describe "#update" do
-    it "updates team when sent propper params" do
+    it "updates post when sent propper params" do
       @post = create(:post)
 
       post :update, id: @post.id, post: {title: "New Name", body: "new body"}
@@ -57,14 +57,6 @@ RSpec.describe PostsController, type: :controller do
 
     end
 
-    it "updates team when sent propper params" do
-      @post = create(:post)
-
-      post :update, id: @post.id, post: {title: "New Name"}
-
-      expect(@post.errors.full_messages.join(", ")).to eq("Body can't be blank")
-
-    end
   end
 
   describe "#destroy" do
