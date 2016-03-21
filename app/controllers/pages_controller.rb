@@ -7,7 +7,7 @@ class PagesController < ApplicationController
         sign_out current_user
       end
       create_rankings
-      @posts = Post.all
+      @posts = Post.order(created_at: :desc).limit(8)
       if @posts.blank?
         Post.create(
         title: "Welcome to League Hero",

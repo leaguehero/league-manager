@@ -1,24 +1,34 @@
-<body>
+<body class="home">
 
   <div class="demo-box">Interested in a personal demo? <a href="/contact">Contact us</a> and we will set it up!</div>
 
-  <header>
-    <a class="logo desktop" href="/">League<span>Hero</span></a>
-    <nav id="cd-top-nav">
-      <ul>
-        <li><a href="/features">Features</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-        <li><a href="http://demo.leaguehero.io/" target="_blank">Demo</a></li>
-        <% if current_user %>
-          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
-        <% else %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-        <% end %>
-        <li><a class="sign-up" href="/create-a-league">Free Trial</a></li>
-      </ul>
-    </nav>
-    <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
-  </header>
+  <div class="home-wrapper">
+    <header>
+      <a class="logo desktop" href="/">League<span>Hero</span></a>
+      <nav id="cd-top-nav">
+        <ul>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="http://demo.leaguehero.io/" target="_blank">Demo</a></li>
+          <li><a href="/users/sign_in">Log In</a></li>
+          <li><a class="sign-up" href="/create-a-league">Free Trial</a></li>
+        </ul>
+      </nav>
+      <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+    </header>
+  </div>
+  <div class="home-hero">
+    <%= image_tag("league-scheduling-application.png", alt: 'League Scheduling Generator', class: "lh-image lh-image-01") %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Manage your league online and with your mobile.</h1>
+          <p>A simple and easy way to manage your leagues online.</p>
+          <a class="button -green" href="/create-a-league">Sign Up for a 30 Day Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <main class="cd-main-content">
     <%= yield %>
   </main>

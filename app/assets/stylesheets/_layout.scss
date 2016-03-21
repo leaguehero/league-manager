@@ -5,6 +5,24 @@
 */
 
 
+// Demo Box
+.demo-box {
+  background: #374457;
+  color: #FFF;
+  font-size: 1.2em;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  @include breakpoint(l-three) {
+    display: none;
+    visibility: hidden;
+  }
+  a {
+    color: #6BC16F;
+    &:hover { text-decoration: underline; }
+  }
+}
+
 .cd-img-replace {
   display: inline-block;
   overflow: hidden;
@@ -41,13 +59,15 @@
 
 // Header
 header {
-  height: 126px;
-  margin: 0 auto 80px auto;
-  padding: 64px 0.9375rem 32px 0.9375rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 60px 0.9375rem 80px 0.9375rem;
+  @extend %clear;
   @media (min-width: 768px) { max-width: 720px; }
   @media (min-width: 992px) { max-width: 940px; }
   @media (min-width: 1200px) { max-width: 1140px; }
   @include breakpoint(l-three) {
+    background: #FFF;
     border-bottom: 3px solid #6BC16F;
     height: 60px;
     left: 0;
@@ -77,12 +97,16 @@ header {
   a.logo.desktop {
     color: #44536A;
     float: left;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 56px;
     text-transform: uppercase;
     &:hover, &:focus { text-decoration: none; }
-    @include breakpoint(l-three) { margin: 13px 0 13px 12px; }
+    @include breakpoint(l-three) {
+      font-size: 28px;
+      line-height: 34px;
+      margin: 13px 0 13px 12px;
+    }
     span {
       color: #6BC16F;
       font-weight: normal;
@@ -100,23 +124,29 @@ header {
   }
   li {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 48px;
   }
   a {
     color: #44536A;
     display: inline-block;
-    letter-spacing: 0.03em;
-    padding: 0.5em;
+    font-size: 18px;
+    font-weight: 700;
     text-transform: uppercase;
     &:hover, &:focus, &.active {
-      font-weight: 600;
-      letter-spacing: 0;
+      color: #6BC16F;
       text-decoration: none;
     }
     &.sign-up {
+      border: 2px solid #6BC16F;
+      border-radius: 8px;
       color: #6BC16F;
       font-weight: 700;
-      letter-spacing: 0;
+      line-height: 52px;
+      padding: 0 24px;
+      &:hover {
+        background: #6BC16F;
+        color: #FFF;
+      }
     }
   }
 }
@@ -387,7 +417,7 @@ section {
   h2 { color: #FFF; }
   @include breakpoint(l-three) {
     margin: 0;
-    padding: 20px;
+    padding: 20px 0;
   }
 }
 .slash-bottom {
