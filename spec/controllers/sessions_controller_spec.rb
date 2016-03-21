@@ -5,6 +5,7 @@ RSpec.describe SessionsController, type: :controller do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @user = FactoryGirl.create(:user) # Using factory girl as an example
     #Needed so we don't get schema errors
+    Apartment::Tenant.create("test")
     Apartment::Tenant.drop("test")
   end
 

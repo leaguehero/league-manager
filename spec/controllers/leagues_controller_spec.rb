@@ -4,6 +4,7 @@ RSpec.describe LeaguesController, type: :controller do
   before(:each) do
     @user = create(:user)
     login_with @user
+    Apartment::Tenant.create("test")
     #Needed so we don't get schema errors
     Apartment::Tenant.drop("test")
   end

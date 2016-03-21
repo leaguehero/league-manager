@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
   before(:each) do
+    Apartment::Tenant.create("test")
     #Needed so we don't get schema errors
     Apartment::Tenant.drop("test")
   end

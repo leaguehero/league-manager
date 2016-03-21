@@ -4,6 +4,7 @@ RSpec.describe PreLeaguesController, type: :controller do
   before(:each) do
     @user = create(:user)
     login_with @user
+    Apartment::Tenant.create("test")
     Apartment::Tenant.drop("test")
   end
   describe "#new" do
