@@ -15,14 +15,18 @@ class Game < ActiveRecord::Base
   end
 
   def winner_and_loser_are_different
-    if self.winner == self.loser
-      errors.add(:game, "winner and loser cannot be the same")
+    if self.winner.present? && self.loser.present?
+      if self.winner == self.loser
+        errors.add(:game, "winner and loser cannot be the same")
+      end
     end
   end
 
   def winner_score_is_higher_than_loser_score
-    if self.winner_score < self.loser_score
-      errors.add(:game, "winner score must be higher than loser score")
+    if self.winner_score.present? && self.loser_score.present?
+      if self.winner_score < self.loser_score
+        errors.add(:game, "winner score must be higher than loser score")
+      end
     end
   end
 
