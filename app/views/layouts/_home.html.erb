@@ -10,7 +10,11 @@
           <li><a href="/features">Features</a></li>
           <li><a href="/pricing">Pricing</a></li>
           <li><a href="http://demo.leaguehero.io/" target="_blank">Demo</a></li>
-          <li><a href="/users/sign_in">Log In</a></li>
+          <% if current_user %>
+            <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+          <% end %>
           <li><a class="sign-up" href="/create-a-league">Free Trial</a></li>
         </ul>
       </nav>
