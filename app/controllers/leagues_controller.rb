@@ -7,6 +7,22 @@ class LeaguesController < ApplicationController
 
   end
 
+  def confirmation
+    # find PreLeague from current_user
+    @pl = PreLeague.find(current_user.pre_league_id)
+    # find league by preleague subdomain
+    @league = League.create(
+          :name => @pl["league_name"],
+          :subdomain => @pl["subdomain"],
+          :url => @pl["subdomain"] + ".leaguehero.io",
+          :max_teams => @pl["max_teams"],
+          :max_players_per_team => @pl["max_players_per_team"],
+          :admin_name => current_user.name,
+          :admin_email => current_user.email,
+          :user_id => current_user.id
+        )
+  end
+
   def update
     if @league.update_attributes(league_params)
       redirect_to schedule_path

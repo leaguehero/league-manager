@@ -23,7 +23,7 @@ class SessionsController < Devise::SessionsController
         user.pre_league_id = params["user"]["pre_league_id"]
         user.save!
         # send user to payment page
-        respond_with resource, :location => "/charges/new"
+        respond_with resource, :location => "/leagues/confirmation"
       end
     end
   end
