@@ -12,7 +12,7 @@ class League < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   validates_attachment_size :avatar, :less_than => 0.2.megabytes
 
-private
+  private
 
   # subdomain should be unique
    def subdomain_is_unique
