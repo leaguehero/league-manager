@@ -4,6 +4,12 @@
     <% if @league %>
       <a href="/"><%= @league.name %></a>
     <% end %>
+    <% if !@league.paid.nil? && !@league.paid %>
+      <p>
+        Your free trial is ending in <strong><%= @trial_days %></strong> days
+        <a class="payment-link" href="http://leaguehero.io/charges/new">Pay Now</a>
+      </p>
+    <% end %>
   </div>
   <div class="league-content">
     <nav class="lh-nav">

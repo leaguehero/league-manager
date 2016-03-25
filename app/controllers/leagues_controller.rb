@@ -19,7 +19,8 @@ class LeaguesController < ApplicationController
           :max_players_per_team => @pl["max_players_per_team"],
           :admin_name => current_user.name,
           :admin_email => current_user.email,
-          :user_id => current_user.id
+          :user_id => current_user.id,
+          :paid => false
         )
   end
 
@@ -35,6 +36,6 @@ class LeaguesController < ApplicationController
 
 # Need to add permitted params for Rails 4
   def league_params
-    params.require(:league).permit(:name, :subdomain, :url, :max_teams, :max_players_per_team, :admin_name, :admin_email, :avatar)
+    params.require(:league).permit(:name, :subdomain, :url, :max_teams, :max_players_per_team, :admin_name, :admin_email, :avatar, :paid)
   end
 end
