@@ -5,3 +5,11 @@ task :remove_trial_leagues => :environment do
   TrialLeagues.remove
   puts "done."
 end
+
+desc "Send reminder to trial league admins"
+
+task :trial_league_email_reminder => :environment do
+  puts "Sending Emails..."
+  TrialLeagues.send_email_reminder
+  puts "don."
+end
