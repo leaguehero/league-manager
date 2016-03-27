@@ -22,6 +22,8 @@ class LeaguesController < ApplicationController
           :user_id => current_user.id,
           :paid => false
         )
+        # send confirmation mailer
+        LeagueMailer.welcome_email(current_user).deliver_now
   end
 
   def update
