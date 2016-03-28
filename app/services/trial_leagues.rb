@@ -5,14 +5,14 @@ class TrialLeagues
     League.all.each do |lg|
       if !lg.paid && (TrialLeagues.trail_days_left(lg) == 0)
         p "subdomain #{lg.subdomain} has been deleted"
-        # Apartment::Tenant.drop(lg.subdomain)
+        Apartment::Tenant.drop(lg.subdomain)
       elsif !lg.paid && (TrialLeagues.trail_days_left(lg) <= -7)
         p "league id:#{lg.id}, name:#{lg.name} has been deleted"
-        # lg.destroy
+        lg.destroy
       end
     end
   end
-  
+
 # send reminder emails based on days left
   def self.send_email_reminder
     League.all.each do |lg|
