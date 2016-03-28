@@ -19,16 +19,18 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    id = params[:id]
+    @post = Post.find(id)
+  end
+
   def update
     @post = Post.find(params[:id])
-    respond_to do |format|
-      if @post.update_attributes(post_params)
-        format.html { redirect_to(@post, :notice => 'User was successfully updated.') }
-        format.json { respond_with_bip(@post) }
-      else
-        format.html { render :action => "edit" }
-        format.json { respond_with_bip(@post) }
-      end
+    if @post.save
+    # go to posts page
+      redirect_to posts_path
+    else
+      redirect_to :back, :flash => {:error => @post.errors.full_messages.join(", ")}
     end
   end
 

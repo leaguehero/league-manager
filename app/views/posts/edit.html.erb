@@ -1,0 +1,20 @@
+<% set_meta_tags :site => 'Edit Post • League Hero',
+  :noindex => true
+%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render :partial => 'layouts/postbar' %>
+      <%= render :partial => 'layouts/messages' %>
+      <h3>Edit a Post</h3>
+      <%= simple_form_for @post do |f| %>
+        <div class="form-group">
+          <label>Title</label>
+          <%= f.input :title, :label => "Title", :placeholder => "Message..." %>
+        </div>
+        <%= f.input :body, :label => "Message", :placeholder => "Message..." %>
+        <%= f.submit "Submit", class: "btn btn-primary-outline" %>
+      <% end %>
+    </div>
+  </div>
