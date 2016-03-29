@@ -1,8 +1,5 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <%= render "leagues/sidebar" %>
-    </div>
     <div class="col-md-9">
       <%= render :partial => 'layouts/messages' %>
       <h3>Edit League</h3>
@@ -36,6 +33,9 @@
       <strong>Max Players Per Team: </strong><div><%= best_in_place @league, :max_players_per_team %></div> -->
       <%#= button_to "Reset League", { action: "delete", id: @image.id },
                                 method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <div class="col-md-3">
+      <%= render "leagues/sidebar" %>
     </div>
   </div>
 </div>
