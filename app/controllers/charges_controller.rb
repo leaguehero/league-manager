@@ -7,6 +7,7 @@ class ChargesController < ApplicationController
   end
 
   def create
+    
     # set api key for Stripe calls
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
@@ -24,8 +25,8 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-    Do everything after the payment has been set up
-    create league specific plan
+    # Do everything after the payment has been set up
+    # create league specific plan
     begin
       Stripe::Plan.create(
         :amount => @amount_in_cents,
@@ -50,9 +51,8 @@ class ChargesController < ApplicationController
     rescue
       # plan and customer were already created, move on
     end
-    # build league if card goes through
 
-    # use this route so user can'tD refresh confirmation page and send another call to Stripe
+    # use this route s refresh confirmation page and send another call to Stripe
     redirect_to "/charges/confirmation"
   end
 

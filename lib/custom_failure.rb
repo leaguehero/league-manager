@@ -1,6 +1,6 @@
 class CustomFailure < Devise::FailureApp
   def redirect_url
-    if params['user']['pre_league_id']
+    if params['user'] && params['user']['pre_league_id']
       "/users/sign_up?pre_league_id=#{params['user']['pre_league_id']}&signing_in"
     else
       super
