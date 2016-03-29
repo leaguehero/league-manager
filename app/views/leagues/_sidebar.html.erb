@@ -1,5 +1,5 @@
 <nav class="lh-sidebar">
   <a class="<% if (params["controller"] == "leagues") %>active<% end %>" href="/leagues/<%= @league.id %>/edit">Edit League</a>
   <a class="<% if current_page?(edit_user_registration_path) %>active<% end %>" href="/users/edit">Edit User</a>
-  <a class="<% if (params["controller"] == "charges") %>active<% end %>" href="/charges/new">Billing</a>
+  <a class="<% if (params["controller"] == "charges") %>active<% end %>" href="/charges/new?league_id=<%= @league.id %>">Billing</a>
 </nav>
