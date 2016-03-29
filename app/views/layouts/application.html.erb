@@ -30,7 +30,7 @@
   <%= csrf_meta_tags %>
 
 </head>
-<% if (params["controller"] == "pre_leagues") || (params["controller"] == "registrations") || (params["controller"] == "charges") || current_page?(leagues_confirmation_path) %>
+<% if (params["controller"] == "pre_leagues") || (params["controller"] == "registrations") || current_page?(leagues_confirmation_path) %>
   <% if current_page?(edit_user_registration_path) %>
     <%= render :partial => 'layouts/app' %>
   <% else %>

@@ -36,7 +36,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-3">
+      - sidebar -
+    </div>
+    <div class="col-md-9">
+      <h3>Activate League</h3>
+      <p>Use the form below to submit payment information and activate your league. League Hero uses <a href="http://stripe.com" target="_blank">Stripe</a> to securely process payments.</p>
       <div class="league-cost">
         <% if current_user %>
           <strong><%= @pl.max_teams %></strong> teams x <strong><%= @pl.max_players_per_team %></strong> players/team x <strong>$1</strong><span>= $<%= @amount %></span>
