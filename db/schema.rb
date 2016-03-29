@@ -101,7 +101,6 @@ ActiveRecord::Schema.define(version: 20160325124648) do
     t.string   "coach"
     t.integer  "points_for"
     t.integer  "points_against"
-    t.integer  "win_percent"
   end
 
   create_table "users", force: :cascade do |t|

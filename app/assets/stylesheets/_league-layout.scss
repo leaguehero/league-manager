@@ -23,7 +23,7 @@
     background: #57A15B;
     height: 16px;
   }
-  a, h1 {
+  a.league-name, h1 {
     color: #FFF;
     display: block;
     font-size: 42px;
@@ -32,6 +32,7 @@
     margin: 42px 0 0 0;
     text-decoration: none;
     @include breakpoint(l-one) { font-size: 36px; }
+    &.trial { margin: 32px 0 0 0; }
   }
 }
 
