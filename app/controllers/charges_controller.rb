@@ -1,17 +1,18 @@
 class ChargesController < ApplicationController
   def new
-    if current_user
-      @pl = PreLeague.find(current_user.pre_league_id)
+    if current_user && params["league_id"]
+      @pl = League.find(params["league_id"])
       @amount  = (@pl.max_teams * @pl.max_players_per_team)
+    else
+      redirect_to root_path
     end
   end
 
   def create
-    
     # set api key for Stripe calls
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
-    pl = PreLeague.find(current_user.pre_league_id)
+    pl = League.find(params["league_id"])
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
     league = pl["league_name"]
@@ -19,7 +20,6 @@ class ChargesController < ApplicationController
     @amount_in_cents = @amount * 100
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
-
       # check for card errors
     rescue Stripe::CardError => e
       flash[:error] = e.message
@@ -51,16 +51,14 @@ class ChargesController < ApplicationController
     rescue
       # plan and customer were already created, move on
     end
-
+    pl.paid = true
+    pl.save!
     # use this route s refresh confirmation page and send another call to Stripe
-    redirect_to "/charges/confirmation"
+    redirect_to "/charges/confirmation?league_id=#{pl.id}"
   end
 
-# all functionality in this route should be moved to the league controller.
   def confirmation
-    # find PreLeague from current_user
-    @pl = PreLeague.find(current_user.pre_league_id)
     # find league by preleague subdomain
-    @league = League.find_by_subdomain(@pl.subdomain)
+    @league = League.find(params["league_id"])
   end
 end
