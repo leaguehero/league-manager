@@ -3,7 +3,7 @@
     <% if !@league.paid.nil? && !@league.paid %>
       <div class="demo-box">
         Your free trial is ending in <strong><%= @trial_days %></strong> days,
-        <a href="http://<%= @league.subdomain %>.leaguehero.io/charges/new">Activate League</a>.
+        <a href="http://<%= @league.subdomain %>.leaguehero.io/charges/new?league_id=<%= @league.id %>">Activate League</a>.
       </div>
     <% else %>
       <div class="lh-topbar"></div>
