@@ -2,28 +2,28 @@
   :noindex => true
 %>
 
-<div class="step-by-step"></div>
+<div class="step-by-step">
+  <div class="step left full"></div>
+  <div class="bar full"></div>
+  <div class="step center full"></div>
+  <div class="bar right full"></div>
+  <div class="step right full"></div>
+</div>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <%= render :partial => 'layouts/messages' %>
-      <h4>Your 7 day trial has begun!</h4>
-      <p>
-        After the trial period ends, the league and all the league information will be deleted.
-      </p>
-      <!-- <p>Your payment of <strong>$<#%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</p> -->
+      <h3>Your 7 day trial has begun!</h3>
+      <p>After the trial period ends, the league and all the league information will be deleted.</p>
       <h5>League Details</h5>
       <p><strong>Name:</strong> <%= @league.name %><br>
         <strong>URL:</strong> <%= @league.subdomain %>.leaguehero.io<br>
         <strong>Teams:</strong> <%= @league.max_teams %></p>
-      <h3>Let's Have Some Fun!</h3>
+      <h5>Let's Have Some Fun!</h5>
       <p>Now that we created your league let's log in to your league website and begin adding information about each team and the players on those teams.</p>
-      <a class="btn btn-primary-outline" href="http://<%= @league.subdomain %>.leaguehero.io">Go To League</a>
+      <a class="btn btn-primary-outline" href="http://<%= @league.subdomain %>.leaguehero.io">Go to League</a>
+      <a class="btn btn-secondary-outline" href="http://leaguehero.io/charges/new">Update Billing</a>
     </div>
-  </div>
-  <div>
-    <h3>Already like what you see, pay now to avoid the hassle later!</h3>
-    <button class="btn btn-primary-outline">Pay Now!</button>
   </div>
 </div>

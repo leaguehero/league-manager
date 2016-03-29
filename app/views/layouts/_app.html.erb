@@ -1,14 +1,15 @@
 <body class="lh-application">
   <div class="league-header">
-    <div class="lh-topbar"></div>
-    <% if @league %>
-      <a href="/"><%= @league.name %></a>
-    <% end %>
     <% if !@league.paid.nil? && !@league.paid %>
-      <p>
+      <div class="demo-box">
         Your free trial is ending in <strong><%= @trial_days %></strong> days
-        <a class="payment-link" href="http://leaguehero.io/charges/new">Pay Now</a>
-      </p>
+        <a href="http://leaguehero.io/charges/new">Pay Now</a>
+      </div>
+    <% else %>
+      <div class="lh-topbar"></div>
+    <% end %>
+    <% if @league %>
+      <a class="league-name <% if !@league.paid.nil? && !@league.paid %>trial<% end %>" href="/"><%= @league.name %></a>
     <% end %>
   </div>
   <div class="league-content">

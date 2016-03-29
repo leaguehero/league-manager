@@ -33,13 +33,6 @@
   });
 </script>
 
-<div class="step-by-step">
-  <div class="step left full"></div>
-  <div class="bar full"></div>
-  <div class="step center full"></div>
-  <div class="bar right full"></div>
-  <div class="step right full"></div>
-</div>
 
 <div class="container">
   <div class="row">
@@ -49,8 +42,6 @@
           <strong><%= @pl.max_teams %></strong> teams x <strong><%= @pl.max_players_per_team %></strong> players/team x <strong>$1</strong><span>= $<%= @amount %></span>
         <% end %>
       </div>
-      <p class="trial-disclaimer"><strong>30 Days Free!</strong> The first 30 days are on us.</p>
-      <p class="cost-disclaimer">After the 30 day trial period you will be charged for the number of teams and the max number of players per team at a dollar per player. Teams and players may be added after league has been created.</p>
       <%= form_tag "/charges", id: "payment-form" do %>
         <span class="payment-errors text-danger"></span>
         <div class="row">

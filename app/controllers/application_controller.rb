@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
   def trail_days_left
     if !@league.nil?
       start_date = Date.parse((@league.created_at).to_s)
-      end_date = start_date + 7
+      end_date = start_date + 6
       @trial_days  = (end_date - Date.today).to_i
     end
   end
