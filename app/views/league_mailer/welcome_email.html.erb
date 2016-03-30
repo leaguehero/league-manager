@@ -4,14 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to LeagueHero, <%= @user.name %></h1>
-    <p>
-      You have successfully signed up to LeagueHero,
-      your username is: <%= @user.email %>.<br>
-    </p>
-    <p>
-      To login to the site, just follow this link: <a href="lvh.me:5000/users/sign_in">Log In</a>.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+    <h1>Welcome to League Hero <%= @user.name %>!</h1>
+    <p>You have successfully signed up and created a league.</p>
+    <p>Your username is: <%= @user.email %>. Please <a href="http://leaguehero.io/users/sign_in">log in</a> and active your league.</p>
+    <p>Thanks for joining and have a great day!<br><strong>Team League Hero</strong></p>
   </body>
 </html>
