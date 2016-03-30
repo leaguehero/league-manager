@@ -4,13 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Heads Up! Your league <%= @league.name %> has 1 day left on your week long trial</h1>
-    <p>
-      If you are ready to pay for your league, sign in,
-    </p>
-    <p>
-      To login to the site, just follow this link: <a href="lvh.me:5000/users/sign_in">Log In</a>.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+    <h1>Your Trial Expires in 1 Day!</h1>
+    <p>Your league trial, <%= @league.name %>, has 1 day left to activate before it will be deleted.</p>
+    <p>To activate your league <a href="http://leaguehero.io/users/sign_in">log in</a> and complete the account process.</p>
+    <p>Game On!<br><strong>Team League Hero</strong></p>
   </body>
 </html>

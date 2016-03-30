@@ -36,11 +36,6 @@
 
 <div class="container">
   <div class="row">
-    <% if @league %>
-      <div class="col-md-3">
-        <%= render "leagues/sidebar" %>
-      </div>
-    <% end %>
     <div class="col-md-9">
       <h3>Activate League</h3>
       <p>Use the form below to submit payment information and activate your league. League Hero uses <a href="http://stripe.com" target="_blank">Stripe</a> to securely process payments.</p>
@@ -83,5 +78,10 @@
         <button type="submit" class="btn btn-primary-outline">Submit</button>
       <% end %>
     </div>
+    <% if @league %>
+      <div class="col-md-3">
+        <%= render "leagues/sidebar" %>
+      </div>
+    <% end %>
   </div>
 </div>

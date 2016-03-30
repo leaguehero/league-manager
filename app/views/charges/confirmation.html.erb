@@ -6,19 +6,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-9">
       <%= render :partial => 'layouts/messages' %>
       <h3>Success!</h3>
       <p>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted.</p>
-      <p>
-        The league will be available for the duration of the league's season.
-      </p>
-      <p>
-        Game On!
-        <br>
-        - Team League Hero
-      </p>
-      <a class="btn btn-primary-outline" href="http://<%= @league.subdomain %>.leaguehero.io">Go To League</a>
+      <p>The <a href="http://<%= @league.subdomain %>.leaguehero.io"><%= @league.name %></a> league will be available for the duration of the league's season. If you have any questions feel free to <a href="http://leaguehero.io/contact" target="_blank">contact us</a> and we will be happy to help!</p>
+      <p>Game On!<br><strong>- Team League Hero</strong></p>
+    </div>
+    <div class="col-md-3">
+      <%= render "leagues/sidebar" %>
     </div>
   </div>
 </div>
