@@ -34,7 +34,6 @@ class ChargesController < ApplicationController
         :name => pl["league_name"]+ " League Plan" ,
         :currency => "usd",
         :id => pl["league_name"],
-        :trial_period_days => 30
       )
       # create stripe customer
       stripe_customer = Stripe::Customer.create(
