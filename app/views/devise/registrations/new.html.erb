@@ -32,6 +32,7 @@
           <label>Confirm Password</label>
           <input class="form-control" type="password" name="user[password_confirmation]">
         </div>
+        <input type="hidden" value="" name="bot-buster"> 
         <%= f.input :pre_league_id, as: :hidden, input_html: {value: (params["pre_league_id"].to_i)} %>
         <div class="form-actions">
           <button class="btn btn-primary-outline" type="submit">Next</button>

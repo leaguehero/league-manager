@@ -19,7 +19,7 @@ class PreLeague < ActiveRecord::Base
    end
 
    def at_least_two_teams
-     if self.max_teams < 2
+     if self.max_teams && self.max_teams < 2
        errors.add(:max_teams, "should be at least 2")
      end
    end
