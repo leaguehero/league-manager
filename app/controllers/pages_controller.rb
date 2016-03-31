@@ -11,8 +11,7 @@ class PagesController < ApplicationController
       if @posts.blank?
         Post.create(
         title: "Welcome to League Hero",
-        body: "Congrats on joining the the fastest, simplest way to set up and manage any sports league! If you have any questions or comments along the way, feel free to reach out to your league admin or getleaguehero@gmail.com.
-        Game On!"
+        body: "Congrats on joining the fastest, simplest way to set up and manage any league! If you have any questions or comments along the way, feel free to reach out to your league admin or getleaguehero@gmail.com. Game On!"
         )
       end
       # Apartment::Tenant.switch!(request.subdomain)
