@@ -3,7 +3,7 @@ class LeagueMailer < ApplicationMailer
 
   def welcome_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Welcome to League Hero!')
+    mail(to: @user.email, subject: 'Welcome to League Hero!', bcc: "getleaguehero@gmail.com")
   end
 
   def three_days_left(user, league)
