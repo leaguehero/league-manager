@@ -35,9 +35,10 @@
           <div class="lh-post">
             <h5><span><%= post.created_at.strftime("%b %e at %-I:%M%p") %></span><%= post.title %></h5>
             <p><%= post.body %></p>
-            <!-- <% if current_user %>
-              <%= link_to "Delete", post_path(:id => post.id), :confirm => 'Are you sure?', :method => :delete %>
-            <% end %> -->
+            <% if current_user %>
+              <%= link_to "Edit", edit_post_path(:id => post.id)%>
+              <%= link_to "Delete", post_path(:id => post.id), data:{:confirm => 'Are you sure?'}, :method => :delete %>
+            <% end %>
           </div>
         <% end %>
       <% else %>
