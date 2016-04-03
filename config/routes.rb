@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   resources  :games
 
   resources  :players
-  get  'charges/confirmation' => "charges#confirmation"
+  get 'charges/confirmation' => "charges#confirmation"
+  get 'league-pay' => "charges#league_pay"
+  # TODO: @justin turn this into modal
+  get 'payment-setup' => "charges#payment_setup"
+  get 'payment-setup/teams' => "charges#teams_pay"
+  get 'payment-setup/players' => "charges#players_pay"
   resources  :charges
   resources  :posts
 

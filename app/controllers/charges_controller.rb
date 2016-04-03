@@ -56,6 +56,22 @@ class ChargesController < ApplicationController
     redirect_to "/charges/confirmation?league_id=#{pl.id}"
   end
 
+  def league_pay
+
+  end
+  # remove after modal is set up
+  def payment_setup
+
+  end
+
+  def teams_pay
+
+  end
+
+  def players_pay
+
+  end
+
   def confirmation
     # find league by preleague subdomain
     @league = League.find(params["league_id"])
