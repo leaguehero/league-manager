@@ -1,24 +1,25 @@
 <% @title = @league.name + ' • League Hero' %>
+<% @description = 'The official league page of ' + @league.name + ' powered by League Hero.' %>
 <% set_meta_tags :site => @title,
   :canonical => request.original_url,
   :author => 'League Hero',
   :copyright => '&copy; 2016 League Hero',
-  :description => "-",
-  :keywords => ['league', 'management', 'schedule', 'teams', 'scheduling', 'recent news'],
+  :description => @description,
+  :keywords => ['league', 'management', 'schedule', 'teams', 'scheduling', 'recent news', 'league hero', 'games', 'game', 'messaging'],
   :reverse => true,
   :og => {
     :title          => @title,
     :type           => 'website',
     :url            => request.original_url,
     :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
-    :description    => "-",
+    :description    => @description,
     :site_name      => 'League Hero',
   },
   :twitter => {
     :card           => 'summary',
     :site           => '@getleaguehero',
     :title          => @title,
-    :description    => "-",
+    :description    => @description,
     :creator        => '@getleaguehero',
     :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
   }

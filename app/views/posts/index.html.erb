@@ -1,24 +1,25 @@
 <% @title = 'League News • ' + @league.name + ' • League Hero' %>
+<% @description = 'Recent posts and league news from the league, ' + @league.name + '.' %>
 <% set_meta_tags :site => @title,
   :canonical => request.original_url,
   :author => 'League Hero',
   :copyright => '&copy; 2016 League Hero',
-  :description => "-",
-  :keywords => ['league', 'news', 'recent', 'posts', 'messages'],
+  :description => @description,
+  :keywords => ['league', 'news', 'recent', 'posts', 'messages', 'communication', 'league hero'],
   :reverse => true,
   :og => {
     :title          => @title,
     :type           => 'website',
     :url            => request.original_url,
     :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
-    :description    => "-",
+    :description    => @description,
     :site_name      => 'League Hero',
   },
   :twitter => {
     :card           => 'summary',
     :site           => '@getleaguehero',
     :title          => @title,
-    :description    => "-",
+    :description    => @description,
     :creator        => '@getleaguehero',
     :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
   }

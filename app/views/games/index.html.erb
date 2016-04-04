@@ -1,24 +1,25 @@
 <% @title = 'Schedule • ' + @league.name + ' • League Hero' %>
+<% @description = 'View and print the season schedule and game results for ' + @league.name + ' on League Hero.' %>
 <% set_meta_tags :site => @title,
   :canonical => request.original_url,
   :author => 'League Hero',
   :copyright => '&copy; 2016 League Hero',
-  :description => "-",
-  :keywords => ['league', 'schedule', 'teams', 'scheduling', 'recent news'],
+  :description => @description,
+  :keywords => ['league', 'schedule', 'teams', 'scheduling', 'recent news', 'scores', 'games', 'game results'],
   :reverse => true,
   :og => {
     :title          => @title,
     :type           => 'website',
     :url            => request.original_url,
     :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
-    :description    => "-",
+    :description    => @description,
     :site_name      => 'League Hero',
   },
   :twitter => {
     :card           => 'summary',
     :site           => '@getleaguehero',
     :title          => @title,
-    :description    => "-",
+    :description    => @description,
     :creator        => '@getleaguehero',
     :image          => 'http://leaguehero.io/assets/fb-image-league-hero.png',
   }
