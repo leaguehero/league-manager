@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h2>Set League Dues</h2>
+
+      Set the league dues below.
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="number" value="100" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" />
+      </div>
+      <br>
+      <p>Your league will be charged 5% for each transaction. When all dues have been marked as “paid” League Hero will send collected payments to the league manager. </p>
+      <br>
+      <%= link_to "Send Dues Emails", payment_setup_league_dues_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

@@ -17,14 +17,15 @@ Rails.application.routes.draw do
 
   resources  :players
   get 'charges/confirmation' => "charges#confirmation"
-  get 'league-pay' => "charges#league_pay"
-  # TODO: @justin turn this into modal
-  get 'payment-setup' => "charges#payment_setup"
-  get 'payment-setup/league-dues' => "charges#league_dues"
-  # get 'payment-setup/teams' => "charges#teams_pay"
-  # get 'payment-setup/players' => "charges#players_pay"
   resources  :charges
   resources  :posts
+
+  get 'league-pay' => "dues#league_pay"
+  # TODO: @justin turn this into modal
+  get 'payment-setup' => "dues#payment_setup"
+  get 'payment-setup/league-dues' => "dues#league_dues"
+  # get 'payment-setup/teams' => "dues#teams_pay"
+  # get 'payment-setup/players' => "dues#players_pay"
 
   # get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"
   # get "/subscriptions/update_card"          => "subscriptions#update_card"
