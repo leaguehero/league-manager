@@ -6,17 +6,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-9">
       <%= render :partial => 'layouts/messages' %>
       <h3>Success!</h3>
-      <p>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted!</p>
-      <h5>League Details</h5>
-      <p><strong>Name:</strong> <%= @league.name %><br>
-        <strong>URL:</strong> <%= @league.subdomain %>.leaguehero.io<br>
-        <strong>Teams:</strong> <%= @league.max_teams %></p>
-      <h3>Let's Have Some Fun!</h3>
-      <p>Now that we created your league let's log in to your league website and begin adding information about each team and the players on those teams.</p>
-      <a class="btn btn-primary-outline" href="http://<%= @league.subdomain %>.leaguehero.io">Go To League</a>
+      <p>Your payment of <strong>$<%= (@league.max_teams * @league.max_players_per_team) %>.00</strong> was accepted.</p>
+      <p>The <a href="http://<%= @league.subdomain %>.leaguehero.io"><%= @league.name %></a> league will be available for the duration of the league's season. If you have any questions feel free to <a href="http://leaguehero.io/contact" target="_blank">contact us</a> and we will be happy to help!</p>
+      <p>Game On!<br><strong>- Team League Hero</strong></p>
+    </div>
+    <div class="col-md-3">
+      <%= render "leagues/sidebar" %>
     </div>
   </div>
 </div>

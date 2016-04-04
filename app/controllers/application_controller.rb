@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_mailer_host
   before_filter :set_league_count
   before_filter :set_league
+  before_filter :trail_days_left
 
   protected
   def set_mailer_host
@@ -30,6 +31,14 @@ class ApplicationController < ActionController::Base
     # set @league if on subdomain
     if !request.subdomain.blank?
       @league = League.find_by_subdomain(request.subdomain)
+    end
+  end
+
+  def trail_days_left
+    if !@league.nil?
+      start_date = Date.parse((@league.created_at).to_s)
+      end_date = start_date + 6
+      @trial_days  = (end_date - Date.today).to_i
     end
   end
 

@@ -1,0 +1,30 @@
+<% set_meta_tags :site => 'Success! • League Hero',
+  :noindex => true
+%>
+
+<div class="step-by-step">
+  <div class="step left full"></div>
+  <div class="bar full"></div>
+  <div class="step center full"></div>
+  <div class="bar right full"></div>
+  <div class="step right full"></div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render :partial => 'layouts/messages' %>
+      <h3>Your 7 day trial has begun!</h3>
+      <p>After the trial period ends, the league and all the league information will be deleted.</p>
+      <h5>League Details</h5>
+      <p><strong>Name:</strong> <%= @league.name %><br>
+        <strong>URL:</strong> <%= @league.subdomain %>.leaguehero.io<br>
+        <strong>Teams:</strong> <%= @league.max_teams %></p>
+      <h5>Let's Have Some Fun!</h5>
+      <p>Now that we created your league let's log in to your league website and begin adding information about each team and the players on those teams.</p>
+      <a class="btn btn-primary-outline" href="http://<%= @league.subdomain %>.leaguehero.io">Go to League</a>
+      <!-- Don't allow users to pay for their league from league confirmation page -->
+      <!-- <a class="btn btn-secondary-outline" href="http://leaguehero.io/charges/new?league_id=<%= @league.id %>">Update Billing</a> -->
+    </div>
+  </div>
+</div>
