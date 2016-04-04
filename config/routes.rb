@@ -20,8 +20,9 @@ Rails.application.routes.draw do
   get 'league-pay' => "charges#league_pay"
   # TODO: @justin turn this into modal
   get 'payment-setup' => "charges#payment_setup"
-  get 'payment-setup/teams' => "charges#teams_pay"
-  get 'payment-setup/players' => "charges#players_pay"
+  get 'payment-setup/league-dues' => "charges#league_dues"
+  # get 'payment-setup/teams' => "charges#teams_pay"
+  # get 'payment-setup/players' => "charges#players_pay"
   resources  :charges
   resources  :posts
 

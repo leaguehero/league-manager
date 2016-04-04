@@ -5,3 +5,17 @@ request email. Please fill out a team captain for each of the teams below.
 </p>
 
 <h3>Set Team Captians</h3>
+
+<strong>TEAM</strong>
+<strong style="float:right;">CAPTIAN</strong>
+<% @teams.each do |team| %>
+  <p>
+    <%= team.name %>
+  </p>
+  <% set_team_players(team).each do |plyr| %>
+    <p style="float:right;">
+      <%= plyr.name %>
+    </p>
+    <br>
+  <% end %>
+<% end %>
