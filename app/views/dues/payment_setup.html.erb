@@ -7,8 +7,8 @@
       Would you like teams or each individual player to pay the league dues?
       </p>
 
-      <%= link_to "Teams", payment_setup_league_dues_path(teams: "teams"), class: "btn btn-primary" %>
-      <%= link_to "Players", payment_setup_league_dues_path(players: "players"), class: "btn btn-primary" %>
+      <%= link_to "Teams", payment_setup_league_dues_path(payer: "teams"), class: "btn btn-primary" %>
+      <%= link_to "Players", payment_setup_league_dues_path(payer: "players"), class: "btn btn-primary" %>
     </div>
   </div>
 </div>
