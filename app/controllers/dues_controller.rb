@@ -46,10 +46,6 @@ class DuesController < ApplicationController
     # end
   end
 
-  def create
-
-  end
-
 # send emails based on if they want from the players or from the captians
   def send_dues_email
     if params["price"].blank?
@@ -57,7 +53,7 @@ class DuesController < ApplicationController
     end
     @league.price = params["price"]
     @league.save!
-    byebug
+
     # include player_id in the payment link in order to know who is paying
     redirect_to root_path, :flash => {:alert => "Emails have been sent to the league. To track payments click here () or select 'Payments' under the manage dropdown."} and return
   end

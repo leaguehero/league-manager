@@ -13,7 +13,7 @@
         <br>
         <p>Your league will be charged 5% for each transaction. When all dues have been marked as “paid” League Hero will send collected payments to the league manager. </p>
         <input class="form-control" type="hidden" name="payer" value=<%= params["payer"] %>>
-        <%= button_to "Send Dues Emails", class: "btn btn-primary", type: "submit" %>
+        <%= button_to("Send Dues Emails", {}, {:onclick => "return confirm('Are you sure the dues are correct? This can not be changed once set.')", :method => :accept_question, :remote => true}) %>
       <% end %>
     </div>
   </div>
