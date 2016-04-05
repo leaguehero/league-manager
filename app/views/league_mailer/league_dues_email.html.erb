@@ -4,8 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Please Visit your league to pay dues</h1>
-    <p>The league dues for <strong><%= @league.name %></strong> have been set. Plese visit your unique payment link, (this will be the unique link to payment form with user id), to pay for the league</p>
+    <h1>Please visit your league to pay dues</h1>
+    <p>The league dues for <strong><%= @league.name %></strong> have been set. Plese visit your unique payment link,
+    <a href="http://<%= @league.url %>/pay-dues?player_id=<%= @player.id %>">
+      <%= @league.url %>/pay-dues
+    </a>, to pay for the league</p>
 
     <p>
       League dues have been set at $<%= @price %>.

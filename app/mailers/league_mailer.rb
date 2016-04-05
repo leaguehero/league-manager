@@ -31,11 +31,11 @@ class LeagueMailer < ApplicationMailer
     mail(to: @user.email, subject: 'NOTICE: Your League Hero league will be deleted today.')
   end
 
-  def league_dues_email(player_email, price, league)
-    @player_email = player_email
+  def league_dues_email(player, price, league)
+    @player = player
     @price = price
     @league = league
-    mail(to: @player_email, subject: 'NOTICE: League dues for ' + @league.name + ' have been set')
+    mail(to: @player.email, subject: 'NOTICE: League dues for ' + @league.name + ' have been set')
   end
 
 end

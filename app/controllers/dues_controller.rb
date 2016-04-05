@@ -62,12 +62,13 @@ class DuesController < ApplicationController
 
 # charge page for league dues
   def pay_dues
+    @player = Player.find(params["player_id"])
     # stripe checkout
   end
 
 # confirmation page after player pays dues
   def confirmation
-    # update due object with player Id to paid
+    # update due object with player_id to paid => true
   end
 
   private

@@ -1,0 +1,79 @@
+<% set_meta_tags :site => 'Pay Dues • League Hero',
+  :noindex => true
+%>
+
+<script type="text/javascript">
+  // This identifies your website in the createToken call below
+  Stripe.setPublishableKey( "<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>");
+
+  var stripeResponseHandler = function(status, response) {
+    var $form = $('#payment-form');
+    if (response.error) {
+      // Show the errors on the form
+      $form.find('.payment-errors').text(response.error.message);
+      $form.find('button').prop('disabled', false);
+    } else {
+      // token contains id, last4, and card type
+      var token = response.id;
+      // Insert the token into the form so it gets submitted to the server
+      $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+      // and re-submit
+      $form.get(0).submit();
+    }
+  };
+  jQuery(function($) {
+    $('#payment-form').submit(function(e) {
+      var $form = $(this);
+      // Disable the submit button to prevent repeated clicks
+      $form.find('button').prop('disabled', true);
+      Stripe.card.createToken($form, stripeResponseHandler);
+      // Prevent the form from submitting with the default action
+      return false;
+    });
+  });
+</script>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h3>Pay Dues for <%= @league.name %></h3>
+      <p>Use the form below to submit payment information and pay your league dues. League Hero uses <a href="http://stripe.com" target="_blank">Stripe</a> to securely process payments.</p>
+      <div class="league-cost">
+        Dues owed by <%= @player.name %>: $<%= @league.price %>
+      </div>
+      <%= form_tag "/charges", id: "payment-form" do %>
+        <span class="payment-errors text-danger"></span>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" size="20" class="form-control" data-stripe="number"/>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Security Code (CVV)</label>
+              <input type="text" size="4" class="form-control" data-stripe="cvc"/>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label>MM</label>
+              <input type="text" size="2" class="form-control exp-field" data-stripe="exp-month"/>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label>YYYY</label>
+              <input type="text" size="4" class="form-control exp-field" data-stripe="exp-year"/>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary-outline">Submit</button>
+      <% end %>
+    </div>
+  </div>
+</div>

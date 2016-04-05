@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   post 'dues-email' => "dues#dues_email"
   get 'submit-dues' => "dues#pay_dues"
   get 'payment-confirmation' => "dues#confirmation"
+  get 'pay-dues' => "dues#pay_dues"
   resources  :dues
 
 
