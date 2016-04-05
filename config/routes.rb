@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get 'payment-setup/league-dues' => "dues#league_dues"
   # get 'payment-setup/teams' => "dues#teams_pay"
   # get 'payment-setup/players' => "dues#players_pay"
-  post 'send-dues-email' => "dues#send_dues_email"
+  post 'dues-email' => "dues#dues_email"
   get 'submit-dues' => "dues#pay_dues"
   get 'payment-confirmation' => "dues#confirmation"
   resources  :dues

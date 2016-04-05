@@ -1,5 +1,6 @@
 class DuesController < ApplicationController
   before_action :authenticate_user!, :except => [:pay_dues, :confirmation]
+  include DuesHelper
 
   # info page on league pay through LH
   def league_pay
@@ -24,37 +25,38 @@ class DuesController < ApplicationController
   def league_dues
     @teams = Team.all
     @players = Player.all
-    # if params['teams']
-    #   @teams.each do |tm|
-    #     if tm.captain.nil?
-    #       redirect_to :back, :flash => {:error => "Oops! It looks like you have not set team captains for every team. This is required before we can send out the payment request email."} and return
-    #     end
-    #   end
-    # elsif params['players']
-    #   @players.each do |pl|
-    #     if pl.email.nil?
-    #       redirect_to :back, :flash => {:error => "Missing Emails! It looks like you have not set emails for each player. This is required before we can send out the payment request email."} and return
-    #     end
-    #   end
-    # else
+    if params['payer'] == "teams"
+      @teams.each do |tm|
+        if tm.captain.nil?
+          redirect_to :back, :flash => {:error => "Oops! It looks like you have not set team captains for every team. This is required before we can send out the payment request email."} and return
+        end
+      end
+    elsif params['payer'] == "players"
+      @players.each do |pl|
+        if pl.email.nil?
+          redirect_to :back, :flash => {:error => "Missing Emails! It looks like you have not set emails for each player. This is required before we can send out the payment request email."} and return
+        end
+      end
+    else
       if params['payer'] == "teams"
         @league.payment_option = "teams"
       elsif params['payer'] == "players"
         @league.payment_option = "players"
       end
       @league.save!
-    # end
+    end
   end
 
 # send emails based on if they want from the players or from the captians
-  def send_dues_email
+  def dues_email
     if params["price"].blank?
       redirect_to :back, :flash => {:error => "Please set a price for the league"} and return
     end
     @league.price = params["price"]
     @league.save!
 
-    # include player_id in the payment link in order to know who is paying
+    send_dues_email(params)
+
     redirect_to root_path, :flash => {:alert => "Emails have been sent to the league. To track payments click here () or select 'Payments' under the manage dropdown."} and return
   end
 

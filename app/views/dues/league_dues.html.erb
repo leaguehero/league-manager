@@ -4,7 +4,7 @@
       <h2>Set League Dues</h2>
       <%= render :partial => 'layouts/messages' %>
       Set the league dues below.
-      <%= simple_form_for @league, :url => send_dues_email_path, :method => :post do |f| %>
+      <%= simple_form_for @league, :url => dues_email_path, :method => :post do |f| %>
         <div class="input-group">
           <span class="input-group-addon">$</span>
           <input type="number" placeholder="100" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" name="price" />
