@@ -2,6 +2,23 @@ class DuesController < ApplicationController
   before_action :authenticate_user!, :except => [:pay_dues, :confirmation]
   include DuesHelper
 
+  def index
+    @dues = Due.all
+    @player_dues = {}
+    @dues.each do |due|
+      player = Player.find(due.player_id)
+      @player_dues[player] = {paid: due.paid}
+    end
+  end
+
+  def update_dues
+    # maunally update user as paid
+    due = Due.find_by_player_id(params["player_id"]) #Should only be 1 result
+    due.paid = params["paid"]
+    due.save!
+    redirect_to :back, :flash => {:alert => "Player has been marked as paid"}
+  end
+
   # info page on league pay through LH
   def league_pay
 

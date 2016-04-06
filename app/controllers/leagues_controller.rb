@@ -34,10 +34,6 @@ class LeaguesController < ApplicationController
     end
   end
 
-  def player_payments
-
-  end
-
   private
 
 # Need to add permitted params for Rails 4

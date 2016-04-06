@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
 
   get "/leagues/confirmation"  => "leagues#confirmation"
-  get 'player-payments' => "leagues#player_payments"
   resources  :leagues
   get "/create-a-league" => "pre_leagues#new"
   resources  :pre_leagues
@@ -31,6 +30,7 @@ Rails.application.routes.draw do
   get 'submit-dues' => "dues#pay_dues"
   get 'payment-confirmation' => "dues#confirmation"
   get 'pay-dues' => "dues#pay_dues"
+  post  'update-dues' => "dues#update_dues"
   resources  :dues
 
 
