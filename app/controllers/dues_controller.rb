@@ -17,7 +17,7 @@ class DuesController < ApplicationController
     due = Due.find_by_player_id(params["player_id"]) #Should only be 1 result
     due.paid = params["paid"]
     due.save!
-    redirect_to :back, :flash => {:alert => "Player has been marked as paid"}
+    redirect_to :back, :flash => {:alert => "Player's dues has been updated"}
   end
 
   # info page on league pay through LH
