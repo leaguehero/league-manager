@@ -1,6 +1,7 @@
 class DuesController < ApplicationController
-  before_action :authenticate_user!, :except => [:pay_dues, :confirmation]
   include DuesHelper
+  before_action :authenticate_user!, :except => [:pay_dues, :confirmation]
+  before_filter :check_for_subdomain
 
   def index
     @dues = Due.all
@@ -74,7 +75,7 @@ class DuesController < ApplicationController
 
     send_dues_email(params)
 
-    redirect_to root_path, :flash => {:alert => "Emails have been sent to the league. To track payments click here () or select 'Payments' under the manage dropdown."} and return
+    redirect_to root_path, :flash => {:alert => "Emails have been sent to the league. To track payments select 'Player Dues' in the settings sidebar menu."} and return
   end
 
 # charge page for league dues

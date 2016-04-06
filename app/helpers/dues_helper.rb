@@ -30,4 +30,11 @@ module DuesHelper
       end
     end
   end
+  
+  # check for subdomain before all dues actions
+  def check_for_subdomain
+    if request.subdomain.blank?
+      redirect_to root_path and return
+    end
+  end
 end
