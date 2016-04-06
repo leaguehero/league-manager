@@ -42,7 +42,7 @@
       <div class="league-cost">
         Dues owed by <%= @player.name %>: $<%= @league.price %>
       </div>
-      <%= form_tag "/charges", id: "payment-form" do %>
+      <%= form_tag "/dues", id: "payment-form" do %>
         <span class="payment-errors text-danger"></span>
         <div class="row">
           <div class="col-sm-12">
@@ -72,6 +72,7 @@
             </div>
           </div>
         </div>
+        <input type="hidden" name="player_id" value="<%= @player.id %>"/>
         <button type="submit" class="btn btn-primary-outline">Submit</button>
       <% end %>
     </div>

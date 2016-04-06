@@ -20,17 +20,15 @@ Rails.application.routes.draw do
   resources  :charges
   resources  :posts
 
-  get 'league-pay' => "dues#league_pay"
-  # TODO: @justin turn this into modal
-  get 'payment-setup' => "dues#payment_setup"
-  get 'payment-setup/league-dues' => "dues#league_dues"
   # get 'payment-setup/teams' => "dues#teams_pay"
   # get 'payment-setup/players' => "dues#players_pay"
-  post 'dues-email' => "dues#dues_email"
+  get 'league-pay' => "dues#league_pay"
+  get 'payment-setup' => "dues#payment_setup"
+  get 'payment-setup/league-dues' => "dues#league_dues"
   get 'submit-dues' => "dues#pay_dues"
-  get 'payment-confirmation' => "dues#confirmation"
   get 'pay-dues' => "dues#pay_dues"
   post  'update-dues' => "dues#update_dues"
+  post 'dues-email' => "dues#dues_email"
   resources  :dues
 
 

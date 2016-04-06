@@ -1,6 +1,6 @@
 class DuesController < ApplicationController
   include DuesHelper
-  before_action :authenticate_user!, :except => [:pay_dues, :confirmation]
+  before_action :authenticate_user!, :except => [:pay_dues, :show, :create]
   before_filter :check_for_subdomain
 
   def index
@@ -85,12 +85,40 @@ class DuesController < ApplicationController
 # charge page for league dues
   def pay_dues
     @player = Player.find(params["player_id"])
+  end
+# for creating the charge
+  def create
+    @player = Player.find(params["player_id"])
+
+    # set api key for Stripe calls
+    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+
+    # Get the credit card details submitted by the form
+    token = params[:stripeToken]
+    # to convert league price to cents
+    @amount = @league.price * 100
+    # Create the charge on Stripe's servers - this will charge the user's card
+    begin
+      charge = Stripe::Charge.create(
+        :amount => @amount, # amount in cents, again
+        :currency => "usd",
+        :source => token,
+        :description => @player.name + "'s payment for " + @league.name
+      )
+    rescue Stripe::CardError => e
+      # The card has been declined
+    end
+    due = Due.find_by_player_id(@player.id)
+    due.paid = true
+    due.save!
+    # use this route s refresh confirmation page and send another call to Stripe
+    redirect_to "/dues/show?player_id=" + @player.id.to_s
     # stripe checkout
   end
 
 # confirmation page after player pays dues
-  def confirmation
-    # update due object with player_id to paid => true
+  def show
+    @player = Player.find(params["player_id"])
   end
 
   private
