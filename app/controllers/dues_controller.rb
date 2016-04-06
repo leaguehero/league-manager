@@ -53,6 +53,7 @@ class DuesController < ApplicationController
           end
         end
       end
+      @league.payment_option = "teams"
     elsif params['payer'] == "players"
       if @players.blank?
         redirect_to :back, :flash => {:error => "Oops! It looks like you have not set players for the league. This is required before we can set the league dues."} and return
@@ -63,14 +64,9 @@ class DuesController < ApplicationController
           end
         end
       end
-    else
-      if params['payer'] == "teams"
-        @league.payment_option = "teams"
-      elsif params['payer'] == "players"
-        @league.payment_option = "players"
-      end
-      @league.save!
+      @league.payment_option = "players"
     end
+    @league.save!
   end
 
 # send emails based on if they want from the players or from the captians
