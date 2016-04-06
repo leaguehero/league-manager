@@ -30,11 +30,15 @@ module DuesHelper
       end
     end
   end
-  
+
   # check for subdomain before all dues actions
   def check_for_subdomain
     if request.subdomain.blank?
       redirect_to root_path and return
     end
+  end
+
+  def find_team(team_id)
+    @team_name = Team.find(team_id).name
   end
 end

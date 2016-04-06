@@ -11,6 +11,7 @@
             <th>Status</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Team</th>
             <th></th>
           </tr>
         </thead>
@@ -20,6 +21,7 @@
             <th scope="row"><%= val[:paid] ? "PAID" : "-" %></th>
             <td><%= key.name %></td>
             <td><%= key.email %></td>
+            <td><%= find_team(key.team_id) %></td>
             <% if !val[:paid] %>
               <td><%= link_to "Mark As Paid", update_dues_path(player_id: key.id, paid: true), :method => :post, :data => {:confirm => "Are you sure you want to mark the player as PAID?"} %></td>
             <% else %>
