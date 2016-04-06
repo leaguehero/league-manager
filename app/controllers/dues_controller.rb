@@ -44,15 +44,23 @@ class DuesController < ApplicationController
     @teams = Team.all
     @players = Player.all
     if params['payer'] == "teams"
-      @teams.each do |tm|
-        if tm.captain.nil?
-          redirect_to :back, :flash => {:error => "Oops! It looks like you have not set team captains for every team. This is required before we can send out the payment request email."} and return
+      if @teams.blank?
+        redirect_to :back, :flash => {:error => "Oops! It looks like you have not set teams for the league. This is required before we can set up the league dues."} and return
+      else
+        @teams.each do |tm|
+          if tm.captain.nil?
+            redirect_to :back, :flash => {:error => "Oops! It looks like you have not set team captains for every team. This is required before we can send out the payment request email."} and return
+          end
         end
       end
     elsif params['payer'] == "players"
-      @players.each do |pl|
-        if pl.email.nil?
-          redirect_to :back, :flash => {:error => "Missing Emails! It looks like you have not set emails for each player. This is required before we can send out the payment request email."} and return
+      if @players.blank?
+        redirect_to :back, :flash => {:error => "Oops! It looks like you have not set players for the league. This is required before we can set the league dues."} and return
+      else
+        @players.each do |pl|
+          if pl.email.nil?
+            redirect_to :back, :flash => {:error => "Missing Emails! It looks like you have not set emails for each player. This is required before we can send out the payment request email."} and return
+          end
         end
       end
     else
