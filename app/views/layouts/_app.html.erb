@@ -5,6 +5,11 @@
         Your free trial is ending in <strong><%= @trial_days %></strong> days,
         <a href="http://<%= @league.subdomain %>.leaguehero.io/charges/new?league_id=<%= @league.id %>">Activate League</a>.
       </div>
+    <% elsif @league.payment_option.nil?%>
+      <div class="demo-box">
+        Need LeagueHero to take care of league dues?
+        <a href="http://<%= @league.subdomain %>.leaguehero.io/league-pay">Activate LeaguePay!</a>.
+      </div>
     <% else %>
       <div class="lh-topbar"></div>
     <% end %>
