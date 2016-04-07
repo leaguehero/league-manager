@@ -1,14 +1,15 @@
-<%= render :partial => 'layouts/messages' %>
+<% set_meta_tags :site => 'Select Who Pays • League Hero',
+  :noindex => true
+%>
+
 <div class="container">
+  <%= render :partial => 'layouts/messages' %>
   <div class="row">
     <div class="col-md-9">
       <h3>Who Pays?</h3>
-      <p>
-      Would you like teams or each individual player to pay the league dues?
-      </p>
-
-      <%= link_to "Teams", payment_setup_league_dues_path(payer: "teams"), class: "btn btn-primary" %>
-      <%= link_to "Players", payment_setup_league_dues_path(payer: "players"), class: "btn btn-primary" %>
+      <p>Would you like teams or each individual player to pay the league dues?</p>
+      <%= link_to "Teams", payment_setup_league_dues_path(payer: "teams"), class: "btn btn-primary-outline" %>
+      <%= link_to "Players", payment_setup_league_dues_path(payer: "players"), class: "btn btn-primary-outline" %>
     </div>
   </div>
 </div>

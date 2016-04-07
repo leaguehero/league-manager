@@ -4,11 +4,6 @@
 * leaguehero.io
 */
 
-// TODO: @justin feel free to remove and re-style
-.payment-link {
-  position: fixed;
-  color: black !important;
-}
 
 .league-header {
   background: #6BC16F;
@@ -73,6 +68,9 @@
         color: #44536A;
       }
       &.active { height: 60px; }
+      &.lp-mobile-hide {
+        @include breakpoint(l-one) { display: none; visibility: hidden; }
+      }
       &.manage-log-in {
         border-right: none;
         float: right;
