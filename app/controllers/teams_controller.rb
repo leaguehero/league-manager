@@ -64,6 +64,7 @@ class TeamsController < ApplicationController
     @players = Player.where(:team_id => id)
     # convert @players into hash to be compatible with best_in_place
     @pl_select = Hash[@players.each_with_index.map {|index, value| [index.id, index.name]}]
+    @pl_select[""] = "Select Captian"
     @team = Team.find(id)
   end
 
