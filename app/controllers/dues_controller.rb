@@ -48,8 +48,11 @@ class DuesController < ApplicationController
         redirect_to :back, :flash => {:error => "Oops! It looks like you have not set teams for the league. This is required before we can set up the league dues."} and return
       else
         @teams.each do |tm|
+          capt_email = Player.find(tm.captain).email
           if tm.captain.nil?
             redirect_to :back, :flash => {:error => "Oops! It looks like you have not set team captains for every team. This is required before we can send out the payment request email."} and return
+          elsif capt_email.nil?
+            redirect_to :back, :flash => {:error => "Oops! It looks like you have not set the email for all captains. This is required before we can send out the payment request email."} and return
           end
         end
       end
