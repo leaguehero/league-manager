@@ -1,8 +1,9 @@
 class LeagueMailer < ApplicationMailer
   default from: 'getleaguehero@gmail.com'
 
-  def welcome_email(user)
+  def welcome_email(user, league)
     @user = user
+    @league = league
     mail(to: @user.email, subject: 'Welcome to League Hero!', bcc: "getleaguehero@gmail.com")
   end
 

@@ -7,6 +7,16 @@
     <h1>Welcome to League Hero <%= @user.name %>!</h1>
     <p>You have successfully signed up and created a league.</p>
     <p>Your username is: <%= @user.email %>. Please <a href="http://leaguehero.io/users/sign_in">log in</a> and active your league.</p>
-    <p>Thanks for joining and have a great day!<br><strong>Team League Hero</strong></p>
+    <br>
+    <h3>Your League Details</h3>
+    <p><strong>League Name:</strong> <%= @league.name %><br>
+      <strong>URL:</strong> <%= @league.subdomain %>.leaguehero.io<br>
+      <strong>Teams:</strong> <%= @league.max_teams %></p>
+
+    <p>Please reach out to our team if you have any questions with your new league.</p>
+    <p>
+      Game On!
+    </p>
+    <p><strong>Team League Hero</strong></p>
   </body>
 </html>

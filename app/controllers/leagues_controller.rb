@@ -23,7 +23,7 @@ class LeaguesController < ApplicationController
           :paid => false
         )
         # send confirmation mailer
-        LeagueMailer.welcome_email(current_user).deliver_now
+        LeagueMailer.welcome_email(current_user, @league).deliver_now
   end
 
   def update
