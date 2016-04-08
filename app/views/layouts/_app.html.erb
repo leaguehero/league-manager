@@ -17,6 +17,9 @@
       <a class="<% if current_page?(root_path) %>active<% end %>"
          href="/">League</a>
       <a class="<% if current_page?(controller: 'games', action: 'index') %>active<% end %>" href="/schedule">Schedule</a>
+      <% if current_user && @league.payment_option.nil? %>
+        <a class="lp-mobile-hide <% if (params['controller'] == 'dues') %>active<% end %>" href="/league-pay">League Pay</a>
+      <% end %>
       <% if current_user.nil? %>
         <%= link_to "Log In", new_user_session_path, :class => "manage-log-in" %>
       <% else %>

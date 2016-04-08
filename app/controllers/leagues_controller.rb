@@ -38,6 +38,6 @@ class LeaguesController < ApplicationController
 
 # Need to add permitted params for Rails 4
   def league_params
-    params.require(:league).permit(:name, :subdomain, :url, :max_teams, :max_players_per_team, :admin_name, :admin_email, :avatar, :paid)
+    params.require(:league).permit(:name, :subdomain, :url, :max_teams, :max_players_per_team, :admin_name, :admin_email, :avatar, :paid, :price, :payment_option)
   end
 end

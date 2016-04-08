@@ -1,0 +1,24 @@
+<% set_meta_tags :site => 'Setup League Pay • League Hero',
+  :noindex => true
+%>
+
+<div class="container">
+  <%= render :partial => 'layouts/messages' %>
+  <div class="row">
+    <div class="col-md-9">
+      <h3>Setup League Pay</h3>
+      <p>Set the league dues below.</p>
+      <%= simple_form_for @league, :url => dues_email_path, :method => :post do |f| %>
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="number" placeholder="100" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" name="price" />
+          </div>
+        </div>
+        <p>Your league will be charged 5% for each transaction. When all dues have been marked as "paid" League Hero will send collected payments to the league manager.</p>
+        <input class="form-control" type="hidden" name="payer" value=<%= params["payer"] %>>
+        <%= button_to("Send League Dues", {}, {:onclick => "return confirm('Are you sure the dues are correct? This can not be changed once set.')", :method => :accept_question, :remote => true, :class => "btn btn-primary-outline"}) %>
+      <% end %>
+    </div>
+  </div>
+</div>

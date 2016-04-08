@@ -16,9 +16,21 @@ Rails.application.routes.draw do
   resources  :games
 
   resources  :players
-  get  'charges/confirmation' => "charges#confirmation"
+  get 'charges/confirmation' => "charges#confirmation"
   resources  :charges
   resources  :posts
+
+  # get 'payment-setup/teams' => "dues#teams_pay"
+  # get 'payment-setup/players' => "dues#players_pay"
+  get 'league-pay' => "dues#league_pay"
+  get 'payment-setup' => "dues#payment_setup"
+  get 'payment-setup/league-dues' => "dues#league_dues"
+  get 'submit-dues' => "dues#pay_dues"
+  get 'pay-dues' => "dues#pay_dues"
+  post  'update-dues' => "dues#update_dues"
+  post 'dues-email' => "dues#dues_email"
+  resources  :dues
+
 
   # get "/subscriptions/cancel_subscription"  => "subscriptions#cancel_subscription"
   # get "/subscriptions/update_card"          => "subscriptions#update_card"

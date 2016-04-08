@@ -1,0 +1,21 @@
+<% set_meta_tags :site => 'League Pay • League Hero',
+  :noindex => true
+%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h3>Online League Pay</h3>
+      <p>Interested in collecting league dues online? Enable online league pay to easily collect from either the teams or individual players of your league.</p>
+      <p><strong>Use Online League Pay to:</strong></p>
+      <ul>
+        <li>Collect league dues online quickly without the hassle of checks.</li>
+        <li>Email sent to each team/player with an individual link to payment page.</li>
+        <li>Track each team/player and whether or not they have paid.</li>
+      </ul>
+      <h4>Fees?</h4>
+      <p>League Hero will charge 5% of teach transaction. All payments are handled using <a href="http://stripe.com" target="_blank">Stripe</a> and the fees for using Stripe are covered by League Hero.</p>
+      <%= link_to "Enable Online League Pay", payment_setup_path, class: "btn btn-primary-outline" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Pay League Dues!</h1>
+    <p>The league dues for <strong><%= @league.name %></strong> have been set. Plese visit your unique payment link, <a href="http://<%= @league.url %>/pay-dues?player_id=<%= @player.id %>"><%= @league.url %>/pay-dues?player_id=<%= @player.id %></a>, to pay for the league.</p>
+    <p>League dues have been set at $<%= @price %>.</p>
+    <p>If you have any questions, please email us at <a href="mailto:getleaguehero@gmail.com">getleaguehero@gmail.com</a> or reach out to your league admin.</p>
+    <p>Game On!<br><strong>Team League Hero</strong></p>
+  </body>
+</html>

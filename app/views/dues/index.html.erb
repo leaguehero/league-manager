@@ -1,0 +1,39 @@
+<% set_meta_tags :site => 'League Dues • League Hero',
+  :noindex => true
+%>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>League Dues Owed</h3>
+      <table class="table">
+        <%= render :partial => 'layouts/messages' %>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Team</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @player_dues.each do |key, val| %>
+          <tr>
+            <th scope="row"><%= val[:paid] ? "PAID" : "-" %></th>
+            <td><%= key.name %></td>
+            <td><%= key.email %></td>
+            <td><%= find_team(key.team_id) %></td>
+            <% if !val[:paid] %>
+              <td><%= link_to "Mark As Paid", update_dues_path(player_id: key.id, paid: true), :method => :post, :data => {:confirm => "Are you sure you want to mark the player as PAID?"} %></td>
+            <% else %>
+              <td><%= link_to "Mark As Unpaid", update_dues_path(player_id: key.id, paid: false), :method => :post, :data => {:confirm => "Are you sure you want to mark the player as UNPAID?"} %></td>
+            <% end %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
