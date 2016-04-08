@@ -1,13 +1,13 @@
 class TrialLeagues
 
-# remove subdomin when trial runs out, then destroy league 7 days after trial ends
+# remove subdomain when trial runs out, then destroy league 7 days after trial ends
   def self.remove
     League.all.each do |lg|
       if !lg.paid && (TrialLeagues.trail_days_left(lg) == 0)
-        p "subdomain #{lg.subdomain} has been deleted"
+        puts "subdomain #{lg.subdomain} has been deleted"
         Apartment::Tenant.drop(lg.subdomain)
       elsif !lg.paid && (TrialLeagues.trail_days_left(lg) <= -7)
-        p "league id:#{lg.id}, name:#{lg.name} has been deleted"
+        puts "league id:#{lg.id}, name:#{lg.name} has been deleted"
         lg.destroy
       end
     end

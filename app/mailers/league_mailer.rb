@@ -38,4 +38,9 @@ class LeagueMailer < ApplicationMailer
     mail(to: @player.email, subject: 'NOTICE: League dues for ' + @league.name + ' have been set')
   end
 
+  def all_dues_paid(league)
+    @league = league
+    mail(to: @league.admin_email, cc: "getleaguehero@gmail.com", subject: 'NOTICE: All league dues for ' + @league.name + ' have been received!')
+  end
+
 end
