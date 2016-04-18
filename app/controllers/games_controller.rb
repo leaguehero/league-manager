@@ -121,14 +121,14 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-
+    game = params["game"]
     # set game winner and loser
-    winner = params["game"]["winner"]
-    loser = params["game"]["loser"]
+    winner = game["winner"] unless !game["tie"]
+    loser = game["loser"] unless !game["tie"]
     # need to keep params here to overwrite
     # refactor to use winner id instead of finding by name then getting id
-    params["game"]["winner"] = Team.find_by_name(winner).id unless winner.nil?
-    params["game"]["loser"] = Team.find_by_name(loser).id unless loser.nil?
+    game["winner"] = Team.find_by_name(winner).id unless winner.nil?
+    game["loser"] = Team.find_by_name(loser).id unless loser.nil?
     if @game.update_attributes(game_params)
       redirect_to schedule_path
     else
@@ -151,6 +151,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:team_one,:team_two,:winner,:loser,:location,:winner_score,:loser_score,:time,:date)
+    params.require(:game).permit(:team_one,:team_two,:winner,:loser,:location,:winner_score,:loser_score,:time,:date, :tie)
   end
 end

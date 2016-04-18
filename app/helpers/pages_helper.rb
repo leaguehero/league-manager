@@ -4,13 +4,14 @@ module PagesHelper
     Team.all.each do |team|
       @rankings[team.name] = {}
       @rankings[team.name]["id"] = team.id
-      wins = Game.where(winner: team.id).count
-      @rankings[team.name]["wins"] = wins
-      @rankings[team.name]["losses"] = Game.where(loser: team.id).count
+
+      set_team_record(team)
+
+      @rankings[team.name]["wins"] = @wins
+      @rankings[team.name]["losses"] = @loses
+      @rankings[team.name]["ties"] = @ties
       # game_count = (Game.where(winner: team.id).count + Game.where(loser: team.id).count)
       # @rankings[team.name]["win_percent"] = (wins / (game_count.nonzero? || 1)).to_f
-      # need to update schema before adding ties
-      @rankings[team.name]["ties"] = 0
       add_points(team)
     end
     # order rank by games win percentage
@@ -32,8 +33,17 @@ module PagesHelper
             @rankings[team.name]["points_for"] += game.loser_score
             @rankings[team.name]["points_against"] += game.winner_score
           end
+        elsif game.tie #add tied score to both for and against 
+          @rankings[team.name]["points_for"] += game.winner_score
+          @rankings[team.name]["points_against"] += game.winner_score
         end
       end
     end
+  end
+
+  def set_team_record(team)
+    @wins = Game.where(winner: team.id).count
+    @loses = Game.where(loser: team.id).count
+    @ties = Game.where("tie = true").where("team_one = #{team.id} or team_two = #{team.id}").count
   end
 end

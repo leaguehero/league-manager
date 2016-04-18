@@ -1,7 +1,7 @@
 class Game < ActiveRecord::Base
   before_save :convert_time
   validate :vs_teams_are_different
-  validate :winner_and_loser_are_different, :winner_score_is_higher_than_loser_score, on: :update
+  validate :winner_and_loser_are_different, :winner_score_is_higher_than_loser_score, :tie_game, on: :update
 
   private
   def convert_time
@@ -23,10 +23,16 @@ class Game < ActiveRecord::Base
   end
 
   def winner_score_is_higher_than_loser_score
-    if self.winner_score.present? && self.loser_score.present?
+    if !self.tie && (self.winner_score.present? && self.loser_score.present?)
       if self.winner_score < self.loser_score
         errors.add(:game, "winner score must be higher than loser score")
       end
+    end
+  end
+
+  def tie_game
+    if self.tie && !self.winner_score.present?
+      errors.add(:game, "must have a score")
     end
   end
 
