@@ -33,6 +33,9 @@
         <% if @game_played %>
         <br>
           <h3>Game Results</h3>
+          <div class="col-sm-12">
+            <%= f.input :tie, label: "Tie Game", :input_html => { :onclick => "tieGame()"} %>
+          </div>
           <div class="col-sm-6">
             <%= f.input :winner, :as => :select, :collection => [Team.find(@game.team_one).name, Team.find(@game.team_two).name],:include_blank => false%>
           </div>
@@ -63,3 +66,18 @@
   });
 <% end %>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+  var tieGame = function(){
+    if ($("#game_winner").is(":disabled")){
+      $("#game_winner").attr('disabled', false);
+      $("#game_loser").attr('disabled', false);
+      $("#game_loser_score").attr('disabled', false);
+      $('label[for="game_winner_score"]').html("Winner Score");
+    }else{
+      $("#game_winner").attr('disabled', 'disabled').val("");
+      $("#game_loser").attr('disabled', 'disabled').val("");
+      $("#game_loser_score").attr('disabled', 'disabled').val("");
+      $('label[for="game_winner_score"]').html("Game Score");
+    }
+  }
+</script>
