@@ -31,8 +31,15 @@ class Game < ActiveRecord::Base
   end
 
   def tie_game
-    if self.tie && !self.winner_score.present?
-      errors.add(:game, "must have a score")
+    # check if game was converted to tie or vise versa
+    if self.tie
+      if !self.winner_score.present?
+        errors.add(:game, "must have a score")
+      end
+      # If a game had a winner and loser but converted to a tie game, reset attributes to nil
+      self.winner = nil
+      self.loser = nil
+      self.loser_score = nil
     end
   end
 
