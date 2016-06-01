@@ -83,7 +83,7 @@
                 <div class="gd-team">
                   <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
                   <div class="gd-result">
-                    <% if game.winner.nil? %>
+                    <% if game.winner.nil? || game.winner_score.nil? %>
                       -
                     <% elsif game.winner == Team.find(game.team_two).id %>
                       W
@@ -92,7 +92,7 @@
                     <% end %>
                   </div>
                   <div class="gd-score">
-                    <% if game.winner.nil? %>
+                    <% if game.winner.nil? || game.winner_score.nil? %>
                       -
                     <% elsif game.winner == Team.find(game.team_two).id %>
                       <%= game.winner_score %>
@@ -104,7 +104,7 @@
                 <div class="gd-team last">
                   <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
                   <div class="gd-result">
-                    <% if game.winner.nil? %>
+                    <% if game.winner.nil? || game.winner_score.nil? %>
                       -
                     <% elsif game.winner == Team.find(game.team_one).id %>
                       W
@@ -113,7 +113,7 @@
                     <% end %>
                   </div>
                   <div class="gd-score">
-                    <% if game.winner.nil? %>
+                    <% if game.winner.nil? || game.winner_score.nil? %>
                       -
                     <% elsif game.winner == Team.find(game.team_one).id %>
                       <%= game.winner_score %>
