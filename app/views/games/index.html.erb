@@ -81,7 +81,11 @@
               </div>
               <div class="gd-teams <% if current_user %>gd-w-admin<% end %>">
                 <div class="gd-team">
+                  <% if game.team_two %>
                   <a href="/teams/<%= Team.find(game.team_two).id %>"><%= Team.find(game.team_two).name %></a>
+                  <% else %>
+                    TBD
+                  <% end %>
                   <div class="gd-result">
                     <% if game.winner.nil? || game.winner_score.nil? %>
                       -
@@ -102,7 +106,11 @@
                   </div>
                 </div>
                 <div class="gd-team last">
-                  <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
+                  <% if game.team_one %>
+                    <a href="/teams/<%= Team.find(game.team_one).id %>"><%= Team.find(game.team_one).name %></a>
+                  <% else %>
+                    TBD
+                  <% end %>
                   <div class="gd-result">
                     <% if game.winner.nil? || game.winner_score.nil? %>
                       -
