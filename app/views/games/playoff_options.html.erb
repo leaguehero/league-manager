@@ -1,0 +1,77 @@
+<% set_meta_tags :site => 'Generate Playoffs • League Hero',
+  :noindex => true
+%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render :partial => 'layouts/toolbar' %>
+      <%= render :partial => 'layouts/messages' %>
+      <h3>Scheduling Hero&trade;</h3>
+      <p>Use Scheduling Hero&trade; to auto generate games for your league based on the criteria below. Games and schedule can be adjusted after creation.</p>
+      <form class="game_generator_form" action="generate" method="post">
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Court / Field Name(s)</label>
+              <select class="form-control" id="game-courts" data-placeholder="Enter a field" multiple type="text" name="field_names[]">
+                <option value=""></option>
+              </select>
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Game Times</label>
+              <select class="form-control" id="game-times" data-placeholder="Choose Game Times" multiple type="text" name="game_times[]">
+                <%= render :partial => 'time_selection' %>
+              </select>
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Start Date</label>
+              <input class="form-control" type="date" name="start_date" placeholder="Date to Start Games">
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label style="display:block;">Game Day</label>
+              <select class="c-select" type="collection" name="game_days" placeholder="Days of week to allow Games">
+                <% @week_days.each do |key, val| %>
+                  <option value=<%= val %>>
+                    <%= key %>
+                  </option>
+                <% end %>
+              </select>
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Game Cycles</label>
+              <input class="form-control" type="text" name="cycles" placeholder="How many times will each team meet?">
+            </fieldset>
+          </div>
+          <!-- <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label>Dates to Exclude</label>
+              <input class="form-control" type="text" name="excluded_dates" placeholder="Dates to not have games.">
+              <small class="text-muted">Add dates in YYYY/MM/DD format</small>
+            </fieldset>
+          </div> -->
+        </div>
+        <button class="btn btn-primary-outline" type="submit">Generate Games</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%= javascript_tag do %>
+$(document).ready(function() {
+  <!-- Ability to add multiple input options into field -->
+  $("#game-courts").chosen({create_option: true, persistent_create_option: true, skip_no_results: true, create_option_text: 'Add Court'});
+  <!-- game times picker -->
+  $("#game-times").chosen();
+});
+<% end %>

@@ -136,6 +136,22 @@ class GamesController < ApplicationController
     end
   end
 
+  def playoff_options
+    @week_days = {sunday:0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday:5, saturday: 6}
+    # TODO: Add validation to make sure the admin has added teams
+    # @game = Game.new
+  end
+
+  def genrate_playoffs
+    # Add playoffs started field to league object
+    # Bring in all teams
+    # Allow admin to select which team is in which rank
+    
+    # ability to select double elimination (post MVP)
+    # Generates games for Playoffs
+    # View should be playoff bracket
+  end
+
   def destroy
     Game.find(params[:id]).destroy
     flash[:notice] = "Game was successfully deleted"

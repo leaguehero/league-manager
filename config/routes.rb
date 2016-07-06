@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "games/generator_options" => "games#generator_options"
   post "games/generate" => "games#generate_games"
   delete "games/destroy_all" => "games#destroy_all"
+  get "games/playoff-generator-options" => "games#playoff_options"
   resources  :games
 
   resources  :players

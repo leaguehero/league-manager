@@ -40,6 +40,7 @@
               <% end %>
             <% end %>
             <% if current_user %>
+              <%= link_to 'Generate Playoffs', games_playoff_generator_options_path, class:"add-game"  %>
               <%= link_to 'Add Game', new_game_path, class: "add-game" %>
             <% end %>
           </nav>
