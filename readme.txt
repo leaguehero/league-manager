@@ -1,5 +1,11 @@
 Ruby version is 2.2.2, to switch using rvm => $rvm ruby-2.2.2
 
+## First-time DB Setup ##
+`bundle exec rake db:create`
+
+for more information on possible DB creation issues check out:
+http://stackoverflow.com/questions/25611004/rake-dbcreate-throws-database-does-not-exist-error-with-postgresql
+
 ##to start the app on port 3000 with background jobs
 foreman start -p 3000
 #starts rails with redis and Sidekiq
