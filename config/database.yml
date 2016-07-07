@@ -58,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: league-hero_test
+  database: lh_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,7 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: league-hero_production
+  database: lh_production
   # only need this if not on Heroku
   # username: league-hero
   # password: <%= ENV['LEAGUE-HERO_DATABASE_PASSWORD'] %>
