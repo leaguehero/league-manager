@@ -6,72 +6,45 @@
     <div class="col-md-12">
       <%= render :partial => 'layouts/toolbar' %>
       <%= render :partial => 'layouts/messages' %>
-      <h3>Scheduling Hero&trade;</h3>
-      <p>Use Scheduling Hero&trade; to auto generate games for your league based on the criteria below. Games and schedule can be adjusted after creation.</p>
-      <form class="game_generator_form" action="generate" method="post">
+      <h3>Bracket Hero&trade;</h3>
+      <p>Use Bracket Hero&trade; to generate playoff games for your league based on the criteria below. Games and schedule can be adjusted after creation.</p>
+      <form class="game_generator_form" action="generate-playoffs" method="post">
+
+        <!-- <div class="row">
+          <div class="col-sm-3">
+            <fieldset class="form-group">
+              <label>Number of Teams in Playoffs</label>
+              <input id="playoff-size" class="form-control" placeholder="Choose Playoff Size" multiple type="number" min="2" max ="<%= @max_teams %>"></input>
+            </fieldset>
+          </div>
+        </div> -->
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-3">
             <fieldset class="form-group">
-              <label>Court / Field Name(s)</label>
-              <select class="form-control" id="game-courts" data-placeholder="Enter a field" multiple type="text" name="field_names[]">
-                <option value=""></option>
-              </select>
+              <label>Playoff Seed</label>
+              <% count = 0 %>
+              <% @max_teams.times do %>
+                <%= count += 1 %>
+                <div id="playoff-seed-<%= count %>">
+                  <select class="c-select" type="collection" name="team-seed-<%= count %>">
+                    <% seed = 0 %>
+                    <% @teams.each_with_index do |team, i| %>
+                      <option value=<%= i +1 %> placeholder=<%= @teams[i].name %>>
+                        <%= @teams[i].name %>
+                      </option>
+                    <% end %>
+                  </select>
+                </div>
+              <% end %>
             </fieldset>
           </div>
           <div class="col-sm-6">
             <fieldset class="form-group">
-              <label>Game Times</label>
-              <select class="form-control" id="game-times" data-placeholder="Choose Game Times" multiple type="text" name="game_times[]">
-                <%= render :partial => 'time_selection' %>
-              </select>
             </fieldset>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <fieldset class="form-group">
-              <label>Start Date</label>
-              <input class="form-control" type="date" name="start_date" placeholder="Date to Start Games">
-            </fieldset>
-          </div>
-          <div class="col-sm-6">
-            <fieldset class="form-group">
-              <label style="display:block;">Game Day</label>
-              <select class="c-select" type="collection" name="game_days" placeholder="Days of week to allow Games">
-                <% @week_days.each do |key, val| %>
-                  <option value=<%= val %>>
-                    <%= key %>
-                  </option>
-                <% end %>
-              </select>
-            </fieldset>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <fieldset class="form-group">
-              <label>Game Cycles</label>
-              <input class="form-control" type="text" name="cycles" placeholder="How many times will each team meet?">
-            </fieldset>
-          </div>
-          <!-- <div class="col-sm-6">
-            <fieldset class="form-group">
-              <label>Dates to Exclude</label>
-              <input class="form-control" type="text" name="excluded_dates" placeholder="Dates to not have games.">
-              <small class="text-muted">Add dates in YYYY/MM/DD format</small>
-            </fieldset>
-          </div> -->
         </div>
         <button class="btn btn-primary-outline" type="submit">Generate Games</button>
       </form>
     </div>
   </div>
 </div>
-<%= javascript_tag do %>
-$(document).ready(function() {
-  <!-- Ability to add multiple input options into field -->
-  $("#game-courts").chosen({create_option: true, persistent_create_option: true, skip_no_results: true, create_option_text: 'Add Court'});
-  <!-- game times picker -->
-  $("#game-times").chosen();
-});
-<% end %>

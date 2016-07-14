@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   include GamesHelper
 
   # don't protect on genrate games post request
-  protect_from_forgery except: :generate_games
+  protect_from_forgery :except => [:generate_games, :generate_playoffs]
 
   before_action :authenticate_user!, :except => [:index, :show]
 
@@ -137,19 +137,39 @@ class GamesController < ApplicationController
   end
 
   def playoff_options
-    @week_days = {sunday:0, monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday:5, saturday: 6}
-    # TODO: Add validation to make sure the admin has added teams
-    # @game = Game.new
+    @max_teams = @league.max_teams
+    @teams = Team.all
+
   end
 
-  def genrate_playoffs
-    # Add playoffs started field to league object
-    # Bring in all teams
-    # Allow admin to select which team is in which rank
-    
+  def generate_playoffs
+    # NOTE: seeds come in team-seed-n
+    seeds = {}
+
+    params.each do |key, val|
+      if key.include?("team-seed")
+        seed = key.split("team-seed-")[1]
+        seeds[seed] = Team.find(val.to_i).name
+      end
+    end
+    ap seeds
+    # Valdiations: no team is in 2 seed spots
+
+    # Add playoff_game => true to game object: Why did I need this?
+
+    # Add playoffs started field to league object: This will tell the schedule page to show the playoffs as the main screen
+
     # ability to select double elimination (post MVP)
-    # Generates games for Playoffs
+    # Generates games for Playoffs: Just create the games with the teams by rank, The admin will need to enter date, time and location
+
+    redirect_to games_playoff_schedule_path
+
+  end
+
+  def playoff_schedule
+
     # View should be playoff bracket
+
   end
 
   def destroy

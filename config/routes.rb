@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   post "games/generate" => "games#generate_games"
   delete "games/destroy_all" => "games#destroy_all"
   get "games/playoff-generator-options" => "games#playoff_options"
+  post "games/generate-playoffs" => "games#generate_playoffs"
+  get "games/playoff-schedule" => "games#playoff_schedule"
+
   resources  :games
 
   resources  :players
